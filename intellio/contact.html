@@ -222,7 +222,7 @@
 	<main>
 
 	<!-- contact page title -->
-	<section class="contact-page-title" style="background-image: url(images/inner-img/blog-details.jpg);">
+	<section class="contact-page-title" style="background-image: url(images/inner-img/a.avif); background-repeat: no-repeat; background-size: cover; background-position: center;">
 		<div class="auto-container">
 			<div class="row">
 				<div class="title-content">
@@ -233,10 +233,12 @@
 					</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row align-items-stretch">
 				<div class="col-xl-5 col-lg-5">
-					<div class="contact-thumb">
-						<figure class="reveal"><img src="images/inner-img/contact-thumb.jpg" alt="contact thumb"></figure>
+					<div class="contact-thumb" style="height: 100%; display: flex; align-items: center;">
+						<figure class="reveal" style="width: 100%; height: 100%; display: flex; align-items: center;">
+							<img src="images/inner-img/contacta-removebg-preview.png" alt="contact thumb" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+						</figure>
 					</div>
 				</div>
 				<div class="col-xl-7 col-lg-7">
@@ -252,25 +254,37 @@
 					<form action="https://formspree.io/f/myyleorq" method="POST">
 						<div class="row">
 							<div class="col-lg-6">
-								<div class="contact-input-box">
-									<input type="text" name="Your Name" placeholder="Your Name" required="">
+								<div class="contact-input-box voice-input-wrapper">
+									<input type="text" id="nameInput" name="Your Name" placeholder="Your Name" required="">
+									<button type="button" class="voice-btn" onclick="startVoiceInput('nameInput')" title="Voice Input">
+										<i class="fa-solid fa-microphone"></i>
+									</button>
 								</div>
 							</div>					
 							<div class="col-lg-6">
-								<div class="contact-input-box">
-									<input type="text" name="Email" placeholder="Your E-Mail" required="">
+								<div class="contact-input-box voice-input-wrapper">
+									<input type="text" id="emailInput" name="Email" placeholder="Your E-Mail" required="">
+									<button type="button" class="voice-btn" onclick="startVoiceInput('emailInput')" title="Voice Input">
+										<i class="fa-solid fa-microphone"></i>
+									</button>
 								</div>
 							</div>							
 							<div class="col-lg-12">
-								<div class="contact-input-box">
-									<input type="text" name="Company" placeholder="Company Name (Optional)">
+								<div class="contact-input-box voice-input-wrapper">
+									<input type="text" id="companyInput" name="Company" placeholder="Company Name (Optional)">
+									<button type="button" class="voice-btn" onclick="startVoiceInput('companyInput')" title="Voice Input">
+										<i class="fa-solid fa-microphone"></i>
+									</button>
 								</div>
 							</div>									
-							<div class="col-lg-12">
-								<div class="contact-input-box">
-									<textarea name="Message" id="Meassage" placeholder="Tell us about your project or how we can help you..."></textarea>
-								</div>
+						<div class="col-lg-12">
+							<div class="contact-input-box voice-input-wrapper">
+								<textarea name="Message" id="messageInput" placeholder="Tell us about your project or how we can help you..."></textarea>
+								<button type="button" class="voice-btn voice-btn-textarea" onclick="startVoiceInput('messageInput')" title="Voice Input">
+									<i class="fa-solid fa-microphone"></i>
+								</button>
 							</div>
+						</div>
 							<div class="col-lg-12">
 								<div class="blog-details-submi-button">
 									<button type="submit">Send Message<i class="fa-light fa-arrow-right"></i></button>
@@ -290,7 +304,7 @@
 
 
 	<!-- Main Footer -->
-	<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png);">
+	<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png); background-repeat: no-repeat;">
 		<div class="auto-container">
 			<div class="row">
 				<!--Footer Column-->
@@ -397,6 +411,214 @@
 <script src="js/ScrollToPlugin.min.js"></script>
 <script src="js/SplitText.js"></script>
 <script src="js/main.js"></script>
+
+<!-- Voice Input Styles and Script -->
+<style>
+.voice-input-wrapper {
+	position: relative;
+}
+
+.voice-btn {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--theme-primary);
+	font-size: 20px;
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+.voice-btn:hover {
+	transform: translateY(-50%) scale(1.2);
+	color: #8b5cf6;
+}
+
+.voice-btn.listening {
+	background: linear-gradient(135deg, #ef4444, #dc2626);
+	animation: pulse 1.5s infinite;
+}
+
+.voice-btn.listening i {
+	animation: micPulse 0.5s infinite alternate;
+}
+
+.voice-btn-textarea {
+	top: 20px;
+	transform: translateY(0);
+}
+
+.voice-btn-textarea:hover {
+	transform: translateY(0) scale(1.1);
+}
+
+@keyframes pulse {
+	0%, 100% {
+		box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+	}
+	50% {
+		box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+	}
+}
+
+@keyframes micPulse {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
+
+.voice-feedback {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(20, 14, 44, 0.95);
+	padding: 30px 50px;
+	border-radius: 20px;
+	border: 2px solid var(--theme-primary);
+	color: white;
+	z-index: 9999;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	display: none;
+}
+
+.voice-feedback.active {
+	display: block;
+	animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -60%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.voice-feedback i {
+	font-size: 40px;
+	margin-bottom: 15px;
+	color: var(--theme-primary);
+	animation: micPulse 0.5s infinite alternate;
+}
+
+.voice-feedback p {
+	margin: 10px 0 0 0;
+	font-size: 18px;
+	font-weight: 600;
+}
+</style>
+
+<script>
+let recognition;
+let currentInputId;
+
+function initSpeechRecognition() {
+	if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+		const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+		recognition = new SpeechRecognition();
+		recognition.continuous = false;
+		recognition.interimResults = false;
+		recognition.lang = 'en-US';
+
+		recognition.onresult = function(event) {
+			const transcript = event.results[0][0].transcript;
+			const input = document.getElementById(currentInputId);
+			if (input) {
+				if (input.tagName === 'TEXTAREA') {
+					input.value += (input.value ? ' ' : '') + transcript;
+				} else {
+					input.value = transcript;
+				}
+			}
+			hideFeedback();
+		};
+
+		recognition.onerror = function(event) {
+			console.error('Speech recognition error:', event.error);
+			hideFeedback();
+			alert('Voice input error: ' + event.error + '. Please try again.');
+		};
+
+		recognition.onend = function() {
+			hideFeedback();
+		};
+	}
+}
+
+function startVoiceInput(inputId) {
+	if (!recognition) {
+		initSpeechRecognition();
+	}
+
+	if (!recognition) {
+		alert('Voice input is not supported in your browser. Please try Chrome, Edge, or Safari.');
+		return;
+	}
+
+	currentInputId = inputId;
+	showFeedback();
+
+	try {
+		recognition.start();
+	} catch (e) {
+		console.error('Recognition start error:', e);
+		hideFeedback();
+	}
+}
+
+function showFeedback() {
+	let feedback = document.getElementById('voiceFeedback');
+	if (!feedback) {
+		feedback = document.createElement('div');
+		feedback.id = 'voiceFeedback';
+		feedback.className = 'voice-feedback';
+		feedback.innerHTML = '<i class="fa-solid fa-microphone"></i><p>Listening... Speak now</p>';
+		document.body.appendChild(feedback);
+	}
+	feedback.classList.add('active');
+
+	// Add listening class to button
+	const buttons = document.querySelectorAll('.voice-btn');
+	buttons.forEach(btn => {
+		if (btn.onclick.toString().includes(currentInputId)) {
+			btn.classList.add('listening');
+		}
+	});
+}
+
+function hideFeedback() {
+	const feedback = document.getElementById('voiceFeedback');
+	if (feedback) {
+		feedback.classList.remove('active');
+	}
+
+	// Remove listening class from all buttons
+	const buttons = document.querySelectorAll('.voice-btn');
+	buttons.forEach(btn => btn.classList.remove('listening'));
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+	initSpeechRecognition();
+});
+</script>
 </div>
 </body>
 </html>
