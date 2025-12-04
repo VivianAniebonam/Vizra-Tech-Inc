@@ -651,76 +651,150 @@
 			</div>
 
 			<!-- CEO Section -->
+			<style>
+				@keyframes ceo-float {
+					0%, 100% { transform: translateY(0px); }
+					50% { transform: translateY(-15px); }
+				}
+				@keyframes shimmer {
+					0% { background-position: -1000px 0; }
+					100% { background-position: 1000px 0; }
+				}
+				@keyframes pulse-border {
+					0%, 100% { opacity: 1; }
+					50% { opacity: 0.5; }
+				}
+				.ceo-hexagon {
+					clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+				}
+			</style>
+			
 			<div class="row justify-content-center mb-5" style="position: relative; z-index: 2;">
-				<div class="col-xl-10">
-					<div class="ceo-spotlight" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05)); border-radius: 20px; padding: 50px; position: relative; overflow: hidden; border: 2px solid rgba(139, 92, 246, 0.2);">
-						<!-- Decorative Background Elements -->
-						<div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(139, 92, 246, 0.1), transparent); border-radius: 50%; z-index: 0;"></div>
-						<div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(236, 72, 153, 0.1), transparent); border-radius: 50%; z-index: 0;"></div>
+				<div class="col-xl-11">
+					<div style="background: linear-gradient(135deg, rgba(103, 102, 255, 0.03), rgba(103, 102, 255, 0.08)); border-radius: 30px; padding: 60px 40px; position: relative; overflow: hidden; border: 1px solid rgba(103, 102, 255, 0.15);">
+						
+						<!-- Animated Background Grid -->
+						<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(103, 102, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(103, 102, 255, 0.05) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.3; z-index: 0;"></div>
+						
+						<!-- Floating Orbs -->
+						<div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(103, 102, 255, 0.15), transparent 70%); border-radius: 50%; z-index: 0; animation: ceo-float 6s ease-in-out infinite;"></div>
+						<div style="position: absolute; bottom: -80px; left: -80px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(103, 102, 255, 0.1), transparent 70%); border-radius: 50%; z-index: 0; animation: ceo-float 8s ease-in-out infinite;"></div>
 						
 						<div class="row align-items-center" style="position: relative; z-index: 1;">
-							<div class="col-lg-4 text-center mb-4 mb-lg-0">
-								<div style="position: relative; display: inline-block;">
-									<!-- CEO Image with gradient overlay -->
-									<div style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; border: 4px solid rgba(139, 92, 246, 0.5); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3); position: relative;">
-										<img src="images/inner-img/P.png" alt="Vivian Aniebonam - CEO" style="width: 100%; height: 100%; object-fit: cover;">
-										<div style="position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to top, rgba(139, 92, 246, 0.2), transparent);"></div>
+							
+							<!-- CEO Image Column -->
+							<div class="col-lg-5 text-center mb-4 mb-lg-0">
+								<div style="position: relative; display: inline-block; padding: 40px;">
+									
+									<!-- Outer Hexagonal Border Layer -->
+									<div class="ceo-hexagon" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(103, 102, 255, 0.3), rgba(103, 102, 255, 0.1)); animation: pulse-border 3s ease-in-out infinite;"></div>
+									
+									<!-- Middle Layer -->
+									<div class="ceo-hexagon" style="position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; background: linear-gradient(45deg, rgba(103, 102, 255, 0.2), transparent); border: 2px solid rgba(103, 102, 255, 0.4);"></div>
+									
+									<!-- Shimmer Effect -->
+									<div class="ceo-hexagon" style="position: absolute; top: 30px; left: 30px; right: 30px; bottom: 30px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); background-size: 1000px 100%; animation: shimmer 3s infinite;"></div>
+									
+									<!-- Main Image Container -->
+									<div class="ceo-hexagon" style="position: relative; width: 350px; height: 350px; background: #fff; padding: 15px; box-shadow: 0 30px 80px rgba(103, 102, 255, 0.3), inset 0 0 50px rgba(103, 102, 255, 0.1);">
+										<div class="ceo-hexagon" style="width: 100%; height: 100%; overflow: hidden; position: relative;">
+											<img src="images/inner-img/P.png" alt="Vivian Aniebonam - CEO" style="width: 100%; height: 100%; object-fit: cover;">
+											
+											<!-- Gradient Overlay -->
+											<div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, rgba(103, 102, 255, 0.4), transparent);"></div>
+											
+											<!-- Tech Grid Overlay -->
+											<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(103, 102, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(103, 102, 255, 0.1) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
+										</div>
 									</div>
-									<!-- Decorative ring -->
-									<div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border: 2px solid rgba(236, 72, 153, 0.3); border-radius: 50%; animation: rotate 20s linear infinite;"></div>
+									
+									<!-- Corner Accent Lines -->
+									<div style="position: absolute; top: 25px; left: 25px; width: 60px; height: 60px; border-top: 4px solid #6766FF; border-left: 4px solid #6766FF;"></div>
+									<div style="position: absolute; top: 25px; right: 25px; width: 60px; height: 60px; border-top: 4px solid #6766FF; border-right: 4px solid #6766FF;"></div>
+									<div style="position: absolute; bottom: 25px; left: 25px; width: 60px; height: 60px; border-bottom: 4px solid #6766FF; border-left: 4px solid #6766FF;"></div>
+									<div style="position: absolute; bottom: 25px; right: 25px; width: 60px; height: 60px; border-bottom: 4px solid #6766FF; border-right: 4px solid #6766FF;"></div>
+									
+									<!-- Floating Tech Icons -->
+									<div style="position: absolute; top: 50px; left: -20px; width: 40px; height: 40px; background: linear-gradient(135deg, #6766FF, rgba(103, 102, 255, 0.6)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; box-shadow: 0 10px 30px rgba(103, 102, 255, 0.4); animation: ceo-float 4s ease-in-out infinite;">
+										<i class="fa-solid fa-code"></i>
+									</div>
+									<div style="position: absolute; bottom: 80px; right: -20px; width: 40px; height: 40px; background: linear-gradient(135deg, #6766FF, rgba(103, 102, 255, 0.6)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; box-shadow: 0 10px 30px rgba(103, 102, 255, 0.4); animation: ceo-float 5s ease-in-out infinite 1s;">
+										<i class="fa-solid fa-brain"></i>
+									</div>
+									<div style="position: absolute; top: 120px; right: -30px; width: 40px; height: 40px; background: linear-gradient(135deg, #6766FF, rgba(103, 102, 255, 0.6)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; box-shadow: 0 10px 30px rgba(103, 102, 255, 0.4); animation: ceo-float 4.5s ease-in-out infinite 0.5s;">
+										<i class="fa-solid fa-rocket"></i>
+									</div>
 								</div>
 							</div>
 							
-							<div class="col-lg-8">
-								<div style="text-align: left;">
-									<h2 style="color: #8b5cf6; font-size: 36px; font-weight: 700; margin-bottom: 5px;">Vivian Aniebonam</h2>
-									<h4 style="color: #ec4899; font-size: 20px; font-weight: 500; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Founder & Chief Executive Officer</h4>
+							<!-- CEO Content Column -->
+							<div class="col-lg-7">
+								<div style="text-align: left; padding-left: 30px;">
 									
-									<p style="font-size: 16px; line-height: 1.8; color: #666; margin-bottom: 25px;">
+									<!-- Name Badge -->
+									<div style="display: inline-block; background: linear-gradient(135deg, rgba(103, 102, 255, 0.15), rgba(103, 102, 255, 0.05)); padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(103, 102, 255, 0.3); margin-bottom: 15px;">
+										<span style="color: #6766FF; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
+											<i class="fa-solid fa-crown" style="margin-right: 8px;"></i>Leadership
+										</span>
+									</div>
+									
+									<h2 style="color: #ffffff; font-size: 48px; font-weight: 700; margin-bottom: 8px; line-height: 1.2;">Vivian Aniebonam</h2>
+									<h4 style="color: #6766FF; font-size: 22px; font-weight: 600; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1.5px;">Founder & Chief Executive Officer</h4>
+									
+									<p style="font-size: 17px; line-height: 1.9; color: #555; margin-bottom: 30px; font-weight: 400;">
 										With a passion for innovation and technology, Vivian founded Vizra Tech Inc. to bridge the gap between talented developers and businesses seeking cutting-edge solutions. Under her leadership, Vizra has evolved into a dual-force entity—operating both as a revolutionary AI-powered gig platform and a full-service tech agency delivering bespoke software solutions.
 									</p>
 									
+									<!-- Credentials Grid -->
 									<div class="row mb-4">
 										<div class="col-md-6 mb-3">
-											<div style="background: rgba(139, 92, 246, 0.1); padding: 20px; border-radius: 12px; border-left: 4px solid #8b5cf6;">
-												<div style="display: flex; align-items: center; margin-bottom: 10px;">
-													<i class="fa-solid fa-graduation-cap" style="font-size: 24px; color: #8b5cf6; margin-right: 10px;"></i>
-													<h5 style="margin: 0; color: #333; font-size: 16px; font-weight: 600;">Education</h5>
+											<div style="background: rgba(103, 102, 255, 0.05); padding: 25px; border-radius: 15px; border-left: 4px solid #6766FF; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.05)'; this.style.transform='translateX(0)';">
+												<div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(103, 102, 255, 0.1), transparent); border-radius: 50%;"></div>
+												<div style="display: flex; align-items: center; margin-bottom: 12px;">
+													<div style="width: 45px; height: 45px; background: linear-gradient(135deg, #6766FF, rgba(103, 102, 255, 0.7)); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+														<i class="fa-solid fa-graduation-cap" style="font-size: 20px; color: white;"></i>
+													</div>
+													<h5 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 700; text-decoration: underline;">Education</h5>
 												</div>
-												<p style="margin: 0; color: #666; font-size: 14px;">B.Sc. Computer Science<br>MBA in Technology Management</p>
+												<p style="margin: 0; color: #666; font-size: 15px; line-height: 1.6; padding-left: 60px;">B.Sc. Computer Science<br>MBA in Technology Management</p>
 											</div>
 										</div>
 										<div class="col-md-6 mb-3">
-											<div style="background: rgba(236, 72, 153, 0.1); padding: 20px; border-radius: 12px; border-left: 4px solid #ec4899;">
-												<div style="display: flex; align-items: center; margin-bottom: 10px;">
-													<i class="fa-solid fa-lightbulb" style="font-size: 24px; color: #ec4899; margin-right: 10px;"></i>
-													<h5 style="margin: 0; color: #333; font-size: 16px; font-weight: 600;">Expertise</h5>
+											<div style="background: rgba(103, 102, 255, 0.05); padding: 25px; border-radius: 15px; border-left: 4px solid #6766FF; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.05)'; this.style.transform='translateX(0)';">
+												<div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(103, 102, 255, 0.1), transparent); border-radius: 50%;"></div>
+												<div style="display: flex; align-items: center; margin-bottom: 12px;">
+													<div style="width: 45px; height: 45px; background: linear-gradient(135deg, #6766FF, rgba(103, 102, 255, 0.7)); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+														<i class="fa-solid fa-lightbulb" style="font-size: 20px; color: white;"></i>
+													</div>
+													<h5 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 700; text-decoration: underline;">Expertise</h5>
 												</div>
-												<p style="margin: 0; color: #666; font-size: 14px;">AI Platform Development<br>Business Strategy & Growth</p>
+												<p style="margin: 0; color: #666; font-size: 15px; line-height: 1.6; padding-left: 60px;">AI Platform Development<br>Business Strategy & Growth</p>
 											</div>
 										</div>
 									</div>
 									
-									<div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-										<a href="https://portfolio.vizratech.com" target="_blank" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 30px rgba(139, 92, 246, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-											<i class="fa-solid fa-briefcase" style="margin-right: 8px;"></i>View Portfolio
+									<!-- CTA Buttons -->
+									<div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap; margin-bottom: 25px;">
+										<a href="https://portfolio.vizratech.com" target="_blank" style="background: linear-gradient(135deg, #6766FF, rgba(103, 102, 255, 0.8)); color: white; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; display: inline-flex; align-items: center; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(103, 102, 255, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(103, 102, 255, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(103, 102, 255, 0.3)';">
+											<i class="fa-solid fa-briefcase" style="margin-right: 10px; font-size: 18px;"></i>View Portfolio
 										</a>
-										<a href="https://linkedin.com/in/viviananiebonam" target="_blank" style="background: #0077b5; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 30px rgba(0, 119, 181, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-											<i class="fa-brands fa-linkedin" style="margin-right: 8px;"></i>Connect on LinkedIn
+										<a href="https://linkedin.com/in/viviananiebonam" target="_blank" style="background: transparent; color: #6766FF; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; display: inline-flex; align-items: center; transition: all 0.3s ease; border: 2px solid #6766FF;" onmouseover="this.style.transform='translateY(-3px)'; this.style.background='#6766FF'; this.style.color='white';" onmouseout="this.style.transform='translateY(0)'; this.style.background='transparent'; this.style.color='#6766FF';">
+											<i class="fa-brands fa-linkedin" style="margin-right: 10px; font-size: 18px;"></i>Connect on LinkedIn
 										</a>
-										
-										<!-- Social Media Icons -->
-										<div style="display: flex; gap: 12px; margin-left: 10px;">
-											<a href="mailto:vivian@vizratech.com" style="width: 45px; height: 45px; background: rgba(139, 92, 246, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #8b5cf6; font-size: 18px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#8b5cf6'; this.style.color='white';" onmouseout="this.style.background='rgba(139, 92, 246, 0.1)'; this.style.color='#8b5cf6';">
-												<i class="fa-solid fa-envelope"></i>
-											</a>
-											<a href="https://twitter.com/viviananiebonam" target="_blank" style="width: 45px; height: 45px; background: rgba(139, 92, 246, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #8b5cf6; font-size: 18px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#8b5cf6'; this.style.color='white';" onmouseout="this.style.background='rgba(139, 92, 246, 0.1)'; this.style.color='#8b5cf6';">
-												<i class="fa-brands fa-twitter"></i>
-											</a>
-											<a href="https://github.com/viviananiebonam" target="_blank" style="width: 45px; height: 45px; background: rgba(139, 92, 246, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #8b5cf6; font-size: 18px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#8b5cf6'; this.style.color='white';" onmouseout="this.style.background='rgba(139, 92, 246, 0.1)'; this.style.color='#8b5cf6';">
-												<i class="fa-brands fa-github"></i>
-											</a>
-										</div>
+									</div>
+									
+									<!-- Social Media -->
+									<div style="display: flex; gap: 15px; align-items: center;">
+										<span style="color: #999; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Connect:</span>
+										<a href="mailto:vivian@vizratech.com" style="width: 50px; height: 50px; background: rgba(103, 102, 255, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 20px; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent;" onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.borderColor='#6766FF'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.borderColor='transparent'; this.style.transform='translateY(0)';">
+											<i class="fa-solid fa-envelope"></i>
+										</a>
+										<a href="https://twitter.com/viviananiebonam" target="_blank" style="width: 50px; height: 50px; background: rgba(103, 102, 255, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 20px; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent;" onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.borderColor='#6766FF'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.borderColor='transparent'; this.style.transform='translateY(0)';">
+											<i class="fa-brands fa-twitter"></i>
+										</a>
+										<a href="https://github.com/viviananiebonam" target="_blank" style="width: 50px; height: 50px; background: rgba(103, 102, 255, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 20px; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent;" onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.borderColor='#6766FF'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.borderColor='transparent'; this.style.transform='translateY(0)';">
+											<i class="fa-brands fa-github"></i>
+										</a>
 									</div>
 								</div>
 							</div>
