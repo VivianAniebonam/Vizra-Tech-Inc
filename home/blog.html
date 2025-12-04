@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Intellio - AI Agency & Technology Saas HTML5 Template</title>
+<title>Volunteers - Join Our Teams</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -11,6 +11,45 @@
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.blog-page-title .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog-page-title .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+.single-blog-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.blog-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.blog-content p {
+    flex: 1;
+    min-height: 60px;
+}
+.single-blog-box .blog-thumb {
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+}
+.single-blog-box .blog-thumb img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+</style>
 </head>
 
 <body>
@@ -61,12 +100,7 @@
 							</li>
 							<li><a href="service.html">Services</a>
 							</li>
-							<li><a href="#">Blog <i class="fa-light fa-angle-down"></i></a>
-								<ul class="sub_menu">
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="blog-details.html">Blog Details</a></li>
-								</ul>
-							</li>
+							<li><a href="blog.html">Volunteers</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>				
 					</div>
@@ -129,12 +163,7 @@
 					</li>
 					<li><a href="service.html">Services</a>
 					</li>
-					<li><a href="#">Blog <i class="fa-light fa-angle-down"></i></a>
-						<ul class="sub_menu">
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="blog-details.html">Blog Details</a></li>
-						</ul>
-					</li>
+					<li><a href="blog.html">Volunteers</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
@@ -223,14 +252,13 @@
 	<main>
 
 	<!--blog page title -->
-	<section class="blog-page-title" style="background-image: url(images/inner-img/about-page-bg.jpg);">
+	<section class="blog-page-title" style="background-image: url(images/demo-img/service-background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
 		<div class="auto-container">
 			<div class="row">
 				<div class="title-content">
-					<h5 class="page-sub-title split_chars">Our Blog</h5>
-					<h1 class="page-title split-text">Latest Blog</h1>
-					<p class="page-desc title-anim">Monotonectally whiteboard proactive with leading business to
-						niche markets rather than tested
+					<h5 class="page-sub-title split_chars">Volunteer Opportunities</h5>
+					<h1 class="page-title split-text">Join Our Teams</h1>
+					<p class="page-desc title-anim">Explore volunteer roles across different teams and find the perfect opportunity to contribute to our mission
 					</p>
 				</div>
 			</div>
@@ -238,17 +266,17 @@
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="single-blog-box">
 						<div class="blog-thumb">
-							<img src="images/demo-img/blog-thumb1.png" alt="thumb">
-							<img src="images/demo-img/blog-thumb1.png" alt="thumb">
+							<img src="images/demo-img/project-manager.png" alt="thumb">
+							<img src="images/demo-img/project-manager.png" alt="thumb">
 							<div class="blog-meta">
-								<a href="blog-details.html">10 AUG, 2025</a>
+								<a href="blog-details.html?team=product-design">Product & Design</a>
 							</div>
 						</div>
 						<div class="blog-content">
-							<h3 class="blog-title"><a href="blog-details.html">Top 10 most popular AI 
-								Automation tools</a></h3>
+							<h3 class="blog-title"><a href="blog-details.html?team=product-design">Product & Design Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Responsible for understanding user needs and shaping the app</p>
 							<div class="blog-btn">
-							<a href="blog-details.html">2 Comments<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							<a href="blog-details.html?team=product-design">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
 							</div>
 						</div>
 					</div>
@@ -256,17 +284,17 @@
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="single-blog-box">
 						<div class="blog-thumb">
-							<img src="images/demo-img/blog-thumb2.png" alt="thumb">
-							<img src="images/demo-img/blog-thumb2.png" alt="thumb">
+							<img src="images/demo-img/software-engineer.jpg" alt="thumb">
+							<img src="images/demo-img/software-engineer.jpg" alt="thumb">
 							<div class="blog-meta">
-								<a href="blog-details.html">12 AUG, 2025</a>
+								<a href="blog-details.html?team=software-engineering">Software Engineering</a>
 							</div>
 						</div>
 						<div class="blog-content">
-							<h3 class="blog-title"><a href="blog-details.html">How to generate audience 
-								Using AI Tools?</a></h3>
+							<h3 class="blog-title"><a href="blog-details.html?team=software-engineering">Software Engineering Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">These roles build and maintain the application</p>
 							<div class="blog-btn">
-							<a href="blog-details.html">1 Comments<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							<a href="blog-details.html?team=software-engineering">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
 							</div>
 						</div>
 					</div>
@@ -274,17 +302,17 @@
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="single-blog-box">
 						<div class="blog-thumb">
-							<img src="images/demo-img/blog-thumb3.png" alt="thumb">
-							<img src="images/demo-img/blog-thumb3.png" alt="thumb">
+							<img src="images/demo-img/qa-testing.png" alt="thumb">
+							<img src="images/demo-img/qa-testing.png" alt="thumb">
 							<div class="blog-meta">
-								<a href="blog-details.html">14 AUG, 2025</a>
+								<a href="blog-details.html?team=qa-testing">QA & Testing</a>
 							</div>
 						</div>
 						<div class="blog-content">
-							<h3 class="blog-title"><a href="blog-details.html">Most Popular tools Grow 
-								Your Business</a></h3>
+							<h3 class="blog-title"><a href="blog-details.html?team=qa-testing">QA & Testing Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Ensures the app is stable, fast, and bug-free</p>
 							<div class="blog-btn">
-							<a href="blog-details.html">3 Comments<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							<a href="blog-details.html?team=qa-testing">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
 							</div>
 						</div>
 					</div>
@@ -294,17 +322,17 @@
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="single-blog-box">
 						<div class="blog-thumb">
-							<img src="images/inner-img/blog-thumb4.png" alt="thumb">
-							<img src="images/inner-img/blog-thumb4.png" alt="thumb">
+							<img src="images/demo-img/ai-role.png" alt="thumb">
+							<img src="images/demo-img/ai-role.png" alt="thumb">
 							<div class="blog-meta">
-								<a href="blog-details.html">16 AUG, 2025</a>
+								<a href="blog-details.html?team=data-analytics">Data & Analytics</a>
 							</div>
 						</div>
 						<div class="blog-content">
-							<h3 class="blog-title"><a href="blog-details.html">15 Essential tools for grow
-								Sales your product</a></h3>
+							<h3 class="blog-title"><a href="blog-details.html?team=data-analytics">Data, Analytics & AI Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">For insights, personalization, and decision-making</p>
 							<div class="blog-btn">
-							<a href="blog-details.html">4 Comments<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							<a href="blog-details.html?team=data-analytics">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
 							</div>
 						</div>
 					</div>
@@ -312,17 +340,17 @@
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="single-blog-box">
 						<div class="blog-thumb">
-							<img src="images/inner-img/blog-thumb5.png" alt="thumb">
-							<img src="images/inner-img/blog-thumb5.png" alt="thumb">
+							<img src="images/demo-img/marketing-team.jpg" alt="thumb">
+							<img src="images/demo-img/marketing-team.jpg" alt="thumb">
 							<div class="blog-meta">
-								<a href="blog-details.html">18 AUG, 2025</a>
+								<a href="blog-details.html?team=marketing-growth">Marketing & Growth</a>
 							</div>
 						</div>
 						<div class="blog-content">
-							<h3 class="blog-title"><a href="blog-details.html">How to install chatgpt on
-								Your Browser</a></h3>
+							<h3 class="blog-title"><a href="blog-details.html?team=marketing-growth">Marketing & Growth Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Responsible for customer acquisition and branding</p>
 							<div class="blog-btn">
-							<a href="blog-details.html">5 Comments<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							<a href="blog-details.html?team=marketing-growth">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
 							</div>
 						</div>
 					</div>
@@ -330,17 +358,73 @@
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="single-blog-box">
 						<div class="blog-thumb">
-							<img src="images/inner-img/blog-thumb6.png" alt="thumb">
-							<img src="images/inner-img/blog-thumb6.png" alt="thumb">
+							<img src="images/demo-img/sale-customer.jpg" alt="thumb">
+							<img src="images/demo-img/sale-customer.jpg" alt="thumb">
 							<div class="blog-meta">
-								<a href="blog-details.html">20 AUG, 2025</a>
+								<a href="blog-details.html?team=sales-customer">Sales & Customer</a>
 							</div>
 						</div>
 						<div class="blog-content">
-							<h3 class="blog-title"><a href="blog-details.html">5 copywriting AI Tools for
-								Unique Blog</a></h3>
+							<h3 class="blog-title"><a href="blog-details.html?team=sales-customer">Sales & Customer Success Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">To support customers and generate revenue</p>
 							<div class="blog-btn">
-							<a href="blog-details.html">6 Comments<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							<a href="blog-details.html?team=sales-customer">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box">
+						<div class="blog-thumb">
+							<img src="images/demo-img/blog-thumb1.png" alt="thumb">
+							<img src="images/demo-img/blog-thumb1.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="blog-details.html?team=operations">Operations</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="blog-details.html?team=operations">Operations & Administration</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Keeps the company running smoothly</p>
+							<div class="blog-btn">
+							<a href="blog-details.html?team=operations">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box">
+						<div class="blog-thumb">
+							<img src="images/demo-img/security.png" alt="thumb">
+							<img src="images/demo-img/security.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="blog-details.html?team=security-compliance">Security & Compliance</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="blog-details.html?team=security-compliance">Security, Compliance & IT Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Essential for fintech, healthtech, AI, and enterprise software</p>
+							<div class="blog-btn">
+							<a href="blog-details.html?team=security-compliance">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box">
+						<div class="blog-thumb">
+							<img src="images/demo-img/blog-thumb3.png" alt="thumb">
+							<img src="images/demo-img/blog-thumb3.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="blog-details.html?team=specialized">Specialized Roles</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="blog-details.html?team=specialized">Specialized Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Fintech, Healthtech, Marketplace, and Logistics roles</p>
+							<div class="blog-btn">
+							<a href="blog-details.html?team=specialized">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
 							</div>
 						</div>
 					</div>
