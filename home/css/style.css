@@ -5408,8 +5408,8 @@ Section Title
   background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   padding: 10px;
-  bottom: 10px;
-  right: 30px;
+  bottom: -70px;
+  left: -90px;
 }
 .about-section-five .about-thumb-wrapper svg {
   width: 100%;
