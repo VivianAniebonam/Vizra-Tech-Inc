@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Intellio - AI Agency & Technology Saas HTML5 Template</title>
+<title>Contact Us - Vizra | AI-Powered Gig Platform & Tech Solutions</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -154,9 +154,7 @@
             <div class="mobile-menu overflow-hidden"></div>
             <div class="d-none d-lg-block">
                 <h5 class="text-white mb-20">About Us</h5>
-                <p class="sidebar__text">Monotonectally whiteboard proactive value with leading continually to
-				niche markets rather than fully tested result generate process-centric 
-				communities rather than systems maintaince.Monotonectally whiteboard proactive value with leading continually to niche markets rather than fully tested result</p>
+                <p class="sidebar__text">Vizra is pioneering the future of work with our AI-powered gig platform connecting job seekers with service opportunities in PSW, babysitting, and more. As a full-service tech company, we specialize in bringing startup visions to life through mobile apps, UI/UX design, websites, and web applications.</p>
             </div>
             <div class="sidebar__contact-info mt-30">
                 <h5 class="text-white mb-20">Contact Info</h5>
@@ -224,58 +222,72 @@
 	<main>
 
 	<!-- contact page title -->
-	<section class="contact-page-title" style="background-image: url(images/inner-img/blog-details.jpg);">
+	<section class="contact-page-title" style="background-image: url(images/inner-img/f.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
 		<div class="auto-container">
 			<div class="row">
 				<div class="title-content">
-					<h5 class="page-sub-title split_chars">Contact Us</h5>
-					<h1 class="page-title split-text">Contact Us</h1>
-					<p class="page-desc title-anim">Monotonectally whiteboard proactive with leading business to
-						niche markets rather than tested
+					<h5 class="page-sub-title split_chars">Get In Touch</h5>
+					<h1 class="page-title split-text">Let's Build Something Great Together</h1>
+					<p class="page-desc title-anim">Whether you need our AI-powered gig platform or expert tech development services, 
+						we're here to help bring your vision to life. Contact us today.
 					</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row align-items-stretch">
 				<div class="col-xl-5 col-lg-5">
-					<div class="contact-thumb">
-						<figure class="reveal"><img src="images/inner-img/contact-thumb.jpg" alt="contact thumb"></figure>
+					<div class="contact-thumb" style="height: 100%; display: flex; align-items: center;">
+						<figure class="reveal" style="width: 100%; height: 100%; display: flex; align-items: center;">
+							<img src="images/inner-img/h.png" alt="contact thumb" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+						</figure>
 					</div>
 				</div>
 				<div class="col-xl-7 col-lg-7">
 					<div class="contact-form-area">
 					<div class="sec-title">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Contact</h5>
+							<h5 class="sub-title split_chars">Let's Connect</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Leave A Reply</h1>
+							<h1 class="title split-text">Start Your Project With Vizra</h1>
 						</div>
 					</div>
-					<form action="https://formspree.io/f/myyleorq" method="POST">
+						<form id="contactForm" action="https://formspree.io/f/xqarlzzk" method="POST">
 						<div class="row">
 							<div class="col-lg-6">
-								<div class="contact-input-box">
-									<input type="text" name="Your Name" placeholder="Your Name" required="">
+								<div class="contact-input-box voice-input-wrapper">
+									<input type="text" id="nameInput" name="Your Name" placeholder="Your Name" required="">
+									<button type="button" class="voice-btn" onclick="startVoiceInput('nameInput')" title="Voice Input">
+										<i class="fa-solid fa-microphone"></i>
+									</button>
 								</div>
 							</div>					
 							<div class="col-lg-6">
-								<div class="contact-input-box">
-									<input type="text" name="Email" placeholder="Your E-Mail" required="">
+								<div class="contact-input-box voice-input-wrapper">
+									<input type="text" id="emailInput" name="Email" placeholder="Your E-Mail" required="">
+									<button type="button" class="voice-btn" onclick="startVoiceInput('emailInput')" title="Voice Input">
+										<i class="fa-solid fa-microphone"></i>
+									</button>
 								</div>
 							</div>							
 							<div class="col-lg-12">
-								<div class="contact-input-box">
-									<input type="text" name="Web Site" placeholder="Enter Website" required="">
+								<div class="contact-input-box voice-input-wrapper">
+									<input type="text" id="companyInput" name="Company" placeholder="Company Name (Optional)">
+									<button type="button" class="voice-btn" onclick="startVoiceInput('companyInput')" title="Voice Input">
+										<i class="fa-solid fa-microphone"></i>
+									</button>
 								</div>
 							</div>									
-							<div class="col-lg-12">
-								<div class="contact-input-box">
-									<textarea name="Message" id="Meassage" placeholder="Write a Comments..."></textarea>
-								</div>
+						<div class="col-lg-12">
+							<div class="contact-input-box voice-input-wrapper">
+								<textarea name="Message" id="messageInput" placeholder="Tell us about your project or how we can help you..."></textarea>
+								<button type="button" class="voice-btn voice-btn-textarea" onclick="startVoiceInput('messageInput')" title="Voice Input">
+									<i class="fa-solid fa-microphone"></i>
+								</button>
 							</div>
+						</div>
 							<div class="col-lg-12">
 								<div class="blog-details-submi-button">
-									<button type="submit">Submit Now<i class="fa-light fa-arrow-right"></i></button>
+									<button type="submit">Send Message<i class="fa-light fa-arrow-right"></i></button>
 								</div>
 							</div>
 						</div>
@@ -287,23 +299,33 @@
 	</section>
 	<!-- contact page title -->
 
+	<!-- Success message (AJAX) -->
+	<div id="formSuccessBackdrop" class="form-success-backdrop" style="display:none;"></div>
+	<div id="formSuccess" class="form-success" style="display:none;">
+		<div class="form-success-content">
+			<i class="fa-solid fa-circle-check" style="font-size:40px;color:#6766FF;margin-bottom:10px;"></i>
+			<p>Your message has been sent. Thank you!</p>
+			<button type="button" id="formSuccessOk" class="btn">Okay</button>
+		</div>
+	</div>
+
 	</main>
 
 
 
 	<!-- Main Footer -->
-	<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png);">
+	<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png); background-repeat: no-repeat;">
 		<div class="auto-container">
 			<div class="row">
 				<!--Footer Column-->
 				<div class="col-xl-4 col-lg-4 col-md-6">
-					<div class="footer-widget-content social">
-						<div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo" ></a></div>
-						<div class="footer-desc">Stay Update with our<br> Latest Offerings</div>
-						<div class="footer-btn">
-							<a href="index.html">Request Demo <i class="fa-light fa-arrow-right"></i></a>
-						</div>
+				<div class="footer-widget-content social">
+					<div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo" ></a></div>
+					<div class="footer-desc">Empowering startups with innovative tech solutions<br> and AI-powered gig connections</div>
+					<div class="footer-btn">
+						<a href="contact.html">Get Started <i class="fa-light fa-arrow-right"></i></a>
 					</div>
+				</div>
 				</div>
 
 				<!--Footer Column-->
@@ -336,17 +358,20 @@
 
 				<!--Footer Column-->
 				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-					<div class="footer-widget-content contact">
-						<h3 class="footer-title">Newsletter</h3>
-						<div class="footer-content">
-							<div class="newsletter">Sign Up our newsletter get<br>
-								Latest Updates</div>
-							<form action="https://formspree.io/f/myyleorq" method="POST">
+				<div class="footer-widget-content contact">
+					<h3 class="footer-title">Newsletter</h3>
+					<div class="footer-content">
+						<div class="newsletter">Subscribe to get the latest news on<br>
+							our gig platform and tech services</div>
+							<form id="newsletterForm" action="https://formspree.io/f/mrbnlzeo" method="POST">
 								<div class="subscribe-box">
-									<input type="text" name="Email" placeholder="Email" required="">
+									<input type="email" name="Email" placeholder="Email" required="">
 									<button type="submit"><span><i class="fa-solid fa-location-arrow"></i></span></button>
 								</div>
 							</form>
+							<div id="newsletterSuccess" class="newsletter-success" style="display:none;">
+								<i class="fa-solid fa-check-circle"></i> Subscribed!
+							</div>
 							<div class="footer-line1">
 								<img src="images/demo-img/footer-line1.png" alt="line">
 							</div>
@@ -367,7 +392,7 @@
 			<div class="footer-bottom">
 				<div class="auto-container">
 					<div class="row">
-						<div class="copyright-text">&copy; Copyright Reserved by Dream IT Solution
+						<div class="copyright-text">&copy; Copyright Reserved by Vizra Tech Inc.
 						</div>
 					</div>
 				</div>
@@ -399,6 +424,377 @@
 <script src="js/ScrollToPlugin.min.js"></script>
 <script src="js/SplitText.js"></script>
 <script src="js/main.js"></script>
+
+<!-- Voice Input Styles and Script -->
+<style>
+.voice-input-wrapper {
+	position: relative;
+}
+
+.voice-btn {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--theme-primary);
+	font-size: 20px;
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+.voice-btn:hover {
+	transform: translateY(-50%) scale(1.2);
+	color: #8b5cf6;
+}
+
+.voice-btn.listening {
+	background: linear-gradient(135deg, #ef4444, #dc2626);
+	animation: pulse 1.5s infinite;
+}
+
+.voice-btn.listening i {
+	animation: micPulse 0.5s infinite alternate;
+}
+
+.voice-btn-textarea {
+	top: 20px;
+	transform: translateY(0);
+}
+
+.voice-btn-textarea:hover {
+	transform: translateY(0) scale(1.1);
+}
+
+@keyframes pulse {
+	0%, 100% {
+		box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+	}
+	50% {
+		box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+	}
+}
+
+@keyframes micPulse {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
+
+.voice-feedback {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(20, 14, 44, 0.95);
+	padding: 30px 50px;
+	border-radius: 20px;
+	border: 2px solid var(--theme-primary);
+	color: white;
+	z-index: 9999;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	display: none;
+}
+
+.voice-feedback.active {
+	display: block;
+	animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -60%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.voice-feedback i {
+	font-size: 40px;
+	margin-bottom: 15px;
+	color: var(--theme-primary);
+	animation: micPulse 0.5s infinite alternate;
+}
+
+.voice-feedback p {
+	margin: 10px 0 0 0;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/* Form success dialog */
+.form-success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.98);
+  padding: 28px 36px;
+  border-radius: 12px;
+  border: 2px solid rgba(16,185,129,0.15);
+  color: #0f172a;
+  z-index: 10001;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.35);
+  text-align: center;
+  max-width: 360px;
+}
+.form-success .form-success-content p { margin: 6px 0 14px; font-weight:600; }
+.form-success .btn { background:#10b981; color:#fff; border:none; padding:8px 18px; border-radius:8px; cursor:pointer; }
+
+/* Glassy backdrop for success dialog */
+.form-success-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45); /* dark translucent */
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  z-index: 10000;
+  display: none;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+.form-success-backdrop.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Make the dialog itself glassy */
+.form-success {
+  background: rgba(255, 255, 255, 0.06); /* translucent */
+  color: #f8fafc; /* light text on dark blurred background */
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.55);
+}
+.form-success .form-success-content p { color: #e6f0ef; }
+.form-success .btn { background:#6766FF; color:#fff; border:none; padding:8px 18px; border-radius:8px; cursor:pointer; }
+
+/* Newsletter success message */
+.newsletter-success {
+  color: #10b981;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.newsletter-success i {
+  font-size: 16px;
+}
+
+</style>
+
+<script>
+let recognition;
+let currentInputId;
+
+function initSpeechRecognition() {
+	if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+		const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+		recognition = new SpeechRecognition();
+		recognition.continuous = false;
+		recognition.interimResults = false;
+		recognition.lang = 'en-US';
+
+		recognition.onresult = function(event) {
+			const transcript = event.results[0][0].transcript;
+			const input = document.getElementById(currentInputId);
+			if (input) {
+				if (input.tagName === 'TEXTAREA') {
+					input.value += (input.value ? ' ' : '') + transcript;
+				} else {
+					input.value = transcript;
+				}
+			}
+			hideFeedback();
+		};
+
+		recognition.onerror = function(event) {
+			console.error('Speech recognition error:', event.error);
+			hideFeedback();
+			alert('Voice input error: ' + event.error + '. Please try again.');
+		};
+
+		recognition.onend = function() {
+			hideFeedback();
+		};
+	}
+}
+
+function startVoiceInput(inputId) {
+	if (!recognition) {
+		initSpeechRecognition();
+	}
+
+	if (!recognition) {
+		alert('Voice input is not supported in your browser. Please try Chrome, Edge, or Safari.');
+		return;
+	}
+
+	currentInputId = inputId;
+	showFeedback();
+
+	try {
+		recognition.start();
+	} catch (e) {
+		console.error('Recognition start error:', e);
+		hideFeedback();
+	}
+}
+
+function showFeedback() {
+	let feedback = document.getElementById('voiceFeedback');
+	if (!feedback) {
+		feedback = document.createElement('div');
+		feedback.id = 'voiceFeedback';
+		feedback.className = 'voice-feedback';
+		feedback.innerHTML = '<i class="fa-solid fa-microphone"></i><p>Listening... Speak now</p>';
+		document.body.appendChild(feedback);
+	}
+	feedback.classList.add('active');
+
+	// Add listening class to button
+	const buttons = document.querySelectorAll('.voice-btn');
+	buttons.forEach(btn => {
+		if (btn.onclick.toString().includes(currentInputId)) {
+			btn.classList.add('listening');
+		}
+	});
+}
+
+function hideFeedback() {
+	const feedback = document.getElementById('voiceFeedback');
+	if (feedback) {
+		feedback.classList.remove('active');
+	}
+
+	// Remove listening class from all buttons
+	const buttons = document.querySelectorAll('.voice-btn');
+	buttons.forEach(btn => btn.classList.remove('listening'));
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+	initSpeechRecognition();
+});
+
+// AJAX submit for Formspree - stays on page and shows a success dialog
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  const successDialog = document.getElementById('formSuccess');
+  const successBackdrop = document.getElementById('formSuccessBackdrop');
+  const okBtn = document.getElementById('formSuccessOk');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      });
+
+      if (res.ok) {
+        // show inline success dialog + glassy backdrop
+        if (successBackdrop) {
+          successBackdrop.style.display = 'block';
+          // small timeout to allow CSS transition
+          requestAnimationFrame(() => successBackdrop.classList.add('active'));
+        }
+        if (successDialog) successDialog.style.display = 'block';
+      } else {
+        let errText = 'Submission failed. Please try again.';
+        try { const json = await res.json(); if (json && json.error) errText = json.error; } catch(e){}
+        alert(errText);
+      }
+    } catch (err) {
+      console.error('Form submit error:', err);
+      alert('Submission error. Please check your connection and try again.');
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+
+  function hideSuccess() {
+    if (successDialog) successDialog.style.display = 'none';
+    if (successBackdrop) {
+      successBackdrop.classList.remove('active');
+      // wait for fade-out then hide
+      setTimeout(() => { if (successBackdrop) successBackdrop.style.display = 'none'; }, 220);
+    }
+    if (form) form.reset();
+  }
+
+  if (okBtn) {
+    okBtn.addEventListener('click', hideSuccess);
+  }
+
+  // Optional: close when clicking backdrop
+  if (successBackdrop) {
+    successBackdrop.addEventListener('click', hideSuccess);
+  }
+});
+
+// Newsletter form AJAX submission
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletterForm = document.getElementById('newsletterForm');
+  if (!newsletterForm) return;
+  const newsletterSuccess = document.getElementById('newsletterSuccess');
+
+  newsletterForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    const data = new FormData(newsletterForm);
+
+    try {
+      const res = await fetch(newsletterForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      });
+
+      if (res.ok) {
+        // Show success message and reset form
+        if (newsletterSuccess) {
+          newsletterSuccess.style.display = 'flex';
+          setTimeout(() => { newsletterSuccess.style.display = 'none'; }, 3000);
+        }
+        newsletterForm.reset();
+      } else {
+        alert('Subscription failed. Please try again.');
+      }
+    } catch (err) {
+      console.error('Newsletter submit error:', err);
+      alert('Subscription error. Please check your connection.');
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+});
+</script>
 </div>
 </body>
 </html>
