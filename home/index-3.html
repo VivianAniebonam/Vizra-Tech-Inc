@@ -225,7 +225,7 @@
 
 	<!-- Banner Section three-->
 
-	<div class="banner-section-three" style="background-image: url(images/inner-img/f.jpg);">
+	<div class="banner-section-three" style="background-image: url(images/demo-img/banner-bg3.png);">
 		<div class="auto-container">
 			<div class="row">
 				<div class="col-xxl-6 col-xl-8 col-lg-8">
@@ -243,36 +243,6 @@
 							<p class="text-anime-3">Monotonectally whiteboard proactive with leading continually 
 							niche markets rather than fully tested</p>
 							<a href="about.html">Get Started <i class="fa-light fa-arrow-right"></i></a>
-
-							<!-- <div class="banner-review-box">
-								<div class="reviews-image">
-									<img src="images/demo-img/google.png" alt="google">
-								</div>
-								<div class="review-content">
-									<h4>Reviews (4.9)</h4>
-									<ul class="review-ratting">
-										<li><i class="fa-solid fa-star"></i></li>
-										<li><i class="fa-solid fa-star"></i></li>
-										<li><i class="fa-solid fa-star"></i></li>
-										<li><i class="fa-solid fa-star"></i></li>
-										<li><i class="fa-solid fa-star"></i></li>
-									</ul>
-								</div>
-							</div> -->
-							<!-- <div class="banner-shape1">
-								<img src="images/demo-img/banner-shape41.png" alt="shape">
-							</div> -->
-							<!-- <div class="banner-shape2">
-								<img src="images/demo-img/banner-shape42.png" alt="shape">
-							</div> -->
-							<!-- connector line between left icon and astronaut -->
-							<div class="banner-linear-line"></div>
-							<div class="banner-shape3">
-								<img src="images/demo-img/banner-shape43.png" alt="shape">
-							</div>
-							<div class="banner-shape4">
-								<img src="images/demo-img/banner-shape44.png" alt="shape">
-							</div>
 						</div>
 					</div>
 				</div>
@@ -1414,38 +1384,6 @@
 <script src="js/text-pullagin.js"></script>
 <script src="js/SplitText.js"></script>
 <script src="js/main.js"></script>
-<script>
-	(function(){
-		function positionConnector(){
-			var leftEl = document.querySelector('.reviews-image img') || document.querySelector('.reviews-image');
-			var astroEl = document.querySelector('.banner-shape4');
-			var line = document.querySelector('.banner-linear-line');
-			var container = document.querySelector('.banner-content-wrap');
-			if(!leftEl || !astroEl || !line || !container) return;
-			var leftRect = leftEl.getBoundingClientRect();
-			var astroRect = astroEl.getBoundingClientRect();
-			var containerRect = container.getBoundingClientRect();
-			var leftMidX = leftRect.left + leftRect.width/2 - containerRect.left;
-			var rightMidX = astroRect.left + astroRect.width/2 - containerRect.left;
-			var topMidY = (leftRect.top + leftRect.height/2 + astroRect.top + astroRect.height/2)/2 - containerRect.top;
-			var startX = Math.min(leftMidX, rightMidX);
-			var width = Math.max(0, Math.abs(rightMidX - leftMidX));
-			// Apply with a small padding so line doesn't touch icons directly
-			var pad = 8;
-			startX = startX + pad;
-			width = Math.max(0, width - pad*2);
-			line.style.left = startX + 'px';
-			line.style.top = topMidY + 'px';
-			line.style.width = width + 'px';
-			line.style.display = (width > 6) ? 'block' : 'none';
-		}
-		// Run after load and on resize
-		window.addEventListener('load', function(){ setTimeout(positionConnector,200); });
-		window.addEventListener('resize', function(){ setTimeout(positionConnector,80); });
-		// Also run when images finish loading (in case sizes change)
-		document.addEventListener('readystatechange', function(){ if(document.readyState === 'complete'){ setTimeout(positionConnector,200); }});
-	})();
-</script>
 </div>
 </body>
 </html>
