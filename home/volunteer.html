@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Volunteer Roles - Team Details</title>
+<title>Volunteers - Join Our Teams</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -11,6 +11,45 @@
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.blog-page-title .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog-page-title .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+.single-blog-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.blog-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.blog-content p {
+    flex: 1;
+    min-height: 60px;
+}
+.single-blog-box .blog-thumb {
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+}
+.single-blog-box .blog-thumb img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+</style>
 </head>
 
 <body>
@@ -35,36 +74,35 @@
 				</div>
 				<div class="col-lg-7">
 					<div class="header-menu">
-					<ul class="nav_scroll">
-						<li><a href="#">Home <i class="fa-light fa-angle-down"></i></a>
-							<ul class="sub_menu">
-								<li><a href="index.html">Ai Saas</a></li>
-								<li><a href="index-2.html">Ai Startup</a></li>
-								<li><a href="index-3.html">Ai Agency</a></li>
-								<li><a href="index-4.html">Ai Chatbot</a></li>
-							</ul>
-						</li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="#">pages <i class="fa-light fa-angle-down"></i></a>
-							<ul class="sub_menu">
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="feature.html">Feature</a></li>
-								<li><a href="integration.html">integration</a></li>
-								<li><a href="service.html">Service</a></li>
-								<li><a href="service-details.html">Service Details</a></li>
-								<li><a href="team.html">Team</a></li>
-								<li><a href="team-details.html">Team Details</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-								<li><a href="faq.html">Faq</a></li>
-								<li><a href="contact.html">Contact</a></li>
-
-							</ul>
-						</li>
-						<li><a href="service.html">Services</a>
-						</li>
-						<li><a href="blog.html">Volunteers</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>				
+						<ul class="nav_scroll">
+							<li><a href="#">Home <i class="fa-light fa-angle-down"></i></a>
+								<ul class="sub_menu">
+									<li><a href="index.html">Ai Saas</a></li>
+									<li><a href="index-2.html">Ai Startup</a></li>
+									<li><a href="index-3.html">Ai Agency</a></li>
+									<li><a href="index-4.html">Ai Chatbot</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="#">pages <i class="fa-light fa-angle-down"></i></a>
+								<ul class="sub_menu">
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="feature.html">Feature</a></li>
+									<li><a href="integration.html">integration</a></li>
+									<li><a href="service.html">Service</a></li>
+									<li><a href="service-details.html">Service Details</a></li>
+									<li><a href="team.html">Team</a></li>
+									<li><a href="team-details.html">Team Details</a></li>
+									<li><a href="pricing.html">Pricing</a></li>
+									<li><a href="faq.html">Faq</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</li>
+							<li><a href="service.html">Services</a>
+							</li>
+							<li><a href="volunteer.html">Volunteers</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>				
 					</div>
 				</div>
 				<div class="col-lg-3">
@@ -125,7 +163,7 @@
 					</li>
 					<li><a href="service.html">Services</a>
 					</li>
-					<li><a href="blog.html">Volunteers</a></li>
+					<li><a href="volunteer.html">Volunteers</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
@@ -213,48 +251,180 @@
 
 	<main>
 
-	<!-- blog details page title -->
-	<section class="blog-details-page-title" style="background-image: url(images/demo-img/service-background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+	<!--blog page title -->
+	<section class="blog-page-title" style="background-image: url(images/demo-img/service-background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
 		<div class="auto-container">
 			<div class="row">
 				<div class="title-content">
-					<h5 class="page-sub-title split_chars">Volunteer Roles</h5>
-					<h1 class="page-title split-text" id="team-title">Team Roles</h1>
-					<p class="page-desc title-anim" id="team-description">Explore available volunteer positions and find the perfect role for you
+					<h5 class="page-sub-title split_chars">Volunteer Opportunities</h5>
+					<h1 class="page-title split-text">Join Our Teams</h1>
+					<p class="page-desc title-anim">Explore volunteer roles across different teams and find the perfect opportunity to contribute to our mission
 					</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="blog-details-area">
-					<div class="auto-container">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="blog-details-content" style="padding: 40px 50px 20px; width: 900px; max-width: 100%; margin-top: 30px;">
-									<div class="meta-blog">
-										<span class="mate-text" id="team-name">Volunteer Opportunities</span>
-										<span id="team-category">Join Our Team</span>
-									</div>
-									<h4 class="blog-details-title" id="team-heading" style="margin-bottom: 30px;">Available Roles</h4>
-
-									<p class="blog-details-desc" id="team-intro" style="margin-bottom: 30px;">Browse through the available volunteer roles below and find the position that matches your skills and interests.</p>
-
-									<div class="blog-details-list-item" id="roles-list" style="margin-top: 20px;">
-										<ul id="roles-container" style="font-size: 15px;">
-										</ul>
-									</div>
-
-									<div class="blog-details-contact" style="margin-top: 50px;">
-										<div class="blog-details-contact-title">
-											<h4>Register as a Volunteer</h4>
-										</div>
-										<div style="text-align: center; padding: 30px 0;">
-											<p style="color: rgba(255,255,255,0.8); margin-bottom: 30px; font-size: 18px;">Ready to join our team? Fill out the registration form to get started.</p>
-											<a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" style="display: inline-block; background: linear-gradient(180deg, #0B0523 0%, #211B39 100%); border: 1.5px solid var(--theme-primary); padding: 15px 40px; border-radius: 10px; color: var(--theme-color-white); font-weight: 600; font-size: 18px; text-decoration: none; transition: 0.5s;">
-												Register Now <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
-											</a>
-										</div>
-									</div>
-								</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box">
+						<div class="blog-thumb">
+							<img src="images/demo-img/project-manager.png" alt="thumb">
+							<img src="images/demo-img/project-manager.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=product-design" onclick="event.stopPropagation();">Product & Design</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=product-design" onclick="event.stopPropagation();">Product & Design Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Responsible for understanding user needs and shaping the app</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=product-design" onclick="event.stopPropagation();">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/software-engineer.jpg" alt="thumb">
+							<img src="images/demo-img/software-engineer.jpg" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=software-engineering">Software Engineering</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=software-engineering">Software Engineering Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">These roles build and maintain the application</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=software-engineering">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/qa-testing.png" alt="thumb">
+							<img src="images/demo-img/qa-testing.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=qa-testing">QA & Testing</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=qa-testing">QA & Testing Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Ensures the app is stable, fast, and bug-free</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=qa-testing">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/ai-role.png" alt="thumb">
+							<img src="images/demo-img/ai-role.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=data-analytics">Data & Analytics</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=data-analytics">Data, Analytics & AI Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">For insights, personalization, and decision-making</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=data-analytics">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/marketing-team.jpg" alt="thumb">
+							<img src="images/demo-img/marketing-team.jpg" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=marketing-growth">Marketing & Growth</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=marketing-growth">Marketing & Growth Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Responsible for customer acquisition and branding</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=marketing-growth">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/sale-customer.jpg" alt="thumb">
+							<img src="images/demo-img/sale-customer.jpg" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=sales-customer">Sales & Customer</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=sales-customer">Sales & Customer Success Team</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">To support customers and generate revenue</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=sales-customer">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/blog-thumb1.png" alt="thumb">
+							<img src="images/demo-img/blog-thumb1.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=operations">Operations</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=operations">Operations & Administration</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Keeps the company running smoothly</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=operations">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/security.png" alt="thumb">
+							<img src="images/demo-img/security.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=security-compliance">Security & Compliance</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=security-compliance">Security, Compliance & IT Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Essential for fintech, healthtech, AI, and enterprise software</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=security-compliance">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="single-blog-box" style="cursor: pointer;" onclick="(function(e){var team=e.closest('.single-blog-box').querySelector('a[href*="team="]');if(team){window.location.href=team.href;}})(event)">
+						<div class="blog-thumb">
+							<img src="images/demo-img/blog-thumb3.png" alt="thumb">
+							<img src="images/demo-img/blog-thumb3.png" alt="thumb">
+							<div class="blog-meta">
+								<a href="volunteer-details.html?team=specialized">Specialized Roles</a>
+							</div>
+						</div>
+						<div class="blog-content">
+							<h3 class="blog-title"><a href="volunteer-details.html?team=specialized">Specialized Roles</a></h3>
+							<p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Fintech, Healthtech, Marketplace, and Logistics roles</p>
+							<div class="blog-btn">
+							<a href="volunteer-details.html?team=specialized">View More<span><i class="fa-solid fa-arrow-right"></i></span></a>
 							</div>
 						</div>
 					</div>
@@ -262,13 +432,9 @@
 			</div>
 		</div>
 	</section>
-	<!-- blog details page title -->
+	<!-- blog page title -->
 
-
-
-
-
-
+	
 	</main>
 
 
@@ -296,7 +462,7 @@
 							<li><a href="feature.html">Features</a></li>
 							<li><a href="#">Checkout</a></li>
 							<li><a href="pricing.html">Pricing Plan</a></li>
-							<li><a href="blog.html">Newsletter</a></li>
+							<li><a href="volunteer.html">Newsletter</a></li>
 							<li><a href="faq.html">Faq’s</a></li>
 						</ul>
 					</div>
@@ -382,174 +548,20 @@
 <script src="js/SplitText.js"></script>
 <script src="js/main.js"></script>
 <script>
-(function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const team = urlParams.get('team') || 'product-design';
-    
-    const teamsData = {
-        'product-design': {
-            title: 'Product & Design Team',
-            description: 'Responsible for understanding user needs and shaping the app',
-            category: 'Product & Design',
-            roles: [
-                'Product Manager',
-                'Technical Product Manager',
-                'Product Owner',
-                'UI/UX Designer',
-                'UX Researcher',
-                'Interaction Designer',
-                'Brand Designer',
-                'Content Strategist / UX Writer',
-                'Product Analyst'
-            ]
-        },
-        'software-engineering': {
-            title: 'Software Engineering Team',
-            description: 'These roles build and maintain the application',
-            category: 'Engineering',
-            roles: [
-                'Frontend Engineer (React, Next.js, Vue, etc.)',
-                'Mobile Engineer (iOS/Android/Flutter/React Native)',
-                'Backend Engineer (Node.js, Python, Go, Java)',
-                'API Engineer',
-                'Database Engineer',
-                'Full-Stack Engineer (combination of frontend + backend)',
-                'DevOps Engineer',
-                'Cloud Architect (AWS/GCP/Azure)',
-                'Site Reliability Engineer (SRE)',
-                'Infrastructure Engineer',
-                'Platform Engineer',
-                'AI/ML Engineer',
-                'Data Engineer',
-                'Data Scientist',
-                'Security Engineer',
-                'Blockchain Engineer (if relevant)',
-                'QA Engineer / Test Automation Engineer',
-                'Performance Engineer'
-            ]
-        },
-        'qa-testing': {
-            title: 'QA & Testing Roles',
-            description: 'Ensures the app is stable, fast, and bug-free',
-            category: 'Quality Assurance',
-            roles: [
-                'QA Tester',
-                'Automation Engineer',
-                'QA Lead',
-                'Performance Tester',
-                'Security Tester / Penetration Tester'
-            ]
-        },
-        'data-analytics': {
-            title: 'Data, Analytics & AI Roles',
-            description: 'For insights, personalization, and decision-making',
-            category: 'Data & Analytics',
-            roles: [
-                'Data Analyst',
-                'Data Engineer',
-                'Data Scientist',
-                'Machine Learning Engineer',
-                'BI (Business Intelligence) Engineer',
-                'Analytics Engineer'
-            ]
-        },
-        'marketing-growth': {
-            title: 'Marketing & Growth Team',
-            description: 'Responsible for customer acquisition and branding',
-            category: 'Marketing',
-            roles: [
-                'Marketing Manager',
-                'Growth Hacker',
-                'SEO Specialist',
-                'Content Creator / Copywriter',
-                'Social Media Manager',
-                'Paid Ads Specialist',
-                'Email Marketing Specialist',
-                'Community Manager',
-                'Product Marketing Manager',
-                'Brand Manager'
-            ]
-        },
-        'sales-customer': {
-            title: 'Sales & Customer Success Team',
-            description: 'To support customers and generate revenue',
-            category: 'Sales & Support',
-            roles: [
-                'Sales Development Representative (SDR)',
-                'Account Executive',
-                'Sales Manager',
-                'Partnerships / Business Development Manager',
-                'Customer Success Manager',
-                'Customer Support Agent',
-                'Technical Support Engineer',
-                'Onboarding Specialist'
-            ]
-        },
-        'operations': {
-            title: 'Operations & Administration',
-            description: 'Keeps the company running smoothly',
-            category: 'Operations',
-            roles: [
-                'Office/Operations Manager',
-                'HR Manager / People Ops',
-                'Recruiter / Talent Acquisition',
-                'Finance Manager / Accountant',
-                'Legal & Compliance Officer',
-                'Administration Assistant'
-            ]
-        },
-        'security-compliance': {
-            title: 'Security, Compliance & IT Roles',
-            description: 'Essential for fintech, healthtech, AI, and enterprise software',
-            category: 'Security & IT',
-            roles: [
-                'IT Administrator',
-                'Cybersecurity Engineer',
-                'Compliance Manager (e.g., GDPR, HIPAA)',
-                'Risk Management Officer',
-                'Fraud Analyst (Fintech)'
-            ]
-        },
-        'specialized': {
-            title: 'Specialized Roles',
-            description: 'Fintech, Healthtech, Marketplace, and Logistics roles',
-            category: 'Specialized',
-            roles: [
-                'Payment Integration Engineer',
-                'Fraud & Risk Analyst',
-                'Compliance Officer (KYC/AML)',
-                'Financial Operations Manager',
-                'Medical Advisor',
-                'Clinical Operations Specialist',
-                'Compliance Specialist (HIPAA)',
-                'Vendor Manager',
-                'Fleet/Logistics Manager',
-                'Dispatch Operator'
-            ]
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.single-blog-box');
+    cards.forEach(function(card) {
+        const link = card.querySelector('a[href*="volunteer-details.html"]');
+        if (link) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'A') {
+                    window.location.href = link.href;
+                }
+            });
         }
-    };
-    
-    const teamData = teamsData[team] || teamsData['product-design'];
-    
-    document.getElementById('team-title').textContent = teamData.title;
-    document.getElementById('team-description').textContent = teamData.description;
-    document.getElementById('team-name').textContent = teamData.title;
-    document.getElementById('team-category').textContent = teamData.category;
-    document.getElementById('team-heading').textContent = 'Available Roles';
-    document.getElementById('team-intro').textContent = `Explore the available volunteer positions in the ${teamData.title}.`;
-    
-    const rolesContainer = document.getElementById('roles-container');
-    rolesContainer.innerHTML = '';
-    
-    teamData.roles.forEach(function(role) {
-        const li = document.createElement('li');
-        li.style.marginBottom = '8px';
-        li.style.fontSize = '15px';
-        li.style.lineHeight = '1.6';
-        li.innerHTML = '<img src="images/demo-img/check.png" alt="" style="width: 16px; height: 16px; margin-right: 8px;">' + role;
-        rolesContainer.appendChild(li);
     });
-})();
+});
 </script>
 </div>
 </body>
