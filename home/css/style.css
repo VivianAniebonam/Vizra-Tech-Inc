@@ -2371,6 +2371,14 @@ Section Title
   overflow: hidden;
   transition: all 300ms ease;
 }
+
+/* Overrides for index-3 banner shapes: push shapes further down visually */
+.banner-section-three .banner-content-wrap .banner-shape3 {
+  bottom: -220px; /* make shape3 appear much lower */
+}
+.banner-section-three .banner-content-wrap .banner-shape4 {
+  bottom: -240px; /* make shape4 appear lower and off to the side */
+}
 .intellio-button a::before {
   position: absolute;
   content: "";
@@ -5245,13 +5253,44 @@ Section Title
 }
 .about-section-four .about-effient-shape1 {
   position: absolute;
-  right: -40px;
+  right: -140px; /* move astronaut further right */
   top: -300px;
+  animation: astronaut-slide 4s ease-in-out infinite;
 }
 .about-section-four .about-effient-shape2 {
   position: absolute;
   left: -20px;
   bottom: -70px;
+}
+
+/* horizontal connector line between left icon and astronaut for banner-section-three */
+.banner-section-three .banner-content-wrap .banner-linear-line {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 45%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(103,102,255,0.15), rgba(103,102,255,0.45), rgba(103,102,255,0.15));
+  z-index: 3;
+  border-radius: 2px;
+}
+
+/* make the astronaut (shape4) gently move right and left */
+@keyframes astronaut-slide {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(0); }
+}
+
+/* ensure the connector and astronaut do not overlap content on small screens */
+@media (max-width: 767.98px) {
+  .banner-section-three .banner-content-wrap .banner-linear-line {
+    display: none;
+  }
+  .banner-section-three .banner-content-wrap .banner-shape4 {
+    right: -40px;
+    animation: none;
+  }
 }
 
 .about-section-five {
