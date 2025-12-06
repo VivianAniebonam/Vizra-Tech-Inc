@@ -434,25 +434,25 @@
 							<div class="section-sub-title">
 								<h5 class="sub-title">Vizra Ongoing Project</h5>
 							</div>
-							<h2 class="hero-title">AI-Powered Gig Marketplace</h2>
-							<p class="hero-lead">Our revolutionary AI Gig App transforms how job seekers and service providers find each other. Using advanced AI and ML, we match skills to opportunities faster and with greater accuracy — helping businesses scale while creating reliable work for vetted professionals.</p>
+							<h2 class="hero-title fade-up delay-1">AI-Powered Gig Marketplace</h2>
+							<p class="hero-lead fade-up delay-2">Our revolutionary AI Gig App transforms how job seekers and service providers find each other. Using advanced AI and ML, we match skills to opportunities faster and with greater accuracy — helping businesses scale while creating reliable work for vetted professionals.</p>
 
 							<div class="project-features-grid">
-								<div class="feat">
+								<div class="feat fade-up delay-3">
 									<div class="icon"><i class="fa-solid fa-brain"></i></div>
 									<div class="text">
 										<h4>Smart AI Matching</h4>
 										<p>Algorithms that surface best-fit talent instantly.</p>
 									</div>
 								</div>
-								<div class="feat">
+								<div class="feat fade-up delay-4">
 									<div class="icon"><i class="fa-solid fa-link"></i></div>
 									<div class="text">
 										<h4>Seamless Connection</h4>
 										<p>Direct, secure engagement between clients and workers.</p>
 									</div>
 								</div>
-								<div class="feat">
+								<div class="feat fade-up delay-5">
 									<div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
 									<div class="text">
 										<h4>Secure Platform</h4>
@@ -462,7 +462,7 @@
 							</div>
 
 							<div class="hero-cta">
-								<a href="#" class="cta-btn primary">View More Details <i class="fa-light fa-arrow-right"></i></a>
+								<a href="#" class="cta-btn primary vizra-btn">Learn More <i class="fa-light fa-arrow-right"></i></a>
 								<label class="download-label">
 									<input type="checkbox" class="download-input" />
 									<span class="download-circle">
@@ -479,20 +479,22 @@
 					</div>
 
 					<div class="col-lg-6">
-						<div class="project-visual-card">
-							<img src="images/inner-img/PRO.png" alt="AI Gig Project">
+						<div class="project-visual-card fade-up delay-4">
+							<div class="visual-frame">
+								<img src="images/inner-img/PRO.png" alt="AI Gig Project">
+							</div>
 							<div class="project-stats-grid">
 								<div class="stat">
-									<div class="num">60<span>%</span></div>
+									<div class="num" data-target="60">0<span>%</span></div>
 									<div class="label">AI Utilization</div>
 								</div>
 								<div class="stat">
-									<div class="num">1200<span>+</span></div>
+									<div class="num" data-target="1200">0<span>+</span></div>
 									<div class="label">Vetted Workers</div>
 								</div>
 								<div class="stat">
-									<div class="num">95<span>%</span></div>
-									<div class="label">Match Rate</div>
+									<div class="num" data-target="95">0<span>%</span></div>
+									<div class="label gold-text">Match Rate</div>
 								</div>
 							</div>
 						</div>
@@ -525,9 +527,9 @@
 								<span class="status-badge in-development">In Development</span>
 							</div>
 						</div>
-						<div class="project-card-footer">
-							<a href="#">Learn More <i class="fa-light fa-arrow-right"></i></a>
-						</div>
+								<div class="project-card-footer">
+									<a href="#" class="vizra-btn">Learn More <i class="fa-light fa-arrow-right"></i></a>
+								</div>
 						<div class="about-effiect">
 							<img src="images/demo-img/workflow-box-eff1.png" alt="eff">
 						</div>
@@ -549,9 +551,9 @@
 								<span class="status-badge planning">Planning Phase</span>
 							</div>
 						</div>
-						<div class="project-card-footer">
-							<a href="#">Learn More <i class="fa-light fa-arrow-right"></i></a>
-						</div>
+								<div class="project-card-footer">
+									<a href="#" class="vizra-btn">Learn More <i class="fa-light fa-arrow-right"></i></a>
+								</div>
 						<div class="about-effiect">
 							<img src="images/demo-img/workflow-box-eff1.png" alt="eff">
 						</div>
@@ -573,9 +575,9 @@
 								<span class="status-badge coming-soon">Coming Soon</span>
 							</div>
 						</div>
-						<div class="project-card-footer">
-							<a href="#">Learn More <i class="fa-light fa-arrow-right"></i></a>
-						</div>
+								<div class="project-card-footer">
+									<a href="#" class="vizra-btn">Learn More <i class="fa-light fa-arrow-right"></i></a>
+								</div>
 						<div class="about-effiect">
 							<img src="images/demo-img/workflow-box-eff1.png" alt="eff">
 						</div>
@@ -1406,6 +1408,65 @@
 <script src="js/ScrollToPlugin.min.js"></script>
 <script src="js/SplitText.js"></script>
 <script src="js/main.js"></script>
+
+<!-- Vizra Projects: entrance trigger and counters -->
+<script>
+	(function(){
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		// Intersection Observer to reveal .fade-up elements
+		const fadeItems = document.querySelectorAll('.fade-up');
+		if ('IntersectionObserver' in window) {
+			const obs = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('show');
+						observer.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.12 });
+			fadeItems.forEach(el => obs.observe(el));
+		} else {
+			fadeItems.forEach(el => el.classList.add('show'));
+		}
+
+		// Animated counters for stats
+		const counters = document.querySelectorAll('.project-stats-grid .num');
+		function animateCount(el, target, duration){
+			const start = 0; let startTime = null;
+			const suffix = el.querySelector('span') ? el.querySelector('span').textContent : '';
+			function step(timestamp){
+				if (!startTime) startTime = timestamp;
+				const progress = Math.min((timestamp - startTime) / duration, 1);
+				const value = Math.floor(progress * (target - start) + start);
+				el.firstChild && (el.firstChild.nodeValue = value);
+				if (progress < 1) window.requestAnimationFrame(step);
+				else el.firstChild && (el.firstChild.nodeValue = target);
+			}
+			window.requestAnimationFrame(step);
+		}
+
+		if ('IntersectionObserver' in window && counters.length) {
+			const statsObs = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const el = entry.target.querySelector('.num');
+						const target = parseInt(el.getAttribute('data-target')) || 0;
+						animateCount(el, target, 1400);
+						observer.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.3 });
+			document.querySelectorAll('.project-stats-grid .stat').forEach(s => statsObs.observe(s));
+		} else {
+			// Fallback: set final values
+			counters.forEach(el => {
+				const target = parseInt(el.getAttribute('data-target')) || 0;
+				el.firstChild && (el.firstChild.nodeValue = target);
+			});
+		}
+	})();
+</script>
 
 </div>
 </body>

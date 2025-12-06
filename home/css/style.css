@@ -5547,6 +5547,110 @@ Section Title
   left: 0;
 }
 
+/* Reusable vizra button: same shape + hover reveal as About section */
+.vizra-btn {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--title-font);
+  color: var(--theme-color-white);
+  background: var(--theme-primary);
+  border-radius: 40px;
+  padding: 12px 40px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+}
+.vizra-btn i {
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+.vizra-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -15%;
+  right: 0;
+  width: 0;
+  height: 106%;
+  background: var(--theme-color-white);
+  transform: skew(45deg);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+.vizra-btn:hover {
+  color: var(--theme-primary);
+}
+.vizra-btn:hover::before {
+  width: 100%;
+  transform: skew(0deg);
+  left: 0;
+}
+.vizra-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Vizra Projects — redesign: ambient gradient, glass cards, framed visual, entrance animations */
+.project-hero { position: relative; z-index: 1; }
+.project-hero-content { position: relative; padding-right: 30px; }
+.project-hero-content::before {
+  content: "";
+  position: absolute;
+  top: -6%;
+  left: -10%;
+  width: 520px;
+  height: 520px;
+  background: linear-gradient(135deg, rgba(103,102,255,0.16) 0%, rgba(155,123,255,0.1) 40%, transparent 70%);
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-title { font-size: 44px; line-height: 1.05; margin-bottom: 18px; }
+.hero-lead { color: rgba(255,255,255,0.72); margin-bottom: 28px; max-width: 640px; }
+
+.project-features-grid { display: grid; gap: 18px; }
+.project-features-grid .feat { display: flex; gap: 18px; align-items: center; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; padding: 16px 18px; transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms; }
+.project-features-grid .feat .icon { width:56px; height:56px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; background: linear-gradient(180deg,#7a75ff,#615bff); font-size:20px; }
+.project-features-grid .feat:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(6,6,20,0.6); }
+
+.project-visual-card { border-radius:20px; padding:20px; background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.04); box-shadow: 0 26px 60px rgba(6,6,12,0.55); }
+.project-visual-card .visual-frame { background: #fff; border-radius:12px; padding:14px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.5); }
+.project-visual-card .visual-frame img { width:100%; height:auto; display:block; border-radius:8px; }
+
+.project-stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap:14px; margin-top:18px; }
+.project-stats-grid .stat { background: rgba(255,255,255,0.02); padding:16px; border-radius:12px; text-align:center; }
+.project-stats-grid .stat .num { font-size:26px; font-weight:700; color:#a99aff; }
+.project-stats-grid .stat .label { font-size:12px; color:#FF8C00; margin-top:8px; }
+
+/* Entrance animations (triggered when .show is added) */
+@keyframes fadeUp { from { opacity:0; transform: translateY(12px); } to { opacity:1; transform:none; } }
+.fade-up { opacity:0; transform: translateY(12px); }
+.fade-up.show { animation-name: fadeUp; animation-duration: 640ms; animation-fill-mode: both; animation-timing-function: cubic-bezier(.2,.9,.2,1); }
+.delay-1.show { animation-delay: 0.12s; }
+.delay-2.show { animation-delay: 0.24s; }
+.delay-3.show { animation-delay: 0.36s; }
+.delay-4.show { animation-delay: 0.48s; }
+.delay-5.show { animation-delay: 0.62s; }
+
+@media (max-width: 991px) {
+  .hero-title { font-size: 32px; }
+  .project-visual-card { margin-top: 28px; }
+  .project-stats-grid { grid-template-columns: repeat(3,1fr); }
+}
+
+@media (max-width: 767px) {
+  .project-hero { padding-bottom: 8px; }
+  .hero-title { font-size: 24px; }
+  .project-features-grid .feat { padding: 14px; }
+  .project-stats-grid { grid-template-columns: repeat(1,1fr); }
+}
+
 /* Floating Metrics Visual Feature */
 .about-visual-wrapper {
   position: relative;
@@ -12906,6 +13010,54 @@ Section Title
     transform: translateX(5px);
 }
 
+/* Make View More Details match the About section button */
+.hero-cta .vizra-btn {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--title-font);
+  color: var(--theme-color-white);
+  background: var(--theme-primary);
+  border-radius: 40px;
+  padding: 12px 40px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.hero-cta .vizra-btn i {
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+.hero-cta .vizra-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -15%;
+  right: 0;
+  width: 0;
+  height: 106%;
+  background: var(--theme-color-white);
+  transform: skew(45deg);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+.hero-cta .vizra-btn:hover {
+  color: var(--theme-primary);
+}
+.hero-cta .vizra-btn:hover::before {
+  width: 100%;
+  transform: skew(0deg);
+  left: 0;
+}
+
+.hero-cta .vizra-btn:hover i {
+  transform: translateX(5px);
+}
+
 .hero-cta .cta-btn.ghost {
     background: transparent;
     color: #a78bfa;
@@ -12919,16 +13071,17 @@ Section Title
 
 /* Animated Download Button */
 .download-label {
-    background-color: transparent;
-    border: 2px solid #6766FF;
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    width: 160px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    padding: 5px;
-    position: relative;
+  background-color: transparent;
+  border: 2px solid #6766FF;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 8px 14px;
+  position: relative;
+  white-space: normal;
 }
 
 .download-label::before {
@@ -12953,14 +13106,14 @@ Section Title
 }
 
 .download-label .download-title {
-    font-size: 17px;
-    color: #fff;
-    transition: all 0.4s ease;
-    position: absolute;
-    right: 18px;
-    bottom: 14px;
-    text-align: center;
-    margin: 0;
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.4s ease;
+  position: relative;
+  margin: 0;
+  text-align: left;
+  max-width: 220px;
+  line-height: 1.15;
 }
 
 .download-label .download-title:last-child {
@@ -13199,10 +13352,10 @@ Section Title
 }
 
 .project-stats-grid .stat .label {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-    text-transform: uppercase;
+  font-size: 13px;
+  color: #FF8C00; /* orange */
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 @media (max-width: 991px) {
