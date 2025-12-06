@@ -3002,7 +3002,7 @@ Section Title
 }
 
 .project-card-footer a {
-  color: var(--theme-primary);
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -3358,7 +3358,7 @@ Section Title
   }
 }
 .binifits-marquee-area-one .single-binifits-box.three {
-  margin-left: 0;
+  margin-left: -50px;
 }
 .binifits-marquee-area-one .single-binifits-box.three::after {
   background-image: url(../images/demo-img/line-3.png);
@@ -3371,7 +3371,7 @@ Section Title
   }
 }
 .binifits-marquee-area-one .single-binifits-box.four {
-  margin-left: 85px;
+  margin-left: 35px;
   margin-bottom: 0;
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
@@ -5553,7 +5553,7 @@ Section Title
   font-size: 20px;
   font-weight: 600;
   font-family: var(--title-font);
-  color: var(--theme-color-white);
+  color: #ffffff;
   background: var(--theme-primary);
   border-radius: 40px;
   padding: 12px 40px;
