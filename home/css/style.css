@@ -5626,7 +5626,7 @@ Section Title
 .project-stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap:14px; margin-top:18px; }
 .project-stats-grid .stat { background: rgba(255,255,255,0.02); padding:16px; border-radius:12px; text-align:center; }
 .project-stats-grid .stat .num { font-size:26px; font-weight:700; color:#a99aff; }
-.project-stats-grid .stat .label { font-size:12px; color:#FF8C00; margin-top:8px; }
+.project-stats-grid .stat .label { font-size:12px; color:rgba(255,255,255,0.6); margin-top:8px; }
 
 /* Entrance animations (triggered when .show is added) */
 @keyframes fadeUp { from { opacity:0; transform: translateY(12px); } to { opacity:1; transform:none; } }
@@ -12856,17 +12856,18 @@ Section Title
    ======================================== */
 
 .project-hero-content .section-sub-title .sub-title {
-    display: inline-block;
-    padding: 10px 24px;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    border-radius: 30px;
-    color: #a78bfa;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 32px;
+  color: #a78bfa;
+  font-size: 22px; /* increased for visibility */
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1;
 }
 
 .project-hero-content .hero-title {
@@ -13352,10 +13353,10 @@ Section Title
 }
 
 .project-stats-grid .stat .label {
-  font-size: 13px;
-  color: #FF8C00; /* orange */
-  font-weight: 500;
-  text-transform: uppercase;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 @media (max-width: 991px) {
