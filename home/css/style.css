@@ -12604,4 +12604,14 @@ Section Title
   }
 }
 
+/* Fix: nudge left-side "Web Development" bubble (diagram-item four) up to align with right-side */
+.banner-ai-diagram .diagram-item.four{
+  transform: translateY(-18px);
+}
+
+/* Slightly adjust the connector dot to center it better after the lift */
+.banner-ai-diagram .diagram-item.four::after{
+  left: 12px; /* small horizontal tweak; adjust if needed */
+}
+
 /*# sourceMappingURL=style.css.map */
