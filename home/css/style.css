@@ -13437,6 +13437,26 @@ Section Title
     background-position: center;
     background-size: cover;
     margin-top: -80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.industries-section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(103, 102, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.industries-section .auto-container {
+    position: relative;
+    z-index: 2;
 }
 
 .industries-section .row.justify-content-center {
@@ -13480,7 +13500,7 @@ Section Title
     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
-    opacity: 0;
+    opacity: 0.5;
     transition: opacity 0.4s ease;
 }
 
@@ -13533,6 +13553,27 @@ Section Title
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-top: -70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.core-services-section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(103, 102, 255, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.core-services-section .auto-container {
+    position: relative;
+    z-index: 2;
 }
 
 .core-services-slider {
@@ -13659,11 +13700,21 @@ Section Title
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
+}
+
+.service-card-btn i {
+    transition: transform 0.3s ease;
 }
 
 .service-card-btn:hover {
-    color: #9B7BFF;
+    color: var(--theme-primary);
     gap: 12px;
+}
+
+.service-card-btn:hover i {
+    transform: translateX(5px);
 }
 
 .core-services-slider .swiper-pagination-bullet {
@@ -13673,6 +13724,30 @@ Section Title
 
 .core-services-slider .swiper-pagination-bullet-active {
     background: var(--theme-primary);
+}
+
+.core-services-slider .swiper-button-prev,
+.core-services-slider .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(103, 102, 255, 0.2);
+    border: 1px solid rgba(103, 102, 255, 0.3);
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.core-services-slider .swiper-button-prev:after,
+.core-services-slider .swiper-button-next:after {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.core-services-slider .swiper-button-prev:hover,
+.core-services-slider .swiper-button-next:hover {
+    background: var(--theme-primary);
+    border-color: var(--theme-primary);
+    transform: scale(1.1);
 }
 
 /* Responsive adjustments */
