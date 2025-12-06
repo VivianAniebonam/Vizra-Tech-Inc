@@ -218,6 +218,35 @@ h6 {
   margin-bottom: 1rem;
 }
 
+/* About visual: shift image to the right on wide viewports */
+.about-visual-wrapper .central-visual {
+  display: flex;
+  align-items: center;
+}
+.about-visual-wrapper .central-visual .about-image-right {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+}
+@media (min-width: 1200px) {
+  .about-visual-wrapper .central-visual .about-image-right {
+    max-width: 760px;
+  }
+}
+@media (max-width: 991px) {
+  .about-visual-wrapper .central-visual .about-image-right {
+    width: 90%;
+    max-width: 520px;
+    margin-left: auto;
+  }
+}
+@media (max-width: 767px) {
+  .about-visual-wrapper .central-visual .about-image-right {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 h1 {
   font-size: var(--h1-font-size);
   font-weight: var(--h1-font-weight);
@@ -5561,6 +5590,57 @@ Section Title
   transform: translate(-50%, -50%);
 }
 
+/* Override central positioning for the about section so the image can size normally */
+.about-section-two .about-visual-wrapper .central-visual {
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-section-two .about-visual-wrapper .central-visual .about-image-right {
+  margin-left: 0; /* allow right alignment by parent */
+  width: 100%;
+  max-width: 760px;
+}
+
+/* Small right nudge for desktop to visually offset the image */
+@media (min-width: 1200px) {
+  .about-section-two .about-visual-wrapper .central-visual .about-image-right {
+    transform: translateX(20px);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-section-two .about-visual-wrapper .central-visual .about-image-right {
+    transform: translateX(12px);
+  }
+}
+@media (max-width: 991px) {
+  .about-section-two .about-visual-wrapper .central-visual .about-image-right {
+    transform: none;
+  }
+}
+
+/* Add extra left padding to the visual wrapper on desktop so the image sits further from the left column */
+@media (min-width: 1200px) {
+  .about-section-two .about-visual-wrapper {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-section-two .about-visual-wrapper {
+    padding-left: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .about-section-two .about-visual-wrapper {
+    padding-left: 0;
+  }
+}
+
 .ai-circle {
   position: relative;
   width: 150px;
@@ -5655,9 +5735,30 @@ Section Title
 .about-section-two .about-thumb-wrapper {
   position: relative;
 }
+/* Soft Card frame for about visual */
+.about-frame-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 40px rgba(4, 7, 22, 0.6);
+  max-width: 760px;
+}
+.about-frame-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 991px) {
+  .about-frame-card {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 576px) and (max-width: 767.98px) {
   .about-section-two .about-thumb-wrapper {
-    margin-top: 50px;
+    margin-top: 70px;
   }
 }
 .about-section-two .about-thumb-wrapper .about-thumb21 {
@@ -12602,16 +12703,6 @@ Section Title
   .service-details-page-title .services-details-area .widget-sidber-contact-box .widget-sidber-contact-btn a {
     padding: 16px 80px 15px;
   }
-}
-
-/* Fix: nudge left-side "Web Development" bubble (diagram-item four) up to align with right-side */
-.banner-ai-diagram .diagram-item.four{
-  transform: translateY(-18px);
-}
-
-/* Slightly adjust the connector dot to center it better after the lift */
-.banner-ai-diagram .diagram-item.four::after{
-  left: 12px; /* small horizontal tweak; adjust if needed */
 }
 
 /*# sourceMappingURL=style.css.map */
