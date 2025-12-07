@@ -13017,10 +13017,15 @@ Section Title
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #6766FF, #9B7BFF);
+    background: rgba(103, 102, 255, 0.2);
     border-radius: 12px;
     color: #fff;
     font-size: 20px;
+    transition: all 0.4s ease;
+}
+
+.project-features-grid .feat:hover .icon {
+    background: linear-gradient(135deg, #6766FF, #9B7BFF);
 }
 
 .project-features-grid .feat .text h4 {
