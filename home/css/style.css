@@ -12858,16 +12858,47 @@ Section Title
 .project-hero-content .section-sub-title .sub-title {
   display: inline-block;
   padding: 12px 28px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: var(--theme-color1);
+  border: 1px solid rgba(103, 102, 255, 0.3);
   border-radius: 32px;
   color: #a78bfa;
-  font-size: 22px; /* increased for visibility */
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 20px;
   line-height: 1;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(103, 102, 255, 0.15), 0 0 20px rgba(103, 102, 255, 0.1);
+}
+
+.project-hero-content .section-sub-title .sub-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 32px;
+  border: 1.5px solid transparent;
+  background: linear-gradient(135deg, #6766FF 0%, rgba(103, 102, 255, 0.4) 50%, #6766FF 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.project-hero-content .section-sub-title .sub-title:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(103, 102, 255, 0.3), 0 0 40px rgba(103, 102, 255, 0.2);
+}
+
+.project-hero-content .section-sub-title .sub-title:hover::before {
+  background: linear-gradient(135deg, #6766FF 0%, rgba(155, 123, 255, 0.6) 50%, #6766FF 100%) border-box;
 }
 
 .project-hero-content .hero-title {
@@ -12918,16 +12949,41 @@ Section Title
     align-items: flex-start;
     gap: 16px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    transition: all 0.3s ease;
+    background: var(--theme-color1);
+    border: 1px solid rgba(103, 102, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.project-features-grid .feat::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(135deg, #6766FF 0%, rgba(103, 102, 255, 0.4) 50%, #6766FF 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .project-features-grid .feat:hover {
-    background: rgba(99, 102, 241, 0.1);
-    border-color: rgba(99, 102, 241, 0.3);
-    transform: translateX(8px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(103, 102, 255, 0.3), 0 0 40px rgba(103, 102, 255, 0.2);
+}
+
+.project-features-grid .feat:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, #6766FF 0%, rgba(155, 123, 255, 0.6) 50%, #6766FF 100%) border-box;
 }
 
 .project-features-grid .feat .icon {
@@ -13309,44 +13365,45 @@ Section Title
 
 .project-visual-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
+    background: var(--theme-color1);
+    border: 1px solid rgba(103, 102, 255, 0.3);
+    border-radius: 30px;
     padding: 30px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    overflow: visible;
+    box-shadow: 0 20px 60px rgba(103, 102, 255, 0.25), 0 0 40px rgba(103, 102, 255, 0.15);
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
-/* Radiating Light Behind Visual Card */
+.project-visual-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(103, 102, 255, 0.4), 0 0 60px rgba(103, 102, 255, 0.3);
+}
+
+/* Glowing Purple Border (always visible) */
 .project-visual-card::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(103, 102, 255, 0.5) 0%, rgba(103, 102, 255, 0.3) 30%, transparent 70%);
-    border-radius: 50%;
-    animation: pulseGlow 4s ease-in-out infinite;
-    pointer-events: none;
-    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #6766FF 0%, rgba(103, 102, 255, 0.4) 50%, #6766FF 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 1;
+    transition: opacity 0.4s ease;
 }
 
-.project-visual-card::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: 900px;
-    background: radial-gradient(circle, transparent 40%, rgba(155, 123, 255, 0.2) 50%, transparent 70%);
-    border-radius: 50%;
-    animation: radiateLight 5s ease-out infinite;
-    pointer-events: none;
-    z-index: -1;
+.project-visual-card:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, #6766FF 0%, rgba(155, 123, 255, 0.6) 50%, #6766FF 100%) border-box;
 }
+
+
 
 .project-visual-card img {
     width: 100%;
@@ -13365,15 +13422,41 @@ Section Title
 .project-stats-grid .stat {
     text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    transition: all 0.3s ease;
+    background: var(--theme-color1);
+    border: 1px solid rgba(103, 102, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.project-stats-grid .stat::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(135deg, #6766FF 0%, rgba(103, 102, 255, 0.4) 50%, #6766FF 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .project-stats-grid .stat:hover {
-    background: rgba(99, 102, 241, 0.15);
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(103, 102, 255, 0.3), 0 0 40px rgba(103, 102, 255, 0.2);
+}
+
+.project-stats-grid .stat:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, #6766FF 0%, rgba(155, 123, 255, 0.6) 50%, #6766FF 100%) border-box;
 }
 
 .project-stats-grid .stat .num {
