@@ -2818,35 +2818,59 @@ Section Title
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 18px 40px;
-  border-radius: 30px;
-  font-size: 16px;
+  padding: 14px 40px;
+  border-radius: 40px;
+  font-size: 18px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: 0.5s;
   text-decoration: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  font-family: var(--title-font);
 }
 
-.volunteer-btn {
-  background: linear-gradient(135deg, #6766FF, #9B7BFF);
-  color: white;
+.cta-btn i {
+  display: inline-block;
+  transition: 0.5s;
 }
 
-.volunteer-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(103, 102, 255, 0.4);
-  color: white;
+.cta-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -15%;
+  right: 0;
+  width: 0;
+  height: 106%;
+  background: var(--theme-color-white);
+  transform: skew(45deg);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
 }
 
-.investor-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #6766FF;
-  color: white;
+.volunteer-btn,
+.investor-btn,
+.pitch-btn {
+  background: var(--theme-primary);
+  color: var(--theme-color-white);
+  border: none;
 }
 
-.investor-btn:hover {
-  background: rgba(103, 102, 255, 0.2);
-  transform: translateY(-3px);
-  color: white;
+.volunteer-btn:hover,
+.investor-btn:hover,
+.pitch-btn:hover {
+  color: var(--theme-primary);
+}
+
+.volunteer-btn:hover::before,
+.investor-btn:hover::before,
+.pitch-btn:hover::before {
+  width: 100%;
+  transform: skew(0deg);
+  left: 0;
 }
 
 /* Other Projects Section */
