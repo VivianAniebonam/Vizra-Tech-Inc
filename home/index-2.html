@@ -212,40 +212,332 @@
 
 	<!-- Banner Section two-->
 
-	<div class="banner-section-two" style="background-image: url(images/inner-img/f.jpg);">
-		<div class="auto-container">
+	<div class="banner-section-two" style="
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		background-image: url(images/inner-img/f.jpg);
+		background-size: cover;
+		background-position: center;
+		overflow: hidden;
+		margin-top: -100px;
+		padding-top: 120px;
+	">
+		<!-- Dark Overlay for Better Text Visibility -->
+		<div style="
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4);
+			z-index: 1;
+		"></div>
+		<!-- Animated Background Shapes -->
+		<div style="
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.1;
+			pointer-events: none;
+		">
+			<div style="
+				position: absolute;
+				top: 10%;
+				left: 5%;
+				width: 300px;
+				height: 300px;
+				background: linear-gradient(135deg, #fff 0%, transparent 100%);
+				border-radius: 50%;
+				animation: float 8s ease-in-out infinite;
+			"></div>
+			<div style="
+				position: absolute;
+				bottom: 15%;
+				right: 10%;
+				width: 400px;
+				height: 400px;
+				background: linear-gradient(135deg, #fff 0%, transparent 100%);
+				border-radius: 50%;
+				animation: float 10s ease-in-out infinite reverse;
+			"></div>
+			<div style="
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 500px;
+				height: 500px;
+				background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+				border-radius: 50%;
+				animation: pulse 6s ease-in-out infinite;
+			"></div>
+		</div>
+
+		<div class="auto-container" style="position: relative; z-index: 2; padding: 20px 0 60px 0;">
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-xxl-6 col-xl-8 col-lg-8">
 					<div class="banner-content-wrap">
 						<div class="banner-content">
-							<h5 class="split_chars"><svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M6.38561 11.9999C6.34326 11.9999 6.30137 11.9913 6.26258 11.9748C6.22378 11.9583 6.18891 11.9342 6.16017 11.9039L0.0815684 5.5059C0.0410469 5.46325 0.0141836 5.41003 0.00426649 5.35275C-0.00565067 5.29547 0.00180835 5.23662 0.0257308 5.1834C0.0496532 5.13018 0.0890012 5.08491 0.138959 5.05311C0.188917 5.02131 0.247317 5.00438 0.307013 5.00438H3.23292C3.27685 5.00438 3.32026 5.01356 3.36024 5.03128C3.40022 5.049 3.43582 5.07486 3.46465 5.10712L5.49615 7.38125C5.7157 6.9246 6.1407 6.16424 6.88652 5.23772C7.98909 3.868 10.0399 1.85355 13.5487 0.0350571C13.6165 -8.32163e-05 13.6954 -0.00920352 13.7698 0.00949718C13.8442 0.0281979 13.9086 0.0733601 13.9505 0.136066C13.9923 0.198772 14.0085 0.274464 13.9958 0.348195C13.983 0.421926 13.9424 0.488336 13.8818 0.534313C13.8684 0.5445 12.5155 1.58113 10.9586 3.4799C9.52566 5.22724 7.62085 8.0844 6.68355 11.773C6.66708 11.8378 6.62879 11.8953 6.57477 11.9365C6.52075 11.9776 6.45413 12 6.38552 12L6.38561 11.9999Z" fill="#6766FF"/>
+							<h5 class="split_chars">
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.29952 12.1663C6.25774 12.1663 6.21641 12.1576 6.17814 12.1409C6.13986 12.1241 6.10547 12.0996 6.07711 12.069L0.0804686 5.58232C0.0404934 5.53907 0.0139924 5.48511 0.00420897 5.42704C-0.00557448 5.36897 0.00178397 5.3093 0.0253838 5.25535C0.0489837 5.20139 0.0878012 5.15549 0.137086 5.12325C0.18637 5.09101 0.243983 5.07384 0.302874 5.07384H3.18933C3.23266 5.07385 3.2755 5.08315 3.31493 5.10112C3.35437 5.11909 3.3895 5.14531 3.41794 5.178L5.42204 7.48365C5.63863 7.02067 6.05791 6.24978 6.79367 5.31042C7.88137 3.92172 9.90455 1.87936 13.366 0.0356649C13.4329 3.7701e-05 13.5107 -0.00920898 13.5841 0.00975084C13.6575 0.0287107 13.7211 0.0744987 13.7624 0.138074C13.8037 0.201649 13.8196 0.278389 13.8071 0.353142C13.7945 0.427894 13.7544 0.495225 13.6946 0.541839C13.6814 0.552167 12.3468 1.60316 10.8108 3.52824C9.39723 5.29979 7.5181 8.19654 6.59343 11.9362C6.57719 12.0019 6.53941 12.0603 6.48612 12.102C6.43283 12.1437 6.36711 12.1664 6.29943 12.1664L6.29952 12.1663Z" fill="#6766FF"/>
 								</svg>
-								Coming Soon</h5>
-							<h2 class="split_chars">eStaff</h2>
-							<h2 class="split_chars">AI Gig Platform</h2>
-							<h2 class="split_chars"><span style="color: #FF6B2C;">(In Development)</span></h2>
-							<p style="font-size: 18px; line-height: 1.8; color: #fff; margin: 25px 0; max-width: 800px;">A modern gig marketplace connecting households and businesses with verified job seekers across multiple service categories — powered by AI, automation, and intelligent matching.</p>
-							<div class="banner-btn">
-								<a href="contact.html">Request Investor Deck <i class="fa-light fa-arrow-right"></i></a>
-							</div>
-							<div class="banner-btn2">
-								<a href="volunteer.html">Join as Volunteer Tester <i class="fa-light fa-arrow-right"></i></a>
+								Coming Soon
+							</h5>
+						<h2 class="split_chars preserve-case">eStaff</h2>
+						<h2 class="split_chars">AI Gig <span style="color: #9B7BFF !important;">Platform</span></h2>
+						<h4 class="dev-badge pill preserve-case"><span style="color: #FF8C00 !important; font-weight: 800;"> (In Development)</h4>
+						<p class="text-anime-3" style="display:block; width:100%; max-width:980px; margin:0 auto; text-align:center;">A modern gig marketplace connecting households and businesses with verified job seekers across multiple service categories — powered by AI, automation, and intelligent matching.</p>							<div class="hero-cta">
+								<a href="contact.html" class="vizra-btn">Request Investor Deck <i class="fa-light fa-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="banner-thumb">
-						<figure class="reveal"><img src="images/demo-img/banner-thumb21.png" alt="banner-thumb21"></figure>
+
+				<div class="col-xxl-6 col-xl-4 col-lg-4">
+					<div class="banner-thumb" style="width: 100%; max-width: 750px; position: relative; margin-left: auto; margin-right: -80px; margin-top: 120px;">
+						<!-- Decorative Blob Background -->
+						<div style="
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							width: 120%;
+							height: 120%;
+							background: linear-gradient(135deg, rgba(255, 107, 44, 0.2) 0%, rgba(102, 126, 234, 0.2) 50%, rgba(118, 75, 162, 0.2) 100%);
+							border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+							filter: blur(40px);
+							animation: morph 15s ease-in-out infinite;
+							z-index: -1;
+						"></div>
+						
+						<!-- Rotating Ring Decoration -->
+						<div style="
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							width: 110%;
+							height: 110%;
+							border: 3px solid rgba(255, 215, 0, 0.3);
+							border-radius: 45% 55% 60% 40% / 50% 60% 40% 50%;
+							animation: rotate 20s linear infinite, morph 10s ease-in-out infinite alternate;
+							z-index: -1;
+						"></div>
+						
+						<figure style="
+							position: relative;
+							border-radius: 45% 55% 50% 50% / 55% 55% 45% 45%;
+							overflow: hidden;
+							box-shadow: 
+								0 40px 100px rgba(0, 0, 0, 0.5),
+								0 0 60px rgba(102, 126, 234, 0.4),
+								inset 0 0 40px rgba(255, 255, 255, 0.1);
+							transform: perspective(1500px) rotateY(-8deg) rotateX(5deg);
+							transition: all 0.6s ease;
+							margin: 0;
+							animation: float 6s ease-in-out infinite;
+							border: 5px solid rgba(255, 255, 255, 0.2);
+						" onmouseover="this.style.transform='perspective(1500px) rotateY(0deg) rotateX(0deg) scale(1.05)'; this.style.borderRadius='50%'" onmouseout="this.style.transform='perspective(1500px) rotateY(-8deg) rotateX(5deg) scale(1)'; this.style.borderRadius='45% 55% 50% 50% / 55% 55% 45% 45%'">
+							<!-- Gradient Overlay -->
+							<div style="
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, transparent 50%, rgba(118, 75, 162, 0.2) 100%);
+								pointer-events: none;
+								z-index: 2;
+							"></div>
+							
+							<!-- Shine Effect -->
+							<div style="
+								position: absolute;
+								top: -50%;
+								left: -50%;
+								width: 200%;
+								height: 200%;
+								background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+								animation: shine 8s ease-in-out infinite;
+								pointer-events: none;
+								z-index: 3;
+							"></div>
+							
+							<img src="images/demo-img/banner-thumb21.png" alt="eStaff Platform Preview" style="width: 100%; display: block; transform: scale(1.1);">
+							
+							<!-- Inner Glow Border -->
+							<div style="
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								box-shadow: inset 0 0 80px rgba(255, 215, 0, 0.3);
+								pointer-events: none;
+							"></div>
+						</figure>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="js-particles"></div>
+
+		<!-- Particles Background -->
+		<div id="js-particles" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+
+		<!-- Scroll Down Indicator -->
+		<div style="
+			position: absolute;
+			bottom: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 10;
+			animation: bounce 2s ease-in-out infinite;
+		">
+			<div style="
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				margin-bottom: 10px;
+			">Scroll Down</div>
+			<div style="
+				width: 30px;
+				height: 50px;
+				border: 2px solid rgba(255, 255, 255, 0.5);
+				border-radius: 25px;
+				position: relative;
+				margin: 0 auto;
+			">
+				<div style="
+					width: 6px;
+					height: 10px;
+					background: rgba(255, 255, 255, 0.8);
+					border-radius: 3px;
+					position: absolute;
+					top: 8px;
+					left: 50%;
+					transform: translateX(-50%);
+					animation: scrollWheel 2s ease-in-out infinite;
+				"></div>
+			</div>
+		</div>
 	</div>
+
+	<!-- CSS Animations -->
+	<style>
+		@keyframes float {
+			0%, 100% { transform: translateY(0px); }
+			50% { transform: translateY(-30px); }
+		}
+		@keyframes pulse {
+			0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.15; }
+			50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.2; }
+		}
+		@keyframes slideDown {
+			from { opacity: 0; transform: translateY(-30px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		@keyframes fadeInUp {
+			from { opacity: 0; transform: translateY(50px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		@keyframes fadeInRight {
+			from { opacity: 0; transform: translateX(50px); }
+			to { opacity: 1; transform: translateX(0); }
+		}
+		@keyframes bounce {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-10px); }
+		}
+		@keyframes scrollWheel {
+			0% { top: 8px; opacity: 1; }
+			100% { top: 24px; opacity: 0; }
+		}
+		@keyframes morph {
+			0%, 100% { 
+				border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+			}
+			25% { 
+				border-radius: 40% 60% 50% 50% / 70% 40% 60% 30%;
+			}
+			50% { 
+				border-radius: 70% 30% 40% 60% / 50% 70% 30% 60%;
+			}
+			75% { 
+				border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+			}
+		}
+		@keyframes rotate {
+			0% { transform: translate(-50%, -50%) rotate(0deg); }
+			100% { transform: translate(-50%, -50%) rotate(360deg); }
+		}
+		@keyframes shine {
+			0% { transform: translate(-50%, -50%) rotate(0deg); }
+			100% { transform: translate(-50%, -50%) rotate(360deg); }
+		}
+
+		/* Banner image vertical offset and responsive adjustments */
+		.banner-thumb {
+			margin-top: 90px; /* moved down a bit */
+			transition: margin-top 0.35s ease;
+		}
+		@media (max-width: 1199px) {
+			.banner-thumb { margin-top: 60px; }
+		}
+		@media (max-width: 767px) {
+			.banner-thumb { margin-top: 30px; margin-right: 0; }
+		}
+
+		/* Add spacing between paragraph and CTA so the button sits lower */
+		.banner-content .hero-cta {
+			margin-top: 72px; /* moved further down */
+		}
+		@media (max-width: 1199px) {
+			.banner-content .hero-cta { margin-top: 56px; }
+		}
+		@media (max-width: 767px) {
+			.banner-content .hero-cta { margin-top: 40px; }
+		}
+
+		/* Preserve original casing for brand name (e.g., "eStaff") when split/uppercasing is applied globally */
+		.preserve-case { text-transform: none !important; }
+
+		/* Dev badge: subtle pill style */
+		.dev-badge.pill {
+			display: inline-block;
+			font-size: 18px;
+			font-weight: 700;
+			padding: 10px 18px;
+			border-radius: 999px;
+			background: rgba(103,102,255,0.12);
+			color: #EDEBFF;
+			border: 1px solid rgba(103,102,255,0.22);
+			letter-spacing: 0.6px;
+			margin: 8px 0;
+		}
+		@media (max-width: 767px) {
+			.dev-badge.pill { font-size: 15px; padding: 8px 14px; }
+		}
+
+		/* Accent color for the word 'In' inside the dev badge */
+		.dev-badge.pill .dev-accent {
+			color: #FF8C00 !important; /* orange (important to override other rules) */
+			font-weight: 800;
+			text-shadow: 0 1px 0 rgba(0,0,0,0.12);
+		}
+
+		/* Force orange color on any span with inline style inside dev badge (override JS animations) */
+		.dev-badge.pill span[style*="color: #FF8C00"],
+		.dev-badge.pill span[style*="color: #FF8C00"] * {
+			color: #FF8C00 !important;
+			font-weight: 800 !important;
+		}
+	</style>
 	<!--END Banner Section two -->
 
 
@@ -256,7 +548,7 @@
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="brand-desc">
-						<p><span>Powered by </span>Vizra Tech Inc — Building the Future of Gig Work</p>
+						<p><span>Powered by </span> Vizra Tech Inc — Building the Future of Gig Work</p>
 					</div>
 				</div>
 			</div>
@@ -369,7 +661,7 @@
 				<div class="col-xl-6">
 					<div class="sec-title">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">What is eStaff</h5>
+							<h5 class="sub-title split_chars preserve-case">What is eStaff</h5>
 						</div>
 						<div class="section-title">
 							<h1 class="title split-text">AI-Powered Gig Platform</h1>
