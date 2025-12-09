@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Intellio - AI Agency & Technology Saas HTML5 Template</title>
+<title>Services - Vizra | AI-Powered Gig Platform & Tech Solutions</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -11,6 +11,139 @@
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.service-modal-content {
+	padding: 10px 0;
+}
+.service-modal-icon {
+	text-align: center;
+}
+.service-features-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.service-features-list li {
+	padding: 10px 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+.service-features-list li:last-child {
+	border-bottom: none;
+}
+.service-features-list i {
+	color: #6766FF;
+	margin-right: 10px;
+	font-size: 18px;
+}
+.service-benefits {
+	background: rgba(103, 102, 255, 0.05);
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.learn-more-link {
+	cursor: pointer;
+}
+.learn-more-link:hover {
+	text-decoration: none;
+}
+.contact-us-link {
+	cursor: pointer !important;
+	pointer-events: auto !important;
+	z-index: 10 !important;
+	position: relative !important;
+}
+.contact-us-link:hover {
+	opacity: 0.9;
+	text-decoration: none;
+}
+.service-buttons {
+	pointer-events: auto !important;
+}
+.service-buttons * {
+	pointer-events: auto !important;
+}
+body.modal-open {
+	overflow: hidden;
+	padding-right: 0 !important;
+}
+.modal {
+	z-index: 1055 !important;
+	display: none;
+}
+.modal.show {
+	display: block !important;
+}
+.modal-backdrop {
+	z-index: 1050 !important;
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
+	filter: none !important;
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100vw !important;
+	height: 100vh !important;
+}
+.modal-backdrop.show {
+	opacity: 0.5 !important;
+	display: block !important;
+}
+.modal-dialog {
+	z-index: 1055 !important;
+	pointer-events: auto !important;
+	position: relative;
+}
+.modal-content {
+	z-index: 1056 !important;
+	pointer-events: auto !important;
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
+	filter: none !important;
+	background: #fff !important;
+	opacity: 1 !important;
+}
+.modal-header,
+.modal-body,
+.modal-footer {
+	pointer-events: auto !important;
+	background: #fff !important;
+}
+.modal-footer a,
+.modal-footer button {
+	pointer-events: auto !important;
+	cursor: pointer !important;
+	z-index: 1057 !important;
+	position: relative;
+}
+.btn-close {
+	pointer-events: auto !important;
+	cursor: pointer !important;
+	z-index: 1057 !important;
+	position: relative;
+	opacity: 1 !important;
+	background: transparent;
+	border: none;
+	padding: 0.5rem;
+	font-size: 1.5rem;
+	line-height: 1;
+	color: #000;
+}
+.btn-close:hover {
+	opacity: 0.75;
+}
+.btn-close:focus {
+	outline: none;
+	box-shadow: none;
+}
+.page-wrapper {
+	position: relative;
+}
+.page-wrapper.modal-open {
+	pointer-events: auto;
+}
+</style>
 </head>
 
 <body>
@@ -224,15 +357,22 @@
 	<main>
 
 	<!-- service page title -->
-	<section class="service-page-title" style="background-image: url(images/inner-img/about-page-bg.jpg);">
+	<section class="service-page-title" style="background-image: url(images/inner-img/f.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
 		<div class="auto-container">
 			<div class="row">
 				<div class="title-content">
-					<h5 class="page-sub-title split_chars">Our Service</h5>
-					<h1 class="page-title split-text">Service Our Company</h1>
-					<p class="page-desc title-anim">Monotonectally whiteboard proactive with leading business to
-						niche markets rather than tested
+					<h5 class="page-sub-title split_chars">Our Services</h5>
+					<h1 class="page-title split-text">Smart. Scalable. AI-Powered Tech Solutions for Businesses & Startups.</h1>
+					<p class="page-desc title-anim">Vizra is a full-scale technology company providing end-to-end digital solutions for businesses of all sizes. From startup development to enterprise outsourcing, UI/UX design, mobile apps, cloud engineering, and our flagship AI Gig Platform — Vizra delivers modern, efficient, and future-ready technology.
 					</p>
+					<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+						<a href="#services" style="display: inline-block; padding: 16px 36px; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); color: #ffffff; font-size: 16px; font-weight: 600; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(103, 102, 255, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(103, 102, 255, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(103, 102, 255, 0.3)';">
+							Explore Services <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i>
+						</a>
+						<a href="contact.html" style="display: inline-block; padding: 16px 36px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(103, 102, 255, 0.5); color: #ffffff; font-size: 16px; font-weight: 600; border-radius: 50px; text-decoration: none; backdrop-filter: blur(10px); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(103, 102, 255, 0.2)'; this.style.borderColor='#6766FF';" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(103, 102, 255, 0.5)';">
+							Get Started <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -243,12 +383,12 @@
 								<div class="service-wrapper"  id="sticky-box">
 									<div class="sec-title">
 										<div class="section-sub-title">
-											<h5 class="sub-title split_chars">Services</h5>
+											<h5 class="sub-title split_chars">What We Offer</h5>
 										</div>
 										<div class="section-title">
-											<h1 class="title split-text">Regular Software Updates of</h1>
-											<h1 class="title split-text">Continue Improvement detail</h1>
-											<h1 class="title split-text">Trending Technology</h1>
+											<h1 class="title split-text">End-to-End Development</h1>
+											<h1 class="title split-text">From Concept to Production</h1>
+											<h1 class="title split-text">Expert Tech Solutions</h1>
 										</div>
 									</div>
 									<div class="service-btn">
@@ -271,12 +411,13 @@
 													<img src="images/demo-img/service-icon1.png" alt="icon">
 												</div>
 												<div class="service-content">
-													<h3>Custom AI Solution</h3>
-													<p>Conveniently predominate holistic expertise technology
-														before leveraged quality vectors negotiate high function
-														standards transform solutions
+													<h3>Startup & Product Development</h3>
+													<p>Everything small businesses and startups need. MVP development, startup tech consulting, rapid prototyping, market-ready product launch, and technical documentation & architecture.
 													</p>
-													<a href="service-details.html">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal1" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -286,12 +427,13 @@
 													<img src="images/demo-img/service-icon2.png" alt="icon">
 												</div>
 												<div class="service-content">
-													<h3>AI Model Training</h3>
-													<p>Conveniently predominate holistic expertise technology
-														before leveraged quality vectors negotiate high function
-														standards transform solutions
+													<h3>Custom Software Development</h3>
+													<p>Mainstream engineering services including web application development, mobile apps (iOS, Android, Cross-Platform), API & microservices, enterprise solutions, SaaS platforms, and custom CRM/ERP solutions.
 													</p>
-													<a href="service-details.html">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal2" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -301,12 +443,13 @@
 													<img src="images/demo-img/service-icon3.png" alt="icon">
 												</div>
 												<div class="service-content">
-													<h3>Predictive Solutions</h3>
-													<p>Conveniently predominate holistic expertise technology
-														before leveraged quality vectors negotiate high function
-														standards transform solutions
+													<h3>UI/UX & Product Design</h3>
+													<p>A dedicated design service offering user research & personas, wireframing & prototyping, high-fidelity UI design, UX audit & redesign, and comprehensive branding & style guidelines.
 													</p>
-													<a href="service-details.html">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal3" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -316,12 +459,29 @@
 													<img src="images/demo-img/service-icon2.png" alt="icon">
 												</div>
 												<div class="service-content">
-													<h3>AI Model Training</h3>
-													<p>Conveniently predominate holistic expertise technology
-														before leveraged quality vectors negotiate high function
-														standards transform solutions
+													<h3>Outsourced Development & Dedicated Teams</h3>
+													<p>Important for B2B partnerships. Access full-stack developers, QA testers, DevOps engineers, cloud architects (AWS, Azure, GCP), project managers, and Scrum masters on demand.
 													</p>
-													<a href="service-details.html">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal4" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="single-service-box">
+											<div class="service-inner">
+												<div class="service-icon">
+													<img src="images/demo-img/service-icon1.png" alt="icon">
+												</div>
+												<div class="service-content">
+													<h3>AI & Automation Services</h3>
+													<p>Future-ready AI solutions including AI model integration, process automation, chatbot development, AI-powered personalization, voice-activated solutions, and machine learning & data engineering.
+													</p>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal5" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -331,12 +491,45 @@
 													<img src="images/demo-img/service-icon2.png" alt="icon">
 												</div>
 												<div class="service-content">
-													<h3>AI Model Training</h3>
-													<p>Conveniently predominate holistic expertise technology
-														before leveraged quality vectors negotiate high function
-														standards transform solutions
+													<h3>Cloud, DevOps & Infrastructure</h3>
+													<p>Enterprise-grade cloud services including cloud migration, infrastructure setup, CI/CD pipeline development, backend optimization, security & compliance configuration, and monitoring & performance tuning.
 													</p>
-													<a href="service-details.html">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal6" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="single-service-box">
+											<div class="service-inner">
+												<div class="service-icon">
+													<img src="images/demo-img/service-icon3.png" alt="icon">
+												</div>
+												<div class="service-content">
+													<h3>QA Testing & Quality Assurance</h3>
+													<p>Comprehensive testing services including manual testing, automation testing, API testing, performance & load testing, and security testing to ensure your products meet the highest quality standards.
+													</p>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal7" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="single-service-box">
+											<div class="service-inner">
+												<div class="service-icon-active">
+													<img src="images/demo-img/service-icon2.png" alt="icon">
+												</div>
+												<div class="service-content">
+													<h3>Technical Support & Maintenance</h3>
+													<p>Recurring revenue services including app maintenance, server monitoring, bug fixes & updates, version upgrades, and comprehensive technical support packages to keep your systems running smoothly.
+													</p>
+													<div class="service-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+														<a href="#" data-bs-toggle="modal" data-bs-target="#serviceModal8" class="learn-more-link">LEARN MORE<i class="fa-light fa-arrow-right"></i></a>
+														<a href="contact.html" class="contact-us-link" style="background: #6766FF; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; cursor: pointer; pointer-events: auto; z-index: 10; position: relative;">CONTACT US</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -345,15 +538,664 @@
 							</div>
 						</div>
 					</div>
-				</section>
+					<a href="contact.html" style="display: inline-block; padding: 16px 36px; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); color: #ffffff; font-size: 16px; font-weight: 600; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(103, 102, 255, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(103, 102, 255, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(103, 102, 255, 0.3)';">
+						Join the Waitlist <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i>
+					</a>
+				</div>
+				<div class="col-xl-6">
+					<div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);">
+						<img src="images/demo-img/service-thumb1.png" alt="Vizra AI Gig Platform" style="width: 100%; border-radius: 24px;">
+						<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(103, 102, 255, 0.3) 0%, transparent 100%);"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-	<!-- service page title -->
+
+	<!-- Why Choose Vizra Section -->
+	<section style="padding: 100px 0; background: #f8f9fa;">
+		<div class="auto-container">
+			<div class="row justify-content-center text-center" style="margin-bottom: 60px;">
+				<div class="col-xl-8">
+					<div style="display: inline-block; padding: 10px 24px; background: rgba(103, 102, 255, 0.1); border-radius: 30px; margin-bottom: 20px;">
+						<h5 style="color: #6766FF; font-size: 14px; font-weight: 600; letter-spacing: 2px; margin: 0;">WHY CHOOSE VIZRA</h5>
+					</div>
+					<h2 style="color: #0a0a1f; font-size: 48px; font-weight: 800; margin-bottom: 20px;">What Sets Us Apart</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xl-3 col-lg-6 col-md-6" style="margin-bottom: 30px;">
+					<div style="text-align: center; padding: 30px 20px;">
+						<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa-solid fa-bolt" style="font-size: 36px; color: #ffffff;"></i>
+						</div>
+						<h4 style="color: #0a0a1f; font-size: 20px; font-weight: 700; margin-bottom: 12px;">Fast Delivery</h4>
+						<p style="color: #666; font-size: 15px; line-height: 1.6;">Agile methodology ensures rapid, iterative delivery</p>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6" style="margin-bottom: 30px;">
+					<div style="text-align: center; padding: 30px 20px;">
+						<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa-solid fa-brain-circuit" style="font-size: 36px; color: #ffffff;"></i>
+						</div>
+						<h4 style="color: #0a0a1f; font-size: 20px; font-weight: 700; margin-bottom: 12px;">AI-Powered Workflows</h4>
+						<p style="color: #666; font-size: 15px; line-height: 1.6;">Leverage AI to optimize every process</p>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6" style="margin-bottom: 30px;">
+					<div style="text-align: center; padding: 30px 20px;">
+						<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa-solid fa-dollar-sign" style="font-size: 36px; color: #ffffff;"></i>
+						</div>
+						<h4 style="color: #0a0a1f; font-size: 20px; font-weight: 700; margin-bottom: 12px;">Affordable Pricing</h4>
+						<p style="color: #666; font-size: 15px; line-height: 1.6;">Startup-friendly rates without compromising quality</p>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6" style="margin-bottom: 30px;">
+					<div style="text-align: center; padding: 30px 20px;">
+						<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa-solid fa-users-gear" style="font-size: 36px; color: #ffffff;"></i>
+						</div>
+						<h4 style="color: #0a0a1f; font-size: 20px; font-weight: 700; margin-bottom: 12px;">Verified Developers</h4>
+						<p style="color: #666; font-size: 15px; line-height: 1.6;">Vetted, skilled professionals you can trust</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Industries Section -->
+	<section style="padding: 100px 0; background: #ffffff;">
+		<div class="auto-container">
+			<div class="row justify-content-center text-center" style="margin-bottom: 60px;">
+				<div class="col-xl-8">
+					<div style="display: inline-block; padding: 10px 24px; background: rgba(103, 102, 255, 0.1); border-radius: 30px; margin-bottom: 20px;">
+						<h5 style="color: #6766FF; font-size: 14px; font-weight: 600; letter-spacing: 2px; margin: 0;">INDUSTRIES WE SERVE</h5>
+					</div>
+					<h2 style="color: #0a0a1f; font-size: 48px; font-weight: 800; margin-bottom: 20px;">Trusted Across Multiple Sectors</h2>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
+					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
+						<i class="fa-solid fa-heartbeat" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
+						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Healthcare</h4>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
+					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
+						<i class="fa-solid fa-building-columns" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
+						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Finance</h4>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
+					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
+						<i class="fa-solid fa-cart-shopping" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
+						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Retail & E-Commerce</h4>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
+					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
+						<i class="fa-solid fa-graduation-cap" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
+						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Education</h4>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
+					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
+						<i class="fa-solid fa-hotel" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
+						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Hospitality</h4>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
+					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
+						<i class="fa-solid fa-truck" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
+						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Logistics</h4>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
+					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
+						<i class="fa-solid fa-shop" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
+						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Small Business & Startups</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section style="padding: 100px 0; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); position: relative; overflow: hidden;">
+		<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.1;">
+			<div style="position: absolute; top: -10%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%); border-radius: 50%;"></div>
+			<div style="position: absolute; bottom: -15%; right: -8%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+		</div>
+
+		<div class="auto-container" style="position: relative; z-index: 1;">
+			<div class="row justify-content-center text-center">
+				<div class="col-xl-10">
+					<h2 style="color: #ffffff; font-size: 52px; font-weight: 800; margin-bottom: 25px; line-height: 1.2;">
+						Need a team or want to build your<br>next big product?
+					</h2>
+					<p style="color: rgba(255, 255, 255, 0.95); font-size: 20px; line-height: 1.7; max-width: 700px; margin: 0 auto 40px;">
+						Let's build it together. Whether you need a dedicated team or full product development, we're here to turn your vision into reality.
+					</p>
+					<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+						<a href="contact.html" style="display: inline-block; padding: 18px 40px; background: #ffffff; color: #6766FF; font-size: 17px; font-weight: 700; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);" onmouseover="this.style.transform='translateY(-3px) scale(1.05)'; this.style.boxShadow='0 15px 40px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.2)';">
+							Get Started <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i>
+						</a>
+						<a href="contact.html" style="display: inline-block; padding: 18px 40px; background: transparent; border: 2px solid #ffffff; color: #ffffff; font-size: 17px; font-weight: 700; border-radius: 50px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.color='#6766FF';" onmouseout="this.style.background='transparent'; this.style.color='#ffffff';">
+							Book a Consultation <i class="fa-light fa-calendar" style="margin-left: 8px;"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Flagship Project Section -->
+	<section class="service-section-inner" style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png) !important; background-repeat: no-repeat !important; background-size: cover !important; background-position: center !important; background-color: transparent !important;">
+		<div class="auto-container">
+			<div class="sec-title text-center mb-60">
+				<div class="section-sub-title">
+					<h5 class="sub-title split_chars">Innovation Project</h5>
+				</div>
+				<div class="section-title">
+					<h1 class="title split-text">Vizra AI Gig Platform</h1>
+					<p style="margin-top: 20px; font-size: 18px; color: #666;">Coming Soon</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-8 offset-xl-2">
+					<div class="text-center mb-40">
+						<p style="font-size: 18px; line-height: 1.8;">An AI-powered gig and talent platform connecting service seekers with job seekers across various industries.</p>
+					</div>
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 mb-20">
+							<div class="single-service-box">
+								<div class="service-content">
+									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Intelligent Job Matching</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 mb-20">
+							<div class="single-service-box">
+								<div class="service-content">
+									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Real-Time Alerts</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 mb-20">
+							<div class="single-service-box">
+								<div class="service-content">
+									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>In-App Chat & Voice Calls</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 mb-20">
+							<div class="single-service-box">
+								<div class="service-content">
+									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Police Check & ID Verification</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 mb-20">
+							<div class="single-service-box">
+								<div class="service-content">
+									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Profile Ratings & AI Review Summaries</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 mb-20">
+							<div class="single-service-box">
+								<div class="service-content">
+									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Secure Payments</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Vizra Section -->
+	<section class="service-section-inner" style="padding: 100px 0;">
+		<div class="auto-container">
+			<div class="sec-title text-center mb-60">
+				<div class="section-sub-title">
+					<h5 class="sub-title split_chars">Why Choose Us</h5>
+				</div>
+				<div class="section-title">
+					<h1 class="title split-text">Why Choose Vizra?</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+								<i class="fa-solid fa-brain" style="font-size: 35px; color: white;"></i>
+							</div>
+							<h4 style="margin-bottom: 15px;">AI-Powered Workflows</h4>
+							<p>Leverage cutting-edge AI technology to streamline your business processes.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+								<i class="fa-solid fa-rocket" style="font-size: 35px; color: white;"></i>
+							</div>
+							<h4 style="margin-bottom: 15px;">Fast Delivery & Agile Methodology</h4>
+							<p>Rapid development cycles with agile practices for faster time-to-market.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+								<i class="fa-solid fa-dollar-sign" style="font-size: 35px; color: white;"></i>
+							</div>
+							<h4 style="margin-bottom: 15px;">Affordable Pricing for Startups</h4>
+							<p>Competitive rates designed to fit startup budgets without compromising quality.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+								<i class="fa-solid fa-user-check" style="font-size: 35px; color: white;"></i>
+							</div>
+							<h4 style="margin-bottom: 15px;">Verified, Skilled Developers</h4>
+							<p>Work with certified professionals who bring expertise and reliability.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+								<i class="fa-solid fa-code" style="font-size: 35px; color: white;"></i>
+							</div>
+							<h4 style="margin-bottom: 15px;">Modern Tech Stack</h4>
+							<p>React, Node, Python, AWS, Flutter, and other cutting-edge technologies.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+								<i class="fa-solid fa-handshake" style="font-size: 35px; color: white;"></i>
+							</div>
+							<h4 style="margin-bottom: 15px;">End-to-End Project Support</h4>
+							<p>Comprehensive support from initial concept through deployment and beyond.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+								<i class="fa-solid fa-star" style="font-size: 35px; color: white;"></i>
+							</div>
+							<h4 style="margin-bottom: 15px;">High Customer Satisfaction</h4>
+							<p>Proven track record with excellent reviews and repeat clients.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Industries We Serve Section -->
+	<section class="service-section-inner" style="padding: 100px 0; background: rgba(103, 102, 255, 0.05);">
+		<div class="auto-container">
+			<div class="sec-title text-center mb-60">
+				<div class="section-sub-title">
+					<h5 class="sub-title split_chars">Industries</h5>
+				</div>
+				<div class="section-title">
+					<h1 class="title split-text">Industries We Serve</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<i class="fa-solid fa-heart-pulse" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
+							<h4>Healthcare</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<i class="fa-solid fa-coins" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
+							<h4>Finance</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<i class="fa-solid fa-cart-shopping" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
+							<h4>Retail & E-Commerce</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<i class="fa-solid fa-graduation-cap" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
+							<h4>Education</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<i class="fa-solid fa-hotel" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
+							<h4>Hospitality</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<i class="fa-solid fa-truck" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
+							<h4>Logistics & Transportation</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+					<div class="single-service-box">
+						<div class="service-content text-center">
+							<i class="fa-solid fa-lightbulb" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
+							<h4>Small Business & Startups</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action Section -->
+	<section class="service-section-inner" style="padding: 100px 0;">
+		<div class="auto-container">
+			<div class="row">
+				<div class="col-xl-8 offset-xl-2 text-center">
+					<div class="sec-title mb-40">
+						<h1 class="title split-text" style="font-size: 42px; margin-bottom: 20px;">Need a team or want to build your next big product?</h1>
+						<h2 class="title split-text" style="font-size: 36px; color: #6766FF;">Let's build it together.</h2>
+					</div>
+					<div class="service-btn" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+						<a href="contact.html" style="padding: 15px 40px; background: #6766FF; color: white; border-radius: 50px; text-decoration: none; display: inline-block; font-weight: 600; transition: all 0.3s;">Get Started<i class="fa-light fa-arrow-right" style="margin-left: 10px;"></i></a>
+						<a href="contact.html" style="padding: 15px 40px; background: transparent; color: #6766FF; border: 2px solid #6766FF; border-radius: 50px; text-decoration: none; display: inline-block; font-weight: 600; transition: all 0.3s;">Book a Consultation<i class="fa-light fa-arrow-right" style="margin-left: 10px;"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	</main>
 
+	<!-- Service Modals -->
+	<div class="modal fade" id="serviceModal1" tabindex="-1" aria-labelledby="serviceModal1Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal1Label">Startup & Product Development</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon1.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Everything small businesses and startups need to transform ideas into market-ready products.</p>
+						<h6 class="mb-3">What We Offer:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>MVP Development:</strong> Build and launch your Minimum Viable Product quickly and efficiently</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Startup Tech Consulting:</strong> Expert guidance on technology stack, architecture, and best practices</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Rapid Prototyping:</strong> Fast iteration cycles to validate your product concept</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Market-Ready Product Launch:</strong> Complete development from concept to production deployment</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Technical Documentation & Architecture:</strong> Comprehensive documentation for scalability and maintenance</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">Why Choose Our Startup Services:</h6>
+							<p>We understand the unique challenges startups face. Our agile approach ensures you get to market faster while maintaining quality and scalability. We work with modern tech stacks and follow industry best practices to build products that grow with your business.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="modal fade" id="serviceModal2" tabindex="-1" aria-labelledby="serviceModal2Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal2Label">Custom Software Development</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon2.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Comprehensive engineering services tailored to your business needs.</p>
+						<h6 class="mb-3">Our Services Include:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>Web Application Development:</strong> Responsive, scalable web applications using modern frameworks</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Mobile Apps:</strong> Native iOS, Android, and Cross-Platform solutions (React Native, Flutter)</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>API & Microservices:</strong> RESTful APIs, GraphQL, and microservices architecture</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Enterprise Solutions:</strong> Large-scale applications for enterprise clients</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>SaaS Platforms:</strong> Multi-tenant SaaS applications with subscription management</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Custom CRM/ERP Solutions:</strong> Tailored business management systems</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">Technology Stack:</h6>
+							<p>We work with cutting-edge technologies including React, Node.js, Python, .NET, Java, and cloud platforms (AWS, Azure, GCP) to deliver robust, scalable solutions.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="serviceModal3" tabindex="-1" aria-labelledby="serviceModal3Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal3Label">UI/UX & Product Design</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon3.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Creating intuitive, beautiful, and user-centered design experiences.</p>
+						<h6 class="mb-3">Design Services:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>User Research & Personas:</strong> Deep understanding of your users and their needs</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Wireframing & Prototyping:</strong> Interactive prototypes to validate design concepts</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>High-Fidelity UI Design:</strong> Pixel-perfect designs ready for development</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>UX Audit & Redesign:</strong> Improve existing products with data-driven design decisions</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Branding & Style Guidelines:</strong> Comprehensive design systems and brand identity</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">Our Design Approach:</h6>
+							<p>We follow a user-centered design process, combining research, creativity, and technical expertise to create designs that not only look great but also drive user engagement and business results.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="serviceModal4" tabindex="-1" aria-labelledby="serviceModal4Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal4Label">Outsourced Development & Dedicated Teams</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon2.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Access skilled professionals on demand for your B2B partnerships.</p>
+						<h6 class="mb-3">Available Team Members:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>Full-Stack Developers:</strong> Frontend and backend expertise across multiple technologies</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>QA Testers:</strong> Manual and automated testing specialists</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>DevOps Engineers:</strong> CI/CD, infrastructure automation, and cloud management</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Cloud Architects:</strong> AWS, Azure, and GCP certified professionals</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Project Managers:</strong> Agile/Scrum certified project coordinators</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Scrum Masters:</strong> Certified agile coaches and facilitators</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">Why Outsource with Us:</h6>
+							<p>Scale your team quickly without the overhead of hiring. Our dedicated teams integrate seamlessly with your existing workflows, providing flexible engagement models from part-time to full-time dedicated resources.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="serviceModal5" tabindex="-1" aria-labelledby="serviceModal5Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal5Label">AI & Automation Services</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon1.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Future-ready AI solutions to transform your business operations.</p>
+						<h6 class="mb-3">AI Services We Provide:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>AI Model Integration:</strong> Integrate pre-trained models or custom AI solutions into your applications</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Process Automation:</strong> Automate repetitive tasks and workflows with intelligent systems</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Chatbot Development:</strong> Conversational AI for customer support and engagement</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>AI-Powered Personalization:</strong> Personalized user experiences using machine learning</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Voice-Activated Solutions:</strong> Voice recognition and natural language processing</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Machine Learning & Data Engineering:</strong> Build predictive models and data pipelines</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">AI Technology Expertise:</h6>
+							<p>We leverage cutting-edge AI technologies including OpenAI, TensorFlow, PyTorch, and cloud AI services to deliver intelligent solutions that drive efficiency and innovation.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="serviceModal6" tabindex="-1" aria-labelledby="serviceModal6Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal6Label">Cloud, DevOps & Infrastructure</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon2.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Enterprise-grade cloud services for scalable, secure infrastructure.</p>
+						<h6 class="mb-3">Infrastructure Services:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>Cloud Migration:</strong> Seamless migration to AWS, Azure, or GCP</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Infrastructure Setup:</strong> Scalable, secure cloud infrastructure design and deployment</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>CI/CD Pipeline Development:</strong> Automated build, test, and deployment pipelines</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Backend Optimization:</strong> Performance tuning and scalability improvements</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Security & Compliance:</strong> Security hardening and compliance configuration (SOC2, GDPR, HIPAA)</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Monitoring & Performance Tuning:</strong> 24/7 monitoring and optimization services</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">Cloud Platforms:</h6>
+							<p>We're certified experts in AWS, Microsoft Azure, and Google Cloud Platform, helping you choose and implement the right cloud strategy for your business needs.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="serviceModal7" tabindex="-1" aria-labelledby="serviceModal7Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal7Label">QA Testing & Quality Assurance</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon3.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Comprehensive testing services to ensure your products meet the highest quality standards.</p>
+						<h6 class="mb-3">Testing Services:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>Manual Testing:</strong> Thorough manual testing across all platforms and devices</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Automation Testing:</strong> Selenium, Cypress, and other automation frameworks</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>API Testing:</strong> Comprehensive API testing and validation</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Performance & Load Testing:</strong> Stress testing and performance optimization</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Security Testing:</strong> Vulnerability assessment and penetration testing</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">Quality Assurance Process:</h6>
+							<p>Our QA team follows industry best practices and testing methodologies to identify issues early, reduce bugs in production, and ensure your applications deliver exceptional user experiences.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="serviceModal8" tabindex="-1" aria-labelledby="serviceModal8Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="serviceModal8Label">Technical Support & Maintenance</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="service-modal-content">
+						<div class="service-modal-icon mb-3">
+							<img src="images/demo-img/service-icon2.png" alt="icon" style="width: 60px; height: 60px;">
+						</div>
+						<p class="lead mb-4">Ongoing support and maintenance to keep your systems running smoothly.</p>
+						<h6 class="mb-3">Support Services:</h6>
+						<ul class="service-features-list">
+							<li><i class="fa-light fa-check-circle"></i> <strong>App Maintenance:</strong> Regular updates, bug fixes, and feature enhancements</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Server Monitoring:</strong> 24/7 monitoring and alerting for your infrastructure</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Bug Fixes & Updates:</strong> Quick response to issues and regular updates</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Version Upgrades:</strong> Framework and dependency updates</li>
+							<li><i class="fa-light fa-check-circle"></i> <strong>Technical Support Packages:</strong> Comprehensive support plans tailored to your needs</li>
+						</ul>
+						<div class="service-benefits mt-4">
+							<h6 class="mb-3">Support Plans:</h6>
+							<p>Choose from flexible support packages ranging from basic maintenance to premium 24/7 support with guaranteed response times. We ensure your applications stay secure, performant, and up-to-date.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Main Footer -->
 	<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png);">
@@ -463,6 +1305,90 @@
 <script src="js/ScrollToPlugin.min.js"></script>
 <script src="js/SplitText.js"></script>
 <script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	var closeButtons = document.querySelectorAll('.modal .btn-close');
+	closeButtons.forEach(function(btn) {
+		btn.addEventListener('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			var modal = this.closest('.modal');
+			if (modal) {
+				if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+					var bsModal = bootstrap.Modal.getInstance(modal);
+					if (bsModal) {
+						bsModal.hide();
+					} else {
+						var newModal = new bootstrap.Modal(modal);
+						newModal.hide();
+					}
+				} else if (typeof $ !== 'undefined') {
+					$(modal).modal('hide');
+				} else {
+					modal.classList.remove('show');
+					modal.style.display = 'none';
+					var backdrop = document.querySelector('.modal-backdrop');
+					if (backdrop) {
+						backdrop.remove();
+					}
+					document.body.classList.remove('modal-open');
+					document.body.style.overflow = '';
+				}
+			}
+		});
+	});
+	
+	document.addEventListener('click', function(e) {
+		if (e.target.classList.contains('modal-backdrop') || e.target.classList.contains('modal')) {
+			var modal = document.querySelector('.modal.show');
+			if (modal && e.target === modal || e.target.classList.contains('modal-backdrop')) {
+				if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+					var bsModal = bootstrap.Modal.getInstance(modal);
+					if (bsModal) {
+						bsModal.hide();
+					}
+				} else if (typeof $ !== 'undefined') {
+					$(modal).modal('hide');
+				} else {
+					modal.classList.remove('show');
+					modal.style.display = 'none';
+					var backdrop = document.querySelector('.modal-backdrop');
+					if (backdrop) {
+						backdrop.remove();
+					}
+					document.body.classList.remove('modal-open');
+					document.body.style.overflow = '';
+				}
+			}
+		}
+	});
+	
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape') {
+			var modal = document.querySelector('.modal.show');
+			if (modal) {
+				if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+					var bsModal = bootstrap.Modal.getInstance(modal);
+					if (bsModal) {
+						bsModal.hide();
+					}
+				} else if (typeof $ !== 'undefined') {
+					$(modal).modal('hide');
+				} else {
+					modal.classList.remove('show');
+					modal.style.display = 'none';
+					var backdrop = document.querySelector('.modal-backdrop');
+					if (backdrop) {
+						backdrop.remove();
+					}
+					document.body.classList.remove('modal-open');
+					document.body.style.overflow = '';
+				}
+			}
+		}
+	});
+});
+</script>
 </div>
 </body>
 </html>
