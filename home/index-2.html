@@ -368,7 +368,7 @@
 								z-index: 3;
 							"></div>
 							
-							<img src="images/demo-img/banner-thumb21.png" alt="eStaff Platform Preview" style="width: 100%; display: block; transform: scale(1.1);">
+							<img src="images/inner-img/ww.jpeg" alt="eStaff Platform Preview" style="width: 100%; display: block; transform: scale(1.1);">
 							
 							<!-- Inner Glow Border -->
 							<div style="
@@ -749,801 +749,823 @@
 			 	
 			<div class="row" style="margin-top: 50px;">
 				<div class="col-lg-12">
+					<style>
+					/* Topic card styling based on Core Services card */
+					.topic-card {
+						display:flex; align-items:center; gap:12px; padding:16px 20px; border-radius:14px;
+						transition: transform .36s ease, box-shadow .36s ease, border-color .28s ease;
+						cursor:pointer; background: transparent; border: 1px solid rgba(103,102,255,0.06);
+						position:relative; overflow:visible;
+						border-left: 4px solid transparent;
+					}
+
+					/* Soft halo glow behind the card */
+					.topic-card::before {
+						content: "";
+						position: absolute;
+						inset: -10px;
+						border-radius: 18px;
+						background: radial-gradient(circle at center, rgba(102,126,234,0.28), transparent 65%);
+						opacity: 0;
+						transition: opacity .28s ease, transform .36s ease;
+						pointer-events: none;
+						z-index: -1;
+						filter: blur(14px);
+						transform: scale(.96);
+					}
+
+					/* Left-edge accent for a glowing border strip */
+					.topic-card::after {
+						content: "";
+						position: absolute;
+						left: -8px;
+						top: 10px;
+						bottom: 10px;
+						width: 6px;
+						border-radius: 8px;
+						background: linear-gradient(180deg, rgba(102,126,234,0.95), rgba(255,140,0,0.9));
+						opacity: 0;
+						transition: opacity .28s ease, transform .28s ease;
+						pointer-events: none;
+						z-index: 1;
+						box-shadow: 0 8px 22px rgba(102,126,234,0.18);
+					}
+
+					.topic-card:hover {
+						transform: translateY(-6px);
+						box-shadow: 0 22px 60px rgba(102,126,234,0.12);
+					}
+
+					.topic-card:hover::before,
+					.topic-card.active::before {
+						opacity: 1;
+						transform: scale(1);
+					}
+
+					.topic-card:hover::after,
+					.topic-card.active::after {
+						opacity: 1;
+						transform: translateX(0);
+					}
+
+					.topic-badge { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:10px; background: #e9ecef; color:#6c757d; font-weight:700; }
+					.topic-card.active .topic-badge { background: linear-gradient(135deg,#667eea,#764ba2); color: #fff; }
+					.topic-card.active {
+						border-color: rgba(103,102,255,0.25);
+						box-shadow: 0 24px 70px rgba(102,126,234,0.16);
+					}
+					.core-service-card.content-inner { padding: 30px; border-radius: 20px; background: var(--theme-color1); border: 1px solid rgba(103,102,255,0.12); box-shadow: 0 12px 40px rgba(103,102,255,0.06); }
+					.core-service-card.content-inner h3 { color: var(--theme-color-white); }
+					.core-service-card.content-inner p { color: rgba(255,255,255,0.85); }
+					</style>
+					<div class="problems-tab-container" style="display:flex; gap:30px; background:transparent; border-radius:12px; padding:0; box-shadow:none; overflow:hidden; margin-bottom:20px;">
+						<!-- LEFT: Topics -->
+						<div class="problems-topics" style="flex:0 0 32%; background:transparent; padding:0;">
+							<!-- Topic items -->
+							<div class="topic-item topic-card active" data-problem="1" tabindex="0" style="border-left:4px solid #667eea;">
+								<span class="topic-badge">1</span>
+								<span style="font-weight:600; color:#2c3e50;">Aging Population & Limited Care Options</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="2" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">2</span>
+								<span style="font-weight:600; color:#6c757d;"> Agencies Struggle With Scheduling</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="3" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">3</span>
+								<span style="font-weight:600; color:#6c757d;">Safety, Trust & Verification Gaps</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="4" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">4</span>
+								<span style="font-weight:600; color:#6c757d;">Lack of Transparency in Worker Qualifications</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="5" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">5</span>
+								<span style="font-weight:600; color:#6c757d;">Need for Cultural & Language Comfort</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="6" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">6</span>
+								<span style="font-weight:600; color:#6c757d;">Reliability & Predictability Are Hard to Find</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="7" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">7</span>
+								<span style="font-weight:600; color:#6c757d;">No Standardized System for Homecare</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="8" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">8</span>
+								<span style="font-weight:600; color:#6c757d;">Limited Platforms for Home Support Roles</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="9" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">9</span>
+								<span style="font-weight:600; color:#6c757d;">Underemployment Among Newcomers</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="10" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">10</span>
+								<span style="font-weight:600; color:#6c757d;">Affordability & Control Over Pricing</span>
+							</div>
+						</div>
+						<div class="problems-content" style="flex:1; padding:36px; background: transparent;">
+							<div id="problems-placeholder" style="color:#777;">Select a topic on the left to view details.</div>
+						</div>
+					</div>
+					<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const topicItems = Array.from(document.querySelectorAll('.problems-topics .topic-item'));
+					const contentPane = document.querySelector('.problems-content');
+
+					const problemData = {
+						"1": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Aging Population & Limited Care Options</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Canada's senior population is growing rapidly, but traditional care systems cannot keep up. Care homes are expensive, understaffed, and have long waitlists; families are left with limited, costly, and often impersonal options and struggle to find reliable, affordable, compassionate in-home support.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Families currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Long Waitlists & High Costs:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Care homes are unaffordable for many, and waitlists can stretch for months or years.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Lack of Personalized Care:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Institutional settings often fail to provide the comfort and familiarity seniors desire.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Difficulty Finding Trusted Help:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families are left to navigate a fragmented, unregulated market for home support.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Seniors risk isolation or institutionalization</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Families experience stress and burnout</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Quality of life declines for all involved</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Verified, Rated Support Workers:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families can book trusted PSWs, companions, and home helpers for flexible shifts.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Personalized Matching:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">AI-powered matching ensures the right fit for every family's needs and preferences.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Transparent Pricing & Easy Booking:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">No hidden fees, instant booking, and clear costs for every service.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Families gain peace of mind and seniors can age in place with dignity and comfort.
+									</p>
+								</div>
+							</div>
+						`,
+						"2": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;"> Agencies Struggle With Scheduling & Staffing</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Care homes, cleaning agencies, childcare centers, and homecare companies face operational chaos from inadequate workforce management tools and last-minute scheduling issues, resulting in staffing gaps and compliance headaches.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Businesses currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Last-Minute Staff Shortages:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Workers call in sick or cancel shifts with no notice, leaving businesses scrambling to find replacements.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Manual Scheduling Chaos:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Spreadsheets, phone calls, and text messages create confusion and inefficiency in managing staff schedules.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Visibility Into Worker Verification:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Agencies have no automated way to track certifications, police checks, or document expiration dates.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Difficulty Finding Qualified Replacements:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">When emergencies happen, finding vetted, qualified workers quickly becomes nearly impossible.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Real-Time Dashboards:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Without centralized visibility, managers waste time trying to coordinate schedules and track worker status.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Service quality suffers and client satisfaction drops</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Administrative costs skyrocket with manual processes</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Compliance risks increase without proper tracking</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Staff turnover increases due to poor scheduling experience</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Revenue loss from unfilled shifts and cancelled services</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Real-Time Worker Availability:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">See which workers are available instantly and book them with one click, eliminating phone tag and scheduling delays.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Automated Verification & Compliance Tracking:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Get automatic alerts when worker documents are expiring, maintain full compliance, and avoid regulatory risks.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Smart Replacement Suggestions:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">When shifts are cancelled, the system automatically suggests qualified replacements based on skills, location, and availability.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Centralized Dashboard & Shift Management:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">View all shifts, worker statuses, and scheduling conflicts in one place with powerful filtering and reporting tools.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Shift Acceptance Logs & Accountability:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Track who accepted, declined, or completed shifts with full audit trails and performance metrics.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Businesses gain operational efficiency, reduce administrative costs by 60%, eliminate scheduling chaos, and create recurring revenue streams through reliable workforce management.
+									</p>
+								</div>
+							</div>
+						`,
+						"3": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Safety, Trust & Verification Gaps</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Verification in today's gig economy is inconsistent. Families worry about who is entering their home and trust is often based on little more than a profile picture; most platforms lack robust background checks, ID verification, or ongoing monitoring, leaving families exposed to risk.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Families currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Consistent Verification:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Background checks, ID verification, and credential monitoring are inconsistent or missing entirely.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Ongoing Oversight:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Once hired, workers may never be re-checked or monitored for compliance with safety standards.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Admin Intervention:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families have no recourse if something goes wrong or if a worker's credentials expire.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Families feel unsafe and anxious about who enters their home</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Trust in the platform and workers is undermined</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Potential for serious safety and legal issues</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Automated, Ongoing Verification:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">ID verification, police checks, and credential monitoring are automated and continuous, not just one-time uploads.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Admin Oversight & Alerts:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Admins are automatically notified of expiring credentials and can intervene if issues arise.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Family Support & Recourse:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families have a direct line to support and can report issues for immediate action and resolution.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Safety becomes a core product feature, not an afterthought. Families can trust that every worker is thoroughly vetted and continuously monitored.
+									</p>
+								</div>
+							</div>
+						`,
+						"4": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Lack of Transparency in Worker Qualifications</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Families often hire without knowing a caregiver's true qualifications, experience, or background; there is no easy way to verify credentials, certifications, police checks, or language ability, forcing families to trust unverified claims.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Families currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Verified Credentials:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families must trust claims about certifications, police checks, and experience without any proof or validation.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Centralized Profile:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Experience, ratings, and language skills are scattered or missing, making it hard to compare workers effectively.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Police Check Status:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families have no way to confirm if a worker's police check is current or expired.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Uncertainty and anxiety for families when making hiring decisions</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Potential safety and legal risks from unverified workers</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Difficulty making informed, confident decisions about care providers</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Verified, Transparent Profiles:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">All credentials, certifications, and police check status are verified and displayed in one centralized place.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Experience & Ratings:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families can see experience level, language skills, and past ratings at a glance for easy comparison.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Police Check Expiry Tracking:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Status and expiry dates are clearly displayed and monitored for ongoing compliance.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Uncertainty is replaced with confidence and safety. Families can make informed decisions with complete transparency about every worker.
+									</p>
+								</div>
+							</div>
+						`,
+						"5": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Need for Cultural & Language Comfort</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Comfort and communication are essential in caregiving, yet most platforms ignore cultural alignment and language comfort. This leads to misunderstandings, anxiety, and a lack of trust between families and caregivers, especially for seniors and children.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">What families want:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Caregivers who speak the same language:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Language barriers create confusion and prevent effective communication, especially in emergencies.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Deep understanding of cultural values and traditions:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Cultural differences can lead to misunderstandings about dietary needs, religious practices, and social norms.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">A familiar, respectful environment that feels like home:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Without cultural alignment, seniors and children may feel isolated, misunderstood, or uncomfortable in their own homes.</p>
+										</div>
+									</div>
+								</div>
+								
+								<p style="margin-bottom:20px;color:rgba(255,255,255,0.85);font-style:italic;">This is not about race — it is about comfort, trust, and effective communication, especially for seniors or children who may feel isolated or misunderstood.</p>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Care recipients feel misunderstood, isolated, and anxious</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Families worry about miscommunication and cultural insensitivity</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Quality of care suffers when trust and comfort are absent</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Language & Culture Filters:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families can filter and select caregivers by language, culture, and communication style to ensure the perfect match.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Cultural Competency Profiles:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Caregivers highlight their backgrounds, languages spoken, and cultural competencies in detailed profiles.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Comfort-Based Matching:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Our matching algorithm prioritizes comfort, trust, and compatibility to create meaningful connections.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Families gain peace of mind, and care recipients feel understood, respected, and at home.
+									</p>
+								</div>
+							</div>
+						`,
+						"6": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Reliability & Predictability Are Hard to Find</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Families need peace of mind about caregiver punctuality and reliability; missed shifts, late arrivals, and last-minute cancellations are common and platforms lack mechanisms to track or enforce reliability, leaving families scrambling for backup care.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Missed Shifts & Cancellations:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">No-shows and last-minute cancellations leave families without critical support.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Accountability:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Platforms rarely track or enforce reliability, so unreliable workers go unchecked.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Real-Time Tracking:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families have no way to know if a worker is on their way, late, or absent until it’s too late.</p>
+										</div>
+									</div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;"><span style="margin-right:10px;">•</span><span>Families are left scrambling for backup care</span></div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;"><span style="margin-right:10px;">•</span><span>Trust in the platform and workers erodes</span></div>
+										<div style="display:flex;align-items:start;"><span style="margin-right:10px;">•</span><span>Care recipients experience anxiety and disruption</span></div>
+									</div>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Reputation Scoring:</strong><p style="margin:5px 0 0 0;color:#155724;">Tracks punctuality, reliability, and completion rates for every worker.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Real-Time Tracking & Alerts:</strong><p style="margin:5px 0 0 0;color:#155724;">Families see live updates on worker status and receive automated reminders.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Reliability Metrics:</strong><p style="margin:5px 0 0 0;color:#155724;">Reliability scores are visible to families before booking, so they can make informed choices.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: Families can trust that help will arrive as scheduled, every time.</p>
+								</div>
+							</div>
+						`,
+						"7": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">No Standardized System for Homecare & Support Services</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Home support and caregiving services operate in a fragmented, manual, and inconsistent way — attendance logs, incident reports, document expiries, and shift histories are scattered across calls and spreadsheets, creating risk, disputes, and poor outcomes.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Agencies, care homes, and families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Worker Attendance Tracking:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Did the worker show up? When did they arrive and leave? Manual logs create disputes and billing errors.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Reliability Monitoring:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Platforms lack data to identify chronic no-shows or unreliable workers, making staffing decisions blind.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Shift History Review:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Shift notes, ratings, and outcomes are lost across messages — nobody can audit performance or patterns.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Incident Reporting System:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">When incidents occur there is no structured way to report, timestamp, or review them — increasing liability and risk.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Document Expiry Tracking:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Police checks, certifications and licenses expire without automated reminders, creating compliance gaps.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;">
+										<li>Agencies lose revenue to billing errors and administrative overhead</li>
+										<li>Families cannot verify what happened during a shift</li>
+										<li>Workers lose opportunities because they lack verifiable shift history</li>
+										<li>Regulators cannot audit safety or compliance reliably</li>
+									</ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Automated Attendance Tracking:</strong><p style="margin:5px 0 0 0;color:#155724;">Workers check in/out via the app with GPS verification. Families and agencies see real-time shift logs.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Reliability Scoring & Analytics:</strong><p style="margin:5px 0 0 0;color:#155724;">Platform tracks punctuality, cancellations, and completion rates to produce reliability scores.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Complete Shift History Dashboard:</strong><p style="margin:5px 0 0 0;color:#155724;">Every shift is recorded with timestamps, notes, photos, and ratings — accessible for audits and reviews.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Built-in Incident Reporting:</strong><p style="margin:5px 0 0 0;color:#155724;">Structured incident forms with photo uploads, timestamps, and admin workflows for remediation.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Smart Document Expiry Management:</strong><p style="margin:5px 0 0 0;color:#155724;">Automated alerts notify workers and admins 30/60/90 days before expiries and enforce compliance.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: eStaff replaces chaos with a standardized, auditable system that benefits families, agencies, workers, and regulators.</p>
+								</div>
+							</div>
+						`,
+						"8": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Limited Platforms for Essential Home Support Roles</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Most mainstream gig platforms focus on delivery and transport, leaving essential home support roles like PSWs, IENs, DSWs, babysitters, cleaners, and companions underserved; families must search widely or hire unverified help.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Platform for Home Support:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Essential roles are ignored by broad gig marketplaces, making discovery difficult.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Fragmented Search:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families must check multiple sites, groups, and agencies to fill simple household needs.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Verification or Ratings:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Unverified workers and missing reviews make it risky to hire for sensitive roles.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;"><li>Families waste time and energy searching for help</li><li>Essential needs go unmet or are filled by unqualified workers</li><li>Communities lack a trusted, all-in-one solution</li></ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Multi-Category Marketplace:</strong><p style="margin:5px 0 0 0;color:#155724;">A dedicated marketplace for PSWs, companions, cleaners, babysitters and more — all verified and searchable.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Tailored Search & Matching:</strong><p style="margin:5px 0 0 0;color:#155724;">Filters and AI matching help families find the right skillset, availability, and fit quickly.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Verified, Rated Workers:</strong><p style="margin:5px 0 0 0;color:#155724;">Every worker is background-checked, rated, and reviewed for trust and quality.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: Families and communities finally have a trusted, all-in-one platform for every essential support role.</p>
+								</div>
+							</div>
+						`,
+						"9": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Underemployment Among Newcomers & Students</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Talented newcomers, students, and part-time workers are often stuck in underemployment due to systemic barriers — employers demand local experience, networks are limited, and credential recognition is slow, wasting skills and potential.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Key challenges include:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">"No Canadian Experience" Barrier:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Employers often demand local experience, excluding globally qualified candidates.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Limited Professional Networks:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Newcomers and students lack local connections, making it hard to find references or mentors.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Credential Recognition Delays:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Foreign qualifications can take months to be recognized, forcing people into survival jobs.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Unfair Hiring Barriers:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Bias and unfamiliarity with local hiring practices keep qualified people out.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Reputation Without History:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Without a verifiable work history, newcomers cannot demonstrate reliability or skills to employers.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Exploitative "Gig" Options:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Many platforms only offer low-wage, unstable gigs with little prospect for advancement.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;"><li>Skills and education go unused, harming the economy</li><li>Newcomers and students remain in survival jobs</li><li>Communities miss out on diverse talent</li><li>Frustration and disengagement rise</li><li>The cycle of underemployment persists</li></ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">No "Canadian Experience" Required:</strong><p style="margin:5px 0 0 0;color:#155724;">Platform values global skills and credentials; work history begins the moment a worker starts on eStaff.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Verified Digital Profile:</strong><p style="margin:5px 0 0 0;color:#155724;">Every worker has a profile with verified credentials, ratings, and shift history visible to employers.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Build Reputation from Day One:</strong><p style="margin:5px 0 0 0;color:#155724;">Ratings and reviews accumulate with every shift, allowing workers to prove themselves quickly.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Flexible, Fair Access to Gigs:</strong><p style="margin:5px 0 0 0;color:#155724;">Gigs are matched on skills, availability, and verified credentials — not connections.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Earn Immediately and Consistently:</strong><p style="margin:5px 0 0 0;color:#155724;">Transparent pay and consistent gig flow help workers earn reliably from day one.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Safety & Legitimacy Built-In:</strong><p style="margin:5px 0 0 0;color:#155724;">All gigs require verified credentials and background checks, protecting workers and families.</p></div></div>
+									</div>
+									<div style="background:#e3e7fd;border-left:4px solid #6766FF;padding:15px;margin-bottom:20px;border-radius:6px;">
+										<p style="margin:0;color:#2d2d6a;"><strong>🎖️ Government Alignment:</strong> This approach supports workforce integration, diversity, and economic participation.</p>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🏆 Result: eStaff unlocks the potential of newcomers and students, creating a fair, inclusive, and prosperous workforce.</p>
+								</div>
+						`,
+						"10": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Affordability & Control Over Pricing</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Many platforms hide fees, inflate prices, or limit choice — making budgeting hard and eroding user trust. Families want transparent pricing and control over worker selection.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Hidden Fees & Unclear Pricing:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Unexpected charges and confusing price structures make it hard to budget.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Control Over Choice:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Platforms sometimes assign workers or limit options, removing user control.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Difficulty Comparing Workers:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Lack of transparent comparisons makes it hard to choose the best value.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;"><li>Users feel powerless and frustrated</li><li>Trust in the platform is eroded</li><li>Families may overpay or avoid needed services</li></ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Transparent Pricing:</strong><p style="margin:5px 0 0 0;color:#155724;">Clear, upfront pricing for every service and worker—no hidden fees.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">User Control & Choice:</strong><p style="margin:5px 0 0 0;color:#155724;">Users can filter, compare, and choose workers based on price, skills, and reviews.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">No Surprises:</strong><p style="margin:5px 0 0 0;color:#155724;">What you see is what you pay—full transparency at every step.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: Users feel empowered, in control, and confident in their choices.</p>
+								</div>
+							</div>
+						`,
+					};
+
+					function setActiveTopic(el) {
+						topicItems.forEach(t => {
+							t.classList.remove('active');
+							t.style.background = '';
+							t.style.borderLeft = '4px solid transparent';
+							const badge = t.querySelector('span:first-child');
+							const text = t.querySelector('span:last-child');
+							if (badge) { badge.style.background = '#e9ecef'; badge.style.color = '#6c757d'; }
+							if (text) text.style.color = '#6c757d';
+							if (t === el) t.setAttribute('aria-selected','true'); else t.removeAttribute('aria-selected');
+						});
+
+						el.classList.add('active');
+						el.style.background = '#fff';
+						el.style.borderLeft = '4px solid #667eea';
+						const activeBadge = el.querySelector('span:first-child');
+						const activeText = el.querySelector('span:last-child');
+						if (activeBadge) { activeBadge.style.background = 'linear-gradient(135deg,#667eea,#764ba2)'; activeBadge.style.color = '#fff'; }
+						if (activeText) activeText.style.color = '#2c3e50';
+					}
+
+					function showContent(id, pushHash = true) {
+						if (!contentPane) return;
+						const html = problemData[id] || '<p>No content available.</p>';
+						const current = contentPane.querySelector('.content-inner');
+						const newHtml = `<div class="core-service-card content-inner" style="opacity:0;transition:opacity .35s ease;">${html}</div>`;
+						if (current) {
+							current.style.opacity = 0;
+							setTimeout(() => {
+								contentPane.innerHTML = newHtml;
+								const inner = contentPane.querySelector('.content-inner');
+								requestAnimationFrame(() => inner.style.opacity = 1);
+							}, 260);
+						} else {
+							contentPane.innerHTML = newHtml;
+							const inner = contentPane.querySelector('.content-inner');
+							requestAnimationFrame(() => inner.style.opacity = 1);
+						}
+						if (pushHash) {
+							history.replaceState(null, '', '#problem-' + id);
+						}
+					}
+
+					// keyboard helpers
+					function focusIndex(idx) {
+						const clamped = Math.max(0, Math.min(topicItems.length - 1, idx));
+						topicItems[clamped].focus();
+					}
+
+					// initial load: respect hash if present
+					let startId = '1';
+					const m = location.hash.match(/^#problem-(\d{1,2})$/);
+					if (m && problemData[m[1]]) startId = m[1];
+					const startEl = topicItems.find(t => t.getAttribute('data-problem') === startId);
+					if (startEl) setActiveTopic(startEl);
+					showContent(startId, false);
+
+					topicItems.forEach((item, i) => {
+						item.addEventListener('click', function() {
+							const id = this.getAttribute('data-problem');
+							setActiveTopic(this);
+							showContent(id, true);
+						});
+
+						item.addEventListener('keydown', function(e) {
+							if (e.key === 'ArrowDown') { e.preventDefault(); focusIndex(i + 1); }
+							else if (e.key === 'ArrowUp') { e.preventDefault(); focusIndex(i - 1); }
+							else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
+						});
+					});
+				});
+				</script>
 					<div class="accordion" id="problemsAccordion">
 						
-						<!-- Problem 1 -->
-						<div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading1">
-								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									1️ Aging Population & Limited Care Options
-								</button>
-							</h2>
-							<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Canada's senior population is growing rapidly, but traditional care systems cannot keep up. Families are left with limited, costly, and often impersonal options.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Care homes are expensive, understaffed, and have long waitlists. Many elderly individuals want to remain at home, but families struggle to find reliable, affordable, and compassionate support.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>Families currently struggle with:</strong></p>
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Long Waitlists & High Costs:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Care homes are unaffordable for many, and waitlists can stretch for months or years.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Lack of Personalized Care:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Institutional settings often fail to provide the comfort and familiarity seniors desire.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Difficulty Finding Trusted Help:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Families are left to navigate a fragmented, unregulated market for home support.</p>
-											</div>
-										</div>
-									</div>
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Seniors risk isolation or institutionalization</li>
-											<li>Families experience stress and burnout</li>
-											<li>Quality of life declines for all involved</li>
-										</ul>
-									</div>
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Verified, Rated Support Workers:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Families can book trusted PSWs, companions, and home helpers for flexible shifts.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Personalized Matching:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">AI-powered matching ensures the right fit for every family’s needs and preferences.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Transparent Pricing & Easy Booking:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">No hidden fees, instant booking, and clear costs for every service.</p>
-												</div>
-											</div>
-										</div>
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: Families gain peace of mind and seniors can age in place with dignity and comfort.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Problem 2 -->
-						 						<div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading10">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10" style="background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%); color: #333; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									2 B2B Agencies Struggle With Scheduling & Staffing
-								</button>
-							</h2>
-							<div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>Care homes, cleaning agencies, childcare centers, and homecare companies face:</strong></p>
-									<ul style="list-style: disc; margin-left: 20px; margin-bottom: 15px;">
-										<li>Last-minute staff shortages</li>
-										<li>Manual scheduling chaos</li>
-										<li>No visibility into worker verification</li>
-										<li>Difficulty finding qualified replacements</li>
-										<li>No real-time dashboards</li>
-									</ul>
-									<p style="margin-bottom: 10px;"><strong>eStaff provides businesses with:</strong></p>
-									<ul style="list-style: disc; margin-left: 20px; margin-bottom: 15px;">
-										<li>Real-time worker availability</li>
-										<li>Verification status</li>
-										<li>Expiring document alerts</li>
-										<li>Shift acceptance logs</li>
-										<li>Replacement worker suggestions</li>
-									</ul>
-									<p style="color: #28a745; font-weight: 600; margin-top: 15px;">✅ This creates recurring revenue and long-term partnerships.</p>
-								</div>
-							</div>
-						</div>
-						
-
-						<!-- Problem 3 -->
-						 <div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading7">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #333; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									3 Safety, Trust & Verification Gaps
-								</button>
-							</h2>
-							<div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Verification in today's gig economy is inconsistent. Families worry about who is entering their home, and trust is often based on little more than a profile picture.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Most platforms do not require robust background checks, ID verification, or ongoing monitoring. This leaves families exposed to risk and uncertainty.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>Families currently struggle with:</strong></p>
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Consistent Verification:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Background checks, ID verification, and credential monitoring are inconsistent or missing.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Ongoing Oversight:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Once hired, workers may never be re-checked or monitored for compliance.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Admin Intervention:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Families have no recourse if something goes wrong or if a worker’s credentials expire.</p>
-											</div>
-										</div>
-									</div>
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Families feel unsafe and anxious</li>
-											<li>Trust in the platform and workers is undermined</li>
-											<li>Potential for serious safety and legal issues</li>
-										</ul>
-									</div>
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Automated, Ongoing Verification:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">ID verification, police checks, and credential monitoring are automated and continuous.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Admin Oversight & Alerts:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Admins are notified of expiring credentials and can intervene if issues arise.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Family Support & Recourse:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Families have a direct line to support and can report issues for immediate action.</p>
-												</div>
-											</div>
-										</div>
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: Safety becomes a core product feature, not an option. Families can trust that every worker is thoroughly vetted and monitored.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-
-						<!-- Problem 4 -->
-						<div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading4">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: #fff; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									4 Lack of Transparency in Worker Qualifications
-								</button>
-							</h2>
-							<div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Families often hire without knowing their caregiver’s true qualifications, experience, or background. This creates fear, uncertainty, and risk.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> There is no easy way to verify credentials, certifications, police checks, or even language ability. Families are forced to trust unverified claims.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>Families currently struggle with:</strong></p>
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Verified Credentials:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Families must trust claims about certifications, police checks, and experience without proof.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Centralized Profile:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Experience, ratings, and language skills are scattered or missing, making it hard to compare workers.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Police Check Status:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Families have no way to confirm if a worker’s police check is current or expired.</p>
-											</div>
-										</div>
-									</div>
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Uncertainty and anxiety for families</li>
-											<li>Potential safety and legal risks</li>
-											<li>Difficulty making informed, confident decisions</li>
-										</ul>
-									</div>
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Verified, Transparent Profiles:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">All credentials, certifications, and police check status are verified and displayed in one place.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Experience & Ratings:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Families can see experience level, language skills, and past ratings at a glance.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Police Check Expiry Tracking:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Status and expiry dates are clearly displayed and monitored for compliance.</p>
-												</div>
-											</div>
-										</div>
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: Uncertainty is replaced with confidence and safety.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Problem 5 -->
-						 <div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading2">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: #fff; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									5 Need for Cultural & Language Comfort
-								</button>
-							</h2>
-							<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Comfort and communication are essential in caregiving, especially for seniors, children, and vulnerable individuals. Yet, families often struggle to find caregivers who truly understand their loved one’s language and cultural background.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Most platforms ignore the importance of cultural alignment and language comfort. This leads to misunderstandings, anxiety, and a lack of trust between families and caregivers.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>What families want:</strong></p>
-									<ul style="list-style: disc; margin-left: 20px; margin-bottom: 15px;">
-										<li>Caregivers who speak the same language</li>
-										<li>Deep understanding of cultural values and traditions</li>
-										<li>A familiar, respectful environment that feels like home</li>
-									</ul>
-									<p style="margin-bottom: 15px;"><em>This is not about race — it is about comfort, trust, and effective communication, especially for seniors or children who may feel isolated or misunderstood.</em></p>
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #155724;">
-											<li>Families can filter and select caregivers by language, culture, and communication style</li>
-											<li>Caregivers highlight their backgrounds, languages, and cultural competencies in their profiles</li>
-											<li>Matching algorithm prioritizes comfort, trust, and compatibility</li>
-										</ul>
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: Families gain peace of mind, and care recipients feel understood, respected, and at home.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-
-						<!-- Problem 6 -->
-						 <div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading3">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #fff; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									6 Reliability & Predictability Are Hard to Find
-								</button>
-							</h2>
-							<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Families need peace of mind knowing that their caregiver will show up, on time, every time. Most gig platforms do not prioritize punctuality or reliability, leaving families anxious and unprepared.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Missed shifts, late arrivals, and last-minute cancellations are common. There’s no way to track or enforce reliability, and families are left scrambling for backup care.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>Families currently struggle with:</strong></p>
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Missed Shifts & Cancellations:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">No-shows and last-minute cancellations leave families without critical support.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Accountability:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Platforms rarely track or enforce reliability, so unreliable workers go unchecked.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Real-Time Tracking:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Families have no way to know if a worker is on their way, late, or absent until it’s too late.</p>
-											</div>
-										</div>
-									</div>
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Families are left scrambling for backup care</li>
-											<li>Trust in the platform and workers erodes</li>
-											<li>Care recipients experience anxiety and disruption</li>
-										</ul>
-									</div>
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Reputation Scoring:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Tracks punctuality, reliability, and completion rates for every worker.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Real-Time Tracking & Alerts:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Families see live updates on worker status and receive automated reminders.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Reliability Metrics:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Reliability scores are visible to families before booking, so they can make informed choices.</p>
-												</div>
-											</div>
-										</div>
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: Families can trust that help will arrive as scheduled, every time.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-
-						<!-- Problem 7 -->
-						 <div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading8">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #333; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									7 No Standardized System for Homecare & Support Services
-								</button>
-							</h2>
-							<div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality: Home support and caregiving services operate in chaos.</strong></p>
-									
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Home support is fragmented, unregulated, and lacks any standardized operational framework. This creates confusion, risk, and inefficiency for everyone involved.</p>
-									</div>
-
-									<p style="margin-bottom: 15px;"><strong>Agencies, care homes, and families currently struggle with:</strong></p>
-									
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Worker Attendance Tracking:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Did the worker show up? When did they arrive? When did they leave? Most families and agencies rely on manual logs, phone calls, or memory — leading to disputes and billing confusion.</p>
-											</div>
-										</div>
-
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Reliability Monitoring:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">How often does a worker cancel? Do they arrive on time? Are they consistent? Without data, there's no way to identify reliable workers or address chronic no-shows.</p>
-											</div>
-										</div>
-
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Shift History Review:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Past shifts are lost in emails, texts, or scattered spreadsheets. Families can't see patterns. Agencies can't audit performance. Workers have no digital record of their work history.</p>
-											</div>
-										</div>
-
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Incident Reporting System:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">If something goes wrong — a fall, a medication error, a behavioral issue — there's no standardized way to document it. This creates liability, miscommunication, and unsafe environments.</p>
-											</div>
-										</div>
-
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Document Expiry Tracking:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Police checks, certifications, insurance, and licenses expire. Most agencies don't have automated alerts. Workers slip through the cracks, creating legal and safety risks.</p>
-											</div>
-										</div>
-									</div>
-
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Agencies lose money due to unbilled shifts and administrative overhead</li>
-											<li>Families lose trust because they can't verify what happened</li>
-											<li>Workers miss opportunities because they have no verifiable work history</li>
-											<li>Regulatory bodies have no way to audit safety and compliance</li>
-										</ul>
-									</div>
-
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Automated Attendance Tracking:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Workers check in/out via the app with GPS verification. Families and agencies see real-time shift logs.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Reliability Scoring & Analytics:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Platform tracks punctuality, cancellations, completion rates, and generates reliability scores visible to seekers.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Complete Shift History Dashboard:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Every shift is recorded with timestamps, locations, notes, and ratings — accessible forever for audits and reviews.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Built-in Incident Reporting:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Structured forms for reporting issues with photo uploads, timestamps, and admin review workflows.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Smart Document Expiry Management:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Automated alerts notify workers and admins 30/60/90 days before documents expire. Compliance is enforced automatically.</p>
-												</div>
-											</div>
-										</div>
-
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: eStaff introduces a standardized, regulated, and accountable system that replaces chaos with clarity — benefiting families, agencies, workers, and regulators.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-
-						<!-- Problem 8 -->
-						<div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading6">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									8 Limited Platforms for Essential Home Support Roles
-								</button>
-							</h2>
-							<div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Most gig platforms only serve delivery or ridesharing. There is no dedicated solution for essential home support roles that families and communities rely on.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Essential roles like PSWs, IENs, DSWs, babysitters, cleaners, companions, and more are left out. Families struggle to find trusted help for real household needs.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>Families currently struggle with:</strong></p>
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Platform for Home Support:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Most platforms ignore essential roles like PSWs, IENs, DSWs, HSWs, babysitters, cleaners, and more.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Fragmented Search:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Families must search multiple sites or rely on word-of-mouth to find help for each need.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Verification or Ratings:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Unverified workers and lack of ratings make it hard to trust or compare options.</p>
-											</div>
-										</div>
-									</div>
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Families waste time and energy searching for help</li>
-											<li>Essential needs go unmet or are filled by unqualified workers</li>
-											<li>Communities lack a trusted, all-in-one solution</li>
-										</ul>
-									</div>
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Multi-Category Marketplace:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Dedicated to essential home and community support roles, all in one place.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Tailored Search & Matching:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Families can search, filter, and match with verified, rated workers for every need.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Verified, Rated Workers:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Every worker is background-checked, rated, and reviewed for trust and quality.</p>
-												</div>
-											</div>
-										</div>
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: Families and communities finally have a trusted, all-in-one platform for every essential support role.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Problem 9 -->
-						<div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading9">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); color: #333; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									9 Underemployment Among Newcomers & Students
-								</button>
-							</h2>
-							<div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Talented newcomers, students, and part-time workers are trapped in underemployment, unable to access meaningful opportunities.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Systemic barriers prevent newcomers and students from fully participating in the workforce, wasting skills and potential.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>Key challenges include:</strong></p>
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>"No Canadian Experience" Barrier:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Employers demand local experience, shutting out newcomers regardless of global skills or credentials.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Limited Professional Networks:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Newcomers and students lack established connections, making it hard to find references or mentors.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Credential Recognition Delays:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Foreign degrees and certifications are slow to be recognized, if at all, forcing skilled people into survival jobs.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Unfair Hiring Barriers:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Bias, lack of references, and unfamiliarity with local hiring practices keep qualified people out.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Reputation Without History:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Without a digital record, newcomers and students can't prove reliability or build trust with employers.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Exploitative "Gig" Options:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Many platforms offer only low-wage, unstable, or unsafe gigs, with little chance for advancement or security.</p>
-											</div>
-										</div>
-									</div>
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Skills and education go unused, hurting the economy</li>
-											<li>Newcomers and students remain in survival jobs</li>
-											<li>Communities miss out on diverse talent</li>
-											<li>Frustration and disengagement rise</li>
-											<li>Cycle of underemployment continues</li>
-										</ul>
-									</div>
-
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>&#9989; How eStaff Solves This:</strong></p>
-
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">&#10003;</span>
-												<div>
-													<strong style="color: #155724;">No "Canadian Experience" Required:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Platform values global skills and credentials. Work history starts on day one, not after years of struggle.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">&#10003;</span>
-												<div>
-													<strong style="color: #155724;">Verified Digital Profile:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Every worker has a digital profile with verified credentials, ratings, and shift history, visible to all employers.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">&#10003;</span>
-												<div>
-													<strong style="color: #155724;">Build Reputation from Day One:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Ratings and reviews accumulate with every shift, allowing newcomers and students to prove themselves quickly.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">&#10003;</span>
-												<div>
-													<strong style="color: #155724;">Flexible, Fair Access to Gigs:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">No gatekeeping. Gigs are matched based on skills, availability, and verified credentials, not connections.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">&#10003;</span>
-												<div>
-													<strong style="color: #155724;">Earn Immediately and Consistently:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Workers can start earning right away, with transparent pay and reliable gig flow.</p>
-												</div>
-											</div>
-
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">&#10003;</span>
-												<div>
-													<strong style="color: #155724;">Safety & Legitimacy Built-In:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">All gigs require verified credentials, background checks, and ongoing compliance, protecting both workers and families.</p>
-												</div>
-											</div>
-										</div>
-
-										<div style="background: #e3e7fd; border-left: 4px solid #6766FF; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-											<p style="margin: 0; color: #2d2d6a;"><strong>&#9989; Government Alignment:</strong> This approach directly supports government priorities for workforce integration, diversity, and economic growth.</p>
-										</div>
-
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											&#127942; Result: eStaff unlocks the potential of newcomers and students, creating a fair, inclusive, and prosperous workforce for all.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Problem 10 -->
-						<div class="accordion-item" style="background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
-							<h2 class="accordion-header" id="heading5">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); color: #fff; font-weight: 600; font-size: 18px; padding: 20px 25px; border-radius: 10px;">
-									 10 Affordability & Control Over Pricing
-								</button>
-							</h2>
-							<div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#problemsAccordion">
-								<div class="accordion-body" style="padding: 25px; font-size: 15px; line-height: 1.8; color: #555;">
-									<p style="margin-bottom: 15px;"><strong>The Current Reality:</strong> Many gig platforms inflate prices, add hidden fees, or limit user choice. Customers feel powerless and uncertain about what they’re paying for.</p>
-									<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0; color: #856404;"><strong>⚠️ The Problem:</strong> Lack of pricing transparency and control makes it hard for families to budget and trust the platform. Users want to choose workers within their budget and know exactly what they’re paying for.</p>
-									</div>
-									<p style="margin-bottom: 15px;"><strong>Families currently struggle with:</strong></p>
-									<div style="margin-bottom: 20px;">
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Hidden Fees & Unclear Pricing:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Unexpected charges and unclear costs make it hard to budget and plan.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>No Control Over Choice:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Platforms may assign workers or limit options, removing user control.</p>
-											</div>
-										</div>
-										<div style="display: flex; align-items: start; margin-bottom: 12px;">
-											<span style="color: #dc3545; font-size: 20px; margin-right: 10px;">❌</span>
-											<div>
-												<strong>Difficulty Comparing Workers:</strong>
-												<p style="margin: 5px 0 0 0; color: #666;">Lack of transparency makes it hard to compare workers by price, skills, or reviews.</p>
-											</div>
-										</div>
-									</div>
-									<div style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-										<p style="margin: 0 0 10px 0; color: #0c5460;"><strong>💡 The Impact:</strong></p>
-										<ul style="list-style: disc; margin-left: 20px; color: #0c5460;">
-											<li>Users feel powerless and frustrated</li>
-											<li>Trust in the platform is eroded</li>
-											<li>Families may overpay or avoid needed services</li>
-										</ul>
-									</div>
-									<div style="background: #d4edda; border-left: 4px solid #28a745; padding: 20px; border-radius: 5px; margin-top: 20px;">
-										<p style="margin: 0 0 15px 0; color: #155724; font-size: 16px;"><strong>✅ How eStaff Solves This:</strong></p>
-										<div style="margin-bottom: 15px;">
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">Transparent Pricing:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Clear, upfront pricing for every service and worker—no hidden fees.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">User Control & Choice:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">Users can filter, compare, and choose workers based on price, skills, and reviews.</p>
-												</div>
-											</div>
-											<div style="display: flex; align-items: start; margin-bottom: 10px;">
-												<span style="color: #28a745; font-size: 18px; margin-right: 10px;">✓</span>
-												<div>
-													<strong style="color: #155724;">No Surprises:</strong>
-													<p style="margin: 5px 0 0 0; color: #155724;">What you see is what you pay—full transparency at every step.</p>
-												</div>
-											</div>
-										</div>
-										<p style="margin: 15px 0 0 0; color: #155724; font-weight: 600; font-size: 15px;">
-											🎯 Result: Users feel empowered, in control, and confident in their choices.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</div>		
@@ -1737,7 +1759,7 @@
 							<h1 class="title split-text">Who Will Use eStaff</h1>
 						</div>
 						<div class="section-desc">
-							<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">eStaff serves three major user groups: B2C Users (Households), B2B Organizations, and Job Seekers</p>
+							<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">eStaff serves three major user groups: B2C Users (Households), Organizations, and Job Seekers</p>
 						</div>
 					</div>
 				</div>
