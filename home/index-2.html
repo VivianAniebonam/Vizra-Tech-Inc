@@ -11,6 +11,48 @@
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Styles for the three-image about thumb layout */
+.about-thumb-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px; /* tighter spacing requested */
+	padding-top: 14px;
+	flex-wrap: nowrap; /* keep them on one row when possible */
+}
+.about-thumb-wrapper > div {
+	width: 38%; /* slightly larger */
+	max-width: 420px; /* allow larger thumbs */
+	min-width: 180px;
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 22px 56px rgba(16,24,40,0.16), 0 10px 26px rgba(16,24,40,0.08);
+	transition: transform .32s cubic-bezier(.2,.9,.2,1), box-shadow .24s;
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+	margin-left: -36px; /* stronger negative margin for closer overlap */
+}
+.about-thumb-wrapper figure{margin:0}
+.about-thumb-wrapper img{display:block;width:100%;height:auto; object-fit:cover}
+.about-thumb21{transform: translateY(-12px) rotate(-8deg) scale(1.14); z-index:6}
+.about-thumb22{transform: translateY(6px) scale(1.18); z-index:5}
+.about-thumb23{transform: translateY(-6px) rotate(8deg) scale(1.12); z-index:4}
+.about-thumb-wrapper:hover > div{box-shadow: 0 34px 72px rgba(16,24,40,0.18)}
+.about-thumb-wrapper > div:hover{transform: translateY(0) rotate(0) scale(1.12); z-index:6}
+
+@media (max-width: 1200px){
+	.about-thumb-wrapper > div{width:40%; max-width:320px}
+}
+@media (max-width: 992px){
+	.about-thumb-wrapper{flex-wrap:wrap; gap:12px}
+	.about-thumb-wrapper > div{width:46%; margin-left:0}
+}
+@media (max-width: 640px){
+	.about-thumb-wrapper{flex-direction:column; gap:14px}
+	.about-thumb-wrapper > div{width:84%; max-width:420px; transform:none; margin-left:0}
+}
+</style>
 </head>
 <body>
 
@@ -703,13 +745,13 @@
 				<div class="col-xl-6">
 					<div class="about-thumb-wrapper">
 						<div class="about-thumb21">
-							<figure class="reveal"><img src="images/demo-img/about-thumb21.png" alt="thumb"></figure>
+							<figure class="reveal"><img src="images/inner-img/cc.png" alt="thumb"></figure>
 						</div>
 						<div class="about-thumb22">
-							<figure class="reveal"><img src="images/demo-img/about-thumb22.png" alt="thumb"></figure>
+							<figure class="reveal"><img src="images/inner-img/yy.webp" alt="thumb"></figure>
 						</div>
 						<div class="about-thumb23">
-							<figure class="reveal"><img src="images/demo-img/about-thumb23.png" alt="thumb"></figure>
+							<figure class="reveal"><img src="images/inner-img/hh.png" alt="thumb"></figure>
 						</div>
 					</div>
 				</div>
@@ -1581,7 +1623,7 @@
 
 
 
-	<!--about Section four -->
+	<!--Features Section four -->
 	<section class="about-section-four">
 		<style>
 			/* Feature titles color (purple accent) */
@@ -1731,7 +1773,7 @@
 							<h1 class="title split-text">Powered by Industry-Leading Technology</h1>
 						</div>
 						<div class="section-desc">
-							<p class="text-anime-3">Built with Firebase, Firestore, Google Cloud Storage, and modern AI frameworks to ensure scalability, security, and intelligent matching capabilities
+							<p class="text-anime-3">Built on scalable cloud infrastructure and modern AI frameworks to ensure reliability, security, and intelligent matching capabilities.
 							</p>
 						</div>
 					</div>
