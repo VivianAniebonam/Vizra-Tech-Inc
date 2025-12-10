@@ -192,6 +192,21 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   line-height: var(--line-height-heading-);
 }
+
+/* Navbar logo sizing - site-wide */
+.header-logo img,
+.mobile-logo img {
+  max-width: 100px; /* increased per request */
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .header-logo img,
+  .mobile-logo img {
+    max-width: 110px; /* slightly smaller on very small screens */
+  }
+}
 h1 small,
 h1 .small, h2 small,
 h2 .small, h3 small,
