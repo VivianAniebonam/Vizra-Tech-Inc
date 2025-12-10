@@ -769,6 +769,25 @@
 	<!-- Problem Section - Detailed -->
 	 
 	<section class="workflow-section-two binifits-marquee-area-one" style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
+		<!-- Decorative corner shapes (left and right). Do not modify section content. -->
+		<img src="images/demo-img/accrodion-shape1.png" alt="decor-left" class="section-corner-left">
+		<img src="images/demo-img/accrodion-shape2.png" alt="decor-right" class="section-corner-right">
+		<style>
+		/* Positioning for the decorative corner images */
+		.workflow-section-two{position:relative}
+		.workflow-section-two .section-corner-left,
+		.workflow-section-two .section-corner-right{position:absolute;top:0;z-index:0;pointer-events:none;}
+		.workflow-section-two .section-corner-left{left:0;}
+		.workflow-section-two .section-corner-right{right:0;}
+		/* Slight scale so shapes don't overlap content; tweak if needed */
+		.workflow-section-two .section-corner-left img,
+		.workflow-section-two .section-corner-right img{display:block}
+		/* Hide decorative shapes on small screens */
+		@media (max-width:768px){
+			.workflow-section-two .section-corner-left,
+			.workflow-section-two .section-corner-right{display:none}
+		}
+		</style>
 		<div class="auto-container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -2063,7 +2082,7 @@
 							<h1 class="title split-text">Building eStaff</h1>
 						</div>
 						<div class="section-desc" style="margin-top: 30px;">
-							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: #555;">
+							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: #ffffff;">
 								At Vizra we build practical technology that makes finding and managing on‑demand help simple and reliable. eStaff focuses on easy scheduling, clear profiles, secure verification, and fair payments so households, small organizations, and service workers can transact with confidence.
 							</p>
 						</div>
@@ -2168,92 +2187,100 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="tab">
-						<ul class="tabs">
-							<li><a href="#">Investors</a></li>
-							<li><a href="#">Volunteers</a></li>
+						<ul class="tabs">				
+					
 						</ul>
 						 <!-- / tabs -->
 						<div class="tab_content">
 							<div class="tabs_item">
 								<div class="row">
-									<div class="col-xl-6 col-lg-6 col-md-6">
+									<div class="col-xl-4 col-lg-6 col-md-6">
 										<div class="pricing-single-item" style="padding: 40px 30px;">
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Partners</h3>
+											<div class="pricing-money">
+												<h3 style="font-size: 24px; color: #6766FF;">Partnership Opportunities</h3>
+											</div>
+											<div class="pricing-body">
+												<div class="pricing-title">
+													<h2>How We Partner</h2>
+												</div>
+												<div class="pricing-feature">
+<ul>
+            <li><img src="images/demo-img/check.png" alt="check">Work with care homes, cleaning agencies & staffing firms</li>
+            <li><img src="images/demo-img/check.png" alt="check">Service provider onboarding & workforce expansion</li>
+            <li><img src="images/demo-img/check.png" alt="check">Pilot programs for new markets and community rollouts</li>
+            <li><img src="images/demo-img/check.png" alt="check">Referral & channel partnership programs</li>
+            <li><img src="images/demo-img/check.png" alt="check">Co-marketing & joint innovation opportunities</li>
+            <li><img src="images/demo-img/check.png" alt="check">Access to anonymized insights & workforce analytics</li>
+        </ul>
+												</div>
+											</div>
+											<div class="pricing-btn style_one">
+												<a href="contact.html">Partner With Us<i class="fa-light fa-arrow-right"></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4 col-lg-6 col-md-6">
+										<div class="pricing-single-item active" style="padding: 40px 30px;">
 											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Investors</h3>
 											<div class="pricing-money">
 												<h3 style="font-size: 24px; color: #6766FF;">Investment Opportunities</h3>
-											</div>						
+											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
 													<h2>What You Can Support</h2>
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">Support platform development and engineering</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Fund expansion across Canada</li>	
-														<li><img src="images/demo-img/check.png" alt="check">Enable AI integrations and advanced features</li>
-														<li><img src="images/demo-img/check.png" alt="check">Participate in beta launch testing</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Gain early access to platform analytics</li>
-														<li><img src="images/demo-img/check.png" alt="check">Shape the future of gig economy in Canada</li>								
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Angel Investors</strong> – Seed funding, early mentorship, and network support.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Venture Capital</strong> – Capital for rapid scaling, product expansion, and growth.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Strategic Partners</strong> – Distribution, integrations, and co-marketing alliances.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Crowdfunding</strong> – Community-driven support through retail and reward-based models.</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn">
-												<a href="contact.html">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
+												<a href="mailto:getvizra@gmail.com">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
+											</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-xl-6 col-lg-6 col-md-6">
-										<div class="pricing-single-item active" style="padding: 40px 30px;">
+									<div class="col-xl-4 col-lg-6 col-md-6">
+										<div class="pricing-single-item">
 											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Volunteers</h3>
 											<div class="pricing-money">
-												<h3 style="font-size: 24px; color: #FF6B2C;">Volunteer Opportunities</h3>
-											</div>						
+												<h3 style="font-size: 24px; color:  #6766FF;">Volunteer Opportunities</h3>
+											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
 													<h2>How You Can Help</h2>
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">Help test early versions of the platform</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Provide valuable user feedback</li>	
-														<li><img src="images/demo-img/check.png" alt="check">Support onboarding processes</li>
-														<li><img src="images/demo-img/check.png" alt="check">Participate in community building</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Join focus groups and surveys</li>
-														<li><img src="images/demo-img/check.png" alt="check">Be part of the founding community</li>								
+														 <li><img src="images/demo-img/check.png" alt="check">
+                Contribute your skills — developers, designers, testers, marketers, PSWs, and community members.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Help test early versions of the platform and new features.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Provide practical feedback from your professional experience.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Support onboarding flows and real-world user scenarios.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Join focus groups, surveys, and community discussions.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Become part of our founding community shaping eStaff’s future.</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn style_one">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
+												<a href="volunteer.html">Join As Volunteer<i class="fa-light fa-arrow-right"></i></a>
+											</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-xl-4 col-lg-6 col-md-6">
-										<div class="pricing-single-item">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>Standard</h3>
-											<div class="pricing-money">
-												<h3><span class="dollar">$</span>69<span class="monthly">/Monthly</span></h3>
-											</div>						
-											<div class="pricing-body">
-												<div class="pricing-title">
-													<h2>Features</h2>
-												</div>
-												<div class="pricing-feature">
-													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">60+ Premium features</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Unlimited supports</li>	
-														<li><img src="images/demo-img/check.png" alt="check">90+ Expert members</li>
-														<li><img src="images/demo-img/check.png" alt="check">Data insights</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Free Hosting plans</li>
-														<li><img src="images/demo-img/check.png" alt="check">Lifetime updates</li>								
-													</ul>
-												</div>
-											</div>
-											<div class="pricing-btn style_one">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div> 
 							<!--tabs_item -->						
