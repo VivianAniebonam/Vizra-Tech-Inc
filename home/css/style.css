@@ -402,6 +402,68 @@ html {
   scrollbar-color: var(--theme-primary) var(--theme-color4);
 }
 
+/* Polished About Hero Images (keeps background unchanged) */
+.about-hero { padding: 40px 0; }
+.about-hero .hero-inner { display: grid; grid-template-columns: 1fr 380px; gap: 36px; align-items: center; max-width: 1200px; margin: 0 auto; }
+.hero-stack { display: grid; grid-auto-rows: 1fr; gap: 22px; }
+.hero-card { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 18px 40px rgba(0,0,0,0.45); background: #000; }
+.hero-card img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .6s cubic-bezier(.2,.9,.2,1); }
+.hero-card:hover img { transform: scale(1.05); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(103,102,255,0.12), rgba(0,0,0,0.22)); mix-blend-mode: overlay; pointer-events: none; opacity: 0; transition: opacity .28s; }
+.hero-card:hover .hero-overlay { opacity: 1; }
+.hero-large { min-height: 340px; }
+.hero-medium { min-height: 160px; }
+
+/* Responsive adjustments */
+@media (max-width: 920px) {
+  .about-hero .hero-inner { grid-template-columns: 1fr; gap: 20px; padding: 0 18px; }
+  .hero-stack { grid-template-columns: repeat(2, 1fr); }
+  .hero-large { min-height: 260px; }
+}
+@media (max-width: 520px) {
+  .hero-stack { grid-template-columns: 1fr; }
+  .hero-medium { min-height: 140px; }
+}
+
+/* Animations for About Hero Images */
+@keyframes heroFadeUp {
+  0% { opacity: 0; transform: translateY(18px) scale(.995); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.about-hero .reveal { visibility: visible; }
+.about-hero .reveal img { opacity: 0; transform: translateY(12px) scale(.998); animation: heroFadeUp .7s cubic-bezier(.2,.9,.2,1) forwards; }
+.about-hero .hero-large .reveal img { animation-delay: 0.05s; }
+.about-hero .hero-stack .hero-medium .reveal img { animation-delay: 0.22s; }
+.about-hero .hero-stack .hero-medium:last-child .reveal img { animation-delay: 0.38s; }
+
+/* Gentle floating for the large image to add life (slow, subtle) */
+.about-hero .hero-large img { animation: heroFadeUp .7s cubic-bezier(.2,.9,.2,1) forwards, floatUpDown 8s ease-in-out 1s infinite; }
+
+/* Hover micro-interactions */
+.hero-card { transition: transform .6s cubic-bezier(.2,.9,.2,1), box-shadow .3s ease; }
+.hero-card:hover { transform: translateY(-6px); }
+.hero-card:hover img { transform: scale(1.06) rotate(-0.6deg); }
+
+/* Make overlay respond smoothly on focus for keyboard users */
+.hero-card:focus-within, .hero-card:focus { outline: none; transform: translateY(-6px); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-hero .reveal img,
+  .about-hero .hero-large img {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
 ::-webkit-scrollbar {
   height: 4px;
   width: 6px;
@@ -5216,6 +5278,37 @@ Section Title
 }
 .integration-section-one .sec-title {
   margin-bottom: 30px;
+}
+
+/* Slightly lower the about page title so heading sits further down */
+.about-page-title .auto-container { padding-top: 80px; }
+@media (max-width: 992px) {
+  .about-page-title .auto-container { padding-top: 60px; }
+}
+@media (max-width: 576px) {
+  .about-page-title .auto-container { padding-top: 40px; }
+}
+
+/* Additional offset specifically for the title block */
+.about-page-title .title-content { margin-top: -100px; }
+/* Move only the H1 title down a bit (About Vizra Tech Inc) */
+.about-page-title .title-content .page-title { display: block; margin-top: 0px; }
+@media (max-width: 992px) {
+  .about-page-title .title-content .page-title { margin-top: 20px; }
+}
+@media (max-width: 576px) {
+  .about-page-title .title-content .page-title { margin-top: 12px; }
+}
+
+/* Reduce the large empty area below the hero by lowering the section min-height
+   Inline style on the section sets min-height:100vh; override it here */
+.about-page-title { min-height: 60vh !important; }
+@media (max-width: 1200px) {
+  .about-page-title { min-height: 65vh !important; }
+}
+@media (max-width: 992px) {
+  /* Let content determine height on smaller screens to avoid large gaps */
+  .about-page-title { min-height: auto !important; padding-bottom: 30px; }
 }
 .integration-section-one .integration-thumb {
   position: relative;
