@@ -3362,6 +3362,62 @@ Section Title
   top: -100px;
   left: 85px;
 }
+
+/* Utility class to force the gradient background when inline styles are blocked */
+.section-bg-gradient {
+  background-image: url("../images/demo-img/binifits-gradient.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Hero component styles */
+.hero {
+  position: relative;
+  padding: 80px 0;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  color: #0a0a1f;
+  overflow: hidden;
+}
+.hero .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.hero .eyebrow {
+  display:inline-block;
+  background: rgba(103,102,255,0.08);
+  color:#6766FF;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  margin-bottom:18px;
+  font-size:13px;
+}
+.hero .hero__title, .hero .page-title { 
+  font-size:48px;
+  line-height:1.05;
+  margin:0 0 18px;
+  font-weight:800;
+  color:#0a0a1f;
+}
+.hero .hero__subtitle { color:#6c6c72; font-size:18px; margin-bottom:28px; }
+.hero__actions .btn { display:inline-block; margin:0 10px; padding:14px 38px; border-radius:40px; text-decoration:none; font-weight:700; }
+.btn--primary { background:#6766FF; color:#fff; box-shadow:0 10px 30px rgba(103,102,255,0.12); }
+.btn--ghost { background:transparent; color:#6766FF; border:2px solid #6766FF; }
+.hero .hero__title, .hero .hero__subtitle, .hero .hero__actions { opacity:0; transform: translateY(10px); animation: fadeUp .7s ease forwards; }
+.hero .hero__title { animation-delay: .15s; }
+.hero .hero__subtitle { animation-delay: .3s; }
+.hero .hero__actions { animation-delay: .5s; }
+@keyframes fadeUp { to { opacity:1; transform:none; } }
+@media (max-width: 767px) { .hero .hero__title { font-size: 32px; } .hero { padding: 60px 0; min-height: 360px; } }
+
 @media (min-width: 576px) and (max-width: 767.98px) {
   .binifits-marquee-area-one .single-binifits-box::after {
     display: none;
