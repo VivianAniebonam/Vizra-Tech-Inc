@@ -811,73 +811,60 @@
 			<div class="row" style="margin-top: 50px;">
 				<div class="col-lg-12">
 					<style>
-					/* Topic card styling based on Core Services card */
-					.topic-card {
-						display:flex; align-items:center; gap:12px; padding:16px 20px; border-radius:14px;
-						transition: transform .36s ease, box-shadow .36s ease, border-color .28s ease;
-						cursor:pointer; background: transparent; border: 1px solid rgba(103,102,255,0.06);
-						position:relative; overflow:visible;
-						border-left: 4px solid transparent;
+					/* Refined topic list: polished badges, soft timeline, hover & active styles */
+					.problems-topics{position:relative;padding:12px;border-radius:14px}
+
+					/* Vertical timeline line behind badges */
+					.problems-topics::before{
+						content:"";position:absolute;left:34px;top:18px;bottom:18px;width:3px;border-radius:3px;
+						background:linear-gradient(180deg, rgba(102,126,234,0.14), rgba(255,140,0,0.08));pointer-events:none;z-index:0;
 					}
 
-					/* Soft halo glow behind the card */
-					.topic-card::before {
-						content: "";
-						position: absolute;
-						inset: -10px;
-						border-radius: 18px;
-						background: radial-gradient(circle at center, rgba(102,126,234,0.28), transparent 65%);
-						opacity: 0;
-						transition: opacity .28s ease, transform .36s ease;
-						pointer-events: none;
-						z-index: -1;
-						filter: blur(14px);
-						transform: scale(.96);
+					.topic-card{
+						display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;margin-bottom:12px;
+						transition:transform .28s ease,box-shadow .28s ease,background .22s ease;border:1px solid rgba(255,255,255,0.03);
+						background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+						cursor:pointer;position:relative;z-index:2;backdrop-filter: blur(4px);
 					}
 
-					/* Left-edge accent for a glowing border strip */
-					.topic-card::after {
-						content: "";
-						position: absolute;
-						left: -8px;
-						top: 10px;
-						bottom: 10px;
-						width: 6px;
-						border-radius: 8px;
-						background: linear-gradient(180deg, rgba(102,126,234,0.95), rgba(255,140,0,0.9));
-						opacity: 0;
-						transition: opacity .28s ease, transform .28s ease;
-						pointer-events: none;
-						z-index: 1;
-						box-shadow: 0 8px 22px rgba(102,126,234,0.18);
+					/* Subtle halo that appears on hover/active */
+					.topic-card::before{
+						content:"";position:absolute;inset:-8px;border-radius:14px;z-index:1;pointer-events:none;
+						background:radial-gradient(circle at 20% 20%, rgba(102,126,234,0.14), transparent 45%);
+						opacity:0;transform:scale(.98);transition:opacity .24s ease,transform .28s ease,filter .28s;
+						filter:blur(12px);
 					}
 
-					.topic-card:hover {
-						transform: translateY(-6px);
-						box-shadow: 0 22px 60px rgba(102,126,234,0.12);
-					}
+					.topic-card:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(16,18,29,0.45)}
+					.topic-card:hover::before,.topic-card.active::before{opacity:1;transform:scale(1)}
 
-					.topic-card:hover::before,
-					.topic-card.active::before {
-						opacity: 1;
-						transform: scale(1);
-					}
+					/* Decorative left accent when active */
+					.topic-card::after{content:"";position:absolute;left:6px;top:12px;bottom:12px;width:6px;border-radius:6px;background:transparent;z-index:2;transition:background .28s ease,box-shadow .28s}
+					.topic-card.active::after{background:linear-gradient(180deg,#667eea,#ff8c42);box-shadow:0 8px 22px rgba(102,126,234,0.14)}
 
-					.topic-card:hover::after,
-					.topic-card.active::after {
-						opacity: 1;
-						transform: translateX(0);
-					}
+					/* Badge styles: rounded, gradient on active, strong numeric weight */
+					.topic-badge{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:#0f1724; color:#cbd5e1;font-weight:800;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02),0 6px 20px rgba(3,7,18,0.45);border:1px solid rgba(255,255,255,0.03);position:relative;z-index:3}
+					.topic-card.active .topic-badge{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;box-shadow:0 12px 36px rgba(102,126,234,0.18)}
 
-					.topic-badge { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:10px; background: #e9ecef; color:#6c757d; font-weight:700; }
-					.topic-card.active .topic-badge { background: linear-gradient(135deg,#667eea,#764ba2); color: #fff; }
-					.topic-card.active {
-						border-color: rgba(103,102,255,0.25);
-						box-shadow: 0 24px 70px rgba(102,126,234,0.16);
+					/* Title text */
+					.topic-card span:last-child{display:block;color:#cbd5e1;font-weight:700;font-size:15px;line-height:1.25}
+					.topic-card:not(.active) span:last-child{color:rgba(255,255,255,0.65)}
+
+					/* Active card elevation */
+					.topic-card.active{border-color:rgba(102,126,234,0.18);background:linear-gradient(180deg, rgba(102,126,234,0.04), rgba(118,75,162,0.02));box-shadow:0 28px 80px rgba(102,126,234,0.12)}
+
+					/* Keep inner content visuals consistent with theme */
+					.core-service-card.content-inner{padding:30px;border-radius:20px;background:var(--theme-color1);border:1px solid rgba(103,102,255,0.12);box-shadow:0 12px 40px rgba(103,102,255,0.06)}
+					.core-service-card.content-inner h3{color:var(--theme-color-white)}
+					.core-service-card.content-inner p{color:rgba(255,255,255,0.85)}
+
+					/* Responsive tweaks */
+					@media (max-width:768px){
+						.problems-topics{padding:6px}
+						.problems-topics::before{display:none}
+						.topic-badge{width:38px;height:38px;font-size:14px}
+						.topic-card{padding:10px 12px}
 					}
-					.core-service-card.content-inner { padding: 30px; border-radius: 20px; background: var(--theme-color1); border: 1px solid rgba(103,102,255,0.12); box-shadow: 0 12px 40px rgba(103,102,255,0.06); }
-					.core-service-card.content-inner h3 { color: var(--theme-color-white); }
-					.core-service-card.content-inner p { color: rgba(255,255,255,0.85); }
 					</style>
 					<div class="problems-tab-container" style="display:flex; gap:30px; background:transparent; border-radius:12px; padding:0; box-shadow:none; overflow:hidden; margin-bottom:20px;">
 						<!-- LEFT: Topics -->
