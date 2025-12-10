@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Intellio - AI Agency & Technology Saas HTML5 Template</title>
+<title>eStaff - AI Gig Platform | Vizra Tech Inc</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -11,29 +11,67 @@
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+<style>
+/* Styles for the three-image about thumb layout */
+.about-thumb-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px; /* tighter spacing requested */
+	padding-top: 14px;
+	flex-wrap: nowrap; /* keep them on one row when possible */
+}
+.about-thumb-wrapper > div {
+	width: 38%; /* slightly larger */
+	max-width: 420px; /* allow larger thumbs */
+	min-width: 180px;
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 22px 56px rgba(16,24,40,0.16), 0 10px 26px rgba(16,24,40,0.08);
+	transition: transform .32s cubic-bezier(.2,.9,.2,1), box-shadow .24s;
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+	margin-left: -36px; /* stronger negative margin for closer overlap */
+}
+.about-thumb-wrapper figure{margin:0}
+.about-thumb-wrapper img{display:block;width:100%;height:auto; object-fit:cover}
+.about-thumb21{transform: translateY(-12px) rotate(-8deg) scale(1.14); z-index:6}
+.about-thumb22{transform: translateY(6px) scale(1.18); z-index:5}
+.about-thumb23{transform: translateY(-6px) rotate(8deg) scale(1.12); z-index:4}
+.about-thumb-wrapper:hover > div{box-shadow: 0 34px 72px rgba(16,24,40,0.18)}
+.about-thumb-wrapper > div:hover{transform: translateY(0) rotate(0) scale(1.12); z-index:6}
 
+@media (max-width: 1200px){
+	.about-thumb-wrapper > div{width:40%; max-width:320px}
+}
+@media (max-width: 992px){
+	.about-thumb-wrapper{flex-wrap:wrap; gap:12px}
+	.about-thumb-wrapper > div{width:46%; margin-left:0}
+}
+@media (max-width: 640px){
+	.about-thumb-wrapper{flex-direction:column; gap:14px}
+	.about-thumb-wrapper > div{width:84%; max-width:420px; transform:none; margin-left:0}
+}
+</style>
+</head>
 <body>
 
 <div class="page-wrapper">
-
 	<!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
-
-
+	<div class="preloader">
+		<div class="loader"></div>
+	</div>
 	<!-- Start intellio Header Area-->
-	<div class="intellio-header-area header-statup" id="sticky-header" >
+	<div class="intellio-header-area" id="sticky-header" >
 		<div class="auto-container">
 			<div class="row align-items-center">
-				<div class="col-xxl-2 col-xl-2 col-lg-2">
+				<div class="col-lg-2">
 					<div class="header-logo">
 						<a class="active_logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
 						<a class="logo_two" href="index.html"><img src="images/logo.png" alt="logo"></a>
 					</div>
 				</div>
-				<div class="col-xxl-7 col-xl-6 col-lg-6">
+				<div class="col-lg-7">
 					<div class="header-menu">
 						<ul class="nav_scroll">
 							<li><a href="#">Home <i class="fa-light fa-angle-down"></i></a>
@@ -57,40 +95,30 @@
 									<li><a href="pricing.html">Pricing</a></li>
 									<li><a href="faq.html">Faq</a></li>
 									<li><a href="contact.html">Contact</a></li>
-
 								</ul>
 							</li>
-							<li><a href="service.html">Services</a>
-							</li>
-							<li><a href="volunteer.html">Volunteers</a>
-								<ul class="sub_menu">
-									<li><a href="volunteer.html">Volunteers</a></li>
-									<li><a href="volunteer-details.html">Blog Details</a></li>
-								</ul>
-							</li>
+							<li><a href="service.html">Services</a></li>
+							<li><a href="volunteer.html">Volunteers</a></li>
 							<li><a href="contact.html">Contact</a></li>
-						</ul>				
+						</ul>
 					</div>
 				</div>
-				<div class="col-xxl-3 col-xl-4 col-lg-4">
+				<div class="col-lg-3">
 					<div class="header-right-wrapper">
 						<div class="header-sidebar">
 							<div class="header-btn">
-								<a href="contact.html">Try for Free<i class="fa-solid fa-arrow-down-to-line"></i></a>
+								<a href="index-2.html">AI Gig Project <i class="fa-light fa-arrow-right"></i></a>
 							</div>
-							<div class="header-sidbar-button">
-								<button class="menubars" type="button" data-bs-toggle="offcanvas" data-bs-target="#menubar">
-								<span></span>
-								<span></span>
-								<span></span>
-                    			</button>
-							</div>
+						</div>
+						<div class="header-btn">
+							<a href="contact.html">Become An Investor</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- End intellio Header Area -->
 	<!-- End intellio Header Area -->
 
 
@@ -226,39 +254,332 @@
 
 	<!-- Banner Section two-->
 
-	<div class="banner-section-two" style="background-image: url(images/inner-img/f.jpg);">
-		<div class="auto-container">
+	<div class="banner-section-two" style="
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		background-image: url(images/inner-img/f.jpg);
+		background-size: cover;
+		background-position: center;
+		overflow: hidden;
+		margin-top: -100px;
+		padding-top: 120px;
+	">
+		<!-- Dark Overlay for Better Text Visibility -->
+		<div style="
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4);
+			z-index: 1;
+		"></div>
+		<!-- Animated Background Shapes -->
+		<div style="
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.1;
+			pointer-events: none;
+		">
+			<div style="
+				position: absolute;
+				top: 10%;
+				left: 5%;
+				width: 300px;
+				height: 300px;
+				background: linear-gradient(135deg, #fff 0%, transparent 100%);
+				border-radius: 50%;
+				animation: float 8s ease-in-out infinite;
+			"></div>
+			<div style="
+				position: absolute;
+				bottom: 15%;
+				right: 10%;
+				width: 400px;
+				height: 400px;
+				background: linear-gradient(135deg, #fff 0%, transparent 100%);
+				border-radius: 50%;
+				animation: float 10s ease-in-out infinite reverse;
+			"></div>
+			<div style="
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 500px;
+				height: 500px;
+				background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+				border-radius: 50%;
+				animation: pulse 6s ease-in-out infinite;
+			"></div>
+		</div>
+
+		<div class="auto-container" style="position: relative; z-index: 2; padding: 20px 0 60px 0;">
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-xxl-6 col-xl-8 col-lg-8">
 					<div class="banner-content-wrap">
 						<div class="banner-content">
-							<h5 class="split_chars"><svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M6.38561 11.9999C6.34326 11.9999 6.30137 11.9913 6.26258 11.9748C6.22378 11.9583 6.18891 11.9342 6.16017 11.9039L0.0815684 5.5059C0.0410469 5.46325 0.0141836 5.41003 0.00426649 5.35275C-0.00565067 5.29547 0.00180835 5.23662 0.0257308 5.1834C0.0496532 5.13018 0.0890012 5.08491 0.138959 5.05311C0.188917 5.02131 0.247317 5.00438 0.307013 5.00438H3.23292C3.27685 5.00438 3.32026 5.01356 3.36024 5.03128C3.40022 5.049 3.43582 5.07486 3.46465 5.10712L5.49615 7.38125C5.7157 6.9246 6.1407 6.16424 6.88652 5.23772C7.98909 3.868 10.0399 1.85355 13.5487 0.0350571C13.6165 -8.32163e-05 13.6954 -0.00920352 13.7698 0.00949718C13.8442 0.0281979 13.9086 0.0733601 13.9505 0.136066C13.9923 0.198772 14.0085 0.274464 13.9958 0.348195C13.983 0.421926 13.9424 0.488336 13.8818 0.534313C13.8684 0.5445 12.5155 1.58113 10.9586 3.4799C9.52566 5.22724 7.62085 8.0844 6.68355 11.773C6.66708 11.8378 6.62879 11.8953 6.57477 11.9365C6.52075 11.9776 6.45413 12 6.38552 12L6.38561 11.9999Z" fill="#6766FF"/>
+							<h5 class="split_chars">
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.29952 12.1663C6.25774 12.1663 6.21641 12.1576 6.17814 12.1409C6.13986 12.1241 6.10547 12.0996 6.07711 12.069L0.0804686 5.58232C0.0404934 5.53907 0.0139924 5.48511 0.00420897 5.42704C-0.00557448 5.36897 0.00178397 5.3093 0.0253838 5.25535C0.0489837 5.20139 0.0878012 5.15549 0.137086 5.12325C0.18637 5.09101 0.243983 5.07384 0.302874 5.07384H3.18933C3.23266 5.07385 3.2755 5.08315 3.31493 5.10112C3.35437 5.11909 3.3895 5.14531 3.41794 5.178L5.42204 7.48365C5.63863 7.02067 6.05791 6.24978 6.79367 5.31042C7.88137 3.92172 9.90455 1.87936 13.366 0.0356649C13.4329 3.7701e-05 13.5107 -0.00920898 13.5841 0.00975084C13.6575 0.0287107 13.7211 0.0744987 13.7624 0.138074C13.8037 0.201649 13.8196 0.278389 13.8071 0.353142C13.7945 0.427894 13.7544 0.495225 13.6946 0.541839C13.6814 0.552167 12.3468 1.60316 10.8108 3.52824C9.39723 5.29979 7.5181 8.19654 6.59343 11.9362C6.57719 12.0019 6.53941 12.0603 6.48612 12.102C6.43283 12.1437 6.36711 12.1664 6.29943 12.1664L6.29952 12.1663Z" fill="#6766FF"/>
 								</svg>
-								Elevate your Startup Business</h5>
-							<h2 class="split_chars">Transforming Ideas</h2>
-							<h2 class="split_chars">Into <span><img src="images/demo-img/banner-title-img.png" alt="title img"></span> Realistic</h2>
-							<h2 class="split_chars">Online Business</h2>
-							<div class="banner-btn">
-								<a href="index.html">Request a Demo <i class="fa-light fa-arrow-right"></i></a>
-							</div>
-							<div class="banner-btn2">
-								<a href="about.html">Learn More <i class="fa-light fa-arrow-right"></i></a>
+								Coming Soon
+							</h5>
+						<h2 class="split_chars preserve-case">eStaff</h2>
+						<h2 class="split_chars">AI Gig <span style="color: #9B7BFF !important;">Platform</span></h2>
+						<h4 class="dev-badge pill preserve-case"><span style="color: #FF8C00 !important; font-weight: 800;"> (In Development)</h4>
+						<p class="text-anime-3" style="display:block; width:100%; max-width:980px; margin:0 auto; text-align:center;">A modern gig marketplace connecting households and businesses with verified job seekers across multiple service categories — powered by AI, automation, and intelligent matching.</p>							<div class="hero-cta">
+								<a href="contact.html" class="vizra-btn">Request Investor Deck <i class="fa-light fa-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="banner-thumb">
-						<figure class="reveal"><img src="images/demo-img/banner-thumb21.png" alt="banner-thumb21"></figure>
+
+				<div class="col-xxl-6 col-xl-4 col-lg-4">
+					<div class="banner-thumb" style="width: 100%; max-width: 750px; position: relative; margin-left: auto; margin-right: -80px; margin-top: 120px;">
+						<!-- Decorative Blob Background -->
+						<div style="
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							width: 120%;
+							height: 120%;
+							background: linear-gradient(135deg, rgba(255, 107, 44, 0.2) 0%, rgba(102, 126, 234, 0.2) 50%, rgba(118, 75, 162, 0.2) 100%);
+							border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+							filter: blur(40px);
+							animation: morph 15s ease-in-out infinite;
+							z-index: -1;
+						"></div>
+						
+						<!-- Rotating Ring Decoration -->
+						<div style="
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							width: 110%;
+							height: 110%;
+							border: 3px solid rgba(255, 215, 0, 0.3);
+							border-radius: 45% 55% 60% 40% / 50% 60% 40% 50%;
+							animation: rotate 20s linear infinite, morph 10s ease-in-out infinite alternate;
+							z-index: -1;
+						"></div>
+						
+						<figure style="
+							position: relative;
+							border-radius: 45% 55% 50% 50% / 55% 55% 45% 45%;
+							overflow: hidden;
+							box-shadow: 
+								0 40px 100px rgba(0, 0, 0, 0.5),
+								0 0 60px rgba(102, 126, 234, 0.4),
+								inset 0 0 40px rgba(255, 255, 255, 0.1);
+							transform: perspective(1500px) rotateY(-8deg) rotateX(5deg);
+							transition: all 0.6s ease;
+							margin: 0;
+							animation: float 6s ease-in-out infinite;
+							border: 5px solid rgba(255, 255, 255, 0.2);
+						" onmouseover="this.style.transform='perspective(1500px) rotateY(0deg) rotateX(0deg) scale(1.05)'; this.style.borderRadius='50%'" onmouseout="this.style.transform='perspective(1500px) rotateY(-8deg) rotateX(5deg) scale(1)'; this.style.borderRadius='45% 55% 50% 50% / 55% 55% 45% 45%'">
+							<!-- Gradient Overlay -->
+							<div style="
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, transparent 50%, rgba(118, 75, 162, 0.2) 100%);
+								pointer-events: none;
+								z-index: 2;
+							"></div>
+							
+							<!-- Shine Effect -->
+							<div style="
+								position: absolute;
+								top: -50%;
+								left: -50%;
+								width: 200%;
+								height: 200%;
+								background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+								animation: shine 8s ease-in-out infinite;
+								pointer-events: none;
+								z-index: 3;
+							"></div>
+							
+							<img src="images/inner-img/ww.jpeg" alt="eStaff Platform Preview" style="width: 100%; display: block; transform: scale(1.1);">
+							
+							<!-- Inner Glow Border -->
+							<div style="
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								box-shadow: inset 0 0 80px rgba(255, 215, 0, 0.3);
+								pointer-events: none;
+							"></div>
+						</figure>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="js-particles"></div>
+
+		<!-- Particles Background -->
+		<div id="js-particles" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+
+		<!-- Scroll Down Indicator -->
+		<div style="
+			position: absolute;
+			bottom: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 10;
+			animation: bounce 2s ease-in-out infinite;
+		">
+			<div style="
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				margin-bottom: 10px;
+			">Scroll Down</div>
+			<div style="
+				width: 30px;
+				height: 50px;
+				border: 2px solid rgba(255, 255, 255, 0.5);
+				border-radius: 25px;
+				position: relative;
+				margin: 0 auto;
+			">
+				<div style="
+					width: 6px;
+					height: 10px;
+					background: rgba(255, 255, 255, 0.8);
+					border-radius: 3px;
+					position: absolute;
+					top: 8px;
+					left: 50%;
+					transform: translateX(-50%);
+					animation: scrollWheel 2s ease-in-out infinite;
+				"></div>
+			</div>
+		</div>
 	</div>
+
+	<!-- CSS Animations -->
+	<style>
+		@keyframes float {
+			0%, 100% { transform: translateY(0px); }
+			50% { transform: translateY(-30px); }
+		}
+		@keyframes pulse {
+			0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.15; }
+			50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.2; }
+		}
+		@keyframes slideDown {
+			from { opacity: 0; transform: translateY(-30px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		@keyframes fadeInUp {
+			from { opacity: 0; transform: translateY(50px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		@keyframes fadeInRight {
+			from { opacity: 0; transform: translateX(50px); }
+			to { opacity: 1; transform: translateX(0); }
+		}
+		@keyframes bounce {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-10px); }
+		}
+		@keyframes scrollWheel {
+			0% { top: 8px; opacity: 1; }
+			100% { top: 24px; opacity: 0; }
+		}
+		@keyframes morph {
+			0%, 100% { 
+				border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+			}
+			25% { 
+				border-radius: 40% 60% 50% 50% / 70% 40% 60% 30%;
+			}
+			50% { 
+				border-radius: 70% 30% 40% 60% / 50% 70% 30% 60%;
+			}
+			75% { 
+				border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+			}
+		}
+		@keyframes rotate {
+			0% { transform: translate(-50%, -50%) rotate(0deg); }
+			100% { transform: translate(-50%, -50%) rotate(360deg); }
+		}
+		@keyframes shine {
+			0% { transform: translate(-50%, -50%) rotate(0deg); }
+			100% { transform: translate(-50%, -50%) rotate(360deg); }
+		}
+
+		/* Banner image vertical offset and responsive adjustments */
+		.banner-thumb {
+			margin-top: 90px; /* moved down a bit */
+			transition: margin-top 0.35s ease;
+		}
+		@media (max-width: 1199px) {
+			.banner-thumb { margin-top: 60px; }
+		}
+		@media (max-width: 767px) {
+			.banner-thumb { margin-top: 30px; margin-right: 0; }
+		}
+
+		/* Add spacing between paragraph and CTA so the button sits lower */
+		.banner-content .hero-cta {
+			margin-top: 72px; /* moved further down */
+		}
+		@media (max-width: 1199px) {
+			.banner-content .hero-cta { margin-top: 56px; }
+		}
+		@media (max-width: 767px) {
+			.banner-content .hero-cta { margin-top: 40px; }
+		}
+
+		/* Preserve original casing for brand name (e.g., "eStaff") when split/uppercasing is applied globally */
+		.preserve-case { text-transform: none !important; }
+
+		/* Dev badge: subtle pill style */
+		.dev-badge.pill {
+			display: inline-block;
+			font-size: 18px;
+			font-weight: 700;
+			padding: 10px 18px;
+			border-radius: 999px;
+			background: rgba(103,102,255,0.12);
+			color: #EDEBFF;
+			border: 1px solid rgba(103,102,255,0.22);
+			letter-spacing: 0.6px;
+			margin: 8px 0;
+		}
+		@media (max-width: 767px) {
+			.dev-badge.pill { font-size: 15px; padding: 8px 14px; }
+		}
+
+		/* Accent color for the word 'In' inside the dev badge */
+		.dev-badge.pill .dev-accent {
+			color: #FF8C00 !important; /* orange (important to override other rules) */
+			font-weight: 800;
+			text-shadow: 0 1px 0 rgba(0,0,0,0.12);
+		}
+
+		/* Force orange color on any span with inline style inside dev badge (override JS animations) */
+		.dev-badge.pill span[style*="color: #FF8C00"],
+		.dev-badge.pill span[style*="color: #FF8C00"] * {
+			color: #FF8C00 !important;
+			font-weight: 800 !important;
+		}
+	</style>
 	<!--END Banner Section two -->
 
 
@@ -269,7 +590,7 @@
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="brand-desc">
-						<p><span>160+ </span>Trusted companies in the world</p>
+						<p><span>Powered by </span> Vizra Tech Inc — Building the Future of Gig Work</p>
 					</div>
 				</div>
 			</div>
@@ -382,16 +703,14 @@
 				<div class="col-xl-6">
 					<div class="sec-title">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">About Us</h5>
+							<h5 class="sub-title split_chars preserve-case">What is eStaff</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Empowering Business to </h1>
-							<h1 class="title split-text">Success Innovation</h1>
+							<h1 class="title split-text">AI-Powered Gig Platform</h1>
+							<h1 class="title split-text">For Modern Service Economy</h1>
 						</div>
 						<div class="section-desc">
-							<p class="text-anime-3">Monotonectally whiteboard proactive value with leading continually
-								niche markets rather than fully tested result maximizing total linkage 
-								dramatically procrastinate 
+							<p class="text-anime-3">eStaff is an AI-powered gig platform designed to make hiring service providers fast, safe, and seamless. The platform uses intelligent matching, real-time notifications, and identity verification to connect service seekers with qualified workers across Ontario. eStaff is currently in the planning, design, and development phase under Vizra Tech Inc.
 							</p>
 						</div>
 					</div>
@@ -402,8 +721,8 @@
 									<img src="images/demo-img/about-icon21.png" alt="icon">
 								</div>
 								<div class="about-content">
-									<h4>Business Growth</h4>
-									<p>Markets rather than fully<br>tested to maximizing</p>
+									<h4>AI-Powered Matching</h4>
+									<p>Intelligent job matching<br>for best results</p>
 								</div>
 							</div>
 						</div>
@@ -413,26 +732,26 @@
 									<img src="images/demo-img/about-icon22.png" alt="icon">
 								</div>
 								<div class="about-content">
-									<h4>Market Solutions</h4>
-									<p>Markets rather than fully <br>tested to maximizing</p>
+									<h4>Verified Workers</h4>
+									<p>Complete identity and<br>background verification</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="about-btn">
-						<a href="about.html">Get Started<i class="fa-light fa-arrow-right"></i></a>
+						<a href="contact.html">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
 					</div>
 				</div>
 				<div class="col-xl-6">
 					<div class="about-thumb-wrapper">
 						<div class="about-thumb21">
-							<figure class="reveal"><img src="images/demo-img/about-thumb21.png" alt="thumb"></figure>
+							<figure class="reveal"><img src="images/inner-img/cc.png" alt="thumb"></figure>
 						</div>
 						<div class="about-thumb22">
-							<figure class="reveal"><img src="images/demo-img/about-thumb22.png" alt="thumb"></figure>
+							<figure class="reveal"><img src="images/inner-img/yy.webp" alt="thumb"></figure>
 						</div>
 						<div class="about-thumb23">
-							<figure class="reveal"><img src="images/demo-img/about-thumb23.png" alt="thumb"></figure>
+							<figure class="reveal"><img src="images/inner-img/hh.png" alt="thumb"></figure>
 						</div>
 					</div>
 				</div>
@@ -447,173 +766,984 @@
 
 
 
-	<!-- workflow Section two -->
-	<section class="workflow-section-two">
+	<!-- Problem Section - Detailed -->
+	 
+	<section class="workflow-section-two binifits-marquee-area-one" style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
+		<!-- Decorative corner shapes (left and right). Do not modify section content. -->
+		<img src="images/demo-img/accrodion-shape1.png" alt="decor-left" class="section-corner-left">
+		<img src="images/demo-img/accrodion-shape2.png" alt="decor-right" class="section-corner-right">
+		<style>
+		/* Positioning for the decorative corner images */
+		.workflow-section-two{position:relative}
+		.workflow-section-two .section-corner-left,
+		.workflow-section-two .section-corner-right{position:absolute;top:0;z-index:0;pointer-events:none;}
+		.workflow-section-two .section-corner-left{left:0;}
+		.workflow-section-two .section-corner-right{right:0;}
+		/* Slight scale so shapes don't overlap content; tweak if needed */
+		.workflow-section-two .section-corner-left img,
+		.workflow-section-two .section-corner-right img{display:block}
+		/* Hide decorative shapes on small screens */
+		@media (max-width:768px){
+			.workflow-section-two .section-corner-left,
+			.workflow-section-two .section-corner-right{display:none}
+		}
+		</style>
 		<div class="auto-container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="sec-title text-center">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Power Up your workflow</h5>
+							<h5 class="sub-title split_chars">The Challenge</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Regular Software Updates for</h1>
-							<h1 class="title split-text">Continue Improvement</h1>
+							<h1 class="title split-text">The Problem We Are</h1>
+							<h1 class="title split-text">Solving</h1>
 						</div>
-					</div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xl-4 col-lg-6">
-					<div class="single-workflow-box">
-						<div class="workflow-thumb">
-							<figure class="reveal"><img src="images/demo-img/workflow-thumb1.png" alt="thumb"></figure>
-						</div>
-						<div class="workflow-content">
-							<h3>Sentiment Analysis</h3>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-6">
-					<div class="single-workflow-box">
-						<div class="workflow-thumb">
-							<figure class="reveal"><img src="images/demo-img/workflow-thumb2.png" alt="thumb"></figure>
-						</div>
-						<div class="workflow-content">
-							<h3>Smart Workflow</h3>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-6">
-					<div class="single-workflow-box">
-						<div class="workflow-thumb">
-							<figure class="reveal"><img src="images/demo-img/workflow-thumb3.png" alt="thumb"></figure>
-						</div>
-						<div class="workflow-content">
-							<h3>Optimize User Experience</h3>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
+						<div class="section-desc" style="margin-top: 20px;">
+							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto; font-size: 17px; line-height: 1.8;">The current gig and home-support ecosystem is broken. Families, seniors, businesses, and workers all face challenges that existing platforms fail to address. eStaff is being built to solve these deeply rooted problems with a modern, AI-powered approach.</p>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Accordion Style Problems -->
+			 	
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-lg-12">
+					<style>
+					/* Refined topic list: polished badges, soft timeline, hover & active styles */
+					.problems-topics{position:relative;padding:12px;border-radius:14px}
+
+					/* Vertical timeline line behind badges */
+					.problems-topics::before{
+						content:"";position:absolute;left:34px;top:18px;bottom:18px;width:3px;border-radius:3px;
+						background:linear-gradient(180deg, rgba(102,126,234,0.14), rgba(255,140,0,0.08));pointer-events:none;z-index:0;
+					}
+
+					.topic-card{
+						display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;margin-bottom:12px;
+						transition:transform .28s ease,box-shadow .28s ease,background .22s ease;border:1px solid rgba(255,255,255,0.03);
+						background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+						cursor:pointer;position:relative;z-index:2;backdrop-filter: blur(4px);
+					}
+
+					/* Subtle halo that appears on hover/active */
+					.topic-card::before{
+						content:"";position:absolute;inset:-8px;border-radius:14px;z-index:1;pointer-events:none;
+						background:radial-gradient(circle at 20% 20%, rgba(102,126,234,0.14), transparent 45%);
+						opacity:0;transform:scale(.98);transition:opacity .24s ease,transform .28s ease,filter .28s;
+						filter:blur(12px);
+					}
+
+					.topic-card:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(16,18,29,0.45)}
+					.topic-card:hover::before,.topic-card.active::before{opacity:1;transform:scale(1)}
+
+					/* Decorative left accent when active */
+					.topic-card::after{content:"";position:absolute;left:6px;top:12px;bottom:12px;width:6px;border-radius:6px;background:transparent;z-index:2;transition:background .28s ease,box-shadow .28s}
+					.topic-card.active::after{background:linear-gradient(180deg,#667eea,#ff8c42);box-shadow:0 8px 22px rgba(102,126,234,0.14)}
+
+					/* Badge styles: rounded, gradient on active, strong numeric weight */
+					.topic-badge{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:#0f1724; color:#cbd5e1;font-weight:800;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02),0 6px 20px rgba(3,7,18,0.45);border:1px solid rgba(255,255,255,0.03);position:relative;z-index:3}
+					.topic-card.active .topic-badge{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;box-shadow:0 12px 36px rgba(102,126,234,0.18)}
+
+					/* Title text */
+					.topic-card span:last-child{display:block;color:#cbd5e1;font-weight:700;font-size:15px;line-height:1.25}
+					.topic-card:not(.active) span:last-child{color:rgba(255,255,255,0.65)}
+
+					/* Active card elevation */
+					.topic-card.active{border-color:rgba(102,126,234,0.18);background:linear-gradient(180deg, rgba(102,126,234,0.04), rgba(118,75,162,0.02));box-shadow:0 28px 80px rgba(102,126,234,0.12)}
+
+					/* Keep inner content visuals consistent with theme */
+					.core-service-card.content-inner{padding:30px;border-radius:20px;background:var(--theme-color1);border:1px solid rgba(103,102,255,0.12);box-shadow:0 12px 40px rgba(103,102,255,0.06)}
+					.core-service-card.content-inner h3{color:var(--theme-color-white)}
+					.core-service-card.content-inner p{color:rgba(255,255,255,0.85)}
+
+					/* Responsive tweaks */
+					@media (max-width:768px){
+						.problems-topics{padding:6px}
+						.problems-topics::before{display:none}
+						.topic-badge{width:38px;height:38px;font-size:14px}
+						.topic-card{padding:10px 12px}
+					}
+					</style>
+					<div class="problems-tab-container" style="display:flex; gap:30px; background:transparent; border-radius:12px; padding:0; box-shadow:none; overflow:hidden; margin-bottom:20px;">
+						<!-- LEFT: Topics -->
+						<div class="problems-topics" style="flex:0 0 32%; background:transparent; padding:0;">
+							<!-- Topic items -->
+							<div class="topic-item topic-card active" data-problem="1" tabindex="0" style="border-left:4px solid #667eea;">
+								<span class="topic-badge">1</span>
+								<span style="font-weight:600; color:#2c3e50;">Aging Population & Limited Care Options</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="2" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">2</span>
+								<span style="font-weight:600; color:#6c757d;"> Agencies Struggle With Scheduling</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="3" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">3</span>
+								<span style="font-weight:600; color:#6c757d;">Safety, Trust & Verification Gaps</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="4" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">4</span>
+								<span style="font-weight:600; color:#6c757d;">Lack of Transparency in Worker Qualifications</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="5" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">5</span>
+								<span style="font-weight:600; color:#6c757d;">Need for Cultural & Language Comfort</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="6" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">6</span>
+								<span style="font-weight:600; color:#6c757d;">Reliability & Predictability Are Hard to Find</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="7" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">7</span>
+								<span style="font-weight:600; color:#6c757d;">No Standardized System for Homecare</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="8" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">8</span>
+								<span style="font-weight:600; color:#6c757d;">Limited Platforms for Home Support Roles</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="9" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">9</span>
+								<span style="font-weight:600; color:#6c757d;">Underemployment Among Newcomers</span>
+							</div>
+							<div class="topic-item topic-card" data-problem="10" tabindex="0" style="border-left:4px solid transparent;">
+								<span class="topic-badge">10</span>
+								<span style="font-weight:600; color:#6c757d;">Affordability & Control Over Pricing</span>
+							</div>
+						</div>
+						<div class="problems-content" style="flex:1; padding:36px; background: transparent;">
+							<div id="problems-placeholder" style="color:#777;">Select a topic on the left to view details.</div>
+						</div>
+					</div>
+					<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const topicItems = Array.from(document.querySelectorAll('.problems-topics .topic-item'));
+					const contentPane = document.querySelector('.problems-content');
+
+					const problemData = {
+						"1": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Aging Population & Limited Care Options</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Canada's senior population is growing rapidly, but traditional care systems cannot keep up. Care homes are expensive, understaffed, and have long waitlists; families are left with limited, costly, and often impersonal options and struggle to find reliable, affordable, compassionate in-home support.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Families currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Long Waitlists & High Costs:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Care homes are unaffordable for many, and waitlists can stretch for months or years.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Lack of Personalized Care:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Institutional settings often fail to provide the comfort and familiarity seniors desire.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Difficulty Finding Trusted Help:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families are left to navigate a fragmented, unregulated market for home support.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Seniors risk isolation or institutionalization</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Families experience stress and burnout</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Quality of life declines for all involved</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Verified, Rated Support Workers:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families can book trusted PSWs, companions, and home helpers for flexible shifts.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Personalized Matching:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">AI-powered matching ensures the right fit for every family's needs and preferences.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Transparent Pricing & Easy Booking:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">No hidden fees, instant booking, and clear costs for every service.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Families gain peace of mind and seniors can age in place with dignity and comfort.
+									</p>
+								</div>
+							</div>
+						`,
+						"2": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;"> Agencies Struggle With Scheduling & Staffing</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Care homes, cleaning agencies, childcare centers, and homecare companies face operational chaos from inadequate workforce management tools and last-minute scheduling issues, resulting in staffing gaps and compliance headaches.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Businesses currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Last-Minute Staff Shortages:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Workers call in sick or cancel shifts with no notice, leaving businesses scrambling to find replacements.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Manual Scheduling Chaos:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Spreadsheets, phone calls, and text messages create confusion and inefficiency in managing staff schedules.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Visibility Into Worker Verification:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Agencies have no automated way to track certifications, police checks, or document expiration dates.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Difficulty Finding Qualified Replacements:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">When emergencies happen, finding vetted, qualified workers quickly becomes nearly impossible.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Real-Time Dashboards:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Without centralized visibility, managers waste time trying to coordinate schedules and track worker status.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Service quality suffers and client satisfaction drops</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Administrative costs skyrocket with manual processes</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Compliance risks increase without proper tracking</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Staff turnover increases due to poor scheduling experience</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Revenue loss from unfilled shifts and cancelled services</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Real-Time Worker Availability:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">See which workers are available instantly and book them with one click, eliminating phone tag and scheduling delays.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Automated Verification & Compliance Tracking:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Get automatic alerts when worker documents are expiring, maintain full compliance, and avoid regulatory risks.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Smart Replacement Suggestions:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">When shifts are cancelled, the system automatically suggests qualified replacements based on skills, location, and availability.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Centralized Dashboard & Shift Management:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">View all shifts, worker statuses, and scheduling conflicts in one place with powerful filtering and reporting tools.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Shift Acceptance Logs & Accountability:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Track who accepted, declined, or completed shifts with full audit trails and performance metrics.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Businesses gain operational efficiency, reduce administrative costs by 60%, eliminate scheduling chaos, and create recurring revenue streams through reliable workforce management.
+									</p>
+								</div>
+							</div>
+						`,
+						"3": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Safety, Trust & Verification Gaps</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Verification in today's gig economy is inconsistent. Families worry about who is entering their home and trust is often based on little more than a profile picture; most platforms lack robust background checks, ID verification, or ongoing monitoring, leaving families exposed to risk.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Families currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Consistent Verification:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Background checks, ID verification, and credential monitoring are inconsistent or missing entirely.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Ongoing Oversight:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Once hired, workers may never be re-checked or monitored for compliance with safety standards.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Admin Intervention:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families have no recourse if something goes wrong or if a worker's credentials expire.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Families feel unsafe and anxious about who enters their home</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Trust in the platform and workers is undermined</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Potential for serious safety and legal issues</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Automated, Ongoing Verification:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">ID verification, police checks, and credential monitoring are automated and continuous, not just one-time uploads.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Admin Oversight & Alerts:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Admins are automatically notified of expiring credentials and can intervene if issues arise.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Family Support & Recourse:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families have a direct line to support and can report issues for immediate action and resolution.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Safety becomes a core product feature, not an afterthought. Families can trust that every worker is thoroughly vetted and continuously monitored.
+									</p>
+								</div>
+							</div>
+						`,
+						"4": `
+							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Lack of Transparency in Worker Qualifications</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Families often hire without knowing a caregiver's true qualifications, experience, or background; there is no easy way to verify credentials, certifications, police checks, or language ability, forcing families to trust unverified claims.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;font-weight:600;color:#fff;">Families currently struggle with:</p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Verified Credentials:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families must trust claims about certifications, police checks, and experience without any proof or validation.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Centralized Profile:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Experience, ratings, and language skills are scattered or missing, making it hard to compare workers effectively.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Police Check Status:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families have no way to confirm if a worker's police check is current or expired.</p>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Uncertainty and anxiety for families when making hiring decisions</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Potential safety and legal risks from unverified workers</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Difficulty making informed, confident decisions about care providers</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Verified, Transparent Profiles:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">All credentials, certifications, and police check status are verified and displayed in one centralized place.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Experience & Ratings:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families can see experience level, language skills, and past ratings at a glance for easy comparison.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Police Check Expiry Tracking:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Status and expiry dates are clearly displayed and monitored for ongoing compliance.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Uncertainty is replaced with confidence and safety. Families can make informed decisions with complete transparency about every worker.
+									</p>
+								</div>
+							</div>
+						`,
+						"5": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Need for Cultural & Language Comfort</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Comfort and communication are essential in caregiving, yet most platforms ignore cultural alignment and language comfort. This leads to misunderstandings, anxiety, and a lack of trust between families and caregivers, especially for seniors and children.</p>
+								</div>
+								
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">What families want:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Caregivers who speak the same language:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Language barriers create confusion and prevent effective communication, especially in emergencies.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Deep understanding of cultural values and traditions:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Cultural differences can lead to misunderstandings about dietary needs, religious practices, and social norms.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">A familiar, respectful environment that feels like home:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Without cultural alignment, seniors and children may feel isolated, misunderstood, or uncomfortable in their own homes.</p>
+										</div>
+									</div>
+								</div>
+								
+								<p style="margin-bottom:20px;color:rgba(255,255,255,0.85);font-style:italic;">This is not about race — it is about comfort, trust, and effective communication, especially for seniors or children who may feel isolated or misunderstood.</p>
+								
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Care recipients feel misunderstood, isolated, and anxious</span>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;">
+											<span style="margin-right:10px;">•</span>
+											<span>Families worry about miscommunication and cultural insensitivity</span>
+										</div>
+										<div style="display:flex;align-items:start;">
+											<span style="margin-right:10px;">•</span>
+											<span>Quality of care suffers when trust and comfort are absent</span>
+										</div>
+									</div>
+								</div>
+								
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Language & Culture Filters:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Families can filter and select caregivers by language, culture, and communication style to ensure the perfect match.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Cultural Competency Profiles:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Caregivers highlight their backgrounds, languages spoken, and cultural competencies in detailed profiles.</p>
+											</div>
+										</div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;">
+											<span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span>
+											<div>
+												<strong style="color:#155724;">Comfort-Based Matching:</strong>
+												<p style="margin:5px 0 0 0;color:#155724;">Our matching algorithm prioritizes comfort, trust, and compatibility to create meaningful connections.</p>
+											</div>
+										</div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">
+										🎯 Result: Families gain peace of mind, and care recipients feel understood, respected, and at home.
+									</p>
+								</div>
+							</div>
+						`,
+						"6": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Reliability & Predictability Are Hard to Find</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Families need peace of mind about caregiver punctuality and reliability; missed shifts, late arrivals, and last-minute cancellations are common and platforms lack mechanisms to track or enforce reliability, leaving families scrambling for backup care.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">Missed Shifts & Cancellations:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">No-shows and last-minute cancellations leave families without critical support.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Accountability:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Platforms rarely track or enforce reliability, so unreliable workers go unchecked.</p>
+										</div>
+									</div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;">
+										<span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span>
+										<div>
+											<strong style="color:#667eea;">No Real-Time Tracking:</strong>
+											<p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families have no way to know if a worker is on their way, late, or absent until it’s too late.</p>
+										</div>
+									</div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<div style="color:#0c5460;">
+										<div style="display:flex;align-items:start;margin-bottom:8px;"><span style="margin-right:10px;">•</span><span>Families are left scrambling for backup care</span></div>
+										<div style="display:flex;align-items:start;margin-bottom:8px;"><span style="margin-right:10px;">•</span><span>Trust in the platform and workers erodes</span></div>
+										<div style="display:flex;align-items:start;"><span style="margin-right:10px;">•</span><span>Care recipients experience anxiety and disruption</span></div>
+									</div>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Reputation Scoring:</strong><p style="margin:5px 0 0 0;color:#155724;">Tracks punctuality, reliability, and completion rates for every worker.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Real-Time Tracking & Alerts:</strong><p style="margin:5px 0 0 0;color:#155724;">Families see live updates on worker status and receive automated reminders.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Reliability Metrics:</strong><p style="margin:5px 0 0 0;color:#155724;">Reliability scores are visible to families before booking, so they can make informed choices.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: Families can trust that help will arrive as scheduled, every time.</p>
+								</div>
+							</div>
+						`,
+						"7": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">No Standardized System for Homecare & Support Services</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Home support and caregiving services operate in a fragmented, manual, and inconsistent way — attendance logs, incident reports, document expiries, and shift histories are scattered across calls and spreadsheets, creating risk, disputes, and poor outcomes.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Agencies, care homes, and families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Worker Attendance Tracking:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Did the worker show up? When did they arrive and leave? Manual logs create disputes and billing errors.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Reliability Monitoring:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Platforms lack data to identify chronic no-shows or unreliable workers, making staffing decisions blind.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Shift History Review:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Shift notes, ratings, and outcomes are lost across messages — nobody can audit performance or patterns.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Incident Reporting System:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">When incidents occur there is no structured way to report, timestamp, or review them — increasing liability and risk.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Document Expiry Tracking:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Police checks, certifications and licenses expire without automated reminders, creating compliance gaps.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;">
+										<li>Agencies lose revenue to billing errors and administrative overhead</li>
+										<li>Families cannot verify what happened during a shift</li>
+										<li>Workers lose opportunities because they lack verifiable shift history</li>
+										<li>Regulators cannot audit safety or compliance reliably</li>
+									</ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Automated Attendance Tracking:</strong><p style="margin:5px 0 0 0;color:#155724;">Workers check in/out via the app with GPS verification. Families and agencies see real-time shift logs.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Reliability Scoring & Analytics:</strong><p style="margin:5px 0 0 0;color:#155724;">Platform tracks punctuality, cancellations, and completion rates to produce reliability scores.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Complete Shift History Dashboard:</strong><p style="margin:5px 0 0 0;color:#155724;">Every shift is recorded with timestamps, notes, photos, and ratings — accessible for audits and reviews.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Built-in Incident Reporting:</strong><p style="margin:5px 0 0 0;color:#155724;">Structured incident forms with photo uploads, timestamps, and admin workflows for remediation.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Smart Document Expiry Management:</strong><p style="margin:5px 0 0 0;color:#155724;">Automated alerts notify workers and admins 30/60/90 days before expiries and enforce compliance.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: eStaff replaces chaos with a standardized, auditable system that benefits families, agencies, workers, and regulators.</p>
+								</div>
+							</div>
+						`,
+						"8": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Limited Platforms for Essential Home Support Roles</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Most mainstream gig platforms focus on delivery and transport, leaving essential home support roles like PSWs, IENs, DSWs, babysitters, cleaners, and companions underserved; families must search widely or hire unverified help.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Platform for Home Support:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Essential roles are ignored by broad gig marketplaces, making discovery difficult.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Fragmented Search:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Families must check multiple sites, groups, and agencies to fill simple household needs.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Verification or Ratings:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Unverified workers and missing reviews make it risky to hire for sensitive roles.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;"><li>Families waste time and energy searching for help</li><li>Essential needs go unmet or are filled by unqualified workers</li><li>Communities lack a trusted, all-in-one solution</li></ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Multi-Category Marketplace:</strong><p style="margin:5px 0 0 0;color:#155724;">A dedicated marketplace for PSWs, companions, cleaners, babysitters and more — all verified and searchable.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Tailored Search & Matching:</strong><p style="margin:5px 0 0 0;color:#155724;">Filters and AI matching help families find the right skillset, availability, and fit quickly.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Verified, Rated Workers:</strong><p style="margin:5px 0 0 0;color:#155724;">Every worker is background-checked, rated, and reviewed for trust and quality.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: Families and communities finally have a trusted, all-in-one platform for every essential support role.</p>
+								</div>
+							</div>
+						`,
+						"9": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Underemployment Among Newcomers & Students</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Talented newcomers, students, and part-time workers are often stuck in underemployment due to systemic barriers — employers demand local experience, networks are limited, and credential recognition is slow, wasting skills and potential.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Key challenges include:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">"No Canadian Experience" Barrier:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Employers often demand local experience, excluding globally qualified candidates.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Limited Professional Networks:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Newcomers and students lack local connections, making it hard to find references or mentors.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Credential Recognition Delays:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Foreign qualifications can take months to be recognized, forcing people into survival jobs.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Unfair Hiring Barriers:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Bias and unfamiliarity with local hiring practices keep qualified people out.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Reputation Without History:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Without a verifiable work history, newcomers cannot demonstrate reliability or skills to employers.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Exploitative "Gig" Options:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Many platforms only offer low-wage, unstable gigs with little prospect for advancement.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;"><li>Skills and education go unused, harming the economy</li><li>Newcomers and students remain in survival jobs</li><li>Communities miss out on diverse talent</li><li>Frustration and disengagement rise</li><li>The cycle of underemployment persists</li></ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">No "Canadian Experience" Required:</strong><p style="margin:5px 0 0 0;color:#155724;">Platform values global skills and credentials; work history begins the moment a worker starts on eStaff.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Verified Digital Profile:</strong><p style="margin:5px 0 0 0;color:#155724;">Every worker has a profile with verified credentials, ratings, and shift history visible to employers.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Build Reputation from Day One:</strong><p style="margin:5px 0 0 0;color:#155724;">Ratings and reviews accumulate with every shift, allowing workers to prove themselves quickly.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Flexible, Fair Access to Gigs:</strong><p style="margin:5px 0 0 0;color:#155724;">Gigs are matched on skills, availability, and verified credentials — not connections.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Earn Immediately and Consistently:</strong><p style="margin:5px 0 0 0;color:#155724;">Transparent pay and consistent gig flow help workers earn reliably from day one.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Safety & Legitimacy Built-In:</strong><p style="margin:5px 0 0 0;color:#155724;">All gigs require verified credentials and background checks, protecting workers and families.</p></div></div>
+									</div>
+									<div style="background:#e3e7fd;border-left:4px solid #6766FF;padding:15px;margin-bottom:20px;border-radius:6px;">
+										<p style="margin:0;color:#2d2d6a;"><strong>🎖️ Government Alignment:</strong> This approach supports workforce integration, diversity, and economic participation.</p>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🏆 Result: eStaff unlocks the potential of newcomers and students, creating a fair, inclusive, and prosperous workforce.</p>
+								</div>
+						`,
+						"10": `
+							<div style="padding:25px;color:#fff;">
+								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Affordability & Control Over Pricing</h3>
+								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
+									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Many platforms hide fees, inflate prices, or limit choice — making budgeting hard and eroding user trust. Families want transparent pricing and control over worker selection.</p>
+								</div>
+								<p style="margin-bottom:15px;color:#fff;"><strong style="color:#fff;">Families currently struggle with:</strong></p>
+								<div style="margin-bottom:20px;">
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Hidden Fees & Unclear Pricing:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Unexpected charges and confusing price structures make it hard to budget.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">No Control Over Choice:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Platforms sometimes assign workers or limit options, removing user control.</p></div></div>
+									<div style="display:flex;align-items:start;margin-bottom:12px;"><span style="color:#dc3545;font-size:20px;margin-right:10px;">❌</span><div><strong style="color:#667eea;">Difficulty Comparing Workers:</strong><p style="margin:5px 0 0 0;color:rgba(255,255,255,0.85);">Lack of transparent comparisons makes it hard to choose the best value.</p></div></div>
+								</div>
+								<div style="background:#d1ecf1;border-left:4px solid #17a2b8;padding:15px;margin-bottom:20px;border-radius:6px;">
+									<p style="margin:0 0 10px 0;color:#0c5460;"><strong>💡 The Impact:</strong></p>
+									<ul style="margin-left:20px;color:#0c5460;"><li>Users feel powerless and frustrated</li><li>Trust in the platform is eroded</li><li>Families may overpay or avoid needed services</li></ul>
+								</div>
+								<div style="background:#d4edda;border-left:4px solid #28a745;padding:20px;border-radius:6px;margin-top:20px;">
+									<p style="margin:0 0 15px 0;color:#155724;font-size:16px;"><strong>✅ How eStaff Solves This:</strong></p>
+									<div style="margin-bottom:15px;">
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">Transparent Pricing:</strong><p style="margin:5px 0 0 0;color:#155724;">Clear, upfront pricing for every service and worker—no hidden fees.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">User Control & Choice:</strong><p style="margin:5px 0 0 0;color:#155724;">Users can filter, compare, and choose workers based on price, skills, and reviews.</p></div></div>
+										<div style="display:flex;align-items:start;margin-bottom:10px;"><span style="color:#28a745;font-size:18px;margin-right:10px;">✓</span><div><strong style="color:#155724;">No Surprises:</strong><p style="margin:5px 0 0 0;color:#155724;">What you see is what you pay—full transparency at every step.</p></div></div>
+									</div>
+									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🎯 Result: Users feel empowered, in control, and confident in their choices.</p>
+								</div>
+							</div>
+						`,
+					};
+
+					function setActiveTopic(el) {
+						topicItems.forEach(t => {
+							t.classList.remove('active');
+							t.style.background = '';
+							t.style.borderLeft = '4px solid transparent';
+							const badge = t.querySelector('span:first-child');
+							const text = t.querySelector('span:last-child');
+							if (badge) { badge.style.background = '#e9ecef'; badge.style.color = '#6c757d'; }
+							if (text) text.style.color = '#6c757d';
+							if (t === el) t.setAttribute('aria-selected','true'); else t.removeAttribute('aria-selected');
+						});
+
+						el.classList.add('active');
+						el.style.background = '#fff';
+						el.style.borderLeft = '4px solid #667eea';
+						const activeBadge = el.querySelector('span:first-child');
+						const activeText = el.querySelector('span:last-child');
+						if (activeBadge) { activeBadge.style.background = 'linear-gradient(135deg,#667eea,#764ba2)'; activeBadge.style.color = '#fff'; }
+						if (activeText) activeText.style.color = '#2c3e50';
+					}
+
+					function showContent(id, pushHash = true) {
+						if (!contentPane) return;
+						const html = problemData[id] || '<p>No content available.</p>';
+						const current = contentPane.querySelector('.content-inner');
+						const newHtml = `<div class="core-service-card content-inner" style="opacity:0;transition:opacity .35s ease;">${html}</div>`;
+						if (current) {
+							current.style.opacity = 0;
+							setTimeout(() => {
+								contentPane.innerHTML = newHtml;
+								const inner = contentPane.querySelector('.content-inner');
+								requestAnimationFrame(() => inner.style.opacity = 1);
+							}, 260);
+						} else {
+							contentPane.innerHTML = newHtml;
+							const inner = contentPane.querySelector('.content-inner');
+							requestAnimationFrame(() => inner.style.opacity = 1);
+						}
+						if (pushHash) {
+							history.replaceState(null, '', '#problem-' + id);
+						}
+					}
+
+					// keyboard helpers
+					function focusIndex(idx) {
+						const clamped = Math.max(0, Math.min(topicItems.length - 1, idx));
+						topicItems[clamped].focus();
+					}
+
+					// initial load: respect hash if present
+					let startId = '1';
+					const m = location.hash.match(/^#problem-(\d{1,2})$/);
+					if (m && problemData[m[1]]) startId = m[1];
+					const startEl = topicItems.find(t => t.getAttribute('data-problem') === startId);
+					if (startEl) setActiveTopic(startEl);
+					showContent(startId, false);
+
+					topicItems.forEach((item, i) => {
+						item.addEventListener('click', function() {
+							const id = this.getAttribute('data-problem');
+							setActiveTopic(this);
+							showContent(id, true);
+						});
+
+						item.addEventListener('keydown', function(e) {
+							if (e.key === 'ArrowDown') { e.preventDefault(); focusIndex(i + 1); }
+							else if (e.key === 'ArrowUp') { e.preventDefault(); focusIndex(i - 1); }
+							else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
+						});
+					});
+				});
+				</script>
+					<div class="accordion" id="problemsAccordion">
+
+					</div>
+				</div>
+			</div>		
 		</div>
+		
 	</section>
-	<!--Emd workflow Section two -->
+
+	<!--End Problem Section -->
 
 
 
 
-	<!--about Section three -->
-	<section class="about-section-three">
-		<div class="auto-container">
-			<div class="row align-items-center">	
-				<div class="col-xl-6 col-lg-6">
-					<div class="about-thumb">
-						<figure class="reveal"><img src="images/demo-img/about-thumb31.png" alt="thumb"></figure>
-					</div>
-				</div>
-				<div class="col-xl-6 col-lg-6">
-					<div class="sec-title">
-						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Analysis</h5>
-						</div>
-						<div class="section-title">
-							<h1 class="title split-text">Personalize Saas Solutions</h1>
-							<h1 class="title split-text">For Your Challanges</h1>
-						</div>
-						<div class="section-desc">
-							<p class="text-anime-3">Monotonectally whiteboard proactive value with leading continually to
-								niche markets rather than fully tested result 
-							</p>
-						</div>
-					</div>
-					<div class="about-item-list">
-						<ul>
-							<li><img src="images/demo-img/check.png" alt="check">Whiteboard proactive value leading</li>
-							<li><img src="images/demo-img/check.png" alt="check">Top notch customers Integrations technology</li>
-						</ul>
-					</div>
-					<div class="about-btn">
-						<a href="about.html">Explore More<i class="fa-light fa-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="about-effient21 fade-in">
-			<img src="images/demo-img/about-effient21.png" alt="about effient">
-		</div>
-	</section>
-	<!--End about Section three -->
 
 
 
-
-	<!--about Section four -->
+	<!--Features Section four -->
 	<section class="about-section-four">
+		<style>
+			/* Feature titles color (purple accent) */
+			.about-section-four .about-item-list ul li strong { color: #667eea; }
+		</style>
 		<div class="auto-container">
 			<div class="row align-items-center">	
 				<div class="col-xl-6 col-lg-8">
 					<div class="sec-title">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Results</h5>
+							<h5 class="sub-title split_chars">Platform Features</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Foundation for High Perform</h1>
-							<h1 class="title split-text">Business Capability</h1>
+							<h1 class="title split-text">Key Features</h1>
+							<h1 class="title split-text">That Power eStaff</h1>
 						</div>
 						<div class="section-desc">
-							<p class="text-anime-3">Monotonectally whiteboard proactive value with leading continually to
-								niche markets rather than fully tested result
+							<p class="text-anime-3">eStaff is built on cutting-edge technology to deliver a seamless, secure, and intelligent gig marketplace experience for all users.
 							</p>
 						</div>
 					</div>
 					<div class="about-item-list">
 						<ul>
-							<li><img src="images/demo-img/check.png" alt="check">Whiteboard proactive value leading</li>
-							<li><img src="images/demo-img/check.png" alt="check">Top notch customers Integrations technology</li>
-							<li><img src="images/demo-img/check.png" alt="check">Whiteboard proactive value leading</li>
+							<li>
+								<!-- Verified Workers -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path fill="#667eea" d="M12 2l7 3v5c0 5-3.8 9.7-7 12-3.2-2.3-7-7-7-12V5l7-3z"/><path d="M9.5 12.5l1.8 1.8L15 11.6" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+								<strong>Verified Workers</strong> - Profiles, background checks, and document tracking that families can trust
+							</li>
+							<li>
+								<!-- Reliable Scheduling -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="#FF6B2C"/><path d="M12 7v6l4 2" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+								<strong>Reliable Scheduling</strong> - Real-time availability, shift acceptance, and automated replacements
+							</li>
+							<li>
+								<!-- Attendance & Audits -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path fill="#28a745" d="M12 2C8 2 4 4 4 8c0 5.2 6.4 11.1 7.1 11.7.3.2.6.3.9.3s.6-.1.9-.3C13.6 19.1 20 13.2 20 8c0-4-4-6-8-6z"/><circle cx="12" cy="8" r="2.2" fill="#fff"/></svg>
+								<strong>Attendance & Audits</strong> - GPS-verified check-ins, shift histories, and incident reporting for accountability
+							</li>
+							<li>
+								<!-- Smart Matching -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="#6766FF"/><circle cx="9" cy="9" r="1.4" fill="#fff"/><circle cx="15" cy="9" r="1.4" fill="#fff"/><path d="M8 15c1.2-1 3-1 4 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+								<strong>Smart Matching</strong> - AI matching that prioritizes skills, availability, language and cultural fit
+							</li>
+							<li>
+								<!-- Transparent Pricing & Reputation -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path fill="#17a2b8" d="M12 2l3 6 6 1-4.5 4 1 6L12 17l-5.5 3 1-6L3 9l6-1z"/></svg>
+								<strong>Transparent Pricing & Reputation</strong> - Clear fees, ratings, and verified shift history to build trust
+							</li>
+							<li>
+								<!-- AI Matching Engine -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="#e6e9ff"/><path d="M7 7h10M7 12h10M7 17h10" stroke="#667eea" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+								<strong>AI Matching Engine</strong> - Connects seekers with the best worker using skills, availability, location, and history
+							</li>
+							<li>
+								<!-- Full Verification Workflow -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="#fff3cd"/><circle cx="8" cy="12" r="2" fill="#ffc107"/></svg>
+								<strong>Full Verification Workflow</strong> - ID, selfie match, police checks, residency proof, certification uploads
+							</li>
+							<li>
+								<!-- Real-Time Gig Alerts -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path d="M12 2c-1 0-2 .5-2 1.5V5c0 .6-.4 1-1 1H6v2h12V6h-3c-.6 0-1-.4-1-1V3.5C14 2.5 13 2 12 2z" fill="#ffdfd6"/><path d="M6 10v4l-2 2v1h16v-1l-2-2v-4H6z" fill="#ff6b2c"/></svg>
+								<strong>Real-Time Gig Alerts</strong> - Workers receive instant notifications for matching opportunities
+							</li>
+							<li>
+								<!-- In-App Communication -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 3V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="#d1ecf1"/></svg>
+								<strong>In-App Communication</strong> - Secure chat and optional call features
+							</li>
+							<li>
+								<!-- Reputation System -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 17l-5.5 3 1-6L3 9l6-1z" fill="#e3e7fd"/></svg>
+								<strong>Reputation System</strong> - Ratings, reviews, and AI-generated summaries
+							</li>
+							<li>
+								<!-- Admin Dashboard -->
+								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" fill="#fff"/><rect x="7" y="9" width="3" height="6" fill="#667eea"/><rect x="12" y="9" width="3" height="4" fill="#FF6B2C"/><rect x="17" y="9" width="3" height="2" fill="#28a745"/></svg>
+								<strong>Admin Dashboard</strong> - Manage verification, disputes, analytics, and trends
+							</li>
 						</ul>
 					</div>
 					<div class="about-btn">
-						<a href="about.html">Explore More<i class="fa-light fa-arrow-right"></i></a>
+						<a href="contact.html">Request Full Feature List<i class="fa-light fa-arrow-right"></i></a>
 					</div>
 				</div>
 				<div class="col-xl-6 col-lg-4">
 					<div class="summary-single-box">
 						<div class="summary-title">
-							<h2>Summary</h2>
+							<h2>Platform Overview</h2>
 						</div>
 						<div class="summary-scedule">
 							<ul>
 								<li>
-									<p><img src="images/demo-img/summary-icon1.png" alt="icon">Overview</p>
-									<span>3,690</span>
+									<p><img src="images/demo-img/summary-icon1.png" alt="icon">Service Categories</p>
+									<span>12+</span>
 								</li>
 								<li>
-									<p><img src="images/demo-img/summary-icon2.png" alt="icon">Campaigns</p>
-									<span>6,593</span>
+									<p><img src="images/demo-img/summary-icon2.png" alt="icon">Target Markets</p>
+									<span>B2C & B2B</span>
 								</li>
 								<li>
-									<p><img src="images/demo-img/summary-icon3.png" alt="icon">Keywords</p>
-									<span>10,980</span>
+									<p><img src="images/demo-img/summary-icon3.png" alt="icon">Launch Region</p>
+									<span>Ontario</span>
 								</li>
 								<li>
-									<p><img src="images/demo-img/summary-icon4.png" alt="icon">Active Users</p>
-									<span>2,000</span>
+									<p><img src="images/demo-img/summary-icon4.png" alt="icon">Development Stage</p>
+									<span>Active</span>
 								</li>
 							</ul>
 							<div class="summary-saas-badge">
 								<div class="saas-cusor">
-									<span>AI Saas Innovation </span>
+									<span>AI-Powered Platform </span>
 								</div>
 								<div class="innovation-cusor">
-									<span>AI Saas Innovation</span>
+									<span>AI-Powered Platform</span>
 								</div>
 							</div>
 						</div>
@@ -643,14 +1773,13 @@
 				<div class="col-xl-12">
 					<div class="sec-title text-center">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Integrations</h5>
+							<h5 class="sub-title split_chars">Technology Stack</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Integrated with Smart AI Tools</h1>
+							<h1 class="title split-text">Powered by Industry-Leading Technology</h1>
 						</div>
 						<div class="section-desc">
-							<p class="text-anime-3">Monotonectally whiteboard proactive value with leading continually
-								niche markets rather than fully tested results
+							<p class="text-anime-3">Built on scalable cloud infrastructure and modern AI frameworks to ensure reliability, security, and intelligent matching capabilities.
 							</p>
 						</div>
 					</div>
@@ -672,290 +1801,290 @@
 	<!--End integration Section two -->
 
 
-	<!--testimonial Section two -->
-	<section class="testimonia-section-two">
+	<!--Who Will Use eStaff Section -->
+	<section class="about-section-two binifits-marquee-area-one" style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
 		<div class="auto-container">
-			<div class="row testi-arrow-box">	
-				<div class="col-xl-4">
-					<div class="sec-title">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="sec-title text-center">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Testimonials</h5>
+							<h5 class="sub-title split_chars">Target Users</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Real Story from Our</h1>
-							<h1 class="title split-text">Dedicated Clients</h1>
-							<h1 class="title split-text">About Service</h1>
+							<h1 class="title split-text">Who Will Use eStaff</h1>
+						</div>
+						<div class="section-desc">
+							<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">eStaff serves three major user groups: B2C Users (Households), Organizations, and Job Seekers</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-8">
-					<div class="row">
-						<div class="swiper testi-active">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="col-lg-12">
-										<div class="testi-box">
-											<div class="single-testi-box">
-												<div class="testi-quote">
-													<img src="images/demo-img/testi-quote.png" alt="quote">
-												</div>
-												<div class="testi-desc">
-													<p>“Continually create ubiquitous leadership
-														magnetic ideas next-generation interface
-														competencies corporate next-generation 
-														scenarios whereas” 
-													</p>
-												</div>
-												<div class="testi-ratting">
-													<ul>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-													</ul>
-												</div>
-												<div class="testi-autor-box">
-													<div class="testi-autor">
-														<img src="images/demo-img/testi-autor1.png" alt="autor">
-													</div>
-													<div class="testi-autor-content">
-														<h5 class="autor-title">Jakulin Farnandez</h5>
-														<p class="autor-desi">UI/UX Designer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="col-lg-12">
-										<div class="testi-box">
-											<div class="single-testi-box">
-												<div class="testi-quote">
-													<img src="images/demo-img/testi-quote.png" alt="quote">
-												</div>
-												<div class="testi-desc">
-													<p>“Continually create ubiquitous leadership
-														magnetic ideas next-generation interface
-														competencies corporate next-generation 
-														scenarios whereas” 
-													</p>
-												</div>
-												<div class="testi-ratting">
-													<ul>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-													</ul>
-												</div>
-												<div class="testi-autor-box">
-													<div class="testi-autor">
-														<img src="images/demo-img/testi-autor2.png" alt="autor">
-													</div>
-													<div class="testi-autor-content">
-														<h5 class="autor-title">Anjelina Shelly</h5>
-														<p class="autor-desi">UI/UX Designer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="col-lg-12">
-										<div class="testi-box">
-											<div class="single-testi-box">
-												<div class="testi-quote">
-													<img src="images/demo-img/testi-quote.png" alt="quote">
-												</div>
-												<div class="testi-desc">
-													<p>“Continually create ubiquitous leadership
-														magnetic ideas next-generation interface
-														competencies corporate next-generation 
-														scenarios whereas” 
-													</p>
-												</div>
-												<div class="testi-ratting">
-													<ul>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-													</ul>
-												</div>
-												<div class="testi-autor-box">
-													<div class="testi-autor">
-														<img src="images/demo-img/testi-autor3.png" alt="autor">
-													</div>
-													<div class="testi-autor-content">
-														<h5 class="autor-title">Sonia Sarlins</h5>
-														<p class="autor-desi">UI/UX Designer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="col-lg-12">
-										<div class="testi-box">
-											<div class="single-testi-box">
-												<div class="testi-quote">
-													<img src="images/demo-img/testi-quote.png" alt="quote">
-												</div>
-												<div class="testi-desc">
-													<p>“Continually create ubiquitous leadership
-														magnetic ideas next-generation interface
-														competencies corporate next-generation 
-														scenarios whereas” 
-													</p>
-												</div>
-												<div class="testi-ratting">
-													<ul>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-													</ul>
-												</div>
-												<div class="testi-autor-box">
-													<div class="testi-autor">
-														<img src="images/demo-img/testi-autor1.png" alt="autor">
-													</div>
-													<div class="testi-autor-content">
-														<h5 class="autor-title">Jakulin Farnandez</h5>
-														<p class="autor-desi">UI/UX Designer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="col-lg-12">
-										<div class="testi-box">
-											<div class="single-testi-box">
-												<div class="testi-quote">
-													<img src="images/demo-img/testi-quote.png" alt="quote">
-												</div>
-												<div class="testi-desc">
-													<p>“Continually create ubiquitous leadership
-														magnetic ideas next-generation interface
-														competencies corporate next-generation 
-														scenarios whereas” 
-													</p>
-												</div>
-												<div class="testi-ratting">
-													<ul>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-													</ul>
-												</div>
-												<div class="testi-autor-box">
-													<div class="testi-autor">
-														<img src="images/demo-img/testi-autor2.png" alt="autor">
-													</div>
-													<div class="testi-autor-content">
-														<h5 class="autor-title">Anjelina Shelly</h5>
-														<p class="autor-desi">UI/UX Designer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="col-lg-12">
-										<div class="testi-box">
-											<div class="single-testi-box">
-												<div class="testi-quote">
-													<img src="images/demo-img/testi-quote.png" alt="quote">
-												</div>
-												<div class="testi-desc">
-													<p>“Continually create ubiquitous leadership
-														magnetic ideas next-generation interface
-														competencies corporate next-generation 
-														scenarios whereas” 
-													</p>
-												</div>
-												<div class="testi-ratting">
-													<ul>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-														<li><i class="fa-solid fa-star"></i></li>
-													</ul>
-												</div>
-												<div class="testi-autor-box">
-													<div class="testi-autor">
-														<img src="images/demo-img/testi-autor3.png" alt="autor">
-													</div>
-													<div class="testi-autor-content">
-														<h5 class="autor-title">Sonia Sarlins</h5>
-														<p class="autor-desi">UI/UX Designer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+			</div>
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-xl-4 col-lg-4 col-md-6">
+					<div class="core-service-card" style="min-height: 380px;">
+						<div class="service-card-icon">
+							<i class="fa-solid fa-house"></i>
 						</div>
+						<h3>🏠 B2C Users (Households)</h3>
+						<p>Households, hosts, and families who need reliable on-demand help.</p>
+						<ul class="service-list">
+							<li><i class="fa-solid fa-check"></i> Households needing help</li>
+							<li><i class="fa-solid fa-check"></i> Airbnb Owners & Rental Hosts</li>
+							<li><i class="fa-solid fa-check"></i> Students, New Parents & Elderly Care Families</li>
+							<li><i class="fa-solid fa-check"></i> Small Businesses</li>
+						</ul>
+						<a href="contact.html" class="service-card-btn">Learn More <i class="fa-light fa-arrow-right"></i></a>
 					</div>
 				</div>
-				<div class="ai-testi-arrow-box">
-					<button class="slider-prev" tabindex="0" aria-label="Previous slide">
-						<i class="fa-solid fa-arrow-left-long"></i>
-					</button>
-					<button class="slider-next" tabindex="0" aria-label="Next slide">
-						<i class="fa-solid fa-arrow-right-long"></i>
-					</button>
+
+				<div class="col-xl-4 col-lg-4 col-md-6">
+					<div class="core-service-card" style="min-height: 380px;">
+						<div class="service-card-icon">
+							<i class="fa-solid fa-building"></i>
+						</div>
+						<h3>🏢 B2B Organizations</h3>
+						<p>Care homes, cleaning companies, agencies, and corporate clients.</p>
+						<ul class="service-list">
+							<li><i class="fa-solid fa-check"></i> Care Homes & Assisted Living</li>
+							<li><i class="fa-solid fa-check"></i> Cleaning & Home Services Companies</li>
+							<li><i class="fa-solid fa-check"></i> Childcare Centres & Pet Care Agencies</li>
+							<li><i class="fa-solid fa-check"></i> Corporate & Tech Service Partners</li>
+						</ul>
+						<a href="contact.html" class="service-card-btn">Partner With Us <i class="fa-light fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<div class="col-xl-4 col-lg-4 col-md-6">
+					<div class="core-service-card" style="min-height: 380px;">
+						<div class="service-card-icon">
+							<i class="fa-solid fa-user-check"></i>
+						</div>
+						<h3>👷 Job Seekers</h3>
+						<p>Cleaners, caregivers, babysitters, and general labourers seeking gigs.</p>
+						<ul class="service-list">
+							<li><i class="fa-solid fa-check"></i> Cleaners & Housekeepers</li>
+							<li><i class="fa-solid fa-check"></i> Babysitters, Nannies & PSWs</li>
+							<li><i class="fa-solid fa-check"></i> Pet Sitters, Tech Helpers & Labour Roles</li>
+							<li><i class="fa-solid fa-check"></i> Verified profiles & onboarding</li>
+						</ul>
+						<a href="contact.html" class="service-card-btn">Get Started <i class="fa-light fa-arrow-right"></i></a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="testi-effient21 fade-in">
-			<img src="images/demo-img/testi-two-effient.png" alt="effient">
+	</section>
+	<!--End Who Will Use eStaff Section -->
+
+	<!-- Product Preview – Early UI/UX Designs (Figma Screens) -->
+	<section class="product-preview-section binifits-marquee-area-one pt-80 pb-80" style="position:relative; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
+		<div class="auto-container">
+			<div class="row justify-content-center mb-4">
+				<div class="col-lg-8 text-center">
+					<div class="section-title">
+						<h2 class="title split-text" style="color:#ffffff;">Product Preview – Early UI/UX Designs</h2>
+						<p class="mt-3" style="font-size:1.15rem; color:#ffffff;">
+							A sneak peek into the eStaff interface currently in design and development. These early Figma screens showcase our vision for service seeker flows, job seeker onboarding, verification dashboards, and AI-powered job matching.
+						</p>
+					</div>
+				</div>
+				<!-- Decorative testimonial-style backgrounds (left + right) -->
+				<div class="product-effient21 fade-in" style="position:absolute; left:8%; top:20px; transform:none; z-index:0; pointer-events:none; opacity:0.95;">
+					<img src="images/demo-img/testi-two-effient.png" alt="effient" />
+				</div>
+
+				<!-- (right decorative blob removed) -->
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<style>
+						/* Product preview carousel styles (local) */
+						.product-effient21 { transition: opacity .6s ease; }
+						.product-carousel-wrap { position: relative; padding: 40px 0; }
+						.product-bg-blob { position: absolute; inset: -40% -10% auto auto; width: 720px; height:720px; background: radial-gradient(circle at 20% 20%, rgba(155,123,255,0.14), transparent 30%), radial-gradient(circle at 80% 80%, rgba(255,140,0,0.06), transparent 30%); filter: blur(60px); z-index:0; pointer-events:none; }
+						.product-swiper { position: relative; z-index:2; padding: 30px 0; }
+						.product-swiper .swiper-slide { display:flex; justify-content:center; }
+						.mockup-card { width: 320px; height: 640px; border-radius: 28px; background: linear-gradient(180deg,#111217 0%, #16161b 100%); box-shadow: 0 40px 80px rgba(11,12,18,0.6); display:flex; align-items:center; justify-content:center; overflow:hidden; transform-style:preserve-3d; transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .35s; cursor: pointer; }
+						.mockup-screen { width: 86%; height: 86%; border-radius: 14px; overflow:hidden; box-shadow: inset 0 0 40px rgba(0,0,0,0.28); }
+						.mockup-screen img { display:block; width:100%; height:100%; object-fit:cover; }
+						.mockup-caption { position: absolute; bottom: 18px; left:50%; transform:translateX(-50%); color: rgba(255,255,255,0.9); font-weight:700; background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)); padding:8px 14px; border-radius: 999px; font-size:14px; backdrop-filter: blur(4px); }
+						@media (max-width: 991px) { .mockup-card { width: 260px; height:520px } }
+						@media (max-width: 640px) { .mockup-card { width: 220px; height:440px } .product-bg-blob{display:none} }
+						@media (max-width: 480px) { .product-effient21 { display:none !important; } }
+					</style>
+
+					<div class="product-carousel-wrap">
+						<div class="product-bg-blob" aria-hidden="true"></div>
+						<div class="swiper product-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="mockup-card" data-title="User Onboarding" data-full="images/demo-img/onboarding-figma.png">
+										<div class="mockup-screen"><img src="images/inner-img/on.jpg" alt="Onboarding preview"></div>
+										<div class="mockup-caption">User Onboarding</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="mockup-card" data-title="Verification Process" data-full="images/demo-img/verification-figma.png">
+										<div class="mockup-screen"><img src="images/inner-img/vv.jpg" alt="Verification preview"></div>
+										<div class="mockup-caption">Verification</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="mockup-card" data-title="Job Seeker Preferences" data-full="images/demo-img/preferences-figma.png">
+										<div class="mockup-screen"><img src="images/inner-img/pp.jpg" alt="Preferences preview"></div>
+										<div class="mockup-caption">Preferences</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="mockup-card" data-title="Service Posting Flow" data-full="images/demo-img/service-posting-figma.png">
+										<div class="mockup-screen"><img src="images/inner-img/pf.jpg" alt="Posting preview"></div>
+										<div class="mockup-caption">Posting Flow</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="mockup-card" data-title="Admin Dashboard" data-full="images/demo-img/admin-dashboard-figma.png">
+										<div class="mockup-screen"><img src="images/inner-img/da.jpg" alt="Admin preview"></div>
+										<div class="mockup-caption">Admin Dashboard</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="mockup-card" data-title="Gig Acceptance" data-full="images/demo-img/gig-acceptance-figma.png">
+										<div class="mockup-screen"><img src="images/inner-img/aaa.jpg" alt="Gig preview"></div>
+										<div class="mockup-caption">Gig Acceptance</div>
+									</div>
+								</div>
+							</div>
+							<!-- Pagination + Navigation -->
+							<div class="swiper-pagination"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+
+					<!-- Lightbox modal -->
+					<div id="previewModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
+						<button id="previewClose" style="position:absolute; top:22px; right:22px; background:transparent; border:none; color:#fff; font-size:28px;">&times;</button>
+						<div style="max-width:1100px; width:92%; max-height:90%; overflow:auto; text-align:center;">
+							<h4 id="previewTitle" style="color:#fff; margin-bottom:14px;"></h4>
+							<img id="previewImage" src="" alt="preview" style="width:100%; height:auto; border-radius:12px; box-shadow:0 40px 120px rgba(0,0,0,0.6);" />
+						</div>
+					</div>
+				</div>
+			</div>
+				<!-- More categories -->
+				<div class="col-12 mt-4">
+					<div class="text-center">
+						<h6 class="mb-2" style="color:#FF6B2C;">And many more…</h6>
+						<ul class="list-inline" style="font-size:1rem; color:#888;">
+							<li class="list-inline-item">Admin Dashboard</li>
+							<li class="list-inline-item">AI Matching</li>
+							<li class="list-inline-item">Mobile & Web Flows</li>
+							<li class="list-inline-item">Notifications</li>
+							<li class="list-inline-item">Profile Management</li>
+							<li class="list-inline-item">...and more</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
-	<!--End testimonia Section two -->
 
 
 
-	<!--Benifits Section two -->
+	<!--Project Stage & Timeline Section -->
+	<section class="about-section-four binifits-marquee-area-one" style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
+		<div class="auto-container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="sec-title text-center">
+						<div class="section-sub-title">
+							<h5 class="sub-title split_chars">Development Progress</h5>
+						</div>
+						<div class="section-title">
+							<h1 class="title split-text">Project Stage & Timeline</h1>
+						</div>
+						<div class="section-desc">
+							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto;">eStaff is currently in the design & development phase. We are actively building the platform architecture, workflows, admin dashboards, and core backend logic using Firebase, Firestore, and GCS.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-xl-3 col-lg-6 col-md-6">
+					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #6766FF;">
+						<div class="workflow-content">
+							<div style="font-size: 48px; margin-bottom: 15px;">✅</div>
+							<h3 style="color: #6766FF; margin-bottom: 15px;">Current Phase</h3>
+							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Design & Development</h4>
+							<p style="font-size: 14px; color: #666;">Platform architecture, UI/UX design, and core workflows</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6">
+					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #FF6B2C;">
+						<div class="workflow-content">
+							<div style="font-size: 48px; margin-bottom: 15px;">🔧</div>
+							<h3 style="color: #FF6B2C; margin-bottom: 15px;">Next Phase</h3>
+							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Backend Development</h4>
+							<p style="font-size: 14px; color: #666;">API, authentication,database integration, and verification workflows</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6">
+					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #28a745;">
+						<div class="workflow-content">
+							<div style="font-size: 48px; margin-bottom: 15px;">🚀</div>
+							<h3 style="color: #28a745; margin-bottom: 15px;">Future Phase</h3>
+							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Pilot Launch</h4>
+							<p style="font-size: 14px; color: #666;">Beta testing in Ontario with select users and partners</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-md-6">
+					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #17a2b8;">
+						<div class="workflow-content">
+							<div style="font-size: 48px; margin-bottom: 15px;">🌍</div>
+							<h3 style="color: #17a2b8; margin-bottom: 15px;">Long-term Goal</h3>
+							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">National Expansion</h4>
+							<p style="font-size: 14px; color: #666;">Expand across Canada and build Africa-to-Canada marketplace</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End Project Stage & Timeline Section -->
+
+
+	<!--Why Vizra is Building This Section -->
 	<section class="benifits-section-two">
 		<div class="auto-container">
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="sec-title text-center">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Benifits</h5>
+							<h5 class="sub-title split_chars">Our Vision</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Empowering Business to Success</h1>
-							<h1 class="title split-text">Targeted Innovations</h1>
+							<h1 class="title split-text">Why Vizra is</h1>
+							<h1 class="title split-text">Building eStaff</h1>
+						</div>
+						<div class="section-desc" style="margin-top: 30px;">
+							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: #ffffff;">
+								At Vizra we build practical technology that makes finding and managing on‑demand help simple and reliable. eStaff focuses on easy scheduling, clear profiles, secure verification, and fair payments so households, small organizations, and service workers can transact with confidence.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" style="margin-top: 50px;">
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="single-binifits-box">
 						<div class="binifits-content">
 							<div class="binifits-icon">
 								<img src="images/demo-img/binifits-icon21.png" alt="icon">
 							</div>
-							<h4>Real time sales Insights</h4>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
+							<h4>Practical Tools</h4>
+							<p>Easy, reliable tools for scheduling, payments, and shift management that simplify daily life for families and service providers.</p>
 						</div>
 					</div>
 				</div>
@@ -965,9 +2094,8 @@
 							<div class="binifits-icon">
 								<img src="images/demo-img/binifits-icon23.png" alt="icon">
 							</div>
-							<h4>Smart AI Chatbot</h4>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
+							<h4>Smart Matching</h4>
+							<p>Intelligent but transparent matching and filtering to connect requests with the most relevant, available workers.</p>
 						</div>
 					</div>
 				</div>
@@ -977,9 +2105,8 @@
 							<div class="binifits-icon">
 								<img src="images/demo-img/binifits-icon22.png" alt="icon">
 							</div>
-							<h4>Seamless Integrations</h4>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
+							<h4>Local Opportunity</h4>
+							<p>Create flexible earning opportunities that support local workers and small service businesses.</p>
 						</div>
 					</div>
 				</div>
@@ -989,9 +2116,8 @@
 							<div class="binifits-icon">
 								<img src="images/demo-img/binifits-icon23.png" alt="icon">
 							</div>
-							<h4>Scalable Growth</h4>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
+							<h4>Market Access</h4>
+							<p>Help local workers and small providers reach more clients through a fair, searchable marketplace.</p>
 						</div>
 					</div>
 				</div>
@@ -1001,9 +2127,8 @@
 							<div class="binifits-icon">
 								<img src="images/demo-img/binifits-icon24.png" alt="icon">
 							</div>
-							<h4>Increased Efficiency</h4>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
+							<h4>Scalable Innovation</h4>
+							<p>Build systems that can grow from pilot deployments to wider regions while keeping usability and cost in mind.</p>
 						</div>
 					</div>
 				</div>
@@ -1013,9 +2138,8 @@
 							<div class="binifits-icon">
 								<img src="images/demo-img/binifits-icon25.png" alt="icon">
 							</div>
-							<h4>Latest Technology</h4>
-							<p>Monotonectally whiteboard proactive value
-								niche markets rather than media</p>
+							<h4>Trust & Safety</h4>
+							<p>Practical verification, clear ratings, and simple dispute workflows to protect both families and workers.</p>
 						</div>
 					</div>
 				</div>
@@ -1028,18 +2152,21 @@
 	<!--Benifitsl Section two -->
 
 
-	<!--pricing plan Section two -->
+	<!--How to Participate Section -->
 	<section class="pricing-plan-section-two">
 		<div class="auto-container">
 			<div class="row">	
 				<div class="col-xl-12">
 					<div class="sec-title">
 						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Pricing Plans</h5>
+							<h5 class="sub-title split_chars">Get Involved</h5>
 						</div>
 						<div class="section-title">
-							<h1 class="title split-text">Choose Perfect Affordable</h1>
-							<h1 class="title split-text">Chief Pricing Plans</h1>
+							<h1 class="title split-text">How Investors & Volunteers</h1>
+							<h1 class="title split-text">Can Participate</h1>
+						</div>
+						<div class="section-desc" style="margin-top: 20px;">
+							<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">Join us in building the future of gig work. Whether you're an investor looking to support innovative technology or a volunteer eager to shape the platform, there's a role for you.</p>
 						</div>
 					</div>
 				</div>
@@ -1047,92 +2174,100 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="tab">
-						<ul class="tabs">
-							<li><a href="#">Monthly</a></li>
-							<li><a href="#">Yearly</a></li>
+						<ul class="tabs">				
+					
 						</ul>
 						 <!-- / tabs -->
 						<div class="tab_content">
 							<div class="tabs_item">
 								<div class="row">
 									<div class="col-xl-4 col-lg-6 col-md-6">
-										<div class="pricing-single-item">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>Basic</h3>
+										<div class="pricing-single-item" style="padding: 40px 30px;">
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Partners</h3>
 											<div class="pricing-money">
-												<h3><span class="dollar">$</span>19<span class="monthly">/Monthly</span></h3>
-											</div>						
+												<h3 style="font-size: 24px; color: #6766FF;">Partnership Opportunities</h3>
+											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
-													<h2>Features</h2>
+													<h2>How We Partner</h2>
+												</div>
+												<div class="pricing-feature">
+<ul>
+            <li><img src="images/demo-img/check.png" alt="check">Work with care homes, cleaning agencies & staffing firms</li>
+            <li><img src="images/demo-img/check.png" alt="check">Service provider onboarding & workforce expansion</li>
+            <li><img src="images/demo-img/check.png" alt="check">Pilot programs for new markets and community rollouts</li>
+            <li><img src="images/demo-img/check.png" alt="check">Referral & channel partnership programs</li>
+            <li><img src="images/demo-img/check.png" alt="check">Co-marketing & joint innovation opportunities</li>
+            <li><img src="images/demo-img/check.png" alt="check">Access to anonymized insights & workforce analytics</li>
+        </ul>
+												</div>
+											</div>
+											<div class="pricing-btn style_one">
+												<a href="contact.html">Partner With Us<i class="fa-light fa-arrow-right"></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4 col-lg-6 col-md-6">
+										<div class="pricing-single-item active" style="padding: 40px 30px;">
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Investors</h3>
+											<div class="pricing-money">
+												<h3 style="font-size: 24px; color: #6766FF;">Investment Opportunities</h3>
+											</div>
+											<div class="pricing-body">
+												<div class="pricing-title">
+													<h2>What You Can Support</h2>
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">60+ Premium features</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Unlimited supports</li>	
-														<li><img src="images/demo-img/check.png" alt="check">90+ Expert members</li>
-														<li><img src="images/demo-img/check.png" alt="check">Data insights</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Free Hosting plans</li>
-														<li><img src="images/demo-img/check.png" alt="check">Lifetime updates</li>								
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Angel Investors</strong> – Seed funding, early mentorship, and network support.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Venture Capital</strong> – Capital for rapid scaling, product expansion, and growth.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Strategic Partners</strong> – Distribution, integrations, and co-marketing alliances.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Crowdfunding</strong> – Community-driven support through retail and reward-based models.</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
+												<a href="mailto:getvizra@gmail.com">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
+											</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-xl-4 col-lg-6 col-md-6">
-										<div class="pricing-single-item active">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>Standard</h3>
-											<div class="pricing-money">
-												<h3><span class="dollar">$</span>39<span class="monthly">/Monthly</span></h3>
-											</div>						
-											<div class="pricing-body">
-												<div class="pricing-title">
-													<h2>Features</h2>
-												</div>
-												<div class="pricing-feature">
-													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">60+ Premium features</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Unlimited supports</li>	
-														<li><img src="images/demo-img/check.png" alt="check">90+ Expert members</li>
-														<li><img src="images/demo-img/check.png" alt="check">Data insights</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Free Hosting plans</li>
-														<li><img src="images/demo-img/check.png" alt="check">Lifetime updates</li>								
-													</ul>
-												</div>
-											</div>
-											<div class="pricing-btn style_one">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
 									<div class="col-xl-4 col-lg-6 col-md-6">
 										<div class="pricing-single-item">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>Standard</h3>
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Volunteers</h3>
 											<div class="pricing-money">
-												<h3><span class="dollar">$</span>69<span class="monthly">/Monthly</span></h3>
-											</div>						
+												<h3 style="font-size: 24px; color:  #6766FF;">Volunteer Opportunities</h3>
+											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
-													<h2>Features</h2>
+													<h2>How You Can Help</h2>
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">60+ Premium features</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Unlimited supports</li>	
-														<li><img src="images/demo-img/check.png" alt="check">90+ Expert members</li>
-														<li><img src="images/demo-img/check.png" alt="check">Data insights</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Free Hosting plans</li>
-														<li><img src="images/demo-img/check.png" alt="check">Lifetime updates</li>								
+														 <li><img src="images/demo-img/check.png" alt="check">
+                Contribute your skills — developers, designers, testers, marketers, PSWs, and community members.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Help test early versions of the platform and new features.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Provide practical feedback from your professional experience.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Support onboarding flows and real-world user scenarios.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Join focus groups, surveys, and community discussions.</li>
+
+            <li><img src="images/demo-img/check.png" alt="check">
+                Become part of our founding community shaping eStaff’s future.</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn style_one">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
+												<a href="volunteer.html">Join As Volunteer<i class="fa-light fa-arrow-right"></i></a>
+											</div>
 											</div>
 										</div>
-									</div>
 								</div>
 							</div> 
 							<!--tabs_item -->						
@@ -1243,10 +2378,13 @@
 							<div class="call-to-icon">
 								<img src="images/demo-img/call-to-icon.png" alt="icon">
 							</div>
-							<h2 class="call-title">Grow Your Startup within 14 Days</h2>
-							<p class="call-disc">Monotonectally whiteboard proactive value with leading continually
-							niche markets rather than fully tested results</p>
-							<a class="call-to-btn" href="contact.html">14 Days Free Trail<i class="fa-solid fa-arrow-down-to-line"></i></a>
+							<h2 class="call-title">eStaff — Smarter Gig Work Powered by AI</h2>
+							<p class="call-disc">Currently in development. Join us as we build the future of work. Be part of the founding community of investors, volunteers, and early adopters shaping the platform.</p>
+							<div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+								<a class="call-to-btn" href="contact.html" style="margin: 0;">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
+								<a class="call-to-btn" href="volunteer.html" style="margin: 0; background: #FF6B2C;">Join as Volunteer<i class="fa-light fa-arrow-right"></i></a>
+								<a class="call-to-btn" href="contact.html" style="margin: 0; background: #28a745;">Contact Vizra Team<i class="fa-light fa-arrow-right"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1375,24 +2513,77 @@
 <script src="js/main.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  if (document.getElementById("cta-particles")) {
-    particlesJS("cta-particles", {
-      "particles": {
-        "number": { "value": 40 },
-        "color": { "value": ["#37B884", "#EB7043", "#6766FF"] },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.8 },
-        "size": { "value": 3, "random": true },
-        "line_linked": { "enable": false },
-        "move": { "enable": true, "speed": 2, "random": true }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "resize": true }
-      },
-      "retina_detect": true
-    });
-  }
+	if (document.getElementById("cta-particles")) {
+		particlesJS("cta-particles", {
+			"particles": {
+				"number": { "value": 40 },
+				"color": { "value": ["#37B884", "#EB7043", "#6766FF"] },
+				"shape": { "type": "circle" },
+				"opacity": { "value": 0.8 },
+				"size": { "value": 3, "random": true },
+				"line_linked": { "enable": false },
+				"move": { "enable": true, "speed": 2, "random": true }
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": { "resize": true }
+			},
+			"retina_detect": true
+		});
+	}
+
+	/* Product Preview carousel init */
+	try {
+		var productSwiper = new Swiper('.product-swiper', {
+			loop: true,
+			centeredSlides: true,
+			slidesPerView: 3,
+			spaceBetween: 28,
+			pagination: { el: '.product-swiper .swiper-pagination', clickable: true },
+			navigation: { nextEl: '.product-swiper .swiper-button-next', prevEl: '.product-swiper .swiper-button-prev' },
+			breakpoints: {
+				0: { slidesPerView: 1, spaceBetween: 12 },
+				640: { slidesPerView: 1.2, spaceBetween: 16 },
+				992: { slidesPerView: 2.1, spaceBetween: 20 },
+				1200: { slidesPerView: 3, spaceBetween: 28 }
+			}
+		});
+
+		// Simple 3D tilt effect for desktops
+		function addTilt(el){
+			var rect = el.getBoundingClientRect();
+			el.addEventListener('mousemove', function(e){
+				var x = e.clientX - rect.left; 
+				var y = e.clientY - rect.top;
+				var cx = rect.width/2;
+				var cy = rect.height/2;
+				var dx = (x-cx)/cx;
+				var dy = (y-cy)/cy;
+				el.style.transform = 'rotateX(' + (-dy*6) + 'deg) rotateY(' + (dx*8) + 'deg) translateZ(6px)';
+				el.style.boxShadow = '0 30px 80px rgba(11,12,18,0.6)';
+			});
+			el.addEventListener('mouseleave', function(){ el.style.transform='none'; el.style.boxShadow='0 40px 80px rgba(11,12,18,0.6)'; });
+		}
+		if (window.innerWidth > 768) {
+			document.querySelectorAll('.mockup-card').forEach(function(card){ addTilt(card); });
+		}
+
+		// Lightbox behaviour
+		var modal = document.getElementById('previewModal');
+		var modalImg = document.getElementById('previewImage');
+		var modalTitle = document.getElementById('previewTitle');
+		document.querySelectorAll('.mockup-card').forEach(function(card){
+			card.addEventListener('click', function(){
+				var src = card.getAttribute('data-full') || card.querySelector('img').src;
+				var title = card.getAttribute('data-title') || '';
+				modalImg.src = src;
+				modalTitle.textContent = title;
+				modal.style.display = 'flex';
+			});
+		});
+		document.getElementById('previewClose').addEventListener('click', function(){ modal.style.display='none'; modalImg.src=''; });
+		modal.addEventListener('click', function(e){ if (e.target===modal) { modal.style.display='none'; modalImg.src=''; } });
+	} catch(err){ console.warn('Product preview init error', err); }
 });
 </script>
 </div>
