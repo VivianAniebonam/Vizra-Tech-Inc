@@ -356,27 +356,22 @@ body.modal-open {
 
 	<main>
 
-	<!-- service page title -->
-	<section class="service-page-title" style="background-image: url(images/inner-img/f.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+	<!-- service page title (hero) -->
+	<section class="service-page-title hero section-bg-gradient" aria-label="Services hero" style="background-image: url(images/inner-img/f.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
 		<div class="auto-container">
-			<div class="row">
-				<div class="title-content">
-					<h5 class="page-sub-title split_chars">Our Services</h5>
-					<h1 class="page-title split-text">Smart. Scalable. AI-Powered Tech Solutions for Businesses & Startups.</h1>
-					<p class="page-desc title-anim">Vizra is a full-scale technology company providing end-to-end digital solutions for businesses of all sizes. From startup development to enterprise outsourcing, UI/UX design, mobile apps, cloud engineering, and our flagship AI Gig Platform — Vizra delivers modern, efficient, and future-ready technology.
-					</p>
-					<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-						<a href="#services" style="display: inline-block; padding: 16px 36px; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); color: #ffffff; font-size: 16px; font-weight: 600; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(103, 102, 255, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(103, 102, 255, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(103, 102, 255, 0.3)';">
-							Explore Services <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i>
-						</a>
-						<a href="contact.html" style="display: inline-block; padding: 16px 36px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(103, 102, 255, 0.5); color: #ffffff; font-size: 16px; font-weight: 600; border-radius: 50px; text-decoration: none; backdrop-filter: blur(10px); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(103, 102, 255, 0.2)'; this.style.borderColor='#6766FF';" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(103, 102, 255, 0.5)';">
-							Get Started <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i>
-						</a>
-					</div>
+			<div class="hero__content">
+				<p class="eyebrow">OUR SERVICES</p>
+				<h1 class="page-title hero__title">Smart. Scalable. AI-Powered Tech Solutions for Businesses & Startups.</h1>
+				<p class="page-desc hero__subtitle">Vizra is a full-scale technology company providing end-to-end digital solutions for businesses of all sizes. From startup development to enterprise outsourcing, UI/UX design, mobile apps, cloud engineering, and our flagship AI Gig Platform — Vizra delivers modern, efficient, and future-ready technology.</p>
+				<div class="hero__actions" role="group" aria-label="Hero actions">
+					<a class="btn btn--primary" href="#services">Explore Services <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i></a>
+					<a class="btn btn--ghost" href="contact.html">Get Started <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i></a>
 				</div>
 			</div>
-			<div class="row">
-				<section class="service-section-inner">
+		</div>
+	</section>
+
+	<section class="service-section-inner">
 					<div class="auto-container">
 						<div class="row">	
 							<div class="col-xl-6 col-lg-6">
@@ -542,12 +537,7 @@ body.modal-open {
 						Join the Waitlist <i class="fa-light fa-arrow-right" style="margin-left: 8px;"></i>
 					</a>
 				</div>
-				<div class="col-xl-6">
-					<div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);">
-						<img src="images/demo-img/service-thumb1.png" alt="Vizra AI Gig Platform" style="width: 100%; border-radius: 24px;">
-						<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(103, 102, 255, 0.3) 0%, transparent 100%);"></div>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</section>
@@ -605,64 +595,7 @@ body.modal-open {
 		</div>
 	</section>
 
-	<!-- Industries Section -->
-	<section style="padding: 100px 0; background: #ffffff;">
-		<div class="auto-container">
-			<div class="row justify-content-center text-center" style="margin-bottom: 60px;">
-				<div class="col-xl-8">
-					<div style="display: inline-block; padding: 10px 24px; background: rgba(103, 102, 255, 0.1); border-radius: 30px; margin-bottom: 20px;">
-						<h5 style="color: #6766FF; font-size: 14px; font-weight: 600; letter-spacing: 2px; margin: 0;">INDUSTRIES WE SERVE</h5>
-					</div>
-					<h2 style="color: #0a0a1f; font-size: 48px; font-weight: 800; margin-bottom: 20px;">Trusted Across Multiple Sectors</h2>
-				</div>
-			</div>
 
-			<div class="row justify-content-center">
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
-					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
-						<i class="fa-solid fa-heartbeat" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
-						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Healthcare</h4>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
-					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
-						<i class="fa-solid fa-building-columns" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
-						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Finance</h4>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
-					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
-						<i class="fa-solid fa-cart-shopping" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
-						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Retail & E-Commerce</h4>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
-					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
-						<i class="fa-solid fa-graduation-cap" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
-						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Education</h4>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
-					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
-						<i class="fa-solid fa-hotel" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
-						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Hospitality</h4>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
-					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
-						<i class="fa-solid fa-truck" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
-						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Logistics</h4>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin-bottom: 25px;">
-					<div style="background: #f8f9fa; padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.querySelector('h4').style.color='#ffffff'; this.querySelector('i').style.color='#ffffff';" onmouseout="this.style.background='#f8f9fa'; this.querySelector('h4').style.color='#0a0a1f'; this.querySelector('i').style.color='#6766FF';">
-						<i class="fa-solid fa-shop" style="font-size: 42px; color: #6766FF; margin-bottom: 15px; transition: color 0.3s ease;"></i>
-						<h4 style="color: #0a0a1f; font-size: 18px; font-weight: 700; margin: 0; transition: color 0.3s ease;">Small Business & Startups</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- CTA Section -->
 	<section style="padding: 100px 0; background: linear-gradient(135deg, #6766FF 0%, #8b5cf6 100%); position: relative; overflow: hidden;">
@@ -693,236 +626,6 @@ body.modal-open {
 		</div>
 	</section>
 
-	<!-- Flagship Project Section -->
-	<section class="service-section-inner" style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png) !important; background-repeat: no-repeat !important; background-size: cover !important; background-position: center !important; background-color: transparent !important;">
-		<div class="auto-container">
-			<div class="sec-title text-center mb-60">
-				<div class="section-sub-title">
-					<h5 class="sub-title split_chars">Innovation Project</h5>
-				</div>
-				<div class="section-title">
-					<h1 class="title split-text">Vizra AI Gig Platform</h1>
-					<p style="margin-top: 20px; font-size: 18px; color: #666;">Coming Soon</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xl-8 offset-xl-2">
-					<div class="text-center mb-40">
-						<p style="font-size: 18px; line-height: 1.8;">An AI-powered gig and talent platform connecting service seekers with job seekers across various industries.</p>
-					</div>
-					<div class="row">
-						<div class="col-xl-6 col-lg-6 mb-20">
-							<div class="single-service-box">
-								<div class="service-content">
-									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Intelligent Job Matching</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 mb-20">
-							<div class="single-service-box">
-								<div class="service-content">
-									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Real-Time Alerts</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 mb-20">
-							<div class="single-service-box">
-								<div class="service-content">
-									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>In-App Chat & Voice Calls</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 mb-20">
-							<div class="single-service-box">
-								<div class="service-content">
-									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Police Check & ID Verification</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 mb-20">
-							<div class="single-service-box">
-								<div class="service-content">
-									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Profile Ratings & AI Review Summaries</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 mb-20">
-							<div class="single-service-box">
-								<div class="service-content">
-									<h4 style="margin-bottom: 15px; color: #6766FF;"><i class="fa-light fa-check-circle" style="margin-right: 10px;"></i>Secure Payments</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Why Choose Vizra Section -->
-	<section class="service-section-inner" style="padding: 100px 0;">
-		<div class="auto-container">
-			<div class="sec-title text-center mb-60">
-				<div class="section-sub-title">
-					<h5 class="sub-title split_chars">Why Choose Us</h5>
-				</div>
-				<div class="section-title">
-					<h1 class="title split-text">Why Choose Vizra?</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-								<i class="fa-solid fa-brain" style="font-size: 35px; color: white;"></i>
-							</div>
-							<h4 style="margin-bottom: 15px;">AI-Powered Workflows</h4>
-							<p>Leverage cutting-edge AI technology to streamline your business processes.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-								<i class="fa-solid fa-rocket" style="font-size: 35px; color: white;"></i>
-							</div>
-							<h4 style="margin-bottom: 15px;">Fast Delivery & Agile Methodology</h4>
-							<p>Rapid development cycles with agile practices for faster time-to-market.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-								<i class="fa-solid fa-dollar-sign" style="font-size: 35px; color: white;"></i>
-							</div>
-							<h4 style="margin-bottom: 15px;">Affordable Pricing for Startups</h4>
-							<p>Competitive rates designed to fit startup budgets without compromising quality.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-								<i class="fa-solid fa-user-check" style="font-size: 35px; color: white;"></i>
-							</div>
-							<h4 style="margin-bottom: 15px;">Verified, Skilled Developers</h4>
-							<p>Work with certified professionals who bring expertise and reliability.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-								<i class="fa-solid fa-code" style="font-size: 35px; color: white;"></i>
-							</div>
-							<h4 style="margin-bottom: 15px;">Modern Tech Stack</h4>
-							<p>React, Node, Python, AWS, Flutter, and other cutting-edge technologies.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-								<i class="fa-solid fa-handshake" style="font-size: 35px; color: white;"></i>
-							</div>
-							<h4 style="margin-bottom: 15px;">End-to-End Project Support</h4>
-							<p>Comprehensive support from initial concept through deployment and beyond.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6766FF, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-								<i class="fa-solid fa-star" style="font-size: 35px; color: white;"></i>
-							</div>
-							<h4 style="margin-bottom: 15px;">High Customer Satisfaction</h4>
-							<p>Proven track record with excellent reviews and repeat clients.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Industries We Serve Section -->
-	<section class="service-section-inner" style="padding: 100px 0; background: rgba(103, 102, 255, 0.05);">
-		<div class="auto-container">
-			<div class="sec-title text-center mb-60">
-				<div class="section-sub-title">
-					<h5 class="sub-title split_chars">Industries</h5>
-				</div>
-				<div class="section-title">
-					<h1 class="title split-text">Industries We Serve</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<i class="fa-solid fa-heart-pulse" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
-							<h4>Healthcare</h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<i class="fa-solid fa-coins" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
-							<h4>Finance</h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<i class="fa-solid fa-cart-shopping" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
-							<h4>Retail & E-Commerce</h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<i class="fa-solid fa-graduation-cap" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
-							<h4>Education</h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<i class="fa-solid fa-hotel" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
-							<h4>Hospitality</h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<i class="fa-solid fa-truck" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
-							<h4>Logistics & Transportation</h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
-					<div class="single-service-box">
-						<div class="service-content text-center">
-							<i class="fa-solid fa-lightbulb" style="font-size: 40px; color: #6766FF; margin-bottom: 15px;"></i>
-							<h4>Small Business & Startups</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- Call to Action Section -->
 	<section class="service-section-inner" style="padding: 100px 0;">
