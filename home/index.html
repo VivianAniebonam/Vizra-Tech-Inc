@@ -1519,6 +1519,25 @@
 .newsletter-success i {
   font-size: 16px;
 }
+/* Footer logo tweaks: increase size slightly and nudge upwards; lift the description */
+.main-footer-one .footer-widget-content.social .logo img {
+	max-width: 140px; /* increased from smaller value */
+	height: auto;
+	display: block;
+	transform: translateY(-48px); /* moved up further */
+}
+.main-footer-one .footer-widget-content.social .footer-desc {
+	margin-top: -90px; /* reduce gap so description sits closer to logo */
+	transform: translateY(-18px); /* lift description up further */
+	font-size: 20px; /* reduced size for a neater footer */
+	line-height: 1.45;
+	max-width: 340px;
+}
+
+@media (max-width: 991px) {
+	.main-footer-one .footer-widget-content.social .logo img { max-width: 120px; transform: translateY(-18px); }
+	.main-footer-one .footer-widget-content.social .footer-desc { transform: translateY(-12px); font-size:14px; max-width:260px; }
+}
 </style>
 
 <script src="js/jquery.js"></script> 
@@ -1665,5 +1684,7 @@
 </div>
 </body>
 </html>
+
+
 
 
