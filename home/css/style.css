@@ -13943,4 +13943,18 @@ Section Title
     }
 }
 
+/* Vizra global background (reused across pages) */
+.vizra-global-bg {
+  background-image: url("../images/demo-img/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .vizra-global-bg { background-attachment: scroll; background-size: cover; }
+}
+
 /*# sourceMappingURL=style.css.map */
