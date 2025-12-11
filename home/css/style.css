@@ -192,6 +192,21 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   line-height: var(--line-height-heading-);
 }
+
+/* Navbar logo sizing - site-wide */
+.header-logo img,
+.mobile-logo img {
+  max-width: 100px; /* increased per request */
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .header-logo img,
+  .mobile-logo img {
+    max-width: 110px; /* slightly smaller on very small screens */
+  }
+}
 h1 small,
 h1 .small, h2 small,
 h2 .small, h3 small,
@@ -385,6 +400,68 @@ label {
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--theme-primary) var(--theme-color4);
+}
+
+/* Polished About Hero Images (keeps background unchanged) */
+.about-hero { padding: 40px 0; }
+.about-hero .hero-inner { display: grid; grid-template-columns: 1fr 380px; gap: 36px; align-items: center; max-width: 1200px; margin: 0 auto; }
+.hero-stack { display: grid; grid-auto-rows: 1fr; gap: 22px; }
+.hero-card { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 18px 40px rgba(0,0,0,0.45); background: #000; }
+.hero-card img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .6s cubic-bezier(.2,.9,.2,1); }
+.hero-card:hover img { transform: scale(1.05); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(103,102,255,0.12), rgba(0,0,0,0.22)); mix-blend-mode: overlay; pointer-events: none; opacity: 0; transition: opacity .28s; }
+.hero-card:hover .hero-overlay { opacity: 1; }
+.hero-large { min-height: 340px; }
+.hero-medium { min-height: 160px; }
+
+/* Responsive adjustments */
+@media (max-width: 920px) {
+  .about-hero .hero-inner { grid-template-columns: 1fr; gap: 20px; padding: 0 18px; }
+  .hero-stack { grid-template-columns: repeat(2, 1fr); }
+  .hero-large { min-height: 260px; }
+}
+@media (max-width: 520px) {
+  .hero-stack { grid-template-columns: 1fr; }
+  .hero-medium { min-height: 140px; }
+}
+
+/* Animations for About Hero Images */
+@keyframes heroFadeUp {
+  0% { opacity: 0; transform: translateY(18px) scale(.995); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.about-hero .reveal { visibility: visible; }
+.about-hero .reveal img { opacity: 0; transform: translateY(12px) scale(.998); animation: heroFadeUp .7s cubic-bezier(.2,.9,.2,1) forwards; }
+.about-hero .hero-large .reveal img { animation-delay: 0.05s; }
+.about-hero .hero-stack .hero-medium .reveal img { animation-delay: 0.22s; }
+.about-hero .hero-stack .hero-medium:last-child .reveal img { animation-delay: 0.38s; }
+
+/* Gentle floating for the large image to add life (slow, subtle) */
+.about-hero .hero-large img { animation: heroFadeUp .7s cubic-bezier(.2,.9,.2,1) forwards, floatUpDown 8s ease-in-out 1s infinite; }
+
+/* Hover micro-interactions */
+.hero-card { transition: transform .6s cubic-bezier(.2,.9,.2,1), box-shadow .3s ease; }
+.hero-card:hover { transform: translateY(-6px); }
+.hero-card:hover img { transform: scale(1.06) rotate(-0.6deg); }
+
+/* Make overlay respond smoothly on focus for keyboard users */
+.hero-card:focus-within, .hero-card:focus { outline: none; transform: translateY(-6px); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-hero .reveal img,
+  .about-hero .hero-large img {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -5202,6 +5279,37 @@ Section Title
 .integration-section-one .sec-title {
   margin-bottom: 30px;
 }
+
+/* Slightly lower the about page title so heading sits further down */
+.about-page-title .auto-container { padding-top: 80px; }
+@media (max-width: 992px) {
+  .about-page-title .auto-container { padding-top: 60px; }
+}
+@media (max-width: 576px) {
+  .about-page-title .auto-container { padding-top: 40px; }
+}
+
+/* Additional offset specifically for the title block */
+.about-page-title .title-content { margin-top: -100px; }
+/* Move only the H1 title down a bit (About Vizra Tech Inc) */
+.about-page-title .title-content .page-title { display: block; margin-top: 0px; }
+@media (max-width: 992px) {
+  .about-page-title .title-content .page-title { margin-top: 20px; }
+}
+@media (max-width: 576px) {
+  .about-page-title .title-content .page-title { margin-top: 12px; }
+}
+
+/* Reduce the large empty area below the hero by lowering the section min-height
+   Inline style on the section sets min-height:100vh; override it here */
+.about-page-title { min-height: 60vh !important; }
+@media (max-width: 1200px) {
+  .about-page-title { min-height: 65vh !important; }
+}
+@media (max-width: 992px) {
+  /* Let content determine height on smaller screens to avoid large gaps */
+  .about-page-title { min-height: auto !important; padding-bottom: 30px; }
+}
 .integration-section-one .integration-thumb {
   position: relative;
 }
@@ -5297,8 +5405,18 @@ Section Title
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0;
-  right: 0;
+  /* nudge the light closer to center (less far right) */
+  left: 12%;
+  right: auto;
+  transform: translateX(-30%);
+}
+
+@media (max-width: 992px) {
+  .integration-section-two .integration-effient21 {
+    /* tablet/mobile: keep it visible but nearer center */
+    left: 45%;
+    transform: translateX(-30%);
+  }
 }
 .integration-section-two .sec-title {
   margin-bottom: 25px;
@@ -11095,6 +11213,24 @@ Section Title
 .team-section-one .single-team-box .team-thumb {
   margin-bottom: 32px;
 }
+.single-team-box .team-thumb {
+  height: 260px; /* uniform visible height for team cards */
+  overflow: hidden;
+}
+.single-team-box .team-thumb figure {
+  height: 100%;
+  margin: 0;
+}
+.single-team-box .team-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+@media (max-width: 768px) {
+  .single-team-box .team-thumb { height: 180px; }
+}
 .team-section-one .single-team-box .team-thumb figure {
   border: 15px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -13941,6 +14077,20 @@ Section Title
     .core-service-card h3 {
         font-size: 20px;
     }
+}
+
+/* Vizra global background (reused across pages) */
+.vizra-global-bg {
+  background-image: url("../images/demo-img/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .vizra-global-bg { background-attachment: scroll; background-size: cover; }
 }
 
 /*# sourceMappingURL=style.css.map */

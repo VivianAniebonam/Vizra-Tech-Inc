@@ -1,0 +1,174 @@
+<!-- Reusable footer partial for Vizra - generated from index.html -->
+<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png); background-repeat: no-repeat;">
+    <div class="auto-container">
+        <div class="row">
+            <!--Footer Column--> 
+            <div class="col-xl-3 col-lg-3 col-md-6">
+                <div class="footer-widget-content social">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo" ></a></div>
+                    <div class="footer-desc">Empowering startups with innovative tech solutions<br> and AI-powered gig connections</div>
+                    <p class="footer-contact-small">Vizra Tech Inc. — Ontario, Canada<br>
+                    <a href="mailto:getvizra@gmail.com">getvizra@gmail.com</a></p>
+                    <div class="footer-btn">
+                        <a href="contact.html">Get Started <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer Column: COMPANY / PRODUCTS / QUICK LINKS (combined) -->
+            <div class="col-xl-5 col-lg-5 col-md-6">
+                <div class="footer-widget-content">
+                    <div class="footer-columns-row fancy">
+                        <div class="footer-col">
+                            <h3 class="footer-title small purple">COMPANY</h3>
+                            <ul class="footer-menu">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="about.html#vizra-team">Our Team</a></li>
+                                <li><a href="service.html">Services</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h3 class="footer-title small orange">PRODUCTS</h3>
+                            <ul class="footer-menu">
+                                <li><a href="index-2.html">Estaff – AI Gig</a></li>
+                                <li><a href="service.html">Startup Park</a></li>
+                                <li><a href="service.html">AI Tools</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h3 class="footer-title small purple">QUICK LINKS</h3>
+                            <ul class="footer-menu">
+                                <li><a href="index-2.html">AI Gig Project</a></li>
+                                <li><a href="index.html#pricing-section">Investors</a></li>
+                                <li><a href="volunteer.html">Volunteer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer Column-->
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="footer-widget-content contact">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <div class="footer-content">
+                        <div class="newsletter">Subscribe to get the latest news on<br>
+                            our gig platform and tech services</div>
+                        <form id="newsletterForm" action="https://formspree.io/f/mrbnlzeo" method="POST">
+                            <div class="subscribe-box">
+                                <input type="email" name="Email" placeholder="Email" required="">
+                                <button type="submit"><span><i class="fa-solid fa-location-arrow"></i></span></button>
+                            </div>
+                        </form>
+                        <div id="newsletterSuccess" class="newsletter-success" style="display:none;">
+                            <i class="fa-solid fa-check-circle"></i> Subscribed!
+                        </div>
+                        <div class="footer-line1">
+                            <img src="images/demo-img/footer-line1.png" alt="line">
+                        </div>
+                        <div class="footer-line2">
+                            <img src="images/demo-img/footer-line2.png" alt="line">
+                        </div>
+                        <div class="footer-line3">
+                            <img src="images/demo-img/footer-line3.png" alt="line">
+                        </div>
+                        <div class="footer-line4">
+                            <img src="images/demo-img/footer-line4.png" alt="line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer Bottom-->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="copyright-text">&copy; 2025 Vizra Tech Inc. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="js-particles"></div>
+    </div>
+</footer>
+
+<!-- Footer styles (kept local to partial so it's reusable) -->
+<style>
+/* Newsletter success message */
+.newsletter-success { color: #10b981; font-size: 14px; font-weight: 600; margin-top: 10px; display: flex; align-items: center; gap: 6px; }
+.newsletter-success i { font-size: 16px; }
+
+/* Footer logo tweaks */
+.main-footer-one .footer-widget-content.social .logo img { max-width: 140px; height: auto; display: block; transform: translateY(-48px); }
+.main-footer-one .footer-widget-content.social .footer-desc { margin-top: -90px; transform: translateY(-18px); font-size: 20px; line-height: 1.45; max-width: 340px; }
+.main-footer-one .footer-contact-small { color: rgba(255,255,255,0.75); font-size: 13px; margin-top: -30px; margin-bottom: 30px; line-height: 1.4; display:block; }
+
+.footer-columns-row { display: flex; gap: 28px; align-items: flex-start; flex-wrap: nowrap; }
+.main-footer-one .footer-widget-content .footer-title.purple { color: #9B7BFF; }
+.main-footer-one .footer-widget-content .footer-title.orange { color: #FF8C00; }
+.footer-columns-row .footer-col { flex: 1 1 140px; min-width: 140px; }
+.footer-columns-row .footer-col .footer-menu { margin-top: 8px; }
+.main-footer-one .footer-widget-content .footer-title.small { font-size: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; margin-top: 60px; }
+
+@media (max-width: 991px) {
+  .footer-columns-row { gap: 18px; flex-wrap: wrap; }
+  .footer-columns-row .footer-col { min-width: 140px; }
+  .main-footer-one .footer-widget-content .footer-title.small { font-size: 18px; margin-top: 12px; }
+}
+
+/* Fancy adjustments */
+.footer-columns-row.fancy { background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: none !important; border: none !important; padding: 18px 22px; border-radius: 0; }
+.footer-columns-row.fancy .footer-col { position: relative; padding-top: 6px; }
+.footer-columns-row.fancy .footer-col::before { content: ''; position: absolute; right: -12px; left: auto; top: 12px; height: 28px; width: 3px; background: rgba(155,123,255,0.12); border-radius: 2px; transition: background .22s ease, height .22s ease, right .18s ease; }
+.footer-columns-row.fancy .footer-col:hover::before { background: linear-gradient(180deg,#9B7BFF,#FF8C00); height: 34px; }
+
+.main-footer-one .footer-widget-content .footer-title.small { color: #9B7BFF; text-shadow: 0 8px 28px rgba(155,123,255,0.03); }
+.main-footer-one .footer-widget-content .footer-title.small.purple { color: #9B7BFF; }
+.main-footer-one .footer-widget-content .footer-title.small.orange { color: #FF8C00; }
+
+.main-footer-one .footer-widget-content .footer-title.small { background: none !important; -webkit-background-clip: unset !important; background-clip: unset !important; -webkit-text-fill-color: unset !important; color: inherit; text-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+.main-footer-one .footer-widget-content .footer-title.small::after { content: ''; display: block; height: 2px; width: 40px; background: linear-gradient(90deg,#9B7BFF,#FF8C00); margin-top: 10px; transition: width .32s ease, opacity .25s ease; opacity: 0.95; }
+.footer-col:hover .footer-title.small::after { width: 62px; }
+
+.footer-columns-row.fancy .footer-menu li { opacity: 0; transform: translateY(8px); }
+.footer-columns-row.fancy .footer-menu li { animation: footerFade .42s ease forwards; }
+.footer-columns-row.fancy .footer-menu li:nth-child(1){ animation-delay: .06s; }
+.footer-columns-row.fancy .footer-menu li:nth-child(2){ animation-delay: .12s; }
+.footer-columns-row.fancy .footer-menu li:nth-child(3){ animation-delay: .18s; }
+.footer-columns-row.fancy .footer-menu li:nth-child(4){ animation-delay: .24s; }
+.footer-columns-row.fancy .footer-menu li:nth-child(5){ animation-delay: .30s; }
+.footer-columns-row.fancy .footer-menu li:nth-child(6){ animation-delay: .36s; }
+@keyframes footerFade { to { opacity: 1; transform: none; } }
+
+.footer-columns-row.fancy .footer-menu li a { color: rgba(255,255,255,0.72); display: inline-block; transition: color .22s ease, transform .18s ease; }
+.footer-columns-row.fancy .footer-menu li a:hover { color: #fff; transform: translateX(6px); }
+
+@media (max-width: 991px) {
+  .footer-columns-row.fancy { padding: 12px 12px; border-radius: 6px; }
+  .footer-columns-row.fancy .footer-col::before { right: -8px; left: auto; top: 10px; }
+  .footer-columns-row.fancy .footer-title.small::after { display:none; }
+}
+
+/* Lift headings */
+.footer-columns-row.fancy .footer-col:nth-child(1) .footer-title.small,
+.footer-columns-row.fancy .footer-col:nth-child(2) .footer-title.small,
+.footer-columns-row.fancy .footer-col:nth-child(3) .footer-title.small { margin-top: 8px !important; }
+@media (max-width: 991px) {
+  .footer-columns-row.fancy .footer-col:nth-child(1) .footer-title.small,
+  .footer-columns-row.fancy .footer-col:nth-child(2) .footer-title.small,
+  .footer-columns-row.fancy .footer-col:nth-child(3) .footer-title.small { margin-top: 10px !important; }
+}
+
+/* Hover underline animation */
+.footer-columns-row.fancy .footer-menu li { position: relative; }
+.footer-columns-row.fancy .footer-menu li a { color: rgba(255,255,255,0.92); transition: color .22s cubic-bezier(.2,.9,.2,1), transform .18s ease; position: relative; z-index: 2; }
+.footer-columns-row.fancy .footer-menu li a::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: -8px; height: 2px; width: 0; background: linear-gradient(90deg, #8a63ff, #b892ff); border-radius: 2px; transition: width .26s cubic-bezier(.2,.9,.2,1), opacity .18s ease; opacity: 0.0; }
+.footer-columns-row.fancy .footer-menu li a:hover::after, .footer-columns-row.fancy .footer-menu li a:focus::after { width: 56%; opacity: 1; }
+.footer-columns-row.fancy .footer-menu li a:hover, .footer-columns-row.fancy .footer-menu li a:focus { color: #8a63ff !important; transform: translateY(-3px); text-decoration: none; text-shadow: 0 6px 18px rgba(138,99,255,0.08); }
+.footer-columns-row.fancy .footer-menu li a:hover { box-shadow: 0 4px 18px rgba(138,99,255,0.06); }
+
+@keyframes footerItemIn { to { opacity: 1; transform: translateY(0); } }
+
+</style>
