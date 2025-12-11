@@ -52,11 +52,8 @@
 					<div class="header-right-wrapper">
 						<div class="header-sidebar">
 							<div class="header-btn">
-								<a href="contact.html">Free Trail<i class="fa-solid fa-arrow-down-to-line"></i></a>
-							</div>
-							<div style="margin-left: 20px; display: flex; align-items: center;">
-								<a href="contact.html" style="color: white; font-size: 16px; font-weight: 600; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#6766FF'" onmouseout="this.style.color='white'">Become an Investor</a>
-							</div>
+								<a href="contact.html">AI Gig Project <i class="fa-light fa-arrow-right"></i></a>
+							</div>							
 						</div>
 					</div>
 				</div>
@@ -189,25 +186,71 @@
 							
 							<a href="contact.html">Get Started <i class="fa-light fa-arrow-right"></i></a>
 							
-							<!-- Stats Section -->
+							<!-- Stats Section (animated counters) -->
 							<div class="banner-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 40px; max-width: 900px; margin: 40px auto 0; padding: 0;">
 								<div style="text-align: center;">
-									<h3 style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">50+</h3>
+									<h3 class="count-num" data-target="50" style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">0<span>+</span></h3>
 									<p style="color: rgba(255, 255, 255, 0.9); font-size: 16px; margin: 0;">Projects Delivered</p>
 								</div>
 								<div style="text-align: center;">
-									<h3 style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">8+</h3>
+									<h3 class="count-num" data-target="8" style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">0<span>+</span></h3>
 									<p style="color: rgba(255, 255, 255, 0.9); font-size: 16px; margin: 0;">Core Services</p>
 								</div>
 								<div style="text-align: center;">
-									<h3 style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">24/7</h3>
+									<h3 class="count-num" data-target="24" style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">0<span>/7</span></h3>
 									<p style="color: rgba(255, 255, 255, 0.9); font-size: 16px; margin: 0;">Support Available</p>
 								</div>
 								<div style="text-align: center;">
-									<h3 style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">100%</h3>
+									<h3 class="count-num" data-target="96" style="font-size: 48px; font-weight: 800; color: #FF8C00; margin-bottom: 8px;">0<span>%</span></h3>
 									<p style="color: rgba(255, 255, 255, 0.9); font-size: 16px; margin: 0;">Client Satisfaction</p>
 								</div>
 							</div>
+
+							<!-- Counter animation script -->
+							<script>
+							(function(){
+								if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+									// Respect reduced motion: just show final values
+									document.querySelectorAll('.banner-stats .count-num').forEach(function(el){
+										el.firstChild && (el.firstChild.nodeValue = el.getAttribute('data-target') || '0');
+									});
+									return;
+								}
+
+								function animateCount(el, target, duration){
+									var start = 0, startTime = null;
+									duration = duration || 1400;
+									function step(timestamp){
+										if (!startTime) startTime = timestamp;
+										var progress = Math.min((timestamp - startTime) / duration, 1);
+										var value = Math.floor(progress * (target - start) + start);
+										if (el.firstChild) el.firstChild.nodeValue = value;
+										if (progress < 1) window.requestAnimationFrame(step);
+									else if (el.firstChild) el.firstChild.nodeValue = target;
+									}
+									window.requestAnimationFrame(step);
+								}
+
+								var counters = document.querySelectorAll('.banner-stats .count-num');
+								if ('IntersectionObserver' in window && counters.length){
+									var obs = new IntersectionObserver(function(entries, observer){
+										entries.forEach(function(entry){
+											if (entry.isIntersecting){
+												var el = entry.target;
+												var target = parseInt(el.getAttribute('data-target')) || 0;
+												animateCount(el, target, 1400);
+												observer.unobserve(el);
+											}
+										});
+									}, {threshold: 0.3});
+									counters.forEach(function(c){ obs.observe(c); });
+								} else {
+									counters.forEach(function(el){
+										el.firstChild && (el.firstChild.nodeValue = el.getAttribute('data-target') || '0');
+									});
+								}
+							})();
+							</script>
 						</div>
 					</div>
 				</div>
@@ -528,8 +571,8 @@
 					font-size: 28px;
 				}
 			}
-		</style>
-		<div class="auto-container">
+			</style>
+			<div class="auto-container" style="position: relative;">
 			<!-- Section Header -->
 			<div class="row mb-5">
 				<div class="col-xl-12 text-center">
@@ -549,9 +592,17 @@
 						<p style="font-size: 18px; color: #666; max-width: 800px; margin: 20px auto 40px;">Expert tech solutions tailored for startups, enterprises, and everything in between</p>
 					</div>
 				</div>
+				
 			</div>
 			
 			<!-- Services Grid -->
+				<!-- Decorative shapes (left and right of What We Offer heading) -->
+				<div class="accordion-shape1 fade-in" aria-hidden="true" style="position:absolute; top:18px; left:-300px; z-index:2;">
+					<img src="images/demo-img/accrodion-shape1.png" alt="accordion shape">
+				</div>
+				<div class="accordion-shape2 fade-in" aria-hidden="true" style="position:absolute; top:18px; right:-400px; z-index:1;">
+					<img src="images/demo-img/accrodion-shape2.png" alt="accordion shape">
+				</div>
 			<div class="row g-4">
 				<!-- Service Card 1 -->
 				<div class="col-xl-3 col-lg-4 col-md-6">
@@ -1132,16 +1183,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="accordion-effient fade-in">
-			<img src="images/demo-img/accrodion-effient.png" alt="accordion effient">
-		</div>
-		<div class="accordion-shape1 fade-in">
-			<img src="images/demo-img/accrodion-shape1.png" alt="accordion shape">
-		</div>
-		<div class="accordion-shape2 fade-in">
-			<img src="images/demo-img/accrodion-shape2.png" alt="accordion shape">
-		</div>
-	</div>
+			<div class="accordion-effient fade-in">
+				<img src="images/demo-img/accrodion-effient.png" alt="accordion effient">
+			</div>
+				</div>
 	<!-- accordion section one -->
 
 
