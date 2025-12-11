@@ -329,8 +329,7 @@
 	</main>
 
 
-
-		<!-- Main Footer -->
+	<!-- Main Footer -->
 	<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png); background-repeat: no-repeat;">
 		<div class="auto-container">
 			<div class="row">
@@ -382,11 +381,11 @@
 				</div>
 
 				<!--Footer Column-->
-				<div class="col-xl-4 col-lg-4 col-md-6">
-					<div class="footer-widget-content contact">
-						<h3 class="footer-title">Newsletter</h3>
+				<div class="col-xl-4 col-lg-4 col-md-6" style="display: flex; justify-content: center;">
+					<div class="footer-widget-content contact" style="padding: 35px 10px; max-width: 700px; width: 100%; margin-top: -80px;">
+						<h3 class="footer-title" style="font-size: 32px; margin-bottom: 25px; text-align: center;">Newsletter</h3>
 						<div class="footer-content">
-							<div class="newsletter">Subscribe to get the latest news on<br>
+							<div class="newsletter" style="font-size: 16px; margin-bottom: 25px; line-height: 1.6; text-align: center;">Subscribe to get the latest news on<br>
 								our gig platform and tech services</div>
 								<form id="newsletterForm" action="https://formspree.io/f/mrbnlzeo" method="POST">
 									<div class="subscribe-box">
@@ -397,7 +396,20 @@
 								<div id="newsletterSuccess" class="newsletter-success" style="display:none;">
 									<i class="fa-solid fa-check-circle"></i> Subscribed!
 								</div>
-							<div class="footer-line1">
+								
+							<!-- Social Media Icons -->
+							<div style="display: flex; gap: 12px; justify-content: center; margin-top: 15px; margin-bottom: -5px;">
+								<a href="mailto:getvizra@gmail.com" style="width: 35px; height: 35px; background: rgba(103, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 14px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.transform='translateY(0)';">
+									<i class="fa-solid fa-envelope"></i>
+								</a>
+								<a href="https://www.linkedin.com/in/vizra-co-689767399/" target="_blank" style="width: 35px; height: 35px; background: rgba(103, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 14px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.transform='translateY(0)';">
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+								<a href="https://github.com/VivianAniebonam" target="_blank" style="width: 35px; height: 35px; background: rgba(103, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 14px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.transform='translateY(0)';">
+									<i class="fa-brands fa-github"></i>
+								</a>
+							</div>
+						<div class="footer-line1">
 								<img src="images/demo-img/footer-line1.png" alt="line">
 							</div>
 							<div class="footer-line2">
@@ -800,9 +812,6 @@
 </div>
 </body>
 </html>
-
-
-
 
 
 <script src="js/jquery.js"></script> 
