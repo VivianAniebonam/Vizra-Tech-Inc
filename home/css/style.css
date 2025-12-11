@@ -7243,6 +7243,15 @@ Section Title
 .pricing-plan-section-two .tab .tab_content .tabs_item .pricing-single-item.active {
   border: 1px solid var(--theme-primary);
 }
+
+/* Entrance animation for the highlighted (active) pricing card so it matches other sections */
+@keyframes pricingSlideUp {
+  0% { transform: translateY(18px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.pricing-plan-section-two .tab .tab_content .tabs_item .pricing-single-item.active {
+  animation: pricingSlideUp .6s cubic-bezier(.2,.9,.2,1) both;
+}
 .pricing-plan-section-two .tab .tab_content .tabs_item .pricing-single-item.active .pricing-plan {
   background: var(--theme-primary);
   border-radius: 30px 30px 0 0;
