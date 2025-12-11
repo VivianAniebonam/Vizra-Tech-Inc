@@ -11203,6 +11203,24 @@ Section Title
 .team-section-one .single-team-box .team-thumb {
   margin-bottom: 32px;
 }
+.single-team-box .team-thumb {
+  height: 260px; /* uniform visible height for team cards */
+  overflow: hidden;
+}
+.single-team-box .team-thumb figure {
+  height: 100%;
+  margin: 0;
+}
+.single-team-box .team-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+@media (max-width: 768px) {
+  .single-team-box .team-thumb { height: 180px; }
+}
 .team-section-one .single-team-box .team-thumb figure {
   border: 15px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
