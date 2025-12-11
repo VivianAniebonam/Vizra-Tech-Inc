@@ -5405,8 +5405,18 @@ Section Title
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0;
-  right: 0;
+  /* nudge the light closer to center (less far right) */
+  left: 12%;
+  right: auto;
+  transform: translateX(-30%);
+}
+
+@media (max-width: 992px) {
+  .integration-section-two .integration-effient21 {
+    /* tablet/mobile: keep it visible but nearer center */
+    left: 45%;
+    transform: translateX(-30%);
+  }
 }
 .integration-section-two .sec-title {
   margin-bottom: 25px;
