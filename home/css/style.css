@@ -373,6 +373,11 @@ iframe {
   transform-origin: left;
 }
 
+/* Override: show reveal images immediately in the about-section-two
+   (prevents them being hidden when the reveal animation/JS doesn't run) */
+.about-section-two .reveal { visibility: visible !important; }
+.about-section-two .reveal img { opacity: 1 !important; transform: none !important; animation: none !important; }
+
 label {
   color: #fff;
   cursor: pointer;
@@ -5631,13 +5636,21 @@ Section Title
 }
 .about-section-two .auto-container {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* keep content above decorative shapes */
 }
 .about-section-two .about-effient21 {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 0; /* push decorative image behind content */
+  pointer-events: none; /* allow clicks/hover to reach underlying elements */
+}
+
+/* Make decorative background subtler so content remains readable */
+.about-section-two .about-effient21 img {
+  opacity: 0.35; /* reduce visual dominance */
+  mix-blend-mode: multiply;
 }
 .about-section-two .sec-title {
   margin-bottom: 30px;
