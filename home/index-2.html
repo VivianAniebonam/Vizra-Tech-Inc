@@ -1,277 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>eStaff - AI Gig Platform | Vizra Tech Inc</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>eStaff - AI Gig Platform | Vizra Tech Inc</title>
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="images/logosingle.png" type="image/png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/logosingle.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/logosingle.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/logosingle.png">
-	<link rel="mask-icon" href="images/logosingle.png" color="#000000">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* Styles for the three-image about thumb layout */
-.about-thumb-wrapper {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 4px; /* tighter spacing requested */
-	padding-top: 14px;
-	flex-wrap: nowrap; /* keep them on one row when possible */
-}
-.about-thumb-wrapper > div {
-	width: 38%; /* slightly larger */
-	max-width: 420px; /* allow larger thumbs */
-	min-width: 180px;
-	border-radius: 14px;
-	overflow: hidden;
-	box-shadow: 0 22px 56px rgba(16,24,40,0.16), 0 10px 26px rgba(16,24,40,0.08);
-	transition: transform .32s cubic-bezier(.2,.9,.2,1), box-shadow .24s;
-	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
-	margin-left: -36px; /* stronger negative margin for closer overlap */
-}
-.about-thumb-wrapper figure{margin:0}
-.about-thumb-wrapper img{display:block;width:100%;height:auto; object-fit:cover}
-.about-thumb21{transform: translateY(-12px) rotate(-8deg) scale(1.14); z-index:6}
-.about-thumb22{transform: translateY(6px) scale(1.18); z-index:5}
-.about-thumb23{transform: translateY(-6px) rotate(8deg) scale(1.12); z-index:4}
-.about-thumb-wrapper:hover > div{box-shadow: 0 34px 72px rgba(16,24,40,0.18)}
-.about-thumb-wrapper > div:hover{transform: translateY(0) rotate(0) scale(1.12); z-index:6}
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		/* Styles for the three-image about thumb layout */
+		.about-thumb-wrapper {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 4px;
+			/* tighter spacing requested */
+			padding-top: 14px;
+			flex-wrap: nowrap;
+			/* keep them on one row when possible */
+		}
 
-@media (max-width: 1200px){
-	.about-thumb-wrapper > div{width:40%; max-width:320px}
-}
-@media (max-width: 992px){
-	.about-thumb-wrapper{flex-wrap:wrap; gap:12px}
-	.about-thumb-wrapper > div{width:46%; margin-left:0}
-}
-@media (max-width: 640px){
-	.about-thumb-wrapper{flex-direction:column; gap:14px}
-	.about-thumb-wrapper > div{width:84%; max-width:420px; transform:none; margin-left:0}
-}
-</style>
+		.about-thumb-wrapper>div {
+			width: 38%;
+			/* slightly larger */
+			max-width: 420px;
+			/* allow larger thumbs */
+			min-width: 180px;
+			border-radius: 14px;
+			overflow: hidden;
+			box-shadow: 0 22px 56px rgba(16, 24, 40, 0.16), 0 10px 26px rgba(16, 24, 40, 0.08);
+			transition: transform .32s cubic-bezier(.2, .9, .2, 1), box-shadow .24s;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.02));
+			margin-left: -36px;
+			/* stronger negative margin for closer overlap */
+		}
+
+		.about-thumb-wrapper figure {
+			margin: 0
+		}
+
+		.about-thumb-wrapper img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover
+		}
+
+		.about-thumb21 {
+			transform: translateY(-12px) rotate(-8deg) scale(1.14);
+			z-index: 6
+		}
+
+		.about-thumb22 {
+			transform: translateY(6px) scale(1.18);
+			z-index: 5
+		}
+
+		.about-thumb23 {
+			transform: translateY(-6px) rotate(8deg) scale(1.12);
+			z-index: 4
+		}
+
+		.about-thumb-wrapper:hover>div {
+			box-shadow: 0 34px 72px rgba(16, 24, 40, 0.18)
+		}
+
+		.about-thumb-wrapper>div:hover {
+			transform: translateY(0) rotate(0) scale(1.12);
+			z-index: 6
+		}
+
+		@media (max-width: 1200px) {
+			.about-thumb-wrapper>div {
+				width: 40%;
+				max-width: 320px
+			}
+		}
+
+		@media (max-width: 992px) {
+			.about-thumb-wrapper {
+				flex-wrap: wrap;
+				gap: 12px
+			}
+
+			.about-thumb-wrapper>div {
+				width: 46%;
+				margin-left: 0
+			}
+		}
+
+		@media (max-width: 640px) {
+			.about-thumb-wrapper {
+				flex-direction: column;
+				gap: 14px
+			}
+
+			.about-thumb-wrapper>div {
+				width: 84%;
+				max-width: 420px;
+				transform: none;
+				margin-left: 0
+			}
+		}
+	</style>
 </head>
-<body class="vizra-global-bg">
 
-<div class="page-wrapper">
-	<!-- Preloader -->
-	<div class="preloader">
-		<div class="loader"></div>
-	</div>
-	<!-- Start intellio Header Area-->
-	<div class="intellio-header-area" id="sticky-header" >
-		<div class="auto-container">
-			<div class="row align-items-center">
-				<div class="col-lg-2">
-					<div class="header-logo">
-						<a class="active_logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
-						<a class="logo_two" href="index.html"><img src="images/logo.png" alt="logo"></a>
-					</div>
-				</div>
-				<div class="col-lg-7">
-					<div class="header-menu">
-						<ul class="nav_scroll">
-							<li><a href="#">Home <i class="fa-light fa-angle-down"></i></a>
-								<ul class="sub_menu">
-									<li><a href="index.html">Ai Saas</a></li>
-									<li><a href="index-2.html">Ai Startup</a></li>
-									<li><a href="index-3.html">Ai Agency</a></li>
-									<li><a href="index-4.html">Ai Chatbot</a></li>
-								</ul>
-							</li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="#">pages <i class="fa-light fa-angle-down"></i></a>
-								<ul class="sub_menu">
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="feature.html">Feature</a></li>
-									<li><a href="integration.html">integration</a></li>
-									<li><a href="service.html">Service</a></li>
-									<li><a href="service-details.html">Service Details</a></li>
-									<li><a href="team.html">Team</a></li>
-									<li><a href="team-details.html">Team Details</a></li>
-									<li><a href="pricing.html">Pricing</a></li>
-									<li><a href="faq.html">Faq</a></li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-							</li>
-							<li><a href="service.html">Services</a></li>
-							<li><a href="volunteer.html">Volunteers</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="header-right-wrapper">
-						<div class="header-sidebar">
-							<div class="header-btn">
-								<a href="index-2.html">AI Gig Project <i class="fa-light fa-arrow-right"></i></a>
-							</div>
+<body>
+
+	<div class="page-wrapper">
+		<!-- Preloader -->
+		<div class="preloader">
+			<div class="loader"></div>
+		</div>
+		<!-- Start intellio Header Area-->
+		<div class="intellio-header-area" id="sticky-header">
+			<div class="auto-container">
+				<div class="row align-items-center">
+					<div class="col-lg-2">
+						<div class="header-logo">
+							<a class="active_logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+							<a class="logo_two" href="index.html"><img src="images/logo.png" alt="logo"></a>
 						</div>
-						<div class="header-btn">
-							<a href="contact.html">Become An Investor</a>
+					</div>
+					<div class="col-lg-7">
+						<div class="header-menu">
+							<ul class="nav_scroll">
+								<li><a href="index.html">Home</i></a>
+
+								</li>
+								<li><a href="about.html">About</a></li>
+
+								<li><a href="service.html">Services</a></li>
+								<li><a href="volunteer.html">Volunteers</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="header-right-wrapper">
+							<div class="header-sidebar">
+								<div class="header-btn">
+									<a href="index-2.html">AI Gig Project <i class="fa-light fa-arrow-right"></i></a>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End intellio Header Area -->
-	<!-- End intellio Header Area -->
+		<!-- End intellio Header Area -->
+		<!-- End intellio Header Area -->
 
 
-	<!--========= Start Mobile Memu========== -->
+		<!--========= Start Mobile Memu========== -->
 
-	<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none">
-		<div class="mobile-menu">
-			<nav class="header-menu">
-				<div class="mobile-logo">
-					<a class="logo_img" href="index.html" title="intellio">
-						<img src="images/logo.png" alt="logo">
-					</a>
-				</div>
-				<ul class="nav_scroll">
-					<li><a href="#">Home <i class="fa-light fa-angle-down"></i></a>
-						<ul class="sub_menu">
-							<li><a href="index.html">Ai Saas</a></li>
-							<li><a href="index-2.html">Ai Startup</a></li>
-							<li><a href="index-3.html">Ai Agency</a></li>
-							<li><a href="index-4.html">Ai Chatbot</a></li>
-						</ul>
-					</li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="#">pages <i class="fa-light fa-angle-down"></i></a>
-						<ul class="sub_menu">
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="feature.html">Feature</a></li>
-							<li><a href="integration.html">integration</a></li>
-							<li><a href="service.html">Service</a></li>
-							<li><a href="service-details.html">Service Details</a></li>
-							<li><a href="team.html">Team</a></li>
-							<li><a href="team-details.html">Team Details</a></li>
-							<li><a href="pricing.html">Pricing</a></li>
-							<li><a href="faq.html">Faq</a></li>
-							<li><a href="contact.html">Contact</a></li>
+		<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none">
+			<div class="mobile-menu">
+				<nav class="header-menu">
+					<div class="mobile-logo">
+						<a class="logo_img" href="index.html" title="intellio">
+							<img src="images/logo.png" alt="logo">
+						</a>
+					</div>
+					<ul class="nav_scroll">
+						<li><a href="index.html">Home</a>
 
-						</ul>
-					</li>
-					<li><a href="service.html">Services</a>
-					</li>
-					<li><a href="volunteer.html">Volunteers</a>
-						<ul class="sub_menu">
-							<li><a href="volunteer.html">Volunteers</a></li>
-							<li><a href="volunteer-details.html">Blog Details</a></li>
-						</ul>
-					</li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+						</li>
+						<li><a href="about.html">About</a></li>
+
+						<li><a href="service.html">Services</a>
+						</li>
+						<li><a href="volunteer.html">Volunteers</a>
+							<ul class="sub_menu">
+								<li><a href="volunteer.html">Volunteers</a></li>
+								<li><a href="volunteer-details.html">Blog Details</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index-2.html">AI GIG Project</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
-	</div>
-	<!--========= End Mobile Memu========== -->
+		<!--========= End Mobile Memu========== -->
 
+		<main>
 
-	<!-- Sidebar area start here -->
-    <div class="sidebar-area offcanvas offcanvas-end" id="menubar">
-        <div class="offcanvas-header">
-            <a href="index.html" class="logo"> <img src="images/logo.png" alt="logo"></a>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"><i class="fa-regular fa-xmark"></i></button>
-        </div>
-        <div class="offcanvas-body sidebar__body">
-            <div class="mobile-menu overflow-hidden"></div>
-            <div class="d-none d-lg-block">
-                <h5 class="text-white mb-20">About Us</h5>
-                <p class="sidebar__text">Monotonectally whiteboard proactive value with leading continually to
-				niche markets rather than fully tested result generate process-centric 
-				communities rather than systems maintaince.Monotonectally whiteboard proactive value with leading continually to niche markets rather than fully tested result</p>
-            </div>
-            <div class="sidebar__contact-info mt-30">
-                <h5 class="text-white mb-20">Contact Info</h5>
-                <ul>
-                    <li><i class="fa-solid fa-location-dot"></i> <a href="#0">Chicago 12, Melborne City, USA</a></li>
-                    <li class="py-2"><i class="fa-solid fa-phone-volume"></i> <a href="#">(+881) 123-456-7890</a></li>
-                    <li><i class="fa-solid fa-paper-plane"></i> <a href="#">info.example@gmail.com</a></li>
-                </ul>
-            </div>
-            <div class="sidebar__btns my-4">
-                <a href="contact.html">Sign Up</a>
-                <a class="sign-in" href="contact.html">Sign In</a>
-            </div>
-            <div class="sidebar__socials">
-                <ul>
-                    <li>
-                        <a href="#0">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.76562 0H8.20406C9.50719 0.0371875 10.8041 0.385625 11.9359 1.03531C13.3297 1.82094 14.4756 3.03625 15.1816 4.47188C15.6875 5.49438 15.9603 6.62656 16 7.76562V8.205C15.9647 9.38344 15.6775 10.5553 15.1419 11.6069C14.6209 12.6316 13.8803 13.5447 12.9794 14.2594C12.0306 15.0175 10.9072 15.5569 9.71937 15.8141C9.22219 15.9275 8.71313 15.9788 8.20438 16H7.795C6.40844 15.9609 5.03281 15.5628 3.84875 14.8387C2.44469 13.985 1.3125 12.6919 0.659063 11.1838C0.252187 10.255 0.0365625 9.2475 0 8.23531V7.79406C0.0359375 6.53 0.366875 5.27437 0.976875 4.16594C1.73094 2.78781 2.8975 1.64031 4.28937 0.911563C5.35844 0.34625 6.55844 0.041875 7.76562 0ZM3.40094 3.29594C4.59812 5.03813 5.79531 6.78 6.99188 8.52219C5.79563 9.91344 4.59812 11.3038 3.40219 12.6953C3.6325 12.6966 3.86313 12.695 4.09344 12.6962C4.13844 12.6884 4.20125 12.7166 4.23281 12.6722C5.27312 11.4641 6.3125 10.2553 7.35219 9.04656C8.18937 10.2625 9.02344 11.4809 9.86156 12.6962C10.7741 12.695 11.6866 12.6962 12.5988 12.6956C11.3594 10.8869 10.1119 9.08313 8.87594 7.27219C10.0203 5.94969 11.1578 4.62156 12.2987 3.29625C12.0281 3.29563 11.7578 3.29563 11.4872 3.29625C10.4987 4.44875 9.50437 5.59656 8.51844 6.75094C7.72031 5.60344 6.93437 4.44688 6.14062 3.29625C5.2275 3.29563 4.31437 3.29594 3.40094 3.29594Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.10223 8.99555V16H1.97333V8.99555H0V6.09778H1.97333V3.89334C1.97333 1.38667 3.46666 0 5.76 0C6.85333 0 8 0.195557 8 0.195557V2.65778H6.73778C5.49334 2.65778 5.10223 3.43111 5.10223 4.22222V6.09778H7.88444L7.44 8.99555H5.10223Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </li>
+			<!-- Banner Section two-->
 
-                    <li>
-                        <a href="#0">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.58958 15.9911H0.222698V5.89045H3.58958V15.9911ZM3.92717 1.96389C3.92717 0.897859 3.08323 0.0361424 2.01719 0.000607979C0.933392 -0.0260429 0.0272588 0.826778 0.00060798 1.91058C-0.0260429 2.99438 0.826779 3.90051 1.91058 3.92716C3.01215 3.93605 3.9094 3.06546 3.92717 1.96389ZM15.9467 9.88807C15.9467 6.74327 13.9124 5.78383 12.1801 5.78383C10.963 5.7483 9.81701 6.34351 9.15074 7.35624V5.89932H5.89933V16H9.26622V10.7587C9.26622 10.7054 9.26622 10.6521 9.26622 10.5988C9.26622 10.5988 9.26622 10.5988 9.26622 10.5899C9.19515 9.51495 10.0124 8.58218 11.0874 8.51111C11.9668 8.51111 12.6331 9.07966 12.6331 10.6787V16H16L15.9556 9.89695L15.9467 9.88807Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#0">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15.9466 4.69593C15.8843 3.41522 15.5906 2.27682 14.6563 1.34297C13.7219 0.409114 12.5829 0.11562 11.3014 0.053363C9.97553 -0.0177877 6.01557 -0.0177877 4.69855 0.053363C3.41713 0.11562 2.28699 0.409114 1.34372 1.34297C0.400455 2.27682 0.115684 3.41522 0.0533926 4.69593C-0.0177975 6.02111 -0.0177975 9.97887 0.0533926 11.3041C0.115684 12.5848 0.409354 13.7232 1.34372 14.657C2.28699 15.5909 3.41713 15.8844 4.69855 15.9466C6.02447 16.0178 9.98443 16.0178 11.3014 15.9466C12.5829 15.8844 13.7219 15.5909 14.6563 14.657C15.5906 13.7232 15.8843 12.5848 15.9466 11.3041C16.0178 9.97887 16.0178 6.02112 15.9466 4.70483V4.69593ZM7.99111 12.2201C5.65963 12.2201 3.76419 10.3257 3.76419 7.99555C3.76419 5.66536 5.65963 3.77098 7.99111 3.77098C10.3226 3.77098 12.218 5.66536 12.218 7.99555C12.218 10.3257 10.3226 12.2201 7.99111 12.2201ZM12.9032 3.99332C12.4138 3.99332 12.0133 3.5931 12.0133 3.10394C12.0133 2.61478 12.4049 2.21456 12.9032 2.21456C13.3926 2.21456 13.7931 2.61478 13.7931 3.10394C13.7931 3.5931 13.3926 3.99332 12.9032 3.99332ZM10.8832 7.99555C10.8832 9.58754 9.58399 10.886 7.99111 10.886C6.39823 10.886 5.09901 9.58754 5.09901 7.99555C5.09901 6.40355 6.39823 5.10505 7.99111 5.10505C9.58399 5.10505 10.8832 6.40355 10.8832 7.99555Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Sidebar area end here -->
-
-
-	<main>
-
-	<!-- Banner Section two-->
-
-	<div class="banner-section-two" style="
+			<div class="banner-section-two" style="
 		position: relative;
 		min-height: 100vh;
 		display: flex;
 		align-items: center;
-		background-image: url(images/inner-img/f.jpg);
+		background-image: url(images/inner-img/i.jpg);
 		background-size: cover;
 		background-position: center;
 		overflow: hidden;
 		margin-top: -100px;
 		padding-top: 120px;
 	">
-		<!-- Dark Overlay for Better Text Visibility -->
-		<div style="
+				<!-- Dark Overlay for Better Text Visibility -->
+				<div style="
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -280,8 +217,8 @@
 			background: rgba(0, 0, 0, 0.4);
 			z-index: 1;
 		"></div>
-		<!-- Animated Background Shapes -->
-		<div style="
+				<!-- Animated Background Shapes -->
+				<div style="
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -290,7 +227,7 @@
 			opacity: 0.1;
 			pointer-events: none;
 		">
-			<div style="
+					<div style="
 				position: absolute;
 				top: 10%;
 				left: 5%;
@@ -300,7 +237,7 @@
 				border-radius: 50%;
 				animation: float 8s ease-in-out infinite;
 			"></div>
-			<div style="
+					<div style="
 				position: absolute;
 				bottom: 15%;
 				right: 10%;
@@ -310,7 +247,7 @@
 				border-radius: 50%;
 				animation: float 10s ease-in-out infinite reverse;
 			"></div>
-			<div style="
+					<div style="
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -321,33 +258,45 @@
 				border-radius: 50%;
 				animation: pulse 6s ease-in-out infinite;
 			"></div>
-		</div>
-
-		<div class="auto-container" style="position: relative; z-index: 2; padding: 20px 0 60px 0;">
-			<div class="row">
-				<div class="col-xxl-6 col-xl-8 col-lg-8">
-					<div class="banner-content-wrap">
-						<div class="banner-content">
-							<h5 class="split_chars">
-								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M6.29952 12.1663C6.25774 12.1663 6.21641 12.1576 6.17814 12.1409C6.13986 12.1241 6.10547 12.0996 6.07711 12.069L0.0804686 5.58232C0.0404934 5.53907 0.0139924 5.48511 0.00420897 5.42704C-0.00557448 5.36897 0.00178397 5.3093 0.0253838 5.25535C0.0489837 5.20139 0.0878012 5.15549 0.137086 5.12325C0.18637 5.09101 0.243983 5.07384 0.302874 5.07384H3.18933C3.23266 5.07385 3.2755 5.08315 3.31493 5.10112C3.35437 5.11909 3.3895 5.14531 3.41794 5.178L5.42204 7.48365C5.63863 7.02067 6.05791 6.24978 6.79367 5.31042C7.88137 3.92172 9.90455 1.87936 13.366 0.0356649C13.4329 3.7701e-05 13.5107 -0.00920898 13.5841 0.00975084C13.6575 0.0287107 13.7211 0.0744987 13.7624 0.138074C13.8037 0.201649 13.8196 0.278389 13.8071 0.353142C13.7945 0.427894 13.7544 0.495225 13.6946 0.541839C13.6814 0.552167 12.3468 1.60316 10.8108 3.52824C9.39723 5.29979 7.5181 8.19654 6.59343 11.9362C6.57719 12.0019 6.53941 12.0603 6.48612 12.102C6.43283 12.1437 6.36711 12.1664 6.29943 12.1664L6.29952 12.1663Z" fill="#6766FF"/>
-								</svg>
-								Coming Soon
-							</h5>
-						<h2 class="split_chars preserve-case">eStaff</h2>
-						<h2 class="split_chars">AI Gig <span style="color: #9B7BFF !important;">Platform</span></h2>
-						<h4 class="dev-badge pill preserve-case"><span style="color: #FF8C00 !important; font-weight: 800;"> (In Development)</h4>
-						<p class="text-anime-3" style="display:block; width:100%; max-width:980px; margin:0 auto; text-align:center;">A modern gig marketplace connecting households and businesses with verified job seekers across multiple service categories — powered by AI, automation, and intelligent matching.</p>							<div class="hero-cta">
-								<a href="contact.html" class="vizra-btn">Request Investor Deck <i class="fa-light fa-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
 				</div>
 
-				<div class="col-xxl-6 col-xl-4 col-lg-4">
-					<div class="banner-thumb" style="width: 100%; max-width: 750px; position: relative; margin-left: auto; margin-right: -80px; margin-top: 120px;">
-						<!-- Decorative Blob Background -->
-						<div style="
+				<div class="auto-container" style="position: relative; z-index: 2; padding: 20px 0 60px 0;">
+					<div class="row">
+						<div class="col-xxl-6 col-xl-8 col-lg-8">
+							<div class="banner-content-wrap">
+								<div class="banner-content">
+									<h5 class="split_chars">
+										<svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M6.29952 12.1663C6.25774 12.1663 6.21641 12.1576 6.17814 12.1409C6.13986 12.1241 6.10547 12.0996 6.07711 12.069L0.0804686 5.58232C0.0404934 5.53907 0.0139924 5.48511 0.00420897 5.42704C-0.00557448 5.36897 0.00178397 5.3093 0.0253838 5.25535C0.0489837 5.20139 0.0878012 5.15549 0.137086 5.12325C0.18637 5.09101 0.243983 5.07384 0.302874 5.07384H3.18933C3.23266 5.07385 3.2755 5.08315 3.31493 5.10112C3.35437 5.11909 3.3895 5.14531 3.41794 5.178L5.42204 7.48365C5.63863 7.02067 6.05791 6.24978 6.79367 5.31042C7.88137 3.92172 9.90455 1.87936 13.366 0.0356649C13.4329 3.7701e-05 13.5107 -0.00920898 13.5841 0.00975084C13.6575 0.0287107 13.7211 0.0744987 13.7624 0.138074C13.8037 0.201649 13.8196 0.278389 13.8071 0.353142C13.7945 0.427894 13.7544 0.495225 13.6946 0.541839C13.6814 0.552167 12.3468 1.60316 10.8108 3.52824C9.39723 5.29979 7.5181 8.19654 6.59343 11.9362C6.57719 12.0019 6.53941 12.0603 6.48612 12.102C6.43283 12.1437 6.36711 12.1664 6.29943 12.1664L6.29952 12.1663Z"
+												fill="#6766FF" />
+										</svg>
+										Coming Soon
+									</h5>
+									<h2 class="split_chars preserve-case">eStaff</h2>
+									<h2 class="split_chars">AI Gig <span
+											style="color: #9B7BFF !important;">Platform</span></h2>
+									<h4 class="dev-badge pill preserve-case"><span
+											style="color: #667eea !important; font-weight: 800;"> (In Development)</h4>
+									<p class="text-anime-3"
+										style="display:block; width:100%; max-width:980px; margin:0 auto; text-align:center;">
+										A modern gig marketplace connecting households and businesses with verified job
+										seekers across multiple service categories — powered by AI, automation, and
+										intelligent matching.</p>
+									<div class="hero-cta">
+										<a href="contact.html" class="vizra-btn">Request Investor Deck <i
+												class="fa-light fa-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xxl-6 col-xl-4 col-lg-4">
+							<div class="banner-thumb"
+								style="width: 100%; max-width: 750px; position: relative; margin-left: auto; margin-right: -80px; margin-top: 120px;">
+								<!-- Decorative Blob Background -->
+								<div style="
 							position: absolute;
 							top: 50%;
 							left: 50%;
@@ -360,9 +309,9 @@
 							animation: morph 15s ease-in-out infinite;
 							z-index: -1;
 						"></div>
-						
-						<!-- Rotating Ring Decoration -->
-						<div style="
+
+								<!-- Rotating Ring Decoration -->
+								<div style="
 							position: absolute;
 							top: 50%;
 							left: 50%;
@@ -374,8 +323,8 @@
 							animation: rotate 20s linear infinite, morph 10s ease-in-out infinite alternate;
 							z-index: -1;
 						"></div>
-						
-						<figure style="
+
+								<figure style="
 							position: relative;
 							border-radius: 45% 55% 50% 50% / 55% 55% 45% 45%;
 							overflow: hidden;
@@ -388,9 +337,10 @@
 							margin: 0;
 							animation: float 6s ease-in-out infinite;
 							border: 5px solid rgba(255, 255, 255, 0.2);
-						" onmouseover="this.style.transform='perspective(1500px) rotateY(0deg) rotateX(0deg) scale(1.05)'; this.style.borderRadius='50%'" onmouseout="this.style.transform='perspective(1500px) rotateY(-8deg) rotateX(5deg) scale(1)'; this.style.borderRadius='45% 55% 50% 50% / 55% 55% 45% 45%'">
-							<!-- Gradient Overlay -->
-							<div style="
+						" onmouseover="this.style.transform='perspective(1500px) rotateY(0deg) rotateX(0deg) scale(1.05)'; this.style.borderRadius='50%'"
+									onmouseout="this.style.transform='perspective(1500px) rotateY(-8deg) rotateX(5deg) scale(1)'; this.style.borderRadius='45% 55% 50% 50% / 55% 55% 45% 45%'">
+									<!-- Gradient Overlay -->
+									<div style="
 								position: absolute;
 								top: 0;
 								left: 0;
@@ -400,9 +350,9 @@
 								pointer-events: none;
 								z-index: 2;
 							"></div>
-							
-							<!-- Shine Effect -->
-							<div style="
+
+									<!-- Shine Effect -->
+									<div style="
 								position: absolute;
 								top: -50%;
 								left: -50%;
@@ -413,11 +363,12 @@
 								pointer-events: none;
 								z-index: 3;
 							"></div>
-							
-							<img src="images/inner-img/ww.jpeg" alt="eStaff Platform Preview" style="width: 100%; display: block; transform: scale(1.1);">
-							
-							<!-- Inner Glow Border -->
-							<div style="
+
+									<img src="images/inner-img/ww.jpeg" alt="eStaff Platform Preview"
+										style="width: 100%; display: block; transform: scale(1.1);">
+
+									<!-- Inner Glow Border -->
+									<div style="
 								position: absolute;
 								top: 0;
 								left: 0;
@@ -426,17 +377,18 @@
 								box-shadow: inset 0 0 80px rgba(255, 215, 0, 0.3);
 								pointer-events: none;
 							"></div>
-						</figure>
+								</figure>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
 
-		<!-- Particles Background -->
-		<div id="js-particles" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+				<!-- Particles Background -->
+				<div id="js-particles"
+					style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
 
-		<!-- Scroll Down Indicator -->
-		<div style="
+				<!-- Scroll Down Indicator -->
+				<div style="
 			position: absolute;
 			bottom: 40px;
 			left: 50%;
@@ -444,14 +396,14 @@
 			z-index: 10;
 			animation: bounce 2s ease-in-out infinite;
 		">
-			<div style="
+					<div style="
 				color: rgba(255, 255, 255, 0.8);
 				font-size: 0.9rem;
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				margin-bottom: 10px;
 			">Scroll Down</div>
-			<div style="
+					<div style="
 				width: 30px;
 				height: 50px;
 				border: 2px solid rgba(255, 255, 255, 0.5);
@@ -459,7 +411,7 @@
 				position: relative;
 				margin: 0 auto;
 			">
-				<div style="
+						<div style="
 					width: 6px;
 					height: 10px;
 					background: rgba(255, 255, 255, 0.8);
@@ -470,464 +422,726 @@
 					transform: translateX(-50%);
 					animation: scrollWheel 2s ease-in-out infinite;
 				"></div>
-			</div>
-		</div>
-	</div>
-
-	<!-- CSS Animations -->
-	<style>
-		@keyframes float {
-			0%, 100% { transform: translateY(0px); }
-			50% { transform: translateY(-30px); }
-		}
-		@keyframes pulse {
-			0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.15; }
-			50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.2; }
-		}
-		@keyframes slideDown {
-			from { opacity: 0; transform: translateY(-30px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
-		@keyframes fadeInUp {
-			from { opacity: 0; transform: translateY(50px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
-		@keyframes fadeInRight {
-			from { opacity: 0; transform: translateX(50px); }
-			to { opacity: 1; transform: translateX(0); }
-		}
-		@keyframes bounce {
-			0%, 100% { transform: translateY(0); }
-			50% { transform: translateY(-10px); }
-		}
-		@keyframes scrollWheel {
-			0% { top: 8px; opacity: 1; }
-			100% { top: 24px; opacity: 0; }
-		}
-		@keyframes morph {
-			0%, 100% { 
-				border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
-			}
-			25% { 
-				border-radius: 40% 60% 50% 50% / 70% 40% 60% 30%;
-			}
-			50% { 
-				border-radius: 70% 30% 40% 60% / 50% 70% 30% 60%;
-			}
-			75% { 
-				border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
-			}
-		}
-		@keyframes rotate {
-			0% { transform: translate(-50%, -50%) rotate(0deg); }
-			100% { transform: translate(-50%, -50%) rotate(360deg); }
-		}
-		@keyframes shine {
-			0% { transform: translate(-50%, -50%) rotate(0deg); }
-			100% { transform: translate(-50%, -50%) rotate(360deg); }
-		}
-
-		/* Banner image vertical offset and responsive adjustments */
-		.banner-thumb {
-			margin-top: 90px; /* moved down a bit */
-			transition: margin-top 0.35s ease;
-		}
-		@media (max-width: 1199px) {
-			.banner-thumb { margin-top: 60px; }
-		}
-		@media (max-width: 767px) {
-			.banner-thumb { margin-top: 30px; margin-right: 0; }
-		}
-
-		/* Add spacing between paragraph and CTA so the button sits lower */
-		.banner-content .hero-cta {
-			margin-top: 72px; /* moved further down */
-		}
-		@media (max-width: 1199px) {
-			.banner-content .hero-cta { margin-top: 56px; }
-		}
-		@media (max-width: 767px) {
-			.banner-content .hero-cta { margin-top: 40px; }
-		}
-
-		/* Preserve original casing for brand name (e.g., "eStaff") when split/uppercasing is applied globally */
-		.preserve-case { text-transform: none !important; }
-
-		/* Dev badge: subtle pill style */
-		.dev-badge.pill {
-			display: inline-block;
-			font-size: 18px;
-			font-weight: 700;
-			padding: 10px 18px;
-			border-radius: 999px;
-			background: rgba(103,102,255,0.12);
-			color: #EDEBFF;
-			border: 1px solid rgba(103,102,255,0.22);
-			letter-spacing: 0.6px;
-			margin: 8px 0;
-		}
-		@media (max-width: 767px) {
-			.dev-badge.pill { font-size: 15px; padding: 8px 14px; }
-		}
-
-		/* Accent color for the word 'In' inside the dev badge */
-		.dev-badge.pill .dev-accent {
-			color: #FF8C00 !important; /* orange (important to override other rules) */
-			font-weight: 800;
-			text-shadow: 0 1px 0 rgba(0,0,0,0.12);
-		}
-
-		/* Force orange color on any span with inline style inside dev badge (override JS animations) */
-		.dev-badge.pill span[style*="color: #FF8C00"],
-		.dev-badge.pill span[style*="color: #FF8C00"] * {
-			color: #FF8C00 !important;
-			font-weight: 800 !important;
-		}
-	</style>
-	<!--END Banner Section two -->
-
-
-	
-	<!--brand area two-->
-	<div class="brand-area-one style-two">
-		<div class="auto-container">
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="brand-desc">
-						<p><span>Powered by </span> Vizra Tech Inc — Building the Future of Gig Work</p>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="swiper band-active">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-								<img src="images/demo-img/band-img.png" alt="brand img">
-								</div>
-							</div>
+
+			<!-- CSS Animations -->
+			<style>
+				@keyframes float {
+
+					0%,
+					100% {
+						transform: translateY(0px);
+					}
+
+					50% {
+						transform: translateY(-30px);
+					}
+				}
+
+				@keyframes pulse {
+
+					0%,
+					100% {
+						transform: translate(-50%, -50%) scale(1);
+						opacity: 0.15;
+					}
+
+					50% {
+						transform: translate(-50%, -50%) scale(1.1);
+						opacity: 0.2;
+					}
+				}
+
+				@keyframes slideDown {
+					from {
+						opacity: 0;
+						transform: translateY(-30px);
+					}
+
+					to {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+
+				@keyframes fadeInUp {
+					from {
+						opacity: 0;
+						transform: translateY(50px);
+					}
+
+					to {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+
+				@keyframes fadeInRight {
+					from {
+						opacity: 0;
+						transform: translateX(50px);
+					}
+
+					to {
+						opacity: 1;
+						transform: translateX(0);
+					}
+				}
+
+				@keyframes bounce {
+
+					0%,
+					100% {
+						transform: translateY(0);
+					}
+
+					50% {
+						transform: translateY(-10px);
+					}
+				}
+
+				@keyframes scrollWheel {
+					0% {
+						top: 8px;
+						opacity: 1;
+					}
+
+					100% {
+						top: 24px;
+						opacity: 0;
+					}
+				}
+
+				@keyframes morph {
+
+					0%,
+					100% {
+						border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+					}
+
+					25% {
+						border-radius: 40% 60% 50% 50% / 70% 40% 60% 30%;
+					}
+
+					50% {
+						border-radius: 70% 30% 40% 60% / 50% 70% 30% 60%;
+					}
+
+					75% {
+						border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+					}
+				}
+
+				@keyframes rotate {
+					0% {
+						transform: translate(-50%, -50%) rotate(0deg);
+					}
+
+					100% {
+						transform: translate(-50%, -50%) rotate(360deg);
+					}
+				}
+
+				@keyframes shine {
+					0% {
+						transform: translate(-50%, -50%) rotate(0deg);
+					}
+
+					100% {
+						transform: translate(-50%, -50%) rotate(360deg);
+					}
+				}
+
+				/* Banner image vertical offset and responsive adjustments */
+				.banner-thumb {
+					margin-top: 90px;
+					/* moved down a bit */
+					transition: margin-top 0.35s ease;
+				}
+
+				@media (max-width: 1199px) {
+					.banner-thumb {
+						margin-top: 60px;
+					}
+				}
+
+				@media (max-width: 767px) {
+					.banner-thumb {
+						margin-top: 30px;
+						margin-right: 0;
+					}
+				}
+
+				/* Add spacing between paragraph and CTA so the button sits lower */
+				.banner-content .hero-cta {
+					margin-top: 72px;
+					/* moved further down */
+				}
+
+				@media (max-width: 1199px) {
+					.banner-content .hero-cta {
+						margin-top: 56px;
+					}
+				}
+
+				@media (max-width: 767px) {
+					.banner-content .hero-cta {
+						margin-top: 40px;
+					}
+				}
+
+				/* Preserve original casing for brand name (e.g., "eStaff") when split/uppercasing is applied globally */
+				.preserve-case {
+					text-transform: none !important;
+				}
+
+				/* Dev badge: subtle pill style */
+				.dev-badge.pill {
+					display: inline-block;
+					font-size: 18px;
+					font-weight: 700;
+					padding: 10px 18px;
+					border-radius: 999px;
+					background: rgba(103, 102, 255, 0.12);
+					color: #EDEBFF;
+					border: 1px solid rgba(103, 102, 255, 0.22);
+					letter-spacing: 0.6px;
+					margin: 8px 0;
+				}
+
+				@media (max-width: 767px) {
+					.dev-badge.pill {
+						font-size: 15px;
+						padding: 8px 14px;
+					}
+				}
+
+				/* Accent color for the word 'In' inside the dev badge */
+				.dev-badge.pill .dev-accent {
+					color: #667eea !important;
+					/* purple (important to override other rules) */
+					font-weight: 800;
+					text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+				}
+
+				/* Force purple color on any span with inline style inside dev badge (override JS animations) */
+				.dev-badge.pill span[style*="color: #FF8C00"],
+				.dev-badge.pill span[style*="color: #FF8C00"] * {
+					color: #667eea !important;
+					font-weight: 800 !important;
+				}
+			</style>
+			<!--END Banner Section two -->
+
+
+
+			<!--brand area two-->
+			<div class="brand-area-one style-two">
+				<div class="auto-container">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="brand-desc">
+								<p><span>Powered by </span> Vizra Tech Inc — Building the Future of Gig Work</p>
 							</div>
 						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img2.png" alt="brand img">
+					</div>
+					<div class="row">
+						<div class="swiper band-active">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img2.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img3.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img4.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img5.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img6.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img2.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img3.png" alt="brand img">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="col-lg-12">
+										<div class="brand-box">
+											<div class="brand-thumb">
+												<img src="images/demo-img/band-img4.png" alt="brand img">
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							</div>
 						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img3.png" alt="brand img">
+					</div>
+				</div>
+			</div>
+			<!--brand area two -->
+
+
+
+			<!--about Section two -->
+			<section class="about-section-two">
+				<div class="auto-container">
+					<div class="row">
+						<div class="col-xl-6">
+							<div class="sec-title">
+								<div class="section-sub-title">
+									<h5 class="sub-title split_chars preserve-case">What is eStaff</h5>
+								</div>
+								<div class="section-title">
+									<h1 class="title split-text">AI-Powered Gig Platform</h1>
+									<h1 class="title split-text">For Modern Service Economy</h1>
+								</div>
+								<div class="section-desc">
+									<p class="text-anime-3">eStaff is an AI-powered gig platform designed to make hiring
+										service providers fast, safe, and seamless. The platform uses intelligent
+										matching, real-time notifications, and identity verification to connect service
+										seekers with qualified workers across Ontario. eStaff is currently in the
+										planning, design, and development phase under Vizra Tech Inc.
+									</p>
 								</div>
 							</div>
+							<div class="about-wrapper-box">
+								<div class="about-icon-box">
+									<div class="about-icon-content">
+										<div class="about-icon">
+											<img src="images/demo-img/about-icon21.png" alt="icon">
+										</div>
+										<div class="about-content">
+											<h4>AI-Powered Matching</h4>
+											<p>Intelligent job matching<br>for best results</p>
+										</div>
+									</div>
+								</div>
+								<div class="about-icon-box">
+									<div class="about-icon-content">
+										<div class="about-icon">
+											<img src="images/demo-img/about-icon22.png" alt="icon">
+										</div>
+										<div class="about-content">
+											<h4>Verified Workers</h4>
+											<p>Complete identity and<br>background verification</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="about-btn">
+								<a href="contact.html">Request Demo Access<i class="fa-light fa-arrow-right"></i></a>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="col-xl-6">
+							<div class="about-thumb-wrapper">
+								<div class="about-thumb21">
+									<figure><img src="images/inner-img/cc.png" alt="thumb"></figure>
+								</div>
+								<div class="about-thumb22">
+									<figure><img src="images/inner-img/yy.webp" alt="thumb"></figure>
+								</div>
+								<div class="about-thumb23">
+									<figure><img src="images/inner-img/hh.png" alt="thumb"></figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-effient21 fade-in">
+					<img src="images/demo-img/about-effient21.png" alt="about effient">
+				</div>
+			</section>
+			<!--End about Section two -->
+
+
+
+
+
+
+			<!-- Problem Section - Detailed -->
+
+			<section class="workflow-section-two binifits-marquee-area-one"
+				style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
+				<!-- Decorative corner shapes (left and right). Do not modify section content. -->
+				<img src="images/demo-img/accrodion-shape1.png" alt="decor-left" class="section-corner-left">
+				<img src="images/demo-img/accrodion-shape2.png" alt="decor-right" class="section-corner-right">
+				<style>
+					/* Positioning for the decorative corner images */
+					.workflow-section-two {
+						position: relative
+					}
+
+					.workflow-section-two .section-corner-left,
+					.workflow-section-two .section-corner-right {
+						position: absolute;
+						top: 0;
+						z-index: 0;
+						pointer-events: none;
+					}
+
+					.workflow-section-two .section-corner-left {
+						left: 0;
+					}
+
+					.workflow-section-two .section-corner-right {
+						right: 0;
+					}
+
+					/* Slight scale so shapes don't overlap content; tweak if needed */
+					.workflow-section-two .section-corner-left img,
+					.workflow-section-two .section-corner-right img {
+						display: block
+					}
+
+					/* Hide decorative shapes on small screens */
+					@media (max-width:768px) {
+
+						.workflow-section-two .section-corner-left,
+						.workflow-section-two .section-corner-right {
+							display: none
+						}
+					}
+				</style>
+				<div class="auto-container">
+					<div class="row">
 						<div class="col-lg-12">
-						<div class="brand-box">
-							<div class="brand-thumb">
-								<img src="images/demo-img/band-img4.png" alt="brand img">
-							</div>
-						</div>
-						</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img5.png" alt="brand img">
+							<div class="sec-title text-center">
+								<div class="section-sub-title">
+									<h5 class="sub-title split_chars">The Challenge</h5>
 								</div>
-							</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img6.png" alt="brand img">
+								<div class="section-title">
+									<h1 class="title split-text">The Problem We Are</h1>
+									<h1 class="title split-text">Solving</h1>
 								</div>
-							</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img2.png" alt="brand img">
-								</div>
-							</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img.png" alt="brand img">
-								</div>
-							</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img3.png" alt="brand img">
-								</div>
-							</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="col-lg-12">
-							<div class="brand-box">
-								<div class="brand-thumb">
-									<img src="images/demo-img/band-img4.png" alt="brand img">
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--brand area two -->
-
-
-
-	<!--about Section two -->
-	<section class="about-section-two">
-		<div class="auto-container">
-			<div class="row">	
-				<div class="col-xl-6">
-					<div class="sec-title">
-						<div class="section-sub-title">
-							<h5 class="sub-title split_chars preserve-case">What is eStaff</h5>
-						</div>
-						<div class="section-title">
-							<h1 class="title split-text">AI-Powered Gig Platform</h1>
-							<h1 class="title split-text">For Modern Service Economy</h1>
-						</div>
-						<div class="section-desc">
-							<p class="text-anime-3">eStaff is an AI-powered gig platform designed to make hiring service providers fast, safe, and seamless. The platform uses intelligent matching, real-time notifications, and identity verification to connect service seekers with qualified workers across Ontario. eStaff is currently in the planning, design, and development phase under Vizra Tech Inc.
-							</p>
-						</div>
-					</div>
-					<div class="about-wrapper-box">
-						<div class="about-icon-box">
-							<div class="about-icon-content">
-								<div class="about-icon">
-									<img src="images/demo-img/about-icon21.png" alt="icon">
-								</div>
-								<div class="about-content">
-									<h4>AI-Powered Matching</h4>
-									<p>Intelligent job matching<br>for best results</p>
-								</div>
-							</div>
-						</div>
-						<div class="about-icon-box">
-							<div class="about-icon-content">
-								<div class="about-icon">
-									<img src="images/demo-img/about-icon22.png" alt="icon">
-								</div>
-								<div class="about-content">
-									<h4>Verified Workers</h4>
-									<p>Complete identity and<br>background verification</p>
+								<div class="section-desc" style="margin-top: 20px;">
+									<p class="text-anime-3"
+										style="max-width: 900px; margin: 0 auto; font-size: 17px; line-height: 1.8;">The
+										current gig and home-support ecosystem is broken. Families, seniors, businesses,
+										and workers all face challenges that existing platforms fail to address. eStaff
+										is being built to solve these deeply rooted problems with a modern, AI-powered
+										approach.</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="about-btn">
-						<a href="contact.html">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
-					</div>
-				</div>
-				<div class="col-xl-6">
-					<div class="about-thumb-wrapper">
-						<div class="about-thumb21">
-							<figure class="reveal"><img src="images/inner-img/cc.png" alt="thumb"></figure>
-						</div>
-						<div class="about-thumb22">
-							<figure class="reveal"><img src="images/inner-img/yy.webp" alt="thumb"></figure>
-						</div>
-						<div class="about-thumb23">
-							<figure class="reveal"><img src="images/inner-img/hh.png" alt="thumb"></figure>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="about-effient21 fade-in">
-			<img src="images/demo-img/about-effient21.png" alt="about effient">
-		</div>
-	</section>
-	<!--End about Section two -->
 
+					<!-- Accordion Style Problems -->
 
+					<div class="row" style="margin-top: 50px;">
+						<div class="col-lg-12">
+							<style>
+								/* Refined topic list: polished badges, soft timeline, hover & active styles */
+								.problems-topics {
+									position: relative;
+									padding: 12px;
+									border-radius: 14px
+								}
 
+								/* Vertical timeline line behind badges */
+								.problems-topics::before {
+									content: "";
+									position: absolute;
+									left: 34px;
+									top: 18px;
+									bottom: 18px;
+									width: 3px;
+									border-radius: 3px;
+									background: linear-gradient(180deg, rgba(102, 126, 234, 0.14), rgba(255, 140, 0, 0.08));
+									pointer-events: none;
+									z-index: 0;
+								}
 
-	<!-- Problem Section - Detailed -->
-	 
-	<section class="workflow-section-two binifits-marquee-area-one section-bg-gradient" style="padding: 100px 0; background-image: url(images/demo-img/binifits-gradient.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
-		<!-- Decorative corner shapes (left and right). Do not modify section content. -->
-		<img src="images/demo-img/accrodion-shape1.png" alt="decor-left" class="section-corner-left">
-		<img src="images/demo-img/accrodion-shape2.png" alt="decor-right" class="section-corner-right">
-		<style>
-		/* Positioning for the decorative corner images */
-		.workflow-section-two{position:relative}
-		.workflow-section-two .section-corner-left,
-		.workflow-section-two .section-corner-right{position:absolute;top:0;z-index:0;pointer-events:none;}
-		.workflow-section-two .section-corner-left{left:0;}
-		.workflow-section-two .section-corner-right{right:0;}
-		/* Slight scale so shapes don't overlap content; tweak if needed */
-		.workflow-section-two .section-corner-left img,
-		.workflow-section-two .section-corner-right img{display:block}
-		/* Hide decorative shapes on small screens */
-		@media (max-width:768px){
-			.workflow-section-two .section-corner-left,
-			.workflow-section-two .section-corner-right{display:none}
-		}
-		</style>
-		<div class="auto-container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="sec-title text-center">
-						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">The Challenge</h5>
-						</div>
-						<div class="section-title">
-							<h1 class="title split-text">The Problem We Are</h1>
-							<h1 class="title split-text">Solving</h1>
-						</div>
-						<div class="section-desc" style="margin-top: 20px;">
-							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto; font-size: 17px; line-height: 1.8;">The current gig and home-support ecosystem is broken. Families, seniors, businesses, and workers all face challenges that existing platforms fail to address. eStaff is being built to solve these deeply rooted problems with a modern, AI-powered approach.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+								.topic-card {
+									display: flex;
+									align-items: center;
+									gap: 14px;
+									padding: 14px 18px;
+									border-radius: 12px;
+									margin-bottom: 12px;
+									transition: transform .28s ease, box-shadow .28s ease, background .22s ease;
+									border: 1px solid rgba(255, 255, 255, 0.03);
+									background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
+									cursor: pointer;
+									position: relative;
+									z-index: 2;
+									backdrop-filter: blur(4px);
+								}
 
-			<!-- Accordion Style Problems -->
-			 	
-			<div class="row" style="margin-top: 50px;">
-				<div class="col-lg-12">
-					<style>
-					/* Refined topic list: polished badges, soft timeline, hover & active styles */
-					.problems-topics{position:relative;padding:12px;border-radius:14px}
+								/* Subtle halo that appears on hover/active */
+								.topic-card::before {
+									content: "";
+									position: absolute;
+									inset: -8px;
+									border-radius: 14px;
+									z-index: 1;
+									pointer-events: none;
+									background: radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.14), transparent 45%);
+									opacity: 0;
+									transform: scale(.98);
+									transition: opacity .24s ease, transform .28s ease, filter .28s;
+									filter: blur(12px);
+								}
 
-					/* Vertical timeline line behind badges */
-					.problems-topics::before{
-						content:"";position:absolute;left:34px;top:18px;bottom:18px;width:3px;border-radius:3px;
-						background:linear-gradient(180deg, rgba(102,126,234,0.14), rgba(255,140,0,0.08));pointer-events:none;z-index:0;
-					}
+								.topic-card:hover {
+									transform: translateY(-6px);
+									box-shadow: 0 28px 70px rgba(16, 18, 29, 0.45)
+								}
 
-					.topic-card{
-						display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;margin-bottom:12px;
-						transition:transform .28s ease,box-shadow .28s ease,background .22s ease;border:1px solid rgba(255,255,255,0.03);
-						background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
-						cursor:pointer;position:relative;z-index:2;backdrop-filter: blur(4px);
-					}
+								.topic-card:hover::before,
+								.topic-card.active::before {
+									opacity: 1;
+									transform: scale(1)
+								}
 
-					/* Subtle halo that appears on hover/active */
-					.topic-card::before{
-						content:"";position:absolute;inset:-8px;border-radius:14px;z-index:1;pointer-events:none;
-						background:radial-gradient(circle at 20% 20%, rgba(102,126,234,0.14), transparent 45%);
-						opacity:0;transform:scale(.98);transition:opacity .24s ease,transform .28s ease,filter .28s;
-						filter:blur(12px);
-					}
+								/* Decorative left accent when active */
+								.topic-card::after {
+									content: "";
+									position: absolute;
+									left: 6px;
+									top: 12px;
+									bottom: 12px;
+									width: 6px;
+									border-radius: 6px;
+									background: transparent;
+									z-index: 2;
+									transition: background .28s ease, box-shadow .28s
+								}
 
-					.topic-card:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(16,18,29,0.45)}
-					.topic-card:hover::before,.topic-card.active::before{opacity:1;transform:scale(1)}
+								.topic-card.active::after {
+									background: linear-gradient(180deg, #667eea, #ff8c42);
+									box-shadow: 0 8px 22px rgba(102, 126, 234, 0.14)
+								}
 
-					/* Decorative left accent when active */
-					.topic-card::after{content:"";position:absolute;left:6px;top:12px;bottom:12px;width:6px;border-radius:6px;background:transparent;z-index:2;transition:background .28s ease,box-shadow .28s}
-					.topic-card.active::after{background:linear-gradient(180deg,#667eea,#ff8c42);box-shadow:0 8px 22px rgba(102,126,234,0.14)}
+								/* Badge styles: rounded, gradient on active, strong numeric weight */
+								.topic-badge {
+									width: 44px;
+									height: 44px;
+									display: inline-flex;
+									align-items: center;
+									justify-content: center;
+									border-radius: 10px;
+									background: #0f1724;
+									color: #cbd5e1;
+									font-weight: 800;
+									font-size: 15px;
+									box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02), 0 6px 20px rgba(3, 7, 18, 0.45);
+									border: 1px solid rgba(255, 255, 255, 0.03);
+									position: relative;
+									z-index: 3
+								}
 
-					/* Badge styles: rounded, gradient on active, strong numeric weight */
-					.topic-badge{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:#0f1724; color:#cbd5e1;font-weight:800;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02),0 6px 20px rgba(3,7,18,0.45);border:1px solid rgba(255,255,255,0.03);position:relative;z-index:3}
-					.topic-card.active .topic-badge{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;box-shadow:0 12px 36px rgba(102,126,234,0.18)}
+								.topic-card.active .topic-badge {
+									background: linear-gradient(135deg, #667eea, #764ba2);
+									color: #fff;
+									border: none;
+									box-shadow: 0 12px 36px rgba(102, 126, 234, 0.18)
+								}
 
-					/* Title text */
-					.topic-card span:last-child{display:block;color:#cbd5e1;font-weight:700;font-size:15px;line-height:1.25}
-					.topic-card:not(.active) span:last-child{color:rgba(255,255,255,0.65)}
+								/* Title text */
+								.topic-card span:last-child {
+									display: block;
+									color: #cbd5e1;
+									font-weight: 700;
+									font-size: 15px;
+									line-height: 1.25
+								}
 
-					/* Active card elevation */
-					.topic-card.active{border-color:rgba(102,126,234,0.18);background:linear-gradient(180deg, rgba(102,126,234,0.04), rgba(118,75,162,0.02));box-shadow:0 28px 80px rgba(102,126,234,0.12)}
+								.topic-card:not(.active) span:last-child {
+									color: rgba(255, 255, 255, 0.65)
+								}
 
-					/* Keep inner content visuals consistent with theme */
-					.core-service-card.content-inner{padding:30px;border-radius:20px;background:var(--theme-color1);border:1px solid rgba(103,102,255,0.12);box-shadow:0 12px 40px rgba(103,102,255,0.06)}
-					.core-service-card.content-inner h3{color:var(--theme-color-white)}
-					.core-service-card.content-inner p{color:rgba(255,255,255,0.85)}
+								/* Active card elevation */
+								.topic-card.active {
+									border-color: rgba(102, 126, 234, 0.18);
+									background: linear-gradient(180deg, rgba(102, 126, 234, 0.04), rgba(118, 75, 162, 0.02));
+									box-shadow: 0 28px 80px rgba(102, 126, 234, 0.12)
+								}
 
-					/* Responsive tweaks */
-					@media (max-width:768px){
-						.problems-topics{padding:6px}
-						.problems-topics::before{display:none}
-						.topic-badge{width:38px;height:38px;font-size:14px}
-						.topic-card{padding:10px 12px}
-					}
-					</style>
-					<div class="problems-tab-container" style="display:flex; gap:30px; background:transparent; border-radius:12px; padding:0; box-shadow:none; overflow:hidden; margin-bottom:20px;">
-						<!-- LEFT: Topics -->
-						<div class="problems-topics" style="flex:0 0 32%; background:transparent; padding:0;">
-							<!-- Topic items -->
-							<div class="topic-item topic-card active" data-problem="1" tabindex="0" style="border-left:4px solid #667eea;">
-								<span class="topic-badge">1</span>
-								<span style="font-weight:600; color:#2c3e50;">Aging Population & Limited Care Options</span>
+								/* Keep inner content visuals consistent with theme */
+								.core-service-card.content-inner {
+									padding: 30px;
+									border-radius: 20px;
+									background: var(--theme-color1);
+									border: 1px solid rgba(103, 102, 255, 0.12);
+									box-shadow: 0 12px 40px rgba(103, 102, 255, 0.06)
+								}
+
+								.core-service-card.content-inner h3 {
+									color: var(--theme-color-white)
+								}
+
+								.core-service-card.content-inner p {
+									color: rgba(255, 255, 255, 0.85)
+								}
+
+								/* Responsive tweaks */
+								@media (max-width:768px) {
+									.problems-topics {
+										padding: 6px
+									}
+
+									.problems-topics::before {
+										display: none
+									}
+
+									.topic-badge {
+										width: 38px;
+										height: 38px;
+										font-size: 14px
+									}
+
+									.topic-card {
+										padding: 10px 12px
+									}
+								}
+							</style>
+							<div class="problems-tab-container"
+								style="display:flex; gap:30px; background:transparent; border-radius:12px; padding:0; box-shadow:none; overflow:hidden; margin-bottom:20px;">
+								<!-- LEFT: Topics -->
+								<div class="problems-topics" style="flex:0 0 32%; background:transparent; padding:0;">
+									<!-- Topic items -->
+									<div class="topic-item topic-card active" data-problem="1" tabindex="0"
+										style="border-left:4px solid #667eea;">
+										<span class="topic-badge">1</span>
+										<span style="font-weight:600; color:#2c3e50;">Aging Population & Limited Care
+											Options</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="2" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">2</span>
+										<span style="font-weight:600; color:#6c757d;"> Agencies Struggle With
+											Scheduling</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="3" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">3</span>
+										<span style="font-weight:600; color:#6c757d;">Safety, Trust & Verification
+											Gaps</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="4" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">4</span>
+										<span style="font-weight:600; color:#6c757d;">Lack of Transparency in Worker
+											Qualifications</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="5" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">5</span>
+										<span style="font-weight:600; color:#6c757d;">Need for Cultural & Language
+											Comfort</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="6" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">6</span>
+										<span style="font-weight:600; color:#6c757d;">Reliability & Predictability Are
+											Hard to Find</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="7" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">7</span>
+										<span style="font-weight:600; color:#6c757d;">No Standardized System for
+											Homecare</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="8" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">8</span>
+										<span style="font-weight:600; color:#6c757d;">Limited Platforms for Home Support
+											Roles</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="9" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">9</span>
+										<span style="font-weight:600; color:#6c757d;">Underemployment Among
+											Newcomers</span>
+									</div>
+									<div class="topic-item topic-card" data-problem="10" tabindex="0"
+										style="border-left:4px solid transparent;">
+										<span class="topic-badge">10</span>
+										<span style="font-weight:600; color:#6c757d;">Affordability & Control Over
+											Pricing</span>
+									</div>
+								</div>
+								<div class="problems-content" style="flex:1; padding:36px; background: transparent;">
+									<div id="problems-placeholder" style="color:#777;">Select a topic on the left to
+										view details.</div>
+								</div>
 							</div>
-							<div class="topic-item topic-card" data-problem="2" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">2</span>
-								<span style="font-weight:600; color:#6c757d;"> Agencies Struggle With Scheduling</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="3" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">3</span>
-								<span style="font-weight:600; color:#6c757d;">Safety, Trust & Verification Gaps</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="4" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">4</span>
-								<span style="font-weight:600; color:#6c757d;">Lack of Transparency in Worker Qualifications</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="5" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">5</span>
-								<span style="font-weight:600; color:#6c757d;">Need for Cultural & Language Comfort</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="6" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">6</span>
-								<span style="font-weight:600; color:#6c757d;">Reliability & Predictability Are Hard to Find</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="7" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">7</span>
-								<span style="font-weight:600; color:#6c757d;">No Standardized System for Homecare</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="8" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">8</span>
-								<span style="font-weight:600; color:#6c757d;">Limited Platforms for Home Support Roles</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="9" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">9</span>
-								<span style="font-weight:600; color:#6c757d;">Underemployment Among Newcomers</span>
-							</div>
-							<div class="topic-item topic-card" data-problem="10" tabindex="0" style="border-left:4px solid transparent;">
-								<span class="topic-badge">10</span>
-								<span style="font-weight:600; color:#6c757d;">Affordability & Control Over Pricing</span>
-							</div>
-						</div>
-						<div class="problems-content" style="flex:1; padding:36px; background: transparent;">
-							<div id="problems-placeholder" style="color:#777;">Select a topic on the left to view details.</div>
-						</div>
-					</div>
-					<script>
-				document.addEventListener('DOMContentLoaded', function() {
-					const topicItems = Array.from(document.querySelectorAll('.problems-topics .topic-item'));
-					const contentPane = document.querySelector('.problems-content');
+							<script>
+								document.addEventListener('DOMContentLoaded', function () {
+									const topicItems = Array.from(document.querySelectorAll('.problems-topics .topic-item'));
+									const contentPane = document.querySelector('.problems-content');
 
-					const problemData = {
-						"1": `
+									const problemData = {
+										"1": `
 							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
-								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Aging Population & Limited Care Options</h3>
+								<h3 style="color:#667eea;font-weight:700;margin-bottom:25px;font-size:24px;">Aging Population & Limited Care Options</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
 									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Canada's senior population is growing rapidly, but traditional care systems cannot keep up. Care homes are expensive, understaffed, and have long waitlists; families are left with limited, costly, and often impersonal options and struggle to find reliable, affordable, compassionate in-home support.</p>
 								</div>
@@ -1006,9 +1220,9 @@
 								</div>
 							</div>
 						`,
-						"2": `
+										"2": `
 							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
-								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;"> Agencies Struggle With Scheduling & Staffing</h3>
+								<h3 style="color:#667eea;font-weight:700;margin-bottom:25px;font-size:24px;"> Agencies Struggle With Scheduling & Staffing</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
 									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Care homes, cleaning agencies, childcare centers, and homecare companies face operational chaos from inadequate workforce management tools and last-minute scheduling issues, resulting in staffing gaps and compliance headaches.</p>
 								</div>
@@ -1123,9 +1337,9 @@
 								</div>
 							</div>
 						`,
-						"3": `
+										"3": `
 							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
-								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Safety, Trust & Verification Gaps</h3>
+								<h3 style="color:#667eea;font-weight:700;margin-bottom:25px;font-size:24px;">Safety, Trust & Verification Gaps</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
 									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Verification in today's gig economy is inconsistent. Families worry about who is entering their home and trust is often based on little more than a profile picture; most platforms lack robust background checks, ID verification, or ongoing monitoring, leaving families exposed to risk.</p>
 								</div>
@@ -1204,9 +1418,9 @@
 								</div>
 							</div>
 						`,
-						"4": `
+										"4": `
 							<div style="color:#2c3e50;line-height:1.7;font-size:15px;">
-								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:25px;font-size:24px;">Lack of Transparency in Worker Qualifications</h3>
+								<h3 style="color:#667eea;font-weight:700;margin-bottom:25px;font-size:24px;">Lack of Transparency in Worker Qualifications</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:6px;">
 									<p style="margin:0;color:#856404;"><strong>⚠️ Current Reality & Problem:</strong> Families often hire without knowing a caregiver's true qualifications, experience, or background; there is no easy way to verify credentials, certifications, police checks, or language ability, forcing families to trust unverified claims.</p>
 								</div>
@@ -1285,7 +1499,7 @@
 								</div>
 							</div>
 						`,
-						"5": `
+										"5": `
 							<div style="padding:25px;color:#fff;">
 								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Need for Cultural & Language Comfort</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
@@ -1368,7 +1582,7 @@
 								</div>
 							</div>
 						`,
-						"6": `
+										"6": `
 							<div style="padding:25px;color:#fff;">
 								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Reliability & Predictability Are Hard to Find</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
@@ -1417,7 +1631,7 @@
 								</div>
 							</div>
 						`,
-						"7": `
+										"7": `
 							<div style="padding:25px;color:#fff;">
 								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">No Standardized System for Homecare & Support Services</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
@@ -1453,7 +1667,7 @@
 								</div>
 							</div>
 						`,
-						"8": `
+										"8": `
 							<div style="padding:25px;color:#fff;">
 								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Limited Platforms for Essential Home Support Roles</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
@@ -1480,7 +1694,7 @@
 								</div>
 							</div>
 						`,
-						"9": `
+										"9": `
 							<div style="padding:25px;color:#fff;">
 								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Underemployment Among Newcomers & Students</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
@@ -1515,7 +1729,7 @@
 									<p style="margin:15px 0 0 0;color:#155724;font-weight:600;font-size:15px;">🏆 Result: eStaff unlocks the potential of newcomers and students, creating a fair, inclusive, and prosperous workforce.</p>
 								</div>
 						`,
-						"10": `
+										"10": `
 							<div style="padding:25px;color:#fff;">
 								<h3 style="color:#FF8C00;font-weight:700;margin-bottom:20px;font-size:24px;">Affordability & Control Over Pricing</h3>
 								<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin-bottom:20px;border-radius:5px;">
@@ -1542,90 +1756,90 @@
 								</div>
 							</div>
 						`,
-					};
+									};
 
-					function setActiveTopic(el) {
-						topicItems.forEach(t => {
-							t.classList.remove('active');
-							t.style.background = '';
-							t.style.borderLeft = '4px solid transparent';
-							const badge = t.querySelector('span:first-child');
-							const text = t.querySelector('span:last-child');
-							if (badge) { badge.style.background = '#e9ecef'; badge.style.color = '#6c757d'; }
-							if (text) text.style.color = '#6c757d';
-							if (t === el) t.setAttribute('aria-selected','true'); else t.removeAttribute('aria-selected');
-						});
+									function setActiveTopic(el) {
+										topicItems.forEach(t => {
+											t.classList.remove('active');
+											t.style.background = '';
+											t.style.borderLeft = '4px solid transparent';
+											const badge = t.querySelector('span:first-child');
+											const text = t.querySelector('span:last-child');
+											if (badge) { badge.style.background = '#e9ecef'; badge.style.color = '#6c757d'; }
+											if (text) text.style.color = '#6c757d';
+											if (t === el) t.setAttribute('aria-selected', 'true'); else t.removeAttribute('aria-selected');
+										});
 
-						el.classList.add('active');
-						el.style.background = '#fff';
-						el.style.borderLeft = '4px solid #667eea';
-						const activeBadge = el.querySelector('span:first-child');
-						const activeText = el.querySelector('span:last-child');
-						if (activeBadge) { activeBadge.style.background = 'linear-gradient(135deg,#667eea,#764ba2)'; activeBadge.style.color = '#fff'; }
-						if (activeText) activeText.style.color = '#2c3e50';
-					}
+										el.classList.add('active');
+										el.style.background = '#fff';
+										el.style.borderLeft = '4px solid #667eea';
+										const activeBadge = el.querySelector('span:first-child');
+										const activeText = el.querySelector('span:last-child');
+										if (activeBadge) { activeBadge.style.background = 'linear-gradient(135deg,#667eea,#764ba2)'; activeBadge.style.color = '#fff'; }
+										if (activeText) activeText.style.color = '#2c3e50';
+									}
 
-					function showContent(id, pushHash = true) {
-						if (!contentPane) return;
-						const html = problemData[id] || '<p>No content available.</p>';
-						const current = contentPane.querySelector('.content-inner');
-						const newHtml = `<div class="core-service-card content-inner" style="opacity:0;transition:opacity .35s ease;">${html}</div>`;
-						if (current) {
-							current.style.opacity = 0;
-							setTimeout(() => {
-								contentPane.innerHTML = newHtml;
-								const inner = contentPane.querySelector('.content-inner');
-								requestAnimationFrame(() => inner.style.opacity = 1);
-							}, 260);
-						} else {
-							contentPane.innerHTML = newHtml;
-							const inner = contentPane.querySelector('.content-inner');
-							requestAnimationFrame(() => inner.style.opacity = 1);
-						}
-						if (pushHash) {
-							history.replaceState(null, '', '#problem-' + id);
-						}
-					}
+									function showContent(id, pushHash = true) {
+										if (!contentPane) return;
+										const html = problemData[id] || '<p>No content available.</p>';
+										const current = contentPane.querySelector('.content-inner');
+										const newHtml = `<div class="core-service-card content-inner" style="opacity:0;transition:opacity .35s ease;">${html}</div>`;
+										if (current) {
+											current.style.opacity = 0;
+											setTimeout(() => {
+												contentPane.innerHTML = newHtml;
+												const inner = contentPane.querySelector('.content-inner');
+												requestAnimationFrame(() => inner.style.opacity = 1);
+											}, 260);
+										} else {
+											contentPane.innerHTML = newHtml;
+											const inner = contentPane.querySelector('.content-inner');
+											requestAnimationFrame(() => inner.style.opacity = 1);
+										}
+										if (pushHash) {
+											history.replaceState(null, '', '#problem-' + id);
+										}
+									}
 
-					// keyboard helpers
-					function focusIndex(idx) {
-						const clamped = Math.max(0, Math.min(topicItems.length - 1, idx));
-						topicItems[clamped].focus();
-					}
+									// keyboard helpers
+									function focusIndex(idx) {
+										const clamped = Math.max(0, Math.min(topicItems.length - 1, idx));
+										topicItems[clamped].focus();
+									}
 
-					// initial load: respect hash if present
-					let startId = '1';
-					const m = location.hash.match(/^#problem-(\d{1,2})$/);
-					if (m && problemData[m[1]]) startId = m[1];
-					const startEl = topicItems.find(t => t.getAttribute('data-problem') === startId);
-					if (startEl) setActiveTopic(startEl);
-					showContent(startId, false);
+									// initial load: respect hash if present
+									let startId = '1';
+									const m = location.hash.match(/^#problem-(\d{1,2})$/);
+									if (m && problemData[m[1]]) startId = m[1];
+									const startEl = topicItems.find(t => t.getAttribute('data-problem') === startId);
+									if (startEl) setActiveTopic(startEl);
+									showContent(startId, false);
 
-					topicItems.forEach((item, i) => {
-						item.addEventListener('click', function() {
-							const id = this.getAttribute('data-problem');
-							setActiveTopic(this);
-							showContent(id, true);
-						});
+									topicItems.forEach((item, i) => {
+										item.addEventListener('click', function () {
+											const id = this.getAttribute('data-problem');
+											setActiveTopic(this);
+											showContent(id, true);
+										});
 
-						item.addEventListener('keydown', function(e) {
-							if (e.key === 'ArrowDown') { e.preventDefault(); focusIndex(i + 1); }
-							else if (e.key === 'ArrowUp') { e.preventDefault(); focusIndex(i - 1); }
-							else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
-						});
-					});
-				});
-				</script>
-					<div class="accordion" id="problemsAccordion">
+										item.addEventListener('keydown', function (e) {
+											if (e.key === 'ArrowDown') { e.preventDefault(); focusIndex(i + 1); }
+											else if (e.key === 'ArrowUp') { e.preventDefault(); focusIndex(i - 1); }
+											else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
+										});
+									});
+								});
+							</script>
+							<div class="accordion" id="problemsAccordion">
 
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>		
-		</div>
-		
-	</section>
 
-	<!--End Problem Section -->
+			</section>
+
+			<!--End Problem Section -->
 
 
 
@@ -1633,369 +1847,409 @@
 
 
 
-	<!--Features Section four -->
-	<section class="about-section-four">
-		<style>
-			/* Feature titles color (purple accent) */
-			.about-section-four .about-item-list ul li strong { color: #667eea; }
-		</style>
-		<div class="auto-container">
-			<div class="row align-items-center">	
-				<div class="col-xl-6 col-lg-8">
-					<div class="sec-title">
-						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Platform Features</h5>
+			<!--Features Section four -->
+			<section class="about-section-four">
+				<style>
+					/* Feature titles color (purple accent) */
+					.about-section-four .about-item-list ul li strong {
+						color: #667eea;
+					}
+				</style>
+				<div class="auto-container">
+					<div class="row align-items-center">
+						<div class="col-xl-6 col-lg-8">
+							<div class="sec-title">
+								<div class="section-sub-title">
+									<h5 class="sub-title split_chars">Platform Features</h5>
+								</div>
+								<div class="section-title">
+									<h1 class="title split-text">Key Features</h1>
+									<h1 class="title split-text">That Power eStaff</h1>
+								</div>
+								<div class="section-desc">
+									<p class="text-anime-3">eStaff is built on cutting-edge technology to deliver a
+										seamless, secure, and intelligent gig marketplace experience for all users.
+									</p>
+								</div>
+							</div>
+							<div class="about-item-list">
+								<ul>
+									<li><strong>AI-powered matching</strong> — Instantly pair requests with qualified
+										local workers (skills, availability, cultural fit).</li>
+									<li><strong>Verified workers</strong> — ID, background checks, and certification
+										tracking for safer hires.</li>
+									<li><strong>Reliable scheduling &amp; accountability</strong> — Real-time
+										availability, GPS check-ins, and shift histories.</li>
+									<li><strong>Secure hiring &amp; payments</strong> — In-app communication,
+										transparent fees, and streamlined payments.</li>
+								</ul>
+							</div>
+							<div class="about-btn">
+								<a href="contact.html">Request Full Feature List<i
+										class="fa-light fa-arrow-right"></i></a>
+							</div>
 						</div>
-						<div class="section-title">
-							<h1 class="title split-text">Key Features</h1>
-							<h1 class="title split-text">That Power eStaff</h1>
+						<div class="col-xl-6 col-lg-4">
+							<div class="summary-single-box">
+								<div class="summary-title">
+									<h2>Platform Overview</h2>
+								</div>
+								<div class="summary-scedule">
+									<ul>
+										<li>
+											<p><img src="images/demo-img/summary-icon1.png" alt="icon">Service
+												Categories</p>
+											<span>12+</span>
+										</li>
+										<li>
+											<p><img src="images/demo-img/summary-icon2.png" alt="icon">Target Markets
+											</p>
+											<span>B2C & B2B</span>
+										</li>
+										<li>
+											<p><img src="images/demo-img/summary-icon3.png" alt="icon">Launch Region</p>
+											<span>Ontario</span>
+										</li>
+										<li>
+											<p><img src="images/demo-img/summary-icon4.png" alt="icon">Development Stage
+											</p>
+											<span>Active</span>
+										</li>
+									</ul>
+									<div class="summary-saas-badge">
+										<div class="saas-cusor">
+											<span>AI-Powered Platform </span>
+										</div>
+										<div class="innovation-cusor">
+											<span>AI-Powered Platform</span>
+										</div>
+									</div>
+								</div>
+								<div class="summary-box-effient fade-in">
+									<img src="images/demo-img/summary-box-effient.png" alt="effient">
+								</div>
+							</div>
 						</div>
-						<div class="section-desc">
-							<p class="text-anime-3">eStaff is built on cutting-edge technology to deliver a seamless, secure, and intelligent gig marketplace experience for all users.
-							</p>
-						</div>
-					</div>
-					<div class="about-item-list">
-						<ul>
-							<li>
-								<!-- Verified Workers -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path fill="#667eea" d="M12 2l7 3v5c0 5-3.8 9.7-7 12-3.2-2.3-7-7-7-12V5l7-3z"/><path d="M9.5 12.5l1.8 1.8L15 11.6" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-								<strong>Verified Workers</strong> - Profiles, background checks, and document tracking that families can trust
-							</li>
-							<li>
-								<!-- Reliable Scheduling -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="#FF6B2C"/><path d="M12 7v6l4 2" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-								<strong>Reliable Scheduling</strong> - Real-time availability, shift acceptance, and automated replacements
-							</li>
-							<li>
-								<!-- Attendance & Audits -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path fill="#28a745" d="M12 2C8 2 4 4 4 8c0 5.2 6.4 11.1 7.1 11.7.3.2.6.3.9.3s.6-.1.9-.3C13.6 19.1 20 13.2 20 8c0-4-4-6-8-6z"/><circle cx="12" cy="8" r="2.2" fill="#fff"/></svg>
-								<strong>Attendance & Audits</strong> - GPS-verified check-ins, shift histories, and incident reporting for accountability
-							</li>
-							<li>
-								<!-- Smart Matching -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="#6766FF"/><circle cx="9" cy="9" r="1.4" fill="#fff"/><circle cx="15" cy="9" r="1.4" fill="#fff"/><path d="M8 15c1.2-1 3-1 4 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-								<strong>Smart Matching</strong> - AI matching that prioritizes skills, availability, language and cultural fit
-							</li>
-							<li>
-								<!-- Transparent Pricing & Reputation -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path fill="#17a2b8" d="M12 2l3 6 6 1-4.5 4 1 6L12 17l-5.5 3 1-6L3 9l6-1z"/></svg>
-								<strong>Transparent Pricing & Reputation</strong> - Clear fees, ratings, and verified shift history to build trust
-							</li>
-							<li>
-								<!-- AI Matching Engine -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="#e6e9ff"/><path d="M7 7h10M7 12h10M7 17h10" stroke="#667eea" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-								<strong>AI Matching Engine</strong> - Connects seekers with the best worker using skills, availability, location, and history
-							</li>
-							<li>
-								<!-- Full Verification Workflow -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="#fff3cd"/><circle cx="8" cy="12" r="2" fill="#ffc107"/></svg>
-								<strong>Full Verification Workflow</strong> - ID, selfie match, police checks, residency proof, certification uploads
-							</li>
-							<li>
-								<!-- Real-Time Gig Alerts -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path d="M12 2c-1 0-2 .5-2 1.5V5c0 .6-.4 1-1 1H6v2h12V6h-3c-.6 0-1-.4-1-1V3.5C14 2.5 13 2 12 2z" fill="#ffdfd6"/><path d="M6 10v4l-2 2v1h16v-1l-2-2v-4H6z" fill="#ff6b2c"/></svg>
-								<strong>Real-Time Gig Alerts</strong> - Workers receive instant notifications for matching opportunities
-							</li>
-							<li>
-								<!-- In-App Communication -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 3V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="#d1ecf1"/></svg>
-								<strong>In-App Communication</strong> - Secure chat and optional call features
-							</li>
-							<li>
-								<!-- Reputation System -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 17l-5.5 3 1-6L3 9l6-1z" fill="#e3e7fd"/></svg>
-								<strong>Reputation System</strong> - Ratings, reviews, and AI-generated summaries
-							</li>
-							<li>
-								<!-- Admin Dashboard -->
-								<svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" fill="#fff"/><rect x="7" y="9" width="3" height="6" fill="#667eea"/><rect x="12" y="9" width="3" height="4" fill="#FF6B2C"/><rect x="17" y="9" width="3" height="2" fill="#28a745"/></svg>
-								<strong>Admin Dashboard</strong> - Manage verification, disputes, analytics, and trends
-							</li>
-						</ul>
-					</div>
-					<div class="about-btn">
-						<a href="contact.html">Request Full Feature List<i class="fa-light fa-arrow-right"></i></a>
 					</div>
 				</div>
-				<div class="col-xl-6 col-lg-4">
-					<div class="summary-single-box">
-						<div class="summary-title">
-							<h2>Platform Overview</h2>
+				<div class="about-effient-shape1 fade-in">
+					<img src="images/demo-img/about-four-shape1.png" alt="effient">
+				</div>
+				<div class="about-effient-shape2 fade-in">
+					<img src="images/demo-img/about-four-shape2.png" alt="effient2">
+				</div>
+			</section>
+			<!--End about Section four -->
+
+
+
+
+			<!--Who Will Use eStaff Section -->
+			<section class="about-section-two binifits-marquee-area-one"
+				style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
+				<div class="auto-container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="sec-title text-center">
+								<div class="section-sub-title">
+									<h5 class="sub-title split_chars">Target Users</h5>
+								</div>
+								<div class="section-title">
+									<h1 class="title split-text">Who Will Use eStaff</h1>
+								</div>
+								<div class="section-desc">
+									<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">eStaff serves
+										three major user groups: B2C Users (Households), Organizations, and Job Seekers
+									</p>
+								</div>
+							</div>
 						</div>
-						<div class="summary-scedule">
-							<ul>
-								<li>
-									<p><img src="images/demo-img/summary-icon1.png" alt="icon">Service Categories</p>
-									<span>12+</span>
-								</li>
-								<li>
-									<p><img src="images/demo-img/summary-icon2.png" alt="icon">Target Markets</p>
-									<span>B2C & B2B</span>
-								</li>
-								<li>
-									<p><img src="images/demo-img/summary-icon3.png" alt="icon">Launch Region</p>
-									<span>Ontario</span>
-								</li>
-								<li>
-									<p><img src="images/demo-img/summary-icon4.png" alt="icon">Development Stage</p>
-									<span>Active</span>
-								</li>
+					</div>
+					<div class="row" style="margin-top: 50px;">
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="core-service-card" style="min-height: 380px;">
+								<div class="service-card-icon">
+									<i class="fa-solid fa-house"></i>
+								</div>
+								<h3>🏠 B2C Users (Households)</h3>
+								<p>Households, hosts, and families who need reliable on-demand help.</p>
+								<ul class="service-list">
+									<li><i class="fa-solid fa-check"></i> Households needing help</li>
+									<li><i class="fa-solid fa-check"></i> Airbnb Owners & Rental Hosts</li>
+									<li><i class="fa-solid fa-check"></i> Students, New Parents & Elderly Care Families
+									</li>
+									<li><i class="fa-solid fa-check"></i> Small Businesses</li>
+								</ul>
+								<a href="contact.html" class="service-card-btn">Learn More <i
+										class="fa-light fa-arrow-right"></i></a>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="core-service-card" style="min-height: 380px;">
+								<div class="service-card-icon">
+									<i class="fa-solid fa-building"></i>
+								</div>
+								<h3>🏢 B2B Organizations</h3>
+								<p>Care homes, cleaning companies, agencies, and corporate clients.</p>
+								<ul class="service-list">
+									<li><i class="fa-solid fa-check"></i> Care Homes & Assisted Living</li>
+									<li><i class="fa-solid fa-check"></i> Cleaning & Home Services Companies</li>
+									<li><i class="fa-solid fa-check"></i> Childcare Centres & Pet Care Agencies</li>
+									<li><i class="fa-solid fa-check"></i> Corporate & Tech Service Partners</li>
+								</ul>
+								<a href="contact.html" class="service-card-btn">Partner With Us <i
+										class="fa-light fa-arrow-right"></i></a>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="core-service-card" style="min-height: 380px;">
+								<div class="service-card-icon">
+									<i class="fa-solid fa-user-check"></i>
+								</div>
+								<h3>👷 Job Seekers</h3>
+								<p>Cleaners, caregivers, babysitters, and general labourers seeking gigs.</p>
+								<ul class="service-list">
+									<li><i class="fa-solid fa-check"></i> Cleaners & Housekeepers</li>
+									<li><i class="fa-solid fa-check"></i> Babysitters, Nannies & PSWs</li>
+									<li><i class="fa-solid fa-check"></i> Pet Sitters, Tech Helpers & Labour Roles</li>
+									<li><i class="fa-solid fa-check"></i> Verified profiles & onboarding</li>
+								</ul>
+								<a href="contact.html" class="service-card-btn">Get Started <i
+										class="fa-light fa-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--End Who Will Use eStaff Section -->
+
+			<!-- Product Preview – Early UI/UX Designs (Figma Screens) -->
+			<section class="product-preview-section binifits-marquee-area-one pt-80 pb-80"
+				style="position:relative; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
+				<div class="auto-container">
+					<div class="row justify-content-center mb-4">
+						<div class="col-lg-8 text-center">
+							<div class="section-title">
+								<h2 class="title split-text" style="color:#ffffff;">Product Preview – Early UI/UX
+									Designs</h2>
+								<p class="mt-3" style="font-size:1.15rem; color:#ffffff;">
+									A sneak peek into the eStaff interface currently in design and development. These
+									early Figma screens showcase our vision for service seeker flows, job seeker
+									onboarding, verification dashboards, and AI-powered job matching.
+								</p>
+							</div>
+						</div>
+						<!-- Decorative testimonial-style backgrounds (left + right) -->
+						<div class="product-effient21 fade-in"
+							style="position:absolute; left:8%; top:20px; transform:none; z-index:0; pointer-events:none; opacity:0.95;">
+							<img src="images/demo-img/testi-two-effient.png" alt="effient" />
+						</div>
+
+						<!-- (right decorative blob removed) -->
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<style>
+								/* Product preview carousel styles (local) */
+								.product-effient21 {
+									transition: opacity .6s ease;
+								}
+
+								.product-carousel-wrap {
+									position: relative;
+									padding: 40px 0;
+								}
+
+								.product-bg-blob {
+									position: absolute;
+									inset: -40% -10% auto auto;
+									width: 720px;
+									height: 720px;
+									background: radial-gradient(circle at 20% 20%, rgba(155, 123, 255, 0.14), transparent 30%), radial-gradient(circle at 80% 80%, rgba(255, 140, 0, 0.06), transparent 30%);
+									filter: blur(60px);
+									z-index: 0;
+									pointer-events: none;
+								}
+
+								.product-swiper {
+									position: relative;
+									z-index: 2;
+									padding: 30px 0;
+								}
+
+								.product-swiper .swiper-slide {
+									display: flex;
+									justify-content: center;
+								}
+
+								.mockup-card {
+									width: 320px;
+									height: 640px;
+									border-radius: 28px;
+									background: linear-gradient(180deg, #111217 0%, #16161b 100%);
+									box-shadow: 0 40px 80px rgba(11, 12, 18, 0.6);
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									overflow: hidden;
+									transform-style: preserve-3d;
+									transition: transform .45s cubic-bezier(.2, .9, .2, 1), box-shadow .35s;
+									cursor: pointer;
+								}
+
+								.mockup-screen {
+									width: 86%;
+									height: 86%;
+									border-radius: 14px;
+									overflow: hidden;
+									box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.28);
+								}
+
+								.mockup-screen img {
+									display: block;
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+								}
+
+								.mockup-caption {
+									position: absolute;
+									bottom: 18px;
+									left: 50%;
+									transform: translateX(-50%);
+									color: rgba(255, 255, 255, 0.9);
+									font-weight: 700;
+									background: linear-gradient(90deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
+									padding: 8px 14px;
+									border-radius: 999px;
+									font-size: 14px;
+									backdrop-filter: blur(4px);
+								}
+
+								@media (max-width: 991px) {
+									.mockup-card {
+										width: 260px;
+										height: 520px
+									}
+								}
+
+								@media (max-width: 640px) {
+									.mockup-card {
+										width: 220px;
+										height: 440px
+									}
+
+									.product-bg-blob {
+										display: none
+									}
+								}
+
+								@media (max-width: 480px) {
+									.product-effient21 {
+										display: none !important;
+									}
+								}
+							</style>
+
+							<div class="product-carousel-wrap">
+								<div class="product-bg-blob" aria-hidden="true"></div>
+								<div class="swiper product-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="mockup-card" data-title="User Onboarding"
+												data-full="images/demo-img/onboarding-figma.png">
+												<div class="mockup-screen"><img src="images/inner-img/on.jpg"
+														alt="Onboarding preview"></div>
+												<div class="mockup-caption">User Onboarding</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="mockup-card" data-title="Verification Process"
+												data-full="images/demo-img/verification-figma.png">
+												<div class="mockup-screen"><img src="images/inner-img/vv.jpg"
+														alt="Verification preview"></div>
+												<div class="mockup-caption">Verification</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="mockup-card" data-title="Job Seeker Preferences"
+												data-full="images/demo-img/preferences-figma.png">
+												<div class="mockup-screen"><img src="images/inner-img/pp.jpg"
+														alt="Preferences preview"></div>
+												<div class="mockup-caption">Preferences</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="mockup-card" data-title="Service Posting Flow"
+												data-full="images/demo-img/service-posting-figma.png">
+												<div class="mockup-screen"><img src="images/inner-img/pf.jpg"
+														alt="Posting preview"></div>
+												<div class="mockup-caption">Posting Flow</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="mockup-card" data-title="Admin Dashboard"
+												data-full="images/demo-img/admin-dashboard-figma.png">
+												<div class="mockup-screen"><img src="images/inner-img/da.jpg"
+														alt="Admin preview"></div>
+												<div class="mockup-caption">Admin Dashboard</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="mockup-card" data-title="Gig Acceptance"
+												data-full="images/demo-img/gig-acceptance-figma.png">
+												<div class="mockup-screen"><img src="images/inner-img/aaa.jpg"
+														alt="Gig preview"></div>
+												<div class="mockup-caption">Gig Acceptance</div>
+											</div>
+										</div>
+									</div>
+									<!-- Pagination + Navigation -->
+									<div class="swiper-pagination"></div>
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+								</div>
+							</div>
+
+							<!-- Lightbox modal -->
+							<div id="previewModal"
+								style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
+								<button id="previewClose"
+									style="position:absolute; top:22px; right:22px; background:transparent; border:none; color:#fff; font-size:28px;">&times;</button>
+								<div
+									style="max-width:1100px; width:92%; max-height:90%; overflow:auto; text-align:center;">
+									<h4 id="previewTitle" style="color:#fff; margin-bottom:14px;"></h4>
+									<img id="previewImage" src="" alt="preview"
+										style="width:100%; height:auto; border-radius:12px; box-shadow:0 40px 120px rgba(0,0,0,0.6);" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- More categories -->
+					<div class="col-12 mt-4">
+						<div class="text-center">
+							<h6 class="mb-2" style="color:#FF6B2C;">And many more…</h6>
+							<ul class="list-inline" style="font-size:1rem; color:#888;">
+								<li class="list-inline-item">Admin Dashboard</li>
+								<li class="list-inline-item">AI Matching</li>
+								<li class="list-inline-item">Mobile & Web Flows</li>
+								<li class="list-inline-item">Notifications</li>
+								<li class="list-inline-item">Profile Management</li>
+								<li class="list-inline-item">...and more</li>
 							</ul>
-							<div class="summary-saas-badge">
-								<div class="saas-cusor">
-									<span>AI-Powered Platform </span>
-								</div>
-								<div class="innovation-cusor">
-									<span>AI-Powered Platform</span>
-								</div>
-							</div>
-						</div>
-						<div class="summary-box-effient fade-in">
-							<img src="images/demo-img/summary-box-effient.png" alt="effient">
-						</div>
-            		</div>
-				</div>
-			</div>
-		</div>
-		<div class="about-effient-shape1 fade-in">
-			<img src="images/demo-img/about-four-shape1.png" alt="effient">
-		</div>
-		<div class="about-effient-shape2 fade-in">
-			<img src="images/demo-img/about-four-shape2.png" alt="effient2">
-		</div>
-	</section>
-	<!--End about Section four -->
-
-
-
-
-	<!--integration Section two -->
-	<section class="integration-section-two">
-		<div class="auto-container">
-			<div class="row">	
-				<div class="col-xl-12">
-					<div class="sec-title text-center">
-						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Technology Stack</h5>
-						</div>
-						<div class="section-title">
-							<h1 class="title split-text">Powered by Industry-Leading Technology</h1>
-						</div>
-						<div class="section-desc">
-							<p class="text-anime-3">Built on scalable cloud infrastructure and modern AI frameworks to ensure reliability, security, and intelligent matching capabilities.
-							</p>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="integration-thumb fade-in">
-						<figure class="reveal"><img src="images/demo-img/integration-thumb21.png" alt="thumb"></figure>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="integration-effient21 fade-in">
-			<img src="images/demo-img/about-effient21.png" alt="about effient">
-		</div>
-		<div id="js-particles-testimonial"></div>
-	</section>
-	<!--End integration Section two -->
-
-
-	<!--Who Will Use eStaff Section -->
-	<section class="about-section-two binifits-marquee-area-one section-bg-gradient" style="padding: 100px 0; background-image: url(images/demo-img/binifits-gradient.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
-		<div class="auto-container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="sec-title text-center">
-						<div class="section-sub-title">
-							<h5 class="sub-title split_chars">Target Users</h5>
-						</div>
-						<div class="section-title">
-							<h1 class="title split-text">Who Will Use eStaff</h1>
-						</div>
-						<div class="section-desc">
-							<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">eStaff serves three major user groups: B2C Users (Households), Organizations, and Job Seekers</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row" style="margin-top: 50px;">
-				<div class="col-xl-4 col-lg-4 col-md-6">
-					<div class="core-service-card" style="min-height: 380px;">
-						<div class="service-card-icon">
-							<i class="fa-solid fa-house"></i>
-						</div>
-						<h3>🏠 B2C Users (Households)</h3>
-						<p>Households, hosts, and families who need reliable on-demand help.</p>
-						<ul class="service-list">
-							<li><i class="fa-solid fa-check"></i> Households needing help</li>
-							<li><i class="fa-solid fa-check"></i> Airbnb Owners & Rental Hosts</li>
-							<li><i class="fa-solid fa-check"></i> Students, New Parents & Elderly Care Families</li>
-							<li><i class="fa-solid fa-check"></i> Small Businesses</li>
-						</ul>
-						<a href="contact.html" class="service-card-btn">Learn More <i class="fa-light fa-arrow-right"></i></a>
-					</div>
-				</div>
-
-				<div class="col-xl-4 col-lg-4 col-md-6">
-					<div class="core-service-card" style="min-height: 380px;">
-						<div class="service-card-icon">
-							<i class="fa-solid fa-building"></i>
-						</div>
-						<h3>🏢 B2B Organizations</h3>
-						<p>Care homes, cleaning companies, agencies, and corporate clients.</p>
-						<ul class="service-list">
-							<li><i class="fa-solid fa-check"></i> Care Homes & Assisted Living</li>
-							<li><i class="fa-solid fa-check"></i> Cleaning & Home Services Companies</li>
-							<li><i class="fa-solid fa-check"></i> Childcare Centres & Pet Care Agencies</li>
-							<li><i class="fa-solid fa-check"></i> Corporate & Tech Service Partners</li>
-						</ul>
-						<a href="contact.html" class="service-card-btn">Partner With Us <i class="fa-light fa-arrow-right"></i></a>
-					</div>
-				</div>
-
-				<div class="col-xl-4 col-lg-4 col-md-6">
-					<div class="core-service-card" style="min-height: 380px;">
-						<div class="service-card-icon">
-							<i class="fa-solid fa-user-check"></i>
-						</div>
-						<h3>👷 Job Seekers</h3>
-						<p>Cleaners, caregivers, babysitters, and general labourers seeking gigs.</p>
-						<ul class="service-list">
-							<li><i class="fa-solid fa-check"></i> Cleaners & Housekeepers</li>
-							<li><i class="fa-solid fa-check"></i> Babysitters, Nannies & PSWs</li>
-							<li><i class="fa-solid fa-check"></i> Pet Sitters, Tech Helpers & Labour Roles</li>
-							<li><i class="fa-solid fa-check"></i> Verified profiles & onboarding</li>
-						</ul>
-						<a href="contact.html" class="service-card-btn">Get Started <i class="fa-light fa-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--End Who Will Use eStaff Section -->
-
-	<!-- Product Preview – Early UI/UX Designs (Figma Screens) -->
-	<section class="product-preview-section binifits-marquee-area-one pt-80 pb-80 section-bg-gradient" style="position:relative; background-image: url(images/demo-img/binifits-gradient.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
-		<div class="auto-container">
-			<div class="row justify-content-center mb-4">
-				<div class="col-lg-8 text-center">
-					<div class="section-title">
-						<h2 class="title split-text" style="color:#ffffff;">Product Preview – Early UI/UX Designs</h2>
-						<p class="mt-3" style="font-size:1.15rem; color:#ffffff;">
-							A sneak peek into the eStaff interface currently in design and development. These early Figma screens showcase our vision for service seeker flows, job seeker onboarding, verification dashboards, and AI-powered job matching.
-						</p>
-					</div>
-				</div>
-				<!-- Decorative testimonial-style backgrounds (left + right) -->
-				<div class="product-effient21 fade-in" style="position:absolute; left:8%; top:20px; transform:none; z-index:0; pointer-events:none; opacity:0.95;">
-					<img src="images/demo-img/testi-two-effient.png" alt="effient" />
-				</div>
-
-				<!-- (right decorative blob removed) -->
-			</div>
-			<div class="row">
-				<div class="col-12">
-					<style>
-						/* Product preview carousel styles (local) */
-						.product-effient21 { transition: opacity .6s ease; }
-						.product-carousel-wrap { position: relative; padding: 40px 0; }
-						.product-bg-blob { position: absolute; inset: -40% -10% auto auto; width: 720px; height:720px; background: radial-gradient(circle at 20% 20%, rgba(155,123,255,0.14), transparent 30%), radial-gradient(circle at 80% 80%, rgba(255,140,0,0.06), transparent 30%); filter: blur(60px); z-index:0; pointer-events:none; }
-						.product-swiper { position: relative; z-index:2; padding: 30px 0; }
-						.product-swiper .swiper-slide { display:flex; justify-content:center; }
-						.mockup-card { width: 320px; height: 640px; border-radius: 28px; background: linear-gradient(180deg,#111217 0%, #16161b 100%); box-shadow: 0 40px 80px rgba(11,12,18,0.6); display:flex; align-items:center; justify-content:center; overflow:hidden; transform-style:preserve-3d; transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .35s; cursor: pointer; }
-						.mockup-screen { width: 86%; height: 86%; border-radius: 14px; overflow:hidden; box-shadow: inset 0 0 40px rgba(0,0,0,0.28); }
-						.mockup-screen img { display:block; width:100%; height:100%; object-fit:cover; }
-						.mockup-caption { position: absolute; bottom: 18px; left:50%; transform:translateX(-50%); color: rgba(255,255,255,0.9); font-weight:700; background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)); padding:8px 14px; border-radius: 999px; font-size:14px; backdrop-filter: blur(4px); }
-						@media (max-width: 991px) { .mockup-card { width: 260px; height:520px } }
-						@media (max-width: 640px) { .mockup-card { width: 220px; height:440px } .product-bg-blob{display:none} }
-						@media (max-width: 480px) { .product-effient21 { display:none !important; } }
-					</style>
-
-					<div class="product-carousel-wrap">
-						<div class="product-bg-blob" aria-hidden="true"></div>
-						<div class="swiper product-swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="mockup-card" data-title="User Onboarding" data-full="images/demo-img/onboarding-figma.png">
-										<div class="mockup-screen"><img src="images/inner-img/on.jpg" alt="Onboarding preview"></div>
-										<div class="mockup-caption">User Onboarding</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="mockup-card" data-title="Verification Process" data-full="images/demo-img/verification-figma.png">
-										<div class="mockup-screen"><img src="images/inner-img/vv.jpg" alt="Verification preview"></div>
-										<div class="mockup-caption">Verification</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="mockup-card" data-title="Job Seeker Preferences" data-full="images/demo-img/preferences-figma.png">
-										<div class="mockup-screen"><img src="images/inner-img/pp.jpg" alt="Preferences preview"></div>
-										<div class="mockup-caption">Preferences</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="mockup-card" data-title="Service Posting Flow" data-full="images/demo-img/service-posting-figma.png">
-										<div class="mockup-screen"><img src="images/inner-img/pf.jpg" alt="Posting preview"></div>
-										<div class="mockup-caption">Posting Flow</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="mockup-card" data-title="Admin Dashboard" data-full="images/demo-img/admin-dashboard-figma.png">
-										<div class="mockup-screen"><img src="images/inner-img/da.jpg" alt="Admin preview"></div>
-										<div class="mockup-caption">Admin Dashboard</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="mockup-card" data-title="Gig Acceptance" data-full="images/demo-img/gig-acceptance-figma.png">
-										<div class="mockup-screen"><img src="images/inner-img/aaa.jpg" alt="Gig preview"></div>
-										<div class="mockup-caption">Gig Acceptance</div>
-									</div>
-								</div>
-							</div>
-							<!-- Pagination + Navigation -->
-							<div class="swiper-pagination"></div>
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div>
-					</div>
-
-					<!-- Lightbox modal -->
-					<div id="previewModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
-						<button id="previewClose" style="position:absolute; top:22px; right:22px; background:transparent; border:none; color:#fff; font-size:28px;">&times;</button>
-						<div style="max-width:1100px; width:92%; max-height:90%; overflow:auto; text-align:center;">
-							<h4 id="previewTitle" style="color:#fff; margin-bottom:14px;"></h4>
-							<img id="previewImage" src="" alt="preview" style="width:100%; height:auto; border-radius:12px; box-shadow:0 40px 120px rgba(0,0,0,0.6);" />
-						</div>
-					</div>
-				</div>
-			</div>
-				<!-- More categories -->
-				<div class="col-12 mt-4">
-					<div class="text-center">
-						<h6 class="mb-2" style="color:#FF6B2C;">And many more…</h6>
-						<ul class="list-inline" style="font-size:1rem; color:#888;">
-							<li class="list-inline-item">Admin Dashboard</li>
-							<li class="list-inline-item">AI Matching</li>
-							<li class="list-inline-item">Mobile & Web Flows</li>
-							<li class="list-inline-item">Notifications</li>
-							<li class="list-inline-item">Profile Management</li>
-							<li class="list-inline-item">...and more</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+	</div>
 	</section>
 
 
 
 	<!--Project Stage & Timeline Section -->
-	<section class="about-section-four binifits-marquee-area-one section-bg-gradient" style="padding: 100px 0; background-image: url(images/demo-img/binifits-gradient.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
+	<section class="about-section-four binifits-marquee-area-one"
+		style="padding: 100px 0; background-image: url(images/demo-img/binifits-marquee-bg1.png);">
 		<div class="auto-container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -2007,49 +2261,61 @@
 							<h1 class="title split-text">Project Stage & Timeline</h1>
 						</div>
 						<div class="section-desc">
-							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto;">eStaff is currently in the design & development phase. We are actively building the platform architecture, workflows, admin dashboards, and core backend logic using Firebase, Firestore, and GCS.</p>
+							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto;">eStaff is currently in the
+								design & development phase. We are actively building the platform architecture,
+								workflows, admin dashboards, and core backend logic using Firebase, Firestore, and GCS.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row" style="margin-top: 50px;">
 				<div class="col-xl-3 col-lg-6 col-md-6">
-					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #6766FF;">
+					<div class="single-workflow-box"
+						style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #6766FF;">
 						<div class="workflow-content">
 							<div style="font-size: 48px; margin-bottom: 15px;">✅</div>
 							<h3 style="color: #6766FF; margin-bottom: 15px;">Current Phase</h3>
-							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Design & Development</h4>
-							<p style="font-size: 14px; color: #666;">Platform architecture, UI/UX design, and core workflows</p>
+							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Design & Development
+							</h4>
+							<p style="font-size: 14px; color: #666;">Platform architecture, UI/UX design, and core
+								workflows</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-6 col-md-6">
-					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #FF6B2C;">
+					<div class="single-workflow-box"
+						style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #FF6B2C;">
 						<div class="workflow-content">
 							<div style="font-size: 48px; margin-bottom: 15px;">🔧</div>
 							<h3 style="color: #FF6B2C; margin-bottom: 15px;">Next Phase</h3>
 							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Backend Development</h4>
-							<p style="font-size: 14px; color: #666;">API, authentication,database integration, and verification workflows</p>
+							<p style="font-size: 14px; color: #666;">API, authentication,database integration, and
+								verification workflows</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-6 col-md-6">
-					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #28a745;">
+					<div class="single-workflow-box"
+						style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #28a745;">
 						<div class="workflow-content">
 							<div style="font-size: 48px; margin-bottom: 15px;">🚀</div>
 							<h3 style="color: #28a745; margin-bottom: 15px;">Future Phase</h3>
 							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">Pilot Launch</h4>
-							<p style="font-size: 14px; color: #666;">Beta testing in Ontario with select users and partners</p>
+							<p style="font-size: 14px; color: #666;">Beta testing in Ontario with select users and
+								partners</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-6 col-md-6">
-					<div class="single-workflow-box" style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #17a2b8;">
+					<div class="single-workflow-box"
+						style="background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-left: 4px solid #17a2b8;">
 						<div class="workflow-content">
 							<div style="font-size: 48px; margin-bottom: 15px;">🌍</div>
 							<h3 style="color: #17a2b8; margin-bottom: 15px;">Long-term Goal</h3>
 							<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">National Expansion</h4>
-							<p style="font-size: 14px; color: #666;">Expand across Canada and build Africa-to-Canada marketplace</p>
+							<p style="font-size: 14px; color: #666;">Expand across Canada and build Africa-to-Canada
+								marketplace</p>
 						</div>
 					</div>
 				</div>
@@ -2073,8 +2339,12 @@
 							<h1 class="title split-text">Building eStaff</h1>
 						</div>
 						<div class="section-desc" style="margin-top: 30px;">
-							<p class="text-anime-3" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: #ffffff;">
-								At Vizra we build practical technology that makes finding and managing on‑demand help simple and reliable. eStaff focuses on easy scheduling, clear profiles, secure verification, and fair payments so households, small organizations, and service workers can transact with confidence.
+							<p class="text-anime-3"
+								style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: #ffffff;">
+								At Vizra we build practical technology that makes finding and managing on‑demand help
+								simple and reliable. eStaff focuses on easy scheduling, clear profiles, secure
+								verification, and fair payments so households, small organizations, and service workers
+								can transact with confidence.
 							</p>
 						</div>
 					</div>
@@ -2088,7 +2358,8 @@
 								<img src="images/demo-img/binifits-icon21.png" alt="icon">
 							</div>
 							<h4>Practical Tools</h4>
-							<p>Easy, reliable tools for scheduling, payments, and shift management that simplify daily life for families and service providers.</p>
+							<p>Easy, reliable tools for scheduling, payments, and shift management that simplify daily
+								life for families and service providers.</p>
 						</div>
 					</div>
 				</div>
@@ -2099,7 +2370,8 @@
 								<img src="images/demo-img/binifits-icon23.png" alt="icon">
 							</div>
 							<h4>Smart Matching</h4>
-							<p>Intelligent but transparent matching and filtering to connect requests with the most relevant, available workers.</p>
+							<p>Intelligent but transparent matching and filtering to connect requests with the most
+								relevant, available workers.</p>
 						</div>
 					</div>
 				</div>
@@ -2110,7 +2382,8 @@
 								<img src="images/demo-img/binifits-icon22.png" alt="icon">
 							</div>
 							<h4>Local Opportunity</h4>
-							<p>Create flexible earning opportunities that support local workers and small service businesses.</p>
+							<p>Create flexible earning opportunities that support local workers and small service
+								businesses.</p>
 						</div>
 					</div>
 				</div>
@@ -2121,7 +2394,8 @@
 								<img src="images/demo-img/binifits-icon23.png" alt="icon">
 							</div>
 							<h4>Market Access</h4>
-							<p>Help local workers and small providers reach more clients through a fair, searchable marketplace.</p>
+							<p>Help local workers and small providers reach more clients through a fair, searchable
+								marketplace.</p>
 						</div>
 					</div>
 				</div>
@@ -2132,7 +2406,8 @@
 								<img src="images/demo-img/binifits-icon24.png" alt="icon">
 							</div>
 							<h4>Scalable Innovation</h4>
-							<p>Build systems that can grow from pilot deployments to wider regions while keeping usability and cost in mind.</p>
+							<p>Build systems that can grow from pilot deployments to wider regions while keeping
+								usability and cost in mind.</p>
 						</div>
 					</div>
 				</div>
@@ -2143,7 +2418,8 @@
 								<img src="images/demo-img/binifits-icon25.png" alt="icon">
 							</div>
 							<h4>Trust & Safety</h4>
-							<p>Practical verification, clear ratings, and simple dispute workflows to protect both families and workers.</p>
+							<p>Practical verification, clear ratings, and simple dispute workflows to protect both
+								families and workers.</p>
 						</div>
 					</div>
 				</div>
@@ -2159,7 +2435,7 @@
 	<!--How to Participate Section -->
 	<section class="pricing-plan-section-two">
 		<div class="auto-container">
-			<div class="row">	
+			<div class="row">
 				<div class="col-xl-12">
 					<div class="sec-title">
 						<div class="section-sub-title">
@@ -2170,7 +2446,9 @@
 							<h1 class="title split-text">Can Participate</h1>
 						</div>
 						<div class="section-desc" style="margin-top: 20px;">
-							<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">Join us in building the future of gig work. Whether you're an investor looking to support innovative technology or a volunteer eager to shape the platform, there's a role for you.</p>
+							<p class="text-anime-3" style="max-width: 800px; margin: 0 auto;">Join us in building the
+								future of gig work. Whether you're an investor looking to support innovative technology
+								or a volunteer eager to shape the platform, there's a role for you.</p>
 						</div>
 					</div>
 				</div>
@@ -2178,44 +2456,56 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="tab">
-						<ul class="tabs">				
-					
+						<ul class="tabs">
+
 						</ul>
-						 <!-- / tabs -->
+						<!-- / tabs -->
 						<div class="tab_content">
 							<div class="tabs_item">
 								<div class="row">
 									<div class="col-xl-4 col-lg-6 col-md-6">
 										<div class="pricing-single-item" style="padding: 40px 30px;">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Partners</h3>
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png"
+														alt="icon"></span>For Partners</h3>
 											<div class="pricing-money">
-												<h3 style="font-size: 24px; color: #6766FF;">Partnership Opportunities</h3>
+												<h3 style="font-size: 24px; color: #6766FF;">Partnership Opportunities
+												</h3>
 											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
 													<h2>How We Partner</h2>
 												</div>
 												<div class="pricing-feature">
-<ul>
-            <li><img src="images/demo-img/check.png" alt="check">Work with care homes, cleaning agencies & staffing firms</li>
-            <li><img src="images/demo-img/check.png" alt="check">Service provider onboarding & workforce expansion</li>
-            <li><img src="images/demo-img/check.png" alt="check">Pilot programs for new markets and community rollouts</li>
-            <li><img src="images/demo-img/check.png" alt="check">Referral & channel partnership programs</li>
-            <li><img src="images/demo-img/check.png" alt="check">Co-marketing & joint innovation opportunities</li>
-            <li><img src="images/demo-img/check.png" alt="check">Access to anonymized insights & workforce analytics</li>
-        </ul>
+													<ul>
+														<li><img src="images/demo-img/check.png" alt="check">Work with
+															care homes, cleaning agencies & staffing firms</li>
+														<li><img src="images/demo-img/check.png" alt="check">Service
+															provider onboarding & workforce expansion</li>
+														<li><img src="images/demo-img/check.png" alt="check">Pilot
+															programs for new markets and community rollouts</li>
+														<li><img src="images/demo-img/check.png" alt="check">Referral &
+															channel partnership programs</li>
+														<li><img src="images/demo-img/check.png"
+																alt="check">Co-marketing & joint innovation
+															opportunities</li>
+														<li><img src="images/demo-img/check.png" alt="check">Access to
+															anonymized insights & workforce analytics</li>
+													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn style_one">
-												<a href="contact.html">Partner With Us<i class="fa-light fa-arrow-right"></i></a>
+												<a href="contact.html">Partner With Us<i
+														class="fa-light fa-arrow-right"></i></a>
 											</div>
 										</div>
 									</div>
 									<div class="col-xl-4 col-lg-6 col-md-6">
-										<div class="pricing-single-item active" style="padding: 40px 30px;">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Investors</h3>
+										<div class="pricing-single-item" style="padding: 40px 30px;">
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png"
+														alt="icon"></span>For Investors</h3>
 											<div class="pricing-money">
-												<h3 style="font-size: 24px; color: #6766FF;">Investment Opportunities</h3>
+												<h3 style="font-size: 24px; color: #6766FF;">Investment Opportunities
+												</h3>
 											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
@@ -2223,23 +2513,36 @@
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Angel Investors</strong> – Seed funding, early mentorship, and network support.</li>
-														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Venture Capital</strong> – Capital for rapid scaling, product expansion, and growth.</li>
-														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Strategic Partners</strong> – Distribution, integrations, and co-marketing alliances.</li>
-														<li><img src="images/demo-img/check.png" alt="check"> <strong style="color:#FF6B2C;">Crowdfunding</strong> – Community-driven support through retail and reward-based models.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong
+																style="color:#6766FF;">Angel Investors</strong> – Seed
+															funding, early mentorship, and network support.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong
+																style="color:#6766FF;">Venture Capital</strong> –
+															Capital for rapid scaling, product expansion, and growth.
+														</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong
+																style="color:#6766FF;">Strategic Partners</strong> –
+															Distribution, integrations, and co-marketing alliances.</li>
+														<li><img src="images/demo-img/check.png" alt="check"> <strong
+																style="color:#6766FF;">Crowdfunding</strong> –
+															Community-driven support through retail and reward-based
+															models.</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn">
-												<a href="mailto:getvizra@gmail.com">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
-											</div>
+												<a href="mailto:getvizra@gmail.com">Request Investor Deck<i
+														class="fa-light fa-arrow-right"></i></a>
 											</div>
 										</div>
+									</div>
 									<div class="col-xl-4 col-lg-6 col-md-6">
 										<div class="pricing-single-item">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>For Volunteers</h3>
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png"
+														alt="icon"></span>For Volunteers</h3>
 											<div class="pricing-money">
-												<h3 style="font-size: 24px; color:  #6766FF;">Volunteer Opportunities</h3>
+												<h3 style="font-size: 24px; color:  #6766FF;">Volunteer Opportunities
+												</h3>
 											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
@@ -2247,119 +2550,151 @@
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														 <li><img src="images/demo-img/check.png" alt="check">
-                Contribute your skills — developers, designers, testers, marketers, PSWs, and community members.</li>
+														<li><img src="images/demo-img/check.png" alt="check">
+															Contribute your skills — developers, designers, testers,
+															marketers, PSWs, and community members.</li>
 
-            <li><img src="images/demo-img/check.png" alt="check">
-                Help test early versions of the platform and new features.</li>
+														<li><img src="images/demo-img/check.png" alt="check">
+															Help test early versions of the platform and new features.
+														</li>
 
-            <li><img src="images/demo-img/check.png" alt="check">
-                Provide practical feedback from your professional experience.</li>
+														<li><img src="images/demo-img/check.png" alt="check">
+															Provide practical feedback from your professional
+															experience.</li>
 
-            <li><img src="images/demo-img/check.png" alt="check">
-                Support onboarding flows and real-world user scenarios.</li>
+														<li><img src="images/demo-img/check.png" alt="check">
+															Support onboarding flows and real-world user scenarios.</li>
 
-            <li><img src="images/demo-img/check.png" alt="check">
-                Join focus groups, surveys, and community discussions.</li>
+														<li><img src="images/demo-img/check.png" alt="check">
+															Join focus groups, surveys, and community discussions.</li>
 
-            <li><img src="images/demo-img/check.png" alt="check">
-                Become part of our founding community shaping eStaff’s future.</li>
+														<li><img src="images/demo-img/check.png" alt="check">
+															Become part of our founding community shaping eStaff’s
+															future.</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn style_one">
-												<a href="volunteer.html">Join As Volunteer<i class="fa-light fa-arrow-right"></i></a>
-											</div>
+												<a href="volunteer.html">Join As Volunteer<i
+														class="fa-light fa-arrow-right"></i></a>
 											</div>
 										</div>
+									</div>
 								</div>
-							</div> 
-							<!--tabs_item -->						
+							</div>
+							<!--tabs_item -->
 							<div class="tabs_item">
 								<div class="row">
 									<div class="col-xl-4 col-lg-6 col-md-6">
 										<div class="pricing-single-item">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>Basic</h3>
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png"
+														alt="icon"></span>Basic</h3>
 											<div class="pricing-money">
-												<h3><span class="dollar">$</span>49<span class="yearly">/yearly</span></h3>
-											</div>						
+												<h3><span class="dollar">$</span>49<span class="yearly">/yearly</span>
+												</h3>
+											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
 													<h2>Features</h2>
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">60+ Premium features</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Unlimited supports</li>	
-														<li><img src="images/demo-img/check.png" alt="check">90+ Expert members</li>
-														<li><img src="images/demo-img/check.png" alt="check">Data insights</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Free Hosting plans</li>
-														<li><img src="images/demo-img/check.png" alt="check">Lifetime updates</li>								
+														<li><img src="images/demo-img/check.png" alt="check">60+ Premium
+															features</li>
+														<li><img src="images/demo-img/check.png" alt="check">Unlimited
+															supports</li>
+														<li><img src="images/demo-img/check.png" alt="check">90+ Expert
+															members</li>
+														<li><img src="images/demo-img/check.png" alt="check">Data
+															insights</li>
+														<li><img src="images/demo-img/check.png" alt="check">Free
+															Hosting plans</li>
+														<li><img src="images/demo-img/check.png" alt="check">Lifetime
+															updates</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn style_one">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
+												<a href="pricing.html">Choose Plans<i
+														class="fa-light fa-arrow-right"></i></a>
 											</div>
 										</div>
 									</div>
 									<div class="col-xl-4 col-lg-6 col-md-6">
 										<div class="pricing-single-item active">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>Standard</h3>
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png"
+														alt="icon"></span>Standard</h3>
 											<div class="pricing-money">
-												<h3><span class="dollar">$</span>79<span class="yearly">/yearly</span></h3>
-											</div>						
+												<h3><span class="dollar">$</span>79<span class="yearly">/yearly</span>
+												</h3>
+											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
 													<h2>Features</h2>
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">60+ Premium features</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Unlimited supports</li>	
-														<li><img src="images/demo-img/check.png" alt="check">90+ Expert members</li>
-														<li><img src="images/demo-img/check.png" alt="check">Data insights</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Free Hosting plans</li>
-														<li><img src="images/demo-img/check.png" alt="check">Lifetime updates</li>								
+														<li><img src="images/demo-img/check.png" alt="check">60+ Premium
+															features</li>
+														<li><img src="images/demo-img/check.png" alt="check">Unlimited
+															supports</li>
+														<li><img src="images/demo-img/check.png" alt="check">90+ Expert
+															members</li>
+														<li><img src="images/demo-img/check.png" alt="check">Data
+															insights</li>
+														<li><img src="images/demo-img/check.png" alt="check">Free
+															Hosting plans</li>
+														<li><img src="images/demo-img/check.png" alt="check">Lifetime
+															updates</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn style_one">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
+												<a href="pricing.html">Choose Plans<i
+														class="fa-light fa-arrow-right"></i></a>
 											</div>
 										</div>
 									</div>
 									<div class="col-xl-4 col-lg-6 col-md-6">
 										<div class="pricing-single-item">
-											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png" alt="icon"></span>Business</h3>
+											<h3 class="pricing-plan"><span><img src="images/demo-img/pricing-icon.png"
+														alt="icon"></span>Business</h3>
 											<div class="pricing-money">
-												<h3><span class="dollar">$</span>99<span class="yearly">/yearly</span></h3>
-											</div>						
+												<h3><span class="dollar">$</span>99<span class="yearly">/yearly</span>
+												</h3>
+											</div>
 											<div class="pricing-body">
 												<div class="pricing-title">
 													<h2>Features</h2>
 												</div>
 												<div class="pricing-feature">
 													<ul>
-														<li><img src="images/demo-img/check.png" alt="check">60+ Premium features</li>												
-														<li><img src="images/demo-img/check.png" alt="check">Unlimited supports</li>	
-														<li><img src="images/demo-img/check.png" alt="check">90+ Expert members</li>
-														<li><img src="images/demo-img/check.png" alt="check">Data insights</li>		
-														<li><img src="images/demo-img/check.png" alt="check">Free Hosting plans</li>
-														<li><img src="images/demo-img/check.png" alt="check">Lifetime updates</li>								
+														<li><img src="images/demo-img/check.png" alt="check">60+ Premium
+															features</li>
+														<li><img src="images/demo-img/check.png" alt="check">Unlimited
+															supports</li>
+														<li><img src="images/demo-img/check.png" alt="check">90+ Expert
+															members</li>
+														<li><img src="images/demo-img/check.png" alt="check">Data
+															insights</li>
+														<li><img src="images/demo-img/check.png" alt="check">Free
+															Hosting plans</li>
+														<li><img src="images/demo-img/check.png" alt="check">Lifetime
+															updates</li>
 													</ul>
 												</div>
 											</div>
 											<div class="pricing-btn style_one">
-												<a href="pricing.html">Choose Plans<i class="fa-light fa-arrow-right"></i></a>
+												<a href="pricing.html">Choose Plans<i
+														class="fa-light fa-arrow-right"></i></a>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div> 
+							</div>
 						</div>
-					</div>				
-				</div>							
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="pricing-effient21 fade-in">
@@ -2375,24 +2710,31 @@
 	<!--call to action Section one -->
 	<section class="call-to-action-one">
 		<div class="auto-container">
-			<div class="call-container" >
-				<div class="row call-to-wrapper" style="background-image: url(images/demo-img/call-to-bg.png);">
+			<div class="call-container">
+				<div class="row call-to-wrapper" style="background-image: url(images/inner-img/ZG.avif);">
 					<div class="col-xl-12">
 						<div class="call-to-content">
 							<div class="call-to-icon">
 								<img src="images/demo-img/call-to-icon.png" alt="icon">
 							</div>
 							<h2 class="call-title">eStaff — Smarter Gig Work Powered by AI</h2>
-							<p class="call-disc">Currently in development. Join us as we build the future of work. Be part of the founding community of investors, volunteers, and early adopters shaping the platform.</p>
-							<div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-								<a class="call-to-btn" href="contact.html" style="margin: 0;">Request Investor Deck<i class="fa-light fa-arrow-right"></i></a>
-								<a class="call-to-btn" href="volunteer.html" style="margin: 0; background: #FF6B2C;">Join as Volunteer<i class="fa-light fa-arrow-right"></i></a>
-								<a class="call-to-btn" href="contact.html" style="margin: 0; background: #28a745;">Contact Vizra Team<i class="fa-light fa-arrow-right"></i></a>
+							<p class="call-disc">Currently in development. Join us as we build the future of work. Be
+								part of the founding community of investors, volunteers, and early adopters shaping the
+								platform.</p>
+							<div
+								style="margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+								<a class="call-to-btn" href="contact.html" style="margin: 0;">Request Investor Deck<i
+										class="fa-light fa-arrow-right"></i></a>
+								<a class="call-to-btn" href="volunteer.html"
+									style="margin: 0; background: #FF6B2C;">Join as Volunteer<i
+										class="fa-light fa-arrow-right"></i></a>
+								<a class="call-to-btn" href="contact.html" style="margin: 0;">Contact Vizra Team<i
+										class="fa-light fa-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="cta-particles"></div>	
+				<div id="cta-particles"></div>
 			</div>
 		</div>
 		<div class="call-to-effient fade-in">
@@ -2406,22 +2748,25 @@
 	</main>
 
 
-
+	<!-- Reusable footer partial for Vizra - generated from index.html -->
 	<!-- Main Footer -->
-	<footer class="main-footer-one four" style="background-image: url(images/demo-img/footer-bg.png); background-repeat: no-repeat;">
+	<footer class="main-footer-one four"
+		style="background-image: url(images/demo-img/footer-bg.png); background-repeat: no-repeat;">
 		<div class="auto-container">
 			<div class="row">
 				<!--Footer Column-->
 				<div class="col-xl-3 col-lg-3 col-md-6">
-				<div class="footer-widget-content social">
-					<div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo" ></a></div>
-					<div class="footer-desc">Empowering startups with innovative tech solutions<br> and AI-powered gig connections</div>
-					<p class="footer-contact-small">Vizra Tech Inc. — Ontario, Canada<br>
-					<a href="mailto:getvizra@gmail.com">getvizra@gmail.com</a></p>
-					<div class="footer-btn">
-						<a href="contact.html">Get Started <i class="fa-light fa-arrow-right"></i></a>
+					<div class="footer-widget-content social">
+						<div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+						<div class="footer-desc">Empowering startups with innovative tech solutions<br> and AI-powered
+							gig connections</div>
+						<p class="footer-contact-small">Vizra Tech Inc. — Ontario, Canada<br>
+							<a href="mailto:getvizra@gmail.com">getvizra@gmail.com</a>
+						</p>
+						<div class="footer-btn">
+							<a href="contact.html">Get Started <i class="fa-light fa-arrow-right"></i></a>
+						</div>
 					</div>
-				</div>
 				</div>
 
 				<!--Footer Column: COMPANY / PRODUCTS / QUICK LINKS (combined) -->
@@ -2430,11 +2775,11 @@
 						<div class="footer-columns-row fancy">
 							<div class="footer-col">
 								<h3 class="footer-title small purple">COMPANY</h3>
-									<ul class="footer-menu">
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="about.html#vizra-team">Our Team</a></li>
-										<li><a href="service.html">Services</a></li>
-									</ul>
+								<ul class="footer-menu">
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="about.html#vizra-team">Our Team</a></li>
+									<li><a href="service.html">Services</a></li>
+								</ul>
 							</div>
 
 							<div class="footer-col">
@@ -2459,21 +2804,49 @@
 				</div>
 
 				<!--Footer Column-->
-				<div class="col-xl-4 col-lg-4 col-md-6">
-					<div class="footer-widget-content contact">
-						<h3 class="footer-title">Newsletter</h3>
+				<div class="col-xl-4 col-lg-4 col-md-6" style="display: flex; justify-content: center;">
+					<div class="footer-widget-content contact"
+						style="padding: 35px 10px; max-width: 700px; width: 100%; margin-top: -80px;">
+						<h3 class="footer-title" style="font-size: 32px; margin-bottom: 25px; text-align: center;">
+							Newsletter</h3>
 						<div class="footer-content">
-							<div class="newsletter">Subscribe to get the latest news on<br>
+							<div class="newsletter"
+								style="font-size: 16px; margin-bottom: 25px; line-height: 1.6; text-align: center;">
+								Subscribe to get the latest news on<br>
 								our gig platform and tech services</div>
-								<form id="newsletterForm" action="https://formspree.io/f/mrbnlzeo" method="POST">
-									<div class="subscribe-box">
-										<input type="email" name="Email" placeholder="Email" required="">
-										<button type="submit"><span><i class="fa-solid fa-location-arrow"></i></span></button>
-									</div>
-								</form>
-								<div id="newsletterSuccess" class="newsletter-success" style="display:none;">
-									<i class="fa-solid fa-check-circle"></i> Subscribed!
+							<form id="newsletterForm" action="https://formspree.io/f/mrbnlzeo" method="POST">
+								<div class="subscribe-box">
+									<input type="email" name="Email" placeholder="Email" required="">
+									<button type="submit"><span><i
+												class="fa-solid fa-location-arrow"></i></span></button>
 								</div>
+							</form>
+							<div id="newsletterSuccess" class="newsletter-success" style="display:none;">
+								<i class="fa-solid fa-check-circle"></i> Subscribed!
+							</div>
+
+							<!-- Social Media Icons -->
+							<div
+								style="display: flex; gap: 12px; justify-content: center; margin-top: 15px; margin-bottom: -5px;">
+								<a href="mailto:getvizra@gmail.com"
+									style="width: 35px; height: 35px; background: rgba(103, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 14px; text-decoration: none; transition: all 0.3s ease;"
+									onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.transform='translateY(-2px)';"
+									onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.transform='translateY(0)';">
+									<i class="fa-solid fa-envelope"></i>
+								</a>
+								<a href="https://www.linkedin.com/in/vizra-co-689767399/" target="_blank"
+									style="width: 35px; height: 35px; background: rgba(103, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 14px; text-decoration: none; transition: all 0.3s ease;"
+									onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.transform='translateY(-2px)';"
+									onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.transform='translateY(0)';">
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+								<a href="https://github.com/VivianAniebonam" target="_blank"
+									style="width: 35px; height: 35px; background: rgba(103, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6766FF; font-size: 14px; text-decoration: none; transition: all 0.3s ease;"
+									onmouseover="this.style.background='#6766FF'; this.style.color='white'; this.style.transform='translateY(-2px)';"
+									onmouseout="this.style.background='rgba(103, 102, 255, 0.1)'; this.style.color='#6766FF'; this.style.transform='translateY(0)';">
+									<i class="fa-brands fa-github"></i>
+								</a>
+							</div>
 							<div class="footer-line1">
 								<img src="images/demo-img/footer-line1.png" alt="line">
 							</div>
@@ -2496,244 +2869,554 @@
 					<div class="row">
 						<div class="copyright-text">&copy; 2025 Vizra Tech Inc. All Rights Reserved.
 						</div>
-			</div>
-		</div>
-		<div id="js-particles"></div>
+					</div>
+				</div>
+				<div id="js-particles"></div>
 	</footer>
 	<!--End Main Footer -->
 
 
 
-	
 
-<!-- Scroll To Top -->
-<div class="scroll-to-top scroll-to-target" data-target="html" style="display: block;"><span class="fa fa-angle-up"></span></div>
 
-<style>
-/* Newsletter success message */
-.newsletter-success {
-  color: #10b981;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.newsletter-success i {
-  font-size: 16px;
-}
-/* Footer logo tweaks: increase size slightly and nudge upwards; lift the description */
-.main-footer-one .footer-widget-content.social .logo img {
-	max-width: 140px; /* increased from smaller value */
-	height: auto;
-	display: block;
-	transform: translateY(-48px); /* moved up further */
-}
-.main-footer-one .footer-widget-content.social .footer-desc {
-	margin-top: -90px; /* reduce gap so description sits closer to logo */
-	transform: translateY(-18px); /* lift description up further */
-	font-size: 20px; /* reduced size for a neater footer */
-	line-height: 1.45;
-	max-width: 340px;
-}
+	<!-- Scroll To Top -->
+	<div class="scroll-to-top scroll-to-target" data-target="html" style="display: block;"><span
+			class="fa fa-angle-up"></span></div>
 
-.main-footer-one .footer-contact-small {
-		color: rgba(255,255,255,0.75);
-		font-size: 13px;
-		margin-top: -30px; 
-		margin-bottom: 30px; /* moved up */
-		line-height: 1.4;
-		display:block;
-}
+	<style>
+		/* Newsletter success message */
+		.newsletter-success {
+			color: #10b981;
+			font-size: 14px;
+			font-weight: 600;
+			margin-top: 10px;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
 
-/* Combined footer columns layout (three headings inline, content below) */
-.footer-columns-row { display: flex; gap: 28px; align-items: flex-start; flex-wrap: nowrap; }
-.main-footer-one .footer-widget-content .footer-title.purple { color: #9B7BFF; }
-.main-footer-one .footer-widget-content .footer-title.orange { color: #FF8C00; }
-.footer-columns-row .footer-col { flex: 1 1 140px; min-width: 140px; }
-.footer-columns-row .footer-col .footer-menu { margin-top: 8px; }
-.main-footer-one .footer-widget-content .footer-title.small { font-size: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; margin-top: 60px; }
+		.newsletter-success i {
+			font-size: 16px;
+		}
 
-@media (max-width: 991px) {
-	.footer-columns-row { gap: 18px; flex-wrap: wrap; }
-	.footer-columns-row .footer-col { min-width: 140px; }
-	.main-footer-one .footer-widget-content .footer-title.small { font-size: 18px; margin-top: 12px; }
-}
+		/* Footer logo tweaks: increase size slightly and nudge upwards; lift the description */
+		.main-footer-one .footer-widget-content.social .logo img {
+			max-width: 140px;
+			/* increased from smaller value */
+			height: auto;
+			display: block;
+			transform: translateY(-48px);
+			/* moved up further */
+		}
 
-@media (max-width: 991px) {
-	.main-footer-one .footer-contact-small { margin-top: -10px; font-size:12px; }
-}
+		.main-footer-one .footer-widget-content.social .footer-desc {
+			margin-top: -90px;
+			/* reduce gap so description sits closer to logo */
+			transform: translateY(-18px);
+			/* lift description up further */
+			font-size: 20px;
+			/* reduced size for a neater footer */
+			line-height: 1.45;
+			max-width: 340px;
+		}
 
-@media (max-width: 991px) {
-	.main-footer-one .footer-widget-content.social .logo img { max-width: 120px; transform: translateY(-18px); }
-	.main-footer-one .footer-widget-content.social .footer-desc { transform: translateY(-12px); font-size:14px; max-width:260px; }
-}
+		.main-footer-one .footer-contact-small {
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 13px;
+			margin-top: -30px;
+			margin-bottom: 30px;
+			/* moved up */
+			line-height: 1.4;
+			display: block;
+		}
 
-/* Pull the footer dividing line and copyright up closer to the footer content */
-.main-footer-one .footer-bottom { padding-top: 18px !important; }
-.main-footer-one .footer-bottom .copyright-text { padding-top: 8px !important; border-top-width: 1px; }
+		/* Combined footer columns layout (three headings inline, content below) */
+		.footer-columns-row {
+			display: flex;
+			gap: 28px;
+			align-items: flex-start;
+			flex-wrap: nowrap;
+		}
 
-/* Fancy combined footer (glass + glow + elegant accents) - keeps same footprint */
-.footer-columns-row.fancy {
-	/* Make footer columns background-less: transparent container without glass blur */
-	background: transparent !important;
-	backdrop-filter: none !important;
-	-webkit-backdrop-filter: none !important;
-	box-shadow: none !important;
-	border: none !important;
-	padding: 18px 22px;
-	border-radius: 0; /* remove card rounding to feel background-less */
-}
-.footer-columns-row.fancy .footer-col { position: relative; padding-top: 6px; }
-.footer-columns-row.fancy .footer-col::before {
-	content: '';
-	position: absolute;
-	right: -12px;
-	left: auto;
-	top: 12px;
-	height: 28px;
-	width: 3px;
-	background: rgba(155,123,255,0.12);
-	border-radius: 2px;
-	transition: background .22s ease, height .22s ease, right .18s ease;
-}
-.footer-columns-row.fancy .footer-col:hover::before { background: linear-gradient(180deg,#9B7BFF,#FF8C00); height: 34px; }
+		.main-footer-one .footer-widget-content .footer-title.purple {
+			color: #9B7BFF;
+		}
 
-.main-footer-one .footer-widget-content .footer-title.small {
-		/* visible fallback color for browsers that don't support gradient text clipping */
-		color: #9B7BFF;
-		text-shadow: 0 8px 28px rgba(155,123,255,0.03);
-}
-.main-footer-one .footer-widget-content .footer-title.small.purple { color: #9B7BFF; }
-.main-footer-one .footer-widget-content .footer-title.small.orange { color: #FF8C00; }
+		.main-footer-one .footer-widget-content .footer-title.orange {
+			color: #FF8C00;
+		}
 
-/* Apply gradient-clipped text only when supported (prevents invisible text in browsers lacking support) */
-.main-footer-one .footer-widget-content .footer-title.small {
-	/* Use solid colors for headings to ensure readability across browsers */
-	background: none !important;
-	-webkit-background-clip: unset !important;
-	background-clip: unset !important;
-	-webkit-text-fill-color: unset !important;
-	color: inherit;
-	text-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-.main-footer-one .footer-widget-content .footer-title.small.purple { color: #9B7BFF; }
-.main-footer-one .footer-widget-content .footer-title.small.orange { color: #FF8C00; }
-.main-footer-one .footer-widget-content .footer-title.small::after {
-	content: '';
-	display: block;
-	height: 2px;
-	width: 40px;
-	background: linear-gradient(90deg,#9B7BFF,#FF8C00);
-	margin-top: 10px;
-	transition: width .32s ease, opacity .25s ease;
-	opacity: 0.95;
-}
-.footer-col:hover .footer-title.small::after { width: 62px; }
+		.footer-columns-row .footer-col {
+			flex: 1 1 140px;
+			min-width: 140px;
+		}
 
-.footer-columns-row.fancy .footer-menu li { opacity: 0; transform: translateY(8px); }
-.footer-columns-row.fancy .footer-menu li { animation: footerFade .42s ease forwards; }
-.footer-columns-row.fancy .footer-menu li:nth-child(1){ animation-delay: .06s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(2){ animation-delay: .12s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(3){ animation-delay: .18s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(4){ animation-delay: .24s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(5){ animation-delay: .30s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(6){ animation-delay: .36s; }
-@keyframes footerFade { to { opacity: 1; transform: none; } }
+		.footer-columns-row .footer-col .footer-menu {
+			margin-top: 8px;
+		}
 
-.footer-columns-row.fancy .footer-menu li a { color: rgba(255,255,255,0.72); display: inline-block; transition: color .22s ease, transform .18s ease; }
-.footer-columns-row.fancy .footer-menu li a:hover { color: #fff; transform: translateX(6px); }
+		.main-footer-one .footer-widget-content .footer-title.small {
+			font-size: 20px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 8px;
+			margin-top: 60px;
+		}
 
-@media (max-width: 991px) {
-	.footer-columns-row.fancy { padding: 12px 12px; border-radius: 6px; }
-	.footer-columns-row.fancy .footer-col::before { right: -8px; left: auto; top: 10px; }
-	.footer-columns-row.fancy .footer-title.small::after { display:none; }
-}
+		@media (max-width: 991px) {
+			.footer-columns-row {
+				gap: 18px;
+				flex-wrap: wrap;
+			}
 
-/* Lift the three sub-column headings (COMPANY, PRODUCTS, QUICK LINKS) slightly for alignment */
-.footer-columns-row.fancy .footer-col:nth-child(1) .footer-title.small,
-.footer-columns-row.fancy .footer-col:nth-child(2) .footer-title.small,
-.footer-columns-row.fancy .footer-col:nth-child(3) .footer-title.small {
-	margin-top: 8px !important;
-}
-@media (max-width: 991px) {
-	.footer-columns-row.fancy .footer-col:nth-child(1) .footer-title.small,
-	.footer-columns-row.fancy .footer-col:nth-child(2) .footer-title.small,
-	.footer-columns-row.fancy .footer-col:nth-child(3) .footer-title.small {
-		margin-top: 10px !important;
-	}
-}
+			.footer-columns-row .footer-col {
+				min-width: 140px;
+			}
 
-/* Footer link hover: make menu items turn purple on hover for the fancy footer
+			.main-footer-one .footer-widget-content .footer-title.small {
+				font-size: 18px;
+				margin-top: 12px;
+			}
+		}
+
+		@media (max-width: 991px) {
+			.main-footer-one .footer-contact-small {
+				margin-top: -10px;
+				font-size: 12px;
+			}
+		}
+
+		@media (max-width: 991px) {
+			.main-footer-one .footer-widget-content.social .logo img {
+				max-width: 120px;
+				transform: translateY(-18px);
+			}
+
+			.main-footer-one .footer-widget-content.social .footer-desc {
+				transform: translateY(-12px);
+				font-size: 14px;
+				max-width: 260px;
+			}
+		}
+
+		/* Pull the footer dividing line and copyright up closer to the footer content */
+		.main-footer-one .footer-bottom {
+			padding-top: 18px !important;
+		}
+
+		.main-footer-one .footer-bottom .copyright-text {
+			padding-top: 8px !important;
+			border-top-width: 1px;
+		}
+
+		/* Fancy combined footer (glass + glow + elegant accents) - keeps same footprint */
+		.footer-columns-row.fancy {
+			/* Make footer columns background-less: transparent container without glass blur */
+			background: transparent !important;
+			backdrop-filter: none !important;
+			-webkit-backdrop-filter: none !important;
+			box-shadow: none !important;
+			border: none !important;
+			padding: 18px 22px;
+			border-radius: 0;
+			/* remove card rounding to feel background-less */
+		}
+
+		.footer-columns-row.fancy .footer-col {
+			position: relative;
+			padding-top: 6px;
+		}
+
+		.footer-columns-row.fancy .footer-col::before {
+			content: '';
+			position: absolute;
+			right: -12px;
+			left: auto;
+			top: 12px;
+			height: 28px;
+			width: 3px;
+			background: rgba(155, 123, 255, 0.12);
+			border-radius: 2px;
+			transition: background .22s ease, height .22s ease, right .18s ease;
+		}
+
+		.footer-columns-row.fancy .footer-col:hover::before {
+			background: linear-gradient(180deg, #9B7BFF, #FF8C00);
+			height: 34px;
+		}
+
+		.main-footer-one .footer-widget-content .footer-title.small {
+			/* visible fallback color for browsers that don't support gradient text clipping */
+			color: #9B7BFF;
+			text-shadow: 0 8px 28px rgba(155, 123, 255, 0.03);
+		}
+
+		.main-footer-one .footer-widget-content .footer-title.small.purple {
+			color: #9B7BFF;
+		}
+
+		.main-footer-one .footer-widget-content .footer-title.small.orange {
+			color: #FF8C00;
+		}
+
+		/* Apply gradient-clipped text only when supported (prevents invisible text in browsers lacking support) */
+		.main-footer-one .footer-widget-content .footer-title.small {
+			/* Use solid colors for headings to ensure readability across browsers */
+			background: none !important;
+			-webkit-background-clip: unset !important;
+			background-clip: unset !important;
+			-webkit-text-fill-color: unset !important;
+			color: inherit;
+			text-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+		}
+
+		.main-footer-one .footer-widget-content .footer-title.small.purple {
+			color: #9B7BFF;
+		}
+
+		.main-footer-one .footer-widget-content .footer-title.small.orange {
+			color: #FF8C00;
+		}
+
+		.main-footer-one .footer-widget-content .footer-title.small::after {
+			content: '';
+			display: block;
+			height: 2px;
+			width: 40px;
+			background: linear-gradient(90deg, #9B7BFF, #FF8C00);
+			margin-top: 10px;
+			transition: width .32s ease, opacity .25s ease;
+			opacity: 0.95;
+		}
+
+		.footer-col:hover .footer-title.small::after {
+			width: 62px;
+		}
+
+		.footer-columns-row.fancy .footer-menu li {
+			opacity: 0;
+			transform: translateY(8px);
+		}
+
+		.footer-columns-row.fancy .footer-menu li {
+			animation: footerFade .42s ease forwards;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(1) {
+			animation-delay: .06s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(2) {
+			animation-delay: .12s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(3) {
+			animation-delay: .18s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(4) {
+			animation-delay: .24s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(5) {
+			animation-delay: .30s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(6) {
+			animation-delay: .36s;
+		}
+
+		@keyframes footerFade {
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		.footer-columns-row.fancy .footer-menu li a {
+			color: rgba(255, 255, 255, 0.72);
+			display: inline-block;
+			transition: color .22s ease, transform .18s ease;
+		}
+
+		.footer-columns-row.fancy .footer-menu li a:hover {
+			color: #fff;
+			transform: translateX(6px);
+		}
+
+		@media (max-width: 991px) {
+			.footer-columns-row.fancy {
+				padding: 12px 12px;
+				border-radius: 6px;
+			}
+
+			.footer-columns-row.fancy .footer-col::before {
+				right: -8px;
+				left: auto;
+				top: 10px;
+			}
+
+			.footer-columns-row.fancy .footer-title.small::after {
+				display: none;
+			}
+		}
+
+		/* Lift the three sub-column headings (COMPANY, PRODUCTS, QUICK LINKS) slightly for alignment */
+		.footer-columns-row.fancy .footer-col:nth-child(1) .footer-title.small,
+		.footer-columns-row.fancy .footer-col:nth-child(2) .footer-title.small,
+		.footer-columns-row.fancy .footer-col:nth-child(3) .footer-title.small {
+			margin-top: 8px !important;
+		}
+
+		@media (max-width: 991px) {
+
+			.footer-columns-row.fancy .footer-col:nth-child(1) .footer-title.small,
+			.footer-columns-row.fancy .footer-col:nth-child(2) .footer-title.small,
+			.footer-columns-row.fancy .footer-col:nth-child(3) .footer-title.small {
+				margin-top: 10px !important;
+			}
+		}
+
+		/* Footer link hover: make menu items turn purple on hover for the fancy footer
 	 - underline grows from center
 	 - slight lift and soft purple glow on hover */
-.footer-columns-row.fancy .footer-menu li {
-	position: relative;
-}
-.footer-columns-row.fancy .footer-menu li a {
-	color: rgba(255,255,255,0.92);
-	transition: color .22s cubic-bezier(.2,.9,.2,1), transform .18s ease;
-	position: relative;
-	z-index: 2;
-}
-.footer-columns-row.fancy .footer-menu li a::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: -8px;
-	height: 2px;
-	width: 0;
-	background: linear-gradient(90deg, #8a63ff, #b892ff);
-	border-radius: 2px;
-	transition: width .26s cubic-bezier(.2,.9,.2,1), opacity .18s ease;
-	opacity: 0.0;
-}
-.footer-columns-row.fancy .footer-menu li a:hover::after,
-.footer-columns-row.fancy .footer-menu li a:focus::after {
-	width: 56%;
-	opacity: 1;
-}
-.footer-columns-row.fancy .footer-menu li a:hover,
-.footer-columns-row.fancy .footer-menu li a:focus {
-	color: #8a63ff !important;
-	transform: translateY(-3px);
-	text-decoration: none;
-	text-shadow: 0 6px 18px rgba(138,99,255,0.08);
-}
+		.footer-columns-row.fancy .footer-menu li {
+			position: relative;
+		}
 
-/* Small pulsing glow when hovering (subtle, non-distracting) */
-.footer-columns-row.fancy .footer-menu li a:hover {
-	box-shadow: 0 4px 18px rgba(138,99,255,0.06);
-}
+		.footer-columns-row.fancy .footer-menu li a {
+			color: rgba(255, 255, 255, 0.92);
+			transition: color .22s cubic-bezier(.2, .9, .2, 1), transform .18s ease;
+			position: relative;
+			z-index: 2;
+		}
 
-/* Headings hover color accents */
-.footer-columns-row.fancy .footer-title.small.purple:hover {
-	color: #b892ff !important;
-}
-.footer-columns-row.fancy .footer-title.small.orange:hover {
-	color: #ffb470 !important;
-}
+		.footer-columns-row.fancy .footer-menu li a::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -8px;
+			height: 2px;
+			width: 0;
+			background: linear-gradient(90deg, #8a63ff, #b892ff);
+			border-radius: 2px;
+			transition: width .26s cubic-bezier(.2, .9, .2, 1), opacity .18s ease;
+			opacity: 0.0;
+		}
 
-/* Optional: gentle staggered reveal for list items (runs once on load) */
-.footer-columns-row.fancy .footer-menu li {
-	opacity: 0;
-	transform: translateY(6px);
-	animation: footerItemIn .48s cubic-bezier(.2,.9,.2,1) forwards;
-}
-.footer-columns-row.fancy .footer-menu li:nth-child(1) { animation-delay: .06s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(2) { animation-delay: .12s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(3) { animation-delay: .18s; }
-.footer-columns-row.fancy .footer-menu li:nth-child(4) { animation-delay: .24s; }
+		.footer-columns-row.fancy .footer-menu li a:hover::after,
+		.footer-columns-row.fancy .footer-menu li a:focus::after {
+			width: 56%;
+			opacity: 1;
+		}
 
-@keyframes footerItemIn {
-	to { opacity: 1; transform: translateY(0); }
-}
+		.footer-columns-row.fancy .footer-menu li a:hover,
+		.footer-columns-row.fancy .footer-menu li a:focus {
+			color: #8a63ff !important;
+			transform: translateY(-3px);
+			text-decoration: none;
+			text-shadow: 0 6px 18px rgba(138, 99, 255, 0.08);
+		}
 
-</style>
+		/* Small pulsing glow when hovering (subtle, non-distracting) */
+		.footer-columns-row.fancy .footer-menu li a:hover {
+			box-shadow: 0 4px 18px rgba(138, 99, 255, 0.06);
+		}
 
-<script src="js/jquery.js"></script> 
+		/* Headings hover color accents */
+		.footer-columns-row.fancy .footer-title.small.purple:hover {
+			color: #b892ff !important;
+		}
+
+		.footer-columns-row.fancy .footer-title.small.orange:hover {
+			color: #ffb470 !important;
+		}
+
+		/* Optional: gentle staggered reveal for list items (runs once on load) */
+		.footer-columns-row.fancy .footer-menu li {
+			opacity: 0;
+			transform: translateY(6px);
+			animation: footerItemIn .48s cubic-bezier(.2, .9, .2, 1) forwards;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(1) {
+			animation-delay: .06s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(2) {
+			animation-delay: .12s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(3) {
+			animation-delay: .18s;
+		}
+
+		.footer-columns-row.fancy .footer-menu li:nth-child(4) {
+			animation-delay: .24s;
+		}
+
+		@keyframes footerItemIn {
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/magnific.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/appear.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.meanmenu.js"></script>
+	<script src="js/particles.js"></script>
+	<script src="js/nice-select.js"></script>
+	<script src="js/gsap.min.js"></script>
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script src="js/ScrollToPlugin.min.js"></script>
+	<script src="js/SplitText.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Vizra Projects: entrance trigger and counters -->
+	<script>
+		(function () {
+			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+			// Intersection Observer to reveal .fade-up elements
+			const fadeItems = document.querySelectorAll('.fade-up');
+			if ('IntersectionObserver' in window) {
+				const obs = new IntersectionObserver((entries, observer) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('show');
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.12 });
+				fadeItems.forEach(el => obs.observe(el));
+			} else {
+				fadeItems.forEach(el => el.classList.add('show'));
+			}
+
+			// Animated counters for stats
+			const counters = document.querySelectorAll('.project-stats-grid .num');
+			function animateCount(el, target, duration) {
+				const start = 0; let startTime = null;
+				const suffix = el.querySelector('span') ? el.querySelector('span').textContent : '';
+				function step(timestamp) {
+					if (!startTime) startTime = timestamp;
+					const progress = Math.min((timestamp - startTime) / duration, 1);
+					const value = Math.floor(progress * (target - start) + start);
+					el.firstChild && (el.firstChild.nodeValue = value);
+					if (progress < 1) window.requestAnimationFrame(step);
+					else el.firstChild && (el.firstChild.nodeValue = target);
+				}
+				window.requestAnimationFrame(step);
+			}
+
+			if ('IntersectionObserver' in window && counters.length) {
+				const statsObs = new IntersectionObserver((entries, observer) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const el = entry.target.querySelector('.num');
+							const target = parseInt(el.getAttribute('data-target')) || 0;
+							animateCount(el, target, 1400);
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.3 });
+				document.querySelectorAll('.project-stats-grid .stat').forEach(s => statsObs.observe(s));
+			} else {
+				// Fallback: set final values
+				counters.forEach(el => {
+					const target = parseInt(el.getAttribute('data-target')) || 0;
+					el.firstChild && (el.firstChild.nodeValue = target);
+				});
+			}
+		})();
+
+		// Core Services Slider
+		var coreServicesSlider = new Swiper('.core-services-slider', {
+			slidesPerView: 1,
+			spaceBetween: 24,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 4,
+				}
+			}
+		});
+
+		// Newsletter form AJAX submission
+		(function () {
+			const newsletterForm = document.getElementById('newsletterForm');
+			if (!newsletterForm) return;
+			const newsletterSuccess = document.getElementById('newsletterSuccess');
+
+			newsletterForm.addEventListener('submit', async function (e) {
+				e.preventDefault();
+				const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+				if (submitBtn) submitBtn.disabled = true;
+
+				const data = new FormData(newsletterForm);
+
+				try {
+					const res = await fetch(newsletterForm.action, {
+						method: 'POST',
+						headers: { 'Accept': 'application/json' },
+						body: data
+					});
+
+					if (res.ok) {
+						// Show success message and reset form
+						if (newsletterSuccess) {
+							newsletterSuccess.style.display = 'flex';
+							setTimeout(() => { newsletterSuccess.style.display = 'none'; }, 3000);
+						}
+						newsletterForm.reset();
+					} else {
+						alert('Subscription failed. Please try again.');
+					}
+				} catch (err) {
+					console.error('Newsletter submit error:', err);
+					alert('Subscription error. Please check your connection.');
+				} finally {
+					if (submitBtn) submitBtn.disabled = false;
+				}
+			});
+		})();
+	</script>
+
+	</div>
+</body>
+
+</html>
+
+
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html" style="display: block;"><span
+		class="fa fa-angle-up"></span></div>
+
+<script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/magnific.js"></script>
 <script src="js/wow.js"></script>
@@ -2749,135 +3432,82 @@
 <script src="js/ScrollToPlugin.min.js"></script>
 <script src="js/SplitText.js"></script>
 <script src="js/main.js"></script>
-
-<!-- Vizra Projects: entrance trigger and counters -->
 <script>
-	(function(){
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-		// Intersection Observer to reveal .fade-up elements
-		const fadeItems = document.querySelectorAll('.fade-up');
-		if ('IntersectionObserver' in window) {
-			const obs = new IntersectionObserver((entries, observer) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('show');
-						observer.unobserve(entry.target);
-					}
-				});
-			}, { threshold: 0.12 });
-			fadeItems.forEach(el => obs.observe(el));
-		} else {
-			fadeItems.forEach(el => el.classList.add('show'));
-		}
-
-		// Animated counters for stats
-		const counters = document.querySelectorAll('.project-stats-grid .num');
-		function animateCount(el, target, duration){
-			const start = 0; let startTime = null;
-			const suffix = el.querySelector('span') ? el.querySelector('span').textContent : '';
-			function step(timestamp){
-				if (!startTime) startTime = timestamp;
-				const progress = Math.min((timestamp - startTime) / duration, 1);
-				const value = Math.floor(progress * (target - start) + start);
-				el.firstChild && (el.firstChild.nodeValue = value);
-				if (progress < 1) window.requestAnimationFrame(step);
-				else el.firstChild && (el.firstChild.nodeValue = target);
-			}
-			window.requestAnimationFrame(step);
-		}
-
-		if ('IntersectionObserver' in window && counters.length) {
-			const statsObs = new IntersectionObserver((entries, observer) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						const el = entry.target.querySelector('.num');
-						const target = parseInt(el.getAttribute('data-target')) || 0;
-						animateCount(el, target, 1400);
-						observer.unobserve(entry.target);
-					}
-				});
-			}, { threshold: 0.3 });
-			document.querySelectorAll('.project-stats-grid .stat').forEach(s => statsObs.observe(s));
-		} else {
-			// Fallback: set final values
-			counters.forEach(el => {
-				const target = parseInt(el.getAttribute('data-target')) || 0;
-				el.firstChild && (el.firstChild.nodeValue = target);
+	document.addEventListener("DOMContentLoaded", function () {
+		if (document.getElementById("cta-particles")) {
+			particlesJS("cta-particles", {
+				"particles": {
+					"number": { "value": 40 },
+					"color": { "value": ["#37B884", "#EB7043", "#6766FF"] },
+					"shape": { "type": "circle" },
+					"opacity": { "value": 0.8 },
+					"size": { "value": 3, "random": true },
+					"line_linked": { "enable": false },
+					"move": { "enable": true, "speed": 2, "random": true }
+				},
+				"interactivity": {
+					"detect_on": "canvas",
+					"events": { "resize": true }
+				},
+				"retina_detect": true
 			});
 		}
-	})();
 
-	// Core Services Slider
-	var coreServicesSlider = new Swiper('.core-services-slider', {
-		slidesPerView: 1,
-		spaceBetween: 24,
-		loop: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		breakpoints: {
-			576: {
-				slidesPerView: 2,
-			},
-			992: {
+		/* Product Preview carousel init */
+		try {
+			var productSwiper = new Swiper('.product-swiper', {
+				loop: true,
+				centeredSlides: true,
 				slidesPerView: 3,
-			},
-			1200: {
-				slidesPerView: 4,
-			}
-		}
-	});
-
-	// Newsletter form AJAX submission
-	(function() {
-		const newsletterForm = document.getElementById('newsletterForm');
-		if (!newsletterForm) return;
-		const newsletterSuccess = document.getElementById('newsletterSuccess');
-
-		newsletterForm.addEventListener('submit', async function(e) {
-			e.preventDefault();
-			const submitBtn = newsletterForm.querySelector('button[type="submit"]');
-			if (submitBtn) submitBtn.disabled = true;
-
-			const data = new FormData(newsletterForm);
-
-			try {
-				const res = await fetch(newsletterForm.action, {
-					method: 'POST',
-					headers: { 'Accept': 'application/json' },
-					body: data
-				});
-
-				if (res.ok) {
-					// Show success message and reset form
-					if (newsletterSuccess) {
-						newsletterSuccess.style.display = 'flex';
-						setTimeout(() => { newsletterSuccess.style.display = 'none'; }, 3000);
-					}
-					newsletterForm.reset();
-				} else {
-					alert('Subscription failed. Please try again.');
+				spaceBetween: 28,
+				pagination: { el: '.product-swiper .swiper-pagination', clickable: true },
+				navigation: { nextEl: '.product-swiper .swiper-button-next', prevEl: '.product-swiper .swiper-button-prev' },
+				breakpoints: {
+					0: { slidesPerView: 1, spaceBetween: 12 },
+					640: { slidesPerView: 1.2, spaceBetween: 16 },
+					992: { slidesPerView: 2.1, spaceBetween: 20 },
+					1200: { slidesPerView: 3, spaceBetween: 28 }
 				}
-			} catch (err) {
-				console.error('Newsletter submit error:', err);
-				alert('Subscription error. Please check your connection.');
-			} finally {
-				if (submitBtn) submitBtn.disabled = false;
-			}
-		});
-	})();
-</script>
+			});
 
+			// Simple 3D tilt effect for desktops
+			function addTilt(el) {
+				var rect = el.getBoundingClientRect();
+				el.addEventListener('mousemove', function (e) {
+					var x = e.clientX - rect.left;
+					var y = e.clientY - rect.top;
+					var cx = rect.width / 2;
+					var cy = rect.height / 2;
+					var dx = (x - cx) / cx;
+					var dy = (y - cy) / cy;
+					el.style.transform = 'rotateX(' + (-dy * 6) + 'deg) rotateY(' + (dx * 8) + 'deg) translateZ(6px)';
+					el.style.boxShadow = '0 30px 80px rgba(11,12,18,0.6)';
+				});
+				el.addEventListener('mouseleave', function () { el.style.transform = 'none'; el.style.boxShadow = '0 40px 80px rgba(11,12,18,0.6)'; });
+			}
+			if (window.innerWidth > 768) {
+				document.querySelectorAll('.mockup-card').forEach(function (card) { addTilt(card); });
+			}
+
+			// Lightbox behaviour
+			var modal = document.getElementById('previewModal');
+			var modalImg = document.getElementById('previewImage');
+			var modalTitle = document.getElementById('previewTitle');
+			document.querySelectorAll('.mockup-card').forEach(function (card) {
+				card.addEventListener('click', function () {
+					var src = card.getAttribute('data-full') || card.querySelector('img').src;
+					var title = card.getAttribute('data-title') || '';
+					modalImg.src = src;
+					modalTitle.textContent = title;
+					modal.style.display = 'flex';
+				});
+			});
+			document.getElementById('previewClose').addEventListener('click', function () { modal.style.display = 'none'; modalImg.src = ''; });
+			modal.addEventListener('click', function (e) { if (e.target === modal) { modal.style.display = 'none'; modalImg.src = ''; } });
+		} catch (err) { console.warn('Product preview init error', err); }
+	});
+</script>
 </div>
 </body>
+
 </html>
-
-
-
-
