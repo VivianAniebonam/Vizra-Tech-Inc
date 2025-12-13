@@ -193,18 +193,154 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height-heading-);
 }
 
-/* Navbar logo sizing - site-wide */
-.header-logo img,
+/* Navbar logo sizing */
+.header-logo img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+}
+
+/* Desktop-only: reduce header logo size to better fit desktop layouts */
+@media (min-width: 1025px) {
+  .intellio-header-area .header-logo img,
+  .header-logo img {
+    max-width: 96px; /* reduced from 120px for desktop */
+    height: auto;
+    display: block;
+  }
+}
+
+/* Mobile-only logo size (mobile menu) - increased slightly */
 .mobile-logo img {
-  max-width: 100px; /* increased per request */
+  max-width: 75px; /* was 60px */
   height: auto;
   display: block;
 }
 
 @media (max-width: 480px) {
-  .header-logo img,
   .mobile-logo img {
-    max-width: 110px; /* slightly smaller on very small screens */
+    max-width: 75px; /* was 48px */
+  }
+}
+/* iPad (tablet) specific: reduce logo size to better fit header */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-logo img {
+    max-width: 90px; /* smaller on iPad */
+  }
+  .mobile-logo img {
+    max-width: 64px; /* adjust mobile logo for tablet-sized devices */
+  }
+  /* if the header layout needs a small vertical nudge on iPad */
+  /* place the mobile logo into the top mean-bar (brown) instead of the lower band */
+  .mean-container .mean-bar {
+    position: relative;
+    background: #262626; /* keep the brown/dark top bar */
+  }
+
+  .mean-container .mobile-logo,
+  .mobile-menu .mobile-logo {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    z-index: 9999;
+    background: transparent;
+    display: block;
+  }
+
+  .mobile-menu .mobile-logo img {
+    max-width: 60px;
+    height: auto;
+    display: block;
+  }
+
+  /* align hamburger to the same vertical center */
+  .mean-container a.meanmenu-reveal {
+    top: 12px !important;
+    right: 12px !important;
+  }
+
+  /* make the lower nav band transparent so the logo appears on the brown bar */
+  .mobile-menu .header-menu {
+    background: transparent !important;
+    margin-top: 56px; /* push nav list below the top bar */
+  }
+}
+/* iPad Air specific: let the meanmenu top bar be transparent so the
+   page background image shows through (target DevTools preset 820x1180) */
+@media (width: 820px) and (height: 1180px) {
+  .mean-container .mean-bar {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .mobile-menu .header-menu {
+    background: transparent !important;
+    margin-top: 56px;
+  }
+  /* ensure the hamburger reveal doesn't bring its own background */
+  .mean-container a.meanmenu-reveal {
+    background: transparent !important;
+  }
+  /* remove any pseudo-element decoration from the top bar if present */
+  .mean-container .mean-bar::before,
+  .mean-container .mean-bar::after {
+    display: none !important;
+  }
+}
+/* Exact DevTools preset: 1280x800 (Nest Hub Max / similar) */
+@media (width: 1280px) and (height: 800px) {
+  .header-logo img {
+    max-width: 80px; /* reduce logo for 1280x800 viewport */
+  }
+  .mobile-logo img {
+    max-width: 56px; /* match smaller header */
+  }
+  /* small vertical alignment tweak */
+  .mobile-menu .mobile-logo {
+    position: relative;
+    top: -4px;
+  }
+}
+
+/* Asus Zenbook Fold / similar foldable preset (around 853px wide) - place logo in same top bar as hamburger */
+@media (min-width: 820px) and (max-width: 880px) {
+  /* shrink the top bar height */
+  .mobile-menu-area {
+    padding: 0; 
+  }
+
+  /* overlay the logo on the top bar so it shares the same space as the hamburger */
+  .mobile-menu .mobile-logo {
+    position: fixed;
+    left: 12px;
+    top: 10px;
+    z-index: 9999;
+    background: transparent;
+    display: block;
+  }
+
+  .mobile-menu .mobile-logo img {
+    max-width: 44px; /* slightly reduced to fit */
+    height: auto;
+    display: block;
+  }
+
+  /* align hamburger into the same top bar */
+  .mean-container a.meanmenu-reveal,
+  .mean-container .mean-bar {
+    top: 10px !important;
+    right: 12px !important;
+    float: right;
+  }
+
+  /* make the secondary header band transparent so the logo overlays cleanly */
+  .mobile-menu .header-menu {
+    background: transparent !important;
+    margin-top: 44px; /* keep nav list below the top bar */
+  }
+
+  /* ensure nav list doesn't overlap the fixed logo */
+  .mobile-menu .header-menu .nav_scroll {
+    padding-top: 8px;
   }
 }
 h1 small,
@@ -9197,6 +9333,40 @@ Section Title
   background: var(--theme-primary);
   color: var(--theme-color-white);
   border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box::before {
+    width: 100%;
+    max-width: 320px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box input {
+    width: calc(100% - 60px);
+    padding-left: 10px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box button {
+    right: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box::before {
+    width: 100%;
+    max-width: 300px;
+    height: 54px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box input {
+    width: calc(100% - 55px);
+    padding-left: 18px;
+    font-size: 14px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box button {
+    right: 8px;
+    top: -5px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box button span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
 }
 .main-footer-one .footer-widget-content.contact {
   position: relative;
