@@ -9334,6 +9334,40 @@ Section Title
   color: var(--theme-color-white);
   border-radius: 50%;
 }
+@media (max-width: 767px) {
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box::before {
+    width: 100%;
+    max-width: 320px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box input {
+    width: calc(100% - 60px);
+    padding-left: 10px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box button {
+    right: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box::before {
+    width: 100%;
+    max-width: 300px;
+    height: 54px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box input {
+    width: calc(100% - 55px);
+    padding-left: 18px;
+    font-size: 14px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box button {
+    right: 8px;
+    top: -5px;
+  }
+  .main-footer-one .footer-widget-content .footer-content .subscribe-box button span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
 .main-footer-one .footer-widget-content.contact {
   position: relative;
   z-index: 1;

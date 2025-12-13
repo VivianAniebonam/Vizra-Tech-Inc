@@ -1152,6 +1152,56 @@
 										padding: 10px 12px
 									}
 								}
+
+								/* Mobile stacking: put topics above content and make both full-width */
+								@media (max-width: 768px) {
+									.problems-tab-container {
+										flex-direction: column !important;
+										align-items: stretch;
+										gap: 12px !important;
+									}
+
+									.problems-topics {
+										flex: none !important;
+										width: 100% !important;
+										padding: 6px 8px !important;
+										background: transparent !important;
+									}
+
+									.problems-topics .topic-item {
+										display: flex;
+										align-items: center;
+										gap: 12px;
+										padding: 10px 12px;
+										border-radius: 10px;
+									}
+
+									.problems-content {
+										flex: none !important;
+										width: 100% !important;
+										padding: 18px 14px !important;
+										order: 2;
+									}
+
+									.topic-badge {
+										width: 36px !important;
+										height: 36px !important;
+										font-size: 14px !important;
+									}
+
+									.topic-card span:last-child {
+										font-size: 15px !important;
+									}
+								}
+
+								/* Extra small phones (narrow widths like older iPhones) */
+								@media (max-width: 430px) {
+									.problems-tab-container { gap: 10px !important; }
+									.problems-topics .topic-item { padding: 8px 10px; }
+									.topic-badge { width: 32px; height: 32px; font-size: 13px; }
+									.topic-card span:last-child { font-size: 14px; }
+									.problems-content { padding: 14px 12px; }
+								}
 							</style>
 							<div class="problems-tab-container"
 								style="display:flex; gap:30px; background:transparent; border-radius:12px; padding:0; box-shadow:none; overflow:hidden; margin-bottom:20px;">

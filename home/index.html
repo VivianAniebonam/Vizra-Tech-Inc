@@ -1560,6 +1560,11 @@
 			}
 
 			/* Footer logo tweaks: increase size slightly and nudge upwards; lift the description */
+			.main-footer-one .footer-widget-content.social .logo {
+				position: relative;
+				z-index: 10;
+			}
+
 			.main-footer-one .footer-widget-content.social .logo img {
 				max-width: 140px;
 				/* increased from smaller value */
@@ -1567,6 +1572,8 @@
 				display: block;
 				transform: translateY(-48px);
 				/* moved up further */
+				position: relative;
+				z-index: 10;
 			}
 
 			.main-footer-one .footer-widget-content.social .footer-desc {
@@ -1578,6 +1585,8 @@
 				/* reduced size for a neater footer */
 				line-height: 1.45;
 				max-width: 340px;
+				position: relative;
+				z-index: 5;
 			}
 
 			.main-footer-one .footer-contact-small {
@@ -1656,6 +1665,38 @@
 					transform: translateY(-12px);
 					font-size: 14px;
 					max-width: 260px;
+				}
+			}
+
+			@media (max-width: 767px) {
+				.main-footer-one .footer-widget-content.social .logo img {
+					max-width: 140px;
+					transform: translateY(-28px);
+					z-index: 10;
+					position: relative;
+				}
+
+				.main-footer-one .footer-widget-content.social .footer-desc {
+					transform: translateY(-18px);
+					font-size: 13px;
+					max-width: 240px;
+					z-index: 5;
+					position: relative;
+				}
+			}
+
+			@media (max-width: 576px) {
+				.main-footer-one .footer-widget-content.social .logo img {
+					max-width: 140px;
+					transform: translateY(-32px);
+					z-index: 10;
+					position: relative;
+				}
+
+				.main-footer-one .footer-widget-content.social .footer-desc {
+					transform: translateY(-20px);
+					font-size: 12px;
+					max-width: 220px;
 				}
 			}
 
