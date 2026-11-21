@@ -6,7 +6,7 @@
 
 @media only screen and (max-width: 1439px){
 	.banner-section-three .banner-ai-diagram {
-		margin-left: -45px;
+		margin-left: 0;
 	}
 	.banner-section-three .banner-ai-diagram .diagram-item.three {
 		right: -50px;
@@ -30,7 +30,7 @@
 
 @media only screen and (max-width: 1400px){
 	.banner-section-three .banner-ai-diagram {
-		margin-left: -45px;
+		margin-left: 0;
 	}
 	.banner-section-three .banner-ai-diagram .diagram-item.three {
 		right: -50px;
